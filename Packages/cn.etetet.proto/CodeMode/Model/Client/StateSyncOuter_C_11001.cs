@@ -831,6 +831,35 @@ namespace ET
         }
     }
 
+    [MemoryPackable]
+    [Message(StateSyncOuter.A2C_Disconnect)]
+    public partial class A2C_Disconnect : MessageObject, ISessionMessage
+    {
+        public static A2C_Disconnect Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<A2C_Disconnect>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
     public static class StateSyncOuter
     {
         public const ushort RouterSync = 11002;
@@ -860,5 +889,6 @@ namespace ET
         public const ushort M2C_TransferMap = 11026;
         public const ushort C2G_Benchmark = 11027;
         public const ushort G2C_Benchmark = 11028;
+        public const ushort A2C_Disconnect = 11029;
     }
 }

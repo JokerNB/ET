@@ -2,6 +2,7 @@
     "name": "ET.Model",
     "rootNamespace": "ET",
     "references": [
+        "",
         "ET.Core",
         "ET.MemoryPack",
         "ET.Recast",

@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "cn.etetet.db": "1.0.0",
     "cn.etetet.packagemanager": "1.0.7",
     "cn.etetet.statesync": "3.0.11",
     "cn.etetet.yiuiinvoke": "4.0.2",
+    "cn.etetet.yiuiluban": "3.0.4",
     "cn.etetet.yiuistatesync": "2.0.1",
     "com.unity.ai.navigation": "2.0.4",
     "com.unity.ide.rider": "3.0.31",

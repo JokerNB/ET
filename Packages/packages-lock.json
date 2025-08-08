@@ -30,6 +30,14 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.db": {
+      "version": "file:cn.etetet.db",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "cn.etetet.core": "1.0.0"
+      }
+    },
     "cn.etetet.demores": {
       "version": "file:cn.etetet.demores",
       "depth": 0,
@@ -174,6 +182,12 @@
         "cn.etetet.startconfig": "3.0.0"
       }
     },
+    "cn.etetet.twsdemo": {
+      "version": "file:cn.etetet.twsdemo",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.ui": {
       "version": "file:cn.etetet.ui",
       "depth": 0,
@@ -244,6 +258,18 @@
       "dependencies": {
         "cn.etetet.core": "4.0.0"
       }
+    },
+    "cn.etetet.yiuiluban": {
+      "version": "file:cn.etetet.yiuiluban",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "cn.etetet.yiuilubangen": {
+      "version": "file:cn.etetet.yiuilubangen",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "cn.etetet.yiuireddot": {
       "version": "file:cn.etetet.yiuireddot",

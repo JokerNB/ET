@@ -419,7 +419,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.actorlocation
     - Name: DownloadValue
       Entry: 3
-      Data: 1960
+      Data: 1970
     - Name: PackageDescription
       Entry: 1
       Data: "\u5B9E\u73B0\u4E86actor location\u673A\u5236"
@@ -624,7 +624,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.router
     - Name: DownloadValue
       Entry: 3
-      Data: 1900
+      Data: 1910
     - Name: PackageDescription
       Entry: 1
       Data: "et\u7684\u8F6F\u8DEF\u7531\uFF0C\u53EF\u4EE5\u9632\u7F51\u7EDC\u653B\u51FB"
@@ -931,7 +931,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.startconfig
     - Name: DownloadValue
       Entry: 3
-      Data: 1870
+      Data: 1880
     - Name: PackageDescription
       Entry: 1
       Data: "\u670D\u52A1\u5668\u8D77\u670D\u914D\u7F6E"
@@ -1033,7 +1033,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.ui
     - Name: DownloadValue
       Entry: 3
-      Data: 1840
+      Data: 1850
     - Name: PackageDescription
       Entry: 1
       Data: "et\u6846\u67B6\u5B9E\u73B0\u7684\u4E00\u4E2A\u7B80\u5355UI"
@@ -1492,13 +1492,13 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.db
     - Name: DownloadValue
       Entry: 3
-      Data: 896
+      Data: 897
     - Name: PackageDescription
       Entry: 1
       Data: "\u4E00\u4E2A\u7B80\u5355\u7684mongodb\u5C01\u88C5"
     - Name: PackageCurrentVersion
       Entry: 1
-      Data: "\u672A\u5B89\u88C5"
+      Data: 1.0.0
     - Name: PackageLastVersion
       Entry: 1
       Data: 1.0.0
@@ -1510,7 +1510,7 @@ MonoBehaviour:
       Data: false
     - Name: m_Install
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -1594,7 +1594,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.yiuiframework.git
     - Name: DownloadValue
       Entry: 3
-      Data: 741
+      Data: 743
     - Name: PackageDescription
       Entry: 1
       Data: "YIUI \u6846\u67B6 >>> \u6587\u6863: https://lib9kmxvq7k.feishu.cn/wiki/ES7Gwz4EAiVGKSkotY5cRbTznuh"
@@ -1900,7 +1900,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.yiuitips.git
     - Name: DownloadValue
       Entry: 3
-      Data: 631
+      Data: 632
     - Name: PackageDescription
       Entry: 1
       Data: "YIUI \u63D0\u793A\u5F39\u7A97 >>> \u6587\u6863: https://lib9kmxvq7k.feishu.cn/wiki/ES7Gwz4EAiVGKSkotY5cRbTznuh"
@@ -1951,7 +1951,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.yiuiloopscrollrectasync.git
     - Name: DownloadValue
       Entry: 3
-      Data: 555
+      Data: 556
     - Name: PackageDescription
       Entry: 1
       Data: "YIUI \u65E0\u9650\u5FAA\u73AF\u5217\u8868 (\u5F02\u6B65) >>> \u6587\u6863:
@@ -2003,7 +2003,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.truesync
     - Name: DownloadValue
       Entry: 3
-      Data: 504
+      Data: 506
     - Name: PackageDescription
       Entry: 1
       Data: "\u5E27\u540C\u6B65\u7528\u7684\u5B9A\u70B9\u6570\u5B9E\u73B0"
@@ -2054,7 +2054,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.lockstep
     - Name: DownloadValue
       Entry: 3
-      Data: 492
+      Data: 494
     - Name: PackageDescription
       Entry: 1
       Data: "\u9884\u6D4B\u56DE\u6EDA\u7684\u5E27\u540C\u6B65demo"
@@ -2105,7 +2105,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.yiuiinvoke.git
     - Name: DownloadValue
       Entry: 3
-      Data: 485
+      Data: 488
     - Name: PackageDescription
       Entry: 1
       Data: "\u72EC\u7ACB\u529F\u80FD\u4E0D\u4F9D\u8D56YIUI \u6846\u67B6 >>> \u6587\u6863:
@@ -2157,7 +2157,7 @@ MonoBehaviour:
       Data: https://github.com/ET-Packages/cn.etetet.lsentity
     - Name: DownloadValue
       Entry: 3
-      Data: 445
+      Data: 447
     - Name: PackageDescription
       Entry: 1
       Data: 
@@ -2650,7 +2650,7 @@ MonoBehaviour:
       Data: 
     - Name: LastUpdateTime
       Entry: 3
-      Data: 1754285078
+      Data: 1754300318
     - Name: UpdateInterval
       Entry: 3
       Data: 3600
