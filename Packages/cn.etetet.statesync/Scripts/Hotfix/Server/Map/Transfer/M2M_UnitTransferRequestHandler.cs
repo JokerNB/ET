@@ -14,10 +14,19 @@ namespace ET.Server
             unitComponent.AddChild(unit);
             unitComponent.Add(unit);
 
-            foreach (byte[] bytes in request.Entitys)
+            // foreach (byte[] bytes in request.Entitys)
+            // {
+            //     Entity entity = MongoHelper.Deserialize<Entity>(bytes);
+            //     unit.AddComponent(entity);
+            // }
+
+            unit.AddComponent<UnitDBSaveComponent>();
+            for (int i = 0; i < request.Entitys.Count; ++i)
             {
-                Entity entity = MongoHelper.Deserialize<Entity>(bytes);
-                unit.AddComponent(entity);
+                string k = request.Types[i];
+                Type t = CodeTypes.Instance.GetType(k);
+                byte[] v = request.Entitys[i];
+                unit.GetComponent<UnitDBSaveComponent>().AddToBytes(t, v);
             }
 
             unit.AddComponent<MoveComponent>();
