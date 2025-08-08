@@ -94,5 +94,13 @@
     "SceneType": "Map",
     "Name": "Map2",
     "Port": 0
+  },
+  {
+    "Id": 306,
+    "Process": 1,
+    "Zone": 1,
+    "SceneType": "UnitCache",
+    "Name": "UnitCache",
+    "Port": 0
   }
 ]

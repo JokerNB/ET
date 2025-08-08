@@ -2,11 +2,11 @@
     "name": "ET.Model",
     "rootNamespace": "ET",
     "references": [
-        "",
         "ET.Core",
         "ET.MemoryPack",
         "ET.Recast",
         "ET.SourceGeneratorAttribute",
+        "ET.TWS.UnitCache",
         "ET.YooAssets",
         "Unity.Mathematics"
     ],

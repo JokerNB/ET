@@ -2,13 +2,13 @@
     "name": "ET.Hotfix",
     "rootNamespace": "ET",
     "references": [
-        "",
         "ET.Core",
         "ET.Loader",
         "ET.MemoryPack",
         "ET.Model",
         "ET.Recast",
         "ET.SourceGeneratorAttribute",
+        "ET.TWS.UnitCache",
         "Unity.Mathematics"
     ],
     "includePlatforms": [],

@@ -67,15 +67,17 @@ namespace ET.Server
 
                 try
                 {
-                    //在Gate上动态创建一个MapScene，把unit从DB中加载放进来，然后传送到真正的Map中，这样登录跟传送的逻辑就完全一样了
-                    GateMapComponent gateMapComponent = player.AddComponent<GateMapComponent>();
-                    gateMapComponent.Scene =
-                            await GateMapFactory.Create(gateMapComponent, player.Id, IdGenerater.Instance.GenerateInstanceId(), "GateMap");
-
-                    Scene scene = gateMapComponent.Scene;
-                    
-                    //这里可以从DB加载Unit
-                    Unit unit = UnitFactory.Create(scene, player.Id, UnitType.Player);
+                    // //在Gate上动态创建一个MapScene，把unit从DB中加载放进来，然后传送到真正的Map中，这样登录跟传送的逻辑就完全一样了
+                    // GateMapComponent gateMapComponent = player.AddComponent<GateMapComponent>();
+                    // gateMapComponent.Scene =
+                    //         await GateMapFactory.Create(gateMapComponent, player.Id, IdGenerater.Instance.GenerateInstanceId(), "GateMap");
+                    //
+                    // Scene scene = gateMapComponent.Scene;
+                    //
+                    // //这里可以从DB加载Unit
+                    // Unit unit = UnitFactory.Create(scene, player.Id, UnitType.Player);
+                    // long unitId = unit.Id;
+                    (bool isNewPlayer, Unit unit) = await UnitLoadHelper.LoadUnit(player);
                     long unitId = unit.Id;
 
                     StartSceneConfig startSceneConfig = StartSceneConfigCategory.Instance.GetBySceneName(session.Zone(), "Map1");

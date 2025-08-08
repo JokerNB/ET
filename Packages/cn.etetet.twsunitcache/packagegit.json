@@ -1,0 +1,9 @@
+﻿{
+    "Id": 0,
+    "Name": "twsunitcache",
+    "ScriptsReferences": 
+    {
+        "Hotfix": ["ET.TWS.UnitCache"],
+        "Model": ["ET.TWS.UnitCache"]
+    }
+}

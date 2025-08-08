@@ -182,8 +182,8 @@
         "cn.etetet.startconfig": "3.0.0"
       }
     },
-    "cn.etetet.twsdemo": {
-      "version": "file:cn.etetet.twsdemo",
+    "cn.etetet.twsunitcache": {
+      "version": "file:cn.etetet.twsunitcache",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

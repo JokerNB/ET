@@ -2,7 +2,6 @@
     "name": "ET.ModelView",
     "rootNamespace": "ET",
     "references": [
-        "",
         "ET.Core",
         "ET.Init",
         "ET.Loader",
