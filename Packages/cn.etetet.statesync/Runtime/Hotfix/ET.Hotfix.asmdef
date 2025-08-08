@@ -8,6 +8,7 @@
         "ET.Model",
         "ET.Recast",
         "ET.SourceGeneratorAttribute",
+        "ET.TWS.NumericNotice",
         "ET.TWS.UnitCache",
         "Unity.Mathematics"
     ],

@@ -1,0 +1,9 @@
+﻿{
+    "Id": 0,
+    "Name": "twsnumericnotice",
+    "ScriptsReferences": 
+    {
+        "Hotfix": ["ET.TWS.NumericNotice"],
+        "Model": ["ET.TWS.NumericNotice"]
+    }
+}
