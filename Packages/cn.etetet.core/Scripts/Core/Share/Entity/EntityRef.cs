@@ -44,10 +44,10 @@ namespace ET
                 throw new Exception("cant convert to entityref, entity is null");
             }
 
-            if (t.InstanceId == 0)
-            {
-                throw new Exception("cant convert to entityref, entity instanceid == 0!");
-            }
+            // if (t.InstanceId == 0)
+            // {
+            //     throw new Exception("cant convert to entityref, entity instanceid == 0!");
+            // }
             this.instanceId = t.InstanceId;
             this.entity = t;
         }
