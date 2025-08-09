@@ -9,14 +9,14 @@
             self.sessionKey_AccountName.Add(account, key);
             self.TimeoutRemoveKey(key).NoContext();
         }
-        
+
         public static string Get(this GateSessionKeyComponent self, long key)
         {
             string account = null;
             self.sessionKey.TryGetValue(key, out account);
             return account;
         }
-        
+
         public static long Get(this GateSessionKeyComponent self, string accountName)
         {
             self.sessionKey_AccountName.TryGetValue(accountName, out long key);
@@ -26,10 +26,13 @@
         public static void Remove(this GateSessionKeyComponent self, long key)
         {
             string AccountName = self.Get(key);
-            self.sessionKey_AccountName.Remove(AccountName);
+            if (!string.IsNullOrEmpty(AccountName))
+            {
+                self.sessionKey_AccountName.Remove(AccountName);
+            }
             self.sessionKey.Remove(key);
         }
-        
+
         public static void Remove(this GateSessionKeyComponent self, string AccountName)
         {
             long key = self.Get(AccountName);

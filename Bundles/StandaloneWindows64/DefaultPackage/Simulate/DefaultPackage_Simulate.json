@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/8/10 0:25:44",
+    "PackageNote": "2025/8/10 5:08:19",
     "AssetList": [
         {
             "Address": "YIUIConstAsset",
@@ -425,7 +425,7 @@
             "UnityCRC": 0,
             "FileHash": "21fc7736e26ea38ee9ed888b93cbe16a",
             "FileCRC": "00000000",
-            "FileSize": 1773836,
+            "FileSize": 1520832,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
