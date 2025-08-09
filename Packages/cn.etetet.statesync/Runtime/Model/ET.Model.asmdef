@@ -6,6 +6,7 @@
         "ET.MemoryPack",
         "ET.Recast",
         "ET.SourceGeneratorAttribute",
+        "ET.TWS.KnapsackContainer",
         "ET.TWS.NumericNotice",
         "ET.TWS.UnitCache",
         "ET.YooAssets",

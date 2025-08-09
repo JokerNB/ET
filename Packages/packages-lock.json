@@ -182,6 +182,12 @@
         "cn.etetet.startconfig": "3.0.0"
       }
     },
+    "cn.etetet.twsknapsackcontainer": {
+      "version": "file:cn.etetet.twsknapsackcontainer",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.twsnumericnotice": {
       "version": "file:cn.etetet.twsnumericnotice",
       "depth": 0,

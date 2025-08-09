@@ -6,6 +6,7 @@ namespace ET.Server
     public class UnitCache : Entity, IAwake, IDestroy
     {
         public string key;
+
         public Dictionary<long,EntityRef<Entity>> CacheComponentsDic = new Dictionary<long, EntityRef<Entity>>();
     }
 }

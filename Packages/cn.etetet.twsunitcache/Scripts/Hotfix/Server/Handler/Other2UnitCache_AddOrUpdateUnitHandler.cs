@@ -5,7 +5,7 @@
     {
         protected override async ETTask Run(Scene scene, Other2UnitCache_AddOrUpdateUnit request, UnitCache2Other_AddOrUpdateUnit response)
         {
-            UpdateUnitCacheAsync(scene,request,response).NoContext();
+            UpdateUnitCacheAsync(scene, request, response).NoContext();
             await ETTask.CompletedTask;
         }
 

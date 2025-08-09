@@ -10,7 +10,7 @@
             NumbericChange numbericChange = args;
             Unit unit = args.Unit;
 
-            unit.GetComponent<NumericNoticeComponent>().Notice(numbericChange.NumericType, numbericChange.New);
+            unit.GetComponent<NumericNoticeComponent>()?.Notice(numbericChange.NumericType, numbericChange.New);
         }
     }
 }

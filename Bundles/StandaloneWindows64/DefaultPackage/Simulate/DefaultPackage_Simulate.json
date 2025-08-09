@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/8/9 1:28:30",
+    "PackageNote": "2025/8/10 0:25:44",
     "AssetList": [
         {
             "Address": "YIUIConstAsset",
@@ -267,6 +267,14 @@
             "DependBundleIDs": []
         },
         {
+            "Address": "ItemConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/ItemConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14,
+            "DependBundleIDs": []
+        },
+        {
             "Address": "UnitConfigCategory",
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/UnitConfigCategory.bytes",
             "AssetGUID": "",
@@ -417,7 +425,7 @@
             "UnityCRC": 0,
             "FileHash": "21fc7736e26ea38ee9ed888b93cbe16a",
             "FileCRC": "00000000",
-            "FileSize": 1691056,
+            "FileSize": 1773836,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -517,7 +525,7 @@
             "UnityCRC": 0,
             "FileHash": "0c6a0998c1163285f8d4f2aabab40624",
             "FileCRC": "00000000",
-            "FileSize": 116,
+            "FileSize": 126,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

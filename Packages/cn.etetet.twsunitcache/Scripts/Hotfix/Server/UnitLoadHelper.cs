@@ -1,4 +1,6 @@
-﻿namespace ET.Server
+﻿using Unity.Mathematics;
+
+namespace ET.Server
 {
     public static class UnitLoadHelper
     {
