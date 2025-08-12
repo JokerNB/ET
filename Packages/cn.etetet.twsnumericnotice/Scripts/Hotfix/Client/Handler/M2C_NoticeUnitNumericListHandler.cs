@@ -6,13 +6,13 @@
         protected override async ETTask Run(Scene root, M2C_NoticeUnitNumericList message)
         {
             Unit unit = root?.CurrentScene()?.GetComponent<UnitComponent>()?.Get(message.UnitId);
-            NumericComponent numericComponent = unit.GetComponent<NumericComponent>();
+            NumericDataComponent NumericDataComponent = unit.GetComponent<NumericDataComponent>();
             int count = message.NumericTypeList.Count;
             for (int i = 0; i < count; i++)
             {
                 int numericType = message.NumericTypeList[i];
                 long newValue = message.NewValueList[i];
-                numericComponent?.Set(numericType, newValue);
+                NumericDataComponent?.Set(numericType, newValue);
             }
 
             await ETTask.CompletedTask;

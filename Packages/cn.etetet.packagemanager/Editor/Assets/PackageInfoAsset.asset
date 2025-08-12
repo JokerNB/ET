@@ -47,7 +47,15 @@ MonoBehaviour:
     Version: 3.0.0
   - Name: cn.etetet.twsunitcache
     Version: 
+  - Name: cn.etetet.twsunit
+    Version: 
   - Name: cn.etetet.twsnumericnotice
+    Version: 
+  - Name: cn.etetet.twsmainui
+    Version: 
+  - Name: cn.etetet.twsloginui
+    Version: 
+  - Name: cn.etetet.twsloadingui
     Version: 
   - Name: cn.etetet.twsknapsackcontainer
     Version: 
@@ -165,6 +173,8 @@ MonoBehaviour:
     Version: 2.0.23
   - Name: com.unity.ide.rider
     Version: 3.0.36
+  - Name: com.unity.feature.2d
+    Version: 2.0.1
   - Name: com.unity.ai.navigation
     Version: 2.0.8
   - Name: cn.etetet.yiuistatesync
@@ -180,5 +190,5 @@ MonoBehaviour:
   - Name: cn.etetet.db
     Version: 1.0.0
   BanPackageInfo: []
-  LastUpdateTime: 1754776564
+  LastUpdateTime: 1755021858
   UpdateInterval: 3600
