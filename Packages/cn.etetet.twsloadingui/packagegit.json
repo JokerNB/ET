@@ -1,0 +1,11 @@
+﻿{
+    "Id": 0,
+    "Name": "twsloadingui",
+    "ScriptsReferences": 
+    {
+        "Hotfix": [""],
+        "HotfixView": [""],
+        "Model": [""],
+        "ModelView": [""]
+    }
+}

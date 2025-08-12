@@ -1,0 +1,11 @@
+﻿{
+    "Id": 0,
+    "Name": "twsmainui",
+    "ScriptsReferences": 
+    {
+        "Hotfix": ["ET.TWS.MainUI"],
+        "HotfixView": ["ET.TWS.MainUI"],
+        "Model": ["ET.TWS.MainUI"],
+        "ModelView": ["ET.TWS.MainUI"]
+    }
+}

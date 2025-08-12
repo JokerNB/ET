@@ -2,6 +2,7 @@
     "name": "ET.Hotfix",
     "rootNamespace": "ET",
     "references": [
+        "",
         "ET.Core",
         "ET.Loader",
         "ET.MemoryPack",
@@ -9,6 +10,7 @@
         "ET.Recast",
         "ET.SourceGeneratorAttribute",
         "ET.TWS.KnapsackContainer",
+        "ET.TWS.MainUI",
         "ET.TWS.NumericNotice",
         "ET.TWS.UnitCache",
         "Unity.Mathematics"

@@ -187,3 +187,32 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
+    - GroupName: TWSUI
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Packages/cn.etetet.twsloginui/Assets/GameRes/YIUI
+        CollectorGUID: 7a47a77e64b007146b2b5812b6814918
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectPrefab
+        AssetTags: 
+        UserData: 
+      - CollectPath: Packages/cn.etetet.twsloadingui/Assets/GameRes/YIUI
+        CollectorGUID: 46829c5c003eeba4ab337b5e97ad549f
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectPrefab
+        AssetTags: 
+        UserData: 
+      - CollectPath: Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI
+        CollectorGUID: 4c2a19123259239419e9fc8cd3000445
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 

@@ -1,0 +1,16 @@
+﻿{
+  "name": "cn.etetet.twsloginui",
+  "displayName": "ET.TWS.LoginUI",
+  "version": "0.0.0",
+  "unity": "2022.3",
+  "description": "登录界面",
+  "author": {
+    "name": "TWS"
+  },
+  "repository": {},
+  "relatedPackages": {},
+  "dependencies": {},
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@ET-Packages"
+  }
+}

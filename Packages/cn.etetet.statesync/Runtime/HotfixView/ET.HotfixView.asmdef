@@ -2,6 +2,7 @@
     "name": "ET.HotfixView",
     "rootNamespace": "ET",
     "references": [
+        "",
         "ET.Core",
         "ET.Hotfix",
         "ET.Init",
@@ -11,6 +12,7 @@
         "ET.ModelView",
         "ET.ReferenceCollector",
         "ET.SourceGeneratorAttribute",
+        "ET.TWS.MainUI",
         "ET.UI",
         "ET.YIUIFramework",
         "ET.YooAssets",
