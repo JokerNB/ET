@@ -212,6 +212,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.twsunit": {
+      "version": "file:cn.etetet.twsrole",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.twsunitcache": {
       "version": "file:cn.etetet.twsunitcache",
       "depth": 0,

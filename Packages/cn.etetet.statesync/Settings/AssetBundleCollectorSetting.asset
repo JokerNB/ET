@@ -81,12 +81,20 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.demores/Bundles/Unit
-        CollectorGUID: 2f805b95f651fcc47a8ad0cc32706c38
+      - CollectPath: Packages/cn.etetet.twsunit/Assets/GameRes/Bundles
+        CollectorGUID: c6bd2b470bea1414eb44ce0fbd88070e
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
         FilterRuleName: CollectPrefab
+        AssetTags: 
+        UserData: 
+      - CollectPath: Packages/cn.etetet.twsunit/Assets/GameRes/Atlas
+        CollectorGUID: 6334b7b0c3cc5cf489994427682dec54
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectSprite
         AssetTags: 
         UserData: 
     - GroupName: YIUI
