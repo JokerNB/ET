@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using Unity.Mathematics;
 
 namespace ET.Server
 {
-    [FriendOf(typeof(MoveComponent))]
     [FriendOf(typeof(NumericDataComponent))]
     public static partial class UnitHelper
     {
@@ -13,24 +11,7 @@ namespace ET.Server
             NumericDataComponent nc = unit.GetComponent<NumericDataComponent>();
             unitInfo.UnitId = unit.Id;
             unitInfo.ConfigId = unit.ConfigId;
-            unitInfo.Type = (int)unit.Type();
-            unitInfo.Position = unit.Position;
-            unitInfo.Forward = unit.Forward;
-
-            MoveComponent moveComponent = unit.GetComponent<MoveComponent>();
-            if (moveComponent != null)
-            {
-                if (!moveComponent.IsArrived())
-                {
-                    unitInfo.MoveInfo = MoveInfo.Create();
-                    unitInfo.MoveInfo.Points.Add(unit.Position);
-                    for (int i = moveComponent.N; i < moveComponent.Targets.Count; ++i)
-                    {
-                        float3 pos = moveComponent.Targets[i];
-                        unitInfo.MoveInfo.Points.Add(pos);
-                    }
-                }
-            }
+            unitInfo.Type = (int)unit.UnitType;
 
             foreach ((int key, long value) in nc.NumericDic)
             {

@@ -1,0 +1,172 @@
+[
+  {
+    "Id": 1,
+    "LevelTitle": "疯狂街区",
+    "LevelDes": "大量变异者游荡在闹市区，整个城市一片混乱……",
+    "ResName": "1",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_1"
+  },
+  {
+    "Id": 2,
+    "LevelTitle": "城区公园",
+    "LevelDes": "现在这里是变异动植物的觅食区，透露着危险的气息……",
+    "ResName": "2",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_2"
+  },
+  {
+    "Id": 3,
+    "LevelTitle": "地下停车场",
+    "LevelDes": "变异爆发后，这里再也没有一辆车开出来……",
+    "ResName": "3",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_3"
+  },
+  {
+    "Id": 4,
+    "LevelTitle": "金融中心",
+    "LevelDes": "现在没人在乎你是工人还是老板……",
+    "ResName": "4",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_4"
+  },
+  {
+    "Id": 5,
+    "LevelTitle": "城市大桥",
+    "LevelDes": "军队曾在这里抵抗过灾难的蔓延，显然他们失败了……",
+    "ResName": "5",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_5"
+  },
+  {
+    "Id": 6,
+    "LevelTitle": "城郊绿地",
+    "LevelDes": "这里已经距离城市很远了，一些城市中不常见的生物也没能幸免……",
+    "ResName": "6",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_6"
+  },
+  {
+    "Id": 7,
+    "LevelTitle": "废弃农场",
+    "LevelDes": "人烟稀少的农场，变异爆发前已经废弃，现在更是人迹罕至……",
+    "ResName": "7",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_7"
+  },
+  {
+    "Id": 8,
+    "LevelTitle": "耕种区域",
+    "LevelDes": "农作物的耕种区，已经变成各种编译植物的乐园……",
+    "ResName": "8",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_8"
+  },
+  {
+    "Id": 9,
+    "LevelTitle": "牧场区域",
+    "LevelDes": "养殖牲畜的区域，变异完全改变了这里原本温暖的生物……",
+    "ResName": "9",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_9"
+  },
+  {
+    "Id": 10,
+    "LevelTitle": "乡间小路",
+    "LevelDes": "一条已经杂草丛生的小路，处处蕴藏着危险……",
+    "ResName": "10",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_10"
+  },
+  {
+    "Id": 11,
+    "LevelTitle": "军工厂警戒区",
+    "LevelDes": "这里警戒十分森严，机器人守卫已经完全失控，似乎会击败所有生物……",
+    "ResName": "11",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_11"
+  },
+  {
+    "Id": 12,
+    "LevelTitle": "工厂前院",
+    "LevelDes": "军工厂的前院，这里的守卫力量更为强大……",
+    "ResName": "12",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_12"
+  },
+  {
+    "Id": 13,
+    "LevelTitle": "工厂内部",
+    "LevelDes": "军工厂的内部，从安保级别和设施来看，这里肯定是个重要的基地……",
+    "ResName": "13",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_13"
+  },
+  {
+    "Id": 14,
+    "LevelTitle": "研究所",
+    "LevelDes": "工厂中的研究所，似乎正在研制某种重型武器……",
+    "ResName": "14",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_14"
+  },
+  {
+    "Id": 15,
+    "LevelTitle": "核心控制区",
+    "LevelDes": "整个军工厂的控制中心，看不出来被变异者破坏的痕迹，似乎隐藏着更深的秘密……",
+    "ResName": "15",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_15"
+  },
+  {
+    "Id": 16,
+    "LevelTitle": "沙漠边缘",
+    "LevelDes": "线索指向更远方，前方似乎是一片沙漠……",
+    "ResName": "16",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_16"
+  },
+  {
+    "Id": 17,
+    "LevelTitle": "荒野小镇",
+    "LevelDes": "地图上并未标记的小镇，变异爆发后更加荒芜了……",
+    "ResName": "17",
+    "CrossGameLevelAwards": [
+      1
+    ],
+    "MapResName": "Map_17"
+  }
+]

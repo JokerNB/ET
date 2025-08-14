@@ -5,27 +5,21 @@ namespace ET.Server
 {
     public static partial class UnitFactory
     {
-        public static Unit Create(Scene scene, long id, int unitType)
+        public static Unit Create(Scene scene, long id, UnitType unitType)
         {
             UnitComponent unitComponent = scene.GetComponent<UnitComponent>();
             switch (unitType)
             {
                 case UnitType.Player:
                 {
-                    Unit unit = unitComponent.AddChildWithId<Unit, int>(id, 1001);
-                    unit.AddComponent<MoveComponent>();
-                    unit.Position = new float3(-10, 0, -10);
-
-                    unit.AddComponent<NumericNoticeComponent>();
+                    Unit unit = unitComponent.AddChildWithId<Unit, int, UnitType>(id, 1001, unitType);
 
                     NumericDataComponent numericComponent = unit.AddComponent<NumericDataComponent>();
                     numericComponent.Set(ENumericType.Speed1, 6f); // 速度是6米每秒
                     numericComponent.Set(ENumericType.AOI1, 15); // 视野15米
 
-                    unit.AddComponent<KnapsackComponent>();
                     unitComponent.Add(unit);
-                    // 加入aoi
-                    unit.AddComponent<AOIEntity, int, float3>(9 * 1000, unit.Position);
+
                     return unit;
                 }
                 default:

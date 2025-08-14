@@ -30,7 +30,7 @@ namespace ET.Client
             {
                 XunLuoPathComponent xunLuoPathComponent = myUnit.GetComponent<XunLuoPathComponent>();
                 float3 nextTarget = xunLuoPathComponent.GetCurrent();
-                await myUnit.MoveToAsync(nextTarget);
+                await ETTask.CompletedTask;
                 
                 ETCancellationToken cancellationToken = await ETTaskHelper.GetContextAsync<ETCancellationToken>();
                 if (cancellationToken.IsCancel())

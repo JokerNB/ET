@@ -9,6 +9,7 @@
         "ET.SourceGeneratorAttribute",
         "ET.TWS.KnapsackContainer",
         "ET.TWS.MainUI",
+        "ET.TWS.Map",
         "ET.TWS.NumericNotice",
         "ET.TWS.UnitCache",
         "ET.YooAssets",

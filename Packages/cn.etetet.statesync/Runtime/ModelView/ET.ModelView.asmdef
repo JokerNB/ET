@@ -10,6 +10,7 @@
         "ET.ReferenceCollector",
         "ET.SourceGeneratorAttribute",
         "ET.TWS.MainUI",
+        "ET.TWS.Map",
         "ET.UI",
         "ET.YIUIFramework",
         "ET.YooAssets",

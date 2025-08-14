@@ -24,13 +24,16 @@ namespace ET.Server
             M2M_UnitTransferRequest request = M2M_UnitTransferRequest.Create();
             request.OldActorId = unit.GetActorId();
             request.Unit = unit.ToBson();
-            // foreach (Entity entity in unit.Components.Values)
-            // {
-            //     if (entity is ITransfer)
-            //     {
-            //         request.Entitys.Add(entity.ToBson());
-            //     }
-            // }
+            
+            foreach (Entity entity in unit.Components.Values)
+            {
+                if (entity is ITransfer)
+                {
+                    string name = entity.GetType().FullName;
+                    request.Entitys.Add(entity.ToBson());
+                    request.Types.Add(name);
+                }
+            }
 
             foreach (var kv in unit.GetComponent<UnitDBSaveComponent>().Bytes)
             {

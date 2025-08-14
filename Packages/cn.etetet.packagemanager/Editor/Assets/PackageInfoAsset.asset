@@ -25,6 +25,8 @@ MonoBehaviour:
     Version: 2.0.2
   - Name: cn.etetet.yiuireddot
     Version: 2.0.2
+  - Name: cn.etetet.yiuinumericconfig
+    Version: 
   - Name: cn.etetet.yiuilubangen
     Version: 
   - Name: cn.etetet.yiuiloopscrollrectasync
@@ -179,10 +181,14 @@ MonoBehaviour:
     Version: 2.0.8
   - Name: cn.etetet.yiuistatesync
     Version: 2.0.1
+  - Name: cn.etetet.yiuinumeric
+    Version: 4.0.2
   - Name: cn.etetet.yiuiluban
     Version: 3.0.5
   - Name: cn.etetet.yiuiinvoke
     Version: 4.0.3
+  - Name: cn.etetet.yiuicodeanalysis
+    Version: 1.0.1
   - Name: cn.etetet.statesync
     Version: 3.0.11
   - Name: cn.etetet.packagemanager
@@ -190,5 +196,5 @@ MonoBehaviour:
   - Name: cn.etetet.db
     Version: 1.0.0
   BanPackageInfo: []
-  LastUpdateTime: 1755021858
+  LastUpdateTime: 1755096043
   UpdateInterval: 3600

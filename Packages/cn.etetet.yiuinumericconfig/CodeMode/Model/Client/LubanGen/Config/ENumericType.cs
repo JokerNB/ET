@@ -163,6 +163,62 @@ namespace ET
         /// AOI_6 (Float)
         /// </summary>
         AOI6 = 2000046,
+        /// <summary>
+        /// Critical_0 (Float)
+        /// </summary>
+        Critical0 = 200005,
+        /// <summary>
+        /// Critical_1 (Float)
+        /// </summary>
+        Critical1 = 2000051,
+        /// <summary>
+        /// Critical_2 (Float)
+        /// </summary>
+        Critical2 = 2000052,
+        /// <summary>
+        /// Critical_3 (Float)
+        /// </summary>
+        Critical3 = 2000053,
+        /// <summary>
+        /// Critical_4 (Float)
+        /// </summary>
+        Critical4 = 2000054,
+        /// <summary>
+        /// Critical_5 (Float)
+        /// </summary>
+        Critical5 = 2000055,
+        /// <summary>
+        /// Critical_6 (Float)
+        /// </summary>
+        Critical6 = 2000056,
+        /// <summary>
+        /// Skill_0 (Float)
+        /// </summary>
+        Skill0 = 200006,
+        /// <summary>
+        /// Skill_1 (Float)
+        /// </summary>
+        Skill1 = 2000061,
+        /// <summary>
+        /// Skill_2 (Float)
+        /// </summary>
+        Skill2 = 2000062,
+        /// <summary>
+        /// Skill_3 (Float)
+        /// </summary>
+        Skill3 = 2000063,
+        /// <summary>
+        /// Skill_4 (Float)
+        /// </summary>
+        Skill4 = 2000064,
+        /// <summary>
+        /// Skill_5 (Float)
+        /// </summary>
+        Skill5 = 2000065,
+        /// <summary>
+        /// Skill_6 (Float)
+        /// </summary>
+        Skill6 = 2000066,
     }
 
 } 

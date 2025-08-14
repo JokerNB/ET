@@ -94,6 +94,7 @@ namespace ET.Server
                     list.Add(entity);
                 }
 
+                Log.Error($"UnitCacheComponent AddOrUpdate Count == {list.Count}");
                 if (list.Count > 0)
                     await self.Root().GetComponent<DBManagerComponent>().GetZoneDB(self.Zone()).Save(id, list);
             }

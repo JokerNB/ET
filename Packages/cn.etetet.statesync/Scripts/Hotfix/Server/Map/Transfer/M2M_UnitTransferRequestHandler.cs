@@ -14,14 +14,7 @@ namespace ET.Server
             unitComponent.AddChild(unit);
             unitComponent.Add(unit);
 
-            // foreach (byte[] bytes in request.Entitys)
-            // {
-            //     Entity entity = MongoHelper.Deserialize<Entity>(bytes);
-            //     unit.AddComponent(entity);
-            // }
-
             unit.AddComponent<UnitDBSaveComponent>();
-            unit.AddComponent<NumericNoticeComponent>();
             for (int i = 0; i < request.Entitys.Count; ++i)
             {
                 string k = request.Types[i];
@@ -32,9 +25,7 @@ namespace ET.Server
                 unit.AddComponent(entity);
             }
 
-            unit.AddComponent<MoveComponent>();
             unit.AddComponent<PathfindingComponent, string>(scene.Name);
-            unit.Position = new float3(-10, 0, -10);
 
             unit.AddComponent<MailBoxComponent, int>(MailBoxType.OrderedMessage);
 
@@ -48,9 +39,6 @@ namespace ET.Server
             M2C_CreateMyUnit m2CCreateUnits = M2C_CreateMyUnit.Create();
             m2CCreateUnits.Unit = UnitHelper.CreateUnitInfo(unit);
             MapMessageHelper.SendToClient(unit, m2CCreateUnits);
-
-            // 加入aoi
-            unit.AddComponent<AOIEntity, int, float3>(9 * 1000, unit.Position);
 
             // 解锁location，可以接收发给Unit的消息
             await scene.Root().GetComponent<LocationProxyComponent>().UnLock(LocationType.Unit, unit.Id, request.OldActorId, unit.GetActorId());

@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/8/12 17:20:44",
+    "PackageNote": "2025/8/14 19:36:39",
     "AssetList": [
         {
             "Address": "MainUIBG",
@@ -27,19 +27,11 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "Unit",
-            "AssetPath": "Packages/cn.etetet.demores/Bundles/Unit/Unit.prefab",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 2,
-            "DependBundleIDs": []
-        },
-        {
             "Address": "Map1",
             "AssetPath": "Packages/cn.etetet.demores/Scenes/Map1.unity",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 2,
             "DependBundleIDs": []
         },
         {
@@ -47,7 +39,7 @@
             "AssetPath": "Packages/cn.etetet.demores/Scenes/Map2.unity",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 4,
+            "BundleID": 3,
             "DependBundleIDs": []
         },
         {
@@ -55,7 +47,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Hotfix.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -63,7 +55,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Hotfix.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -71,7 +63,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.HotfixView.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -79,7 +71,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.HotfixView.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -87,7 +79,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Model.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -95,7 +87,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Model.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -103,7 +95,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.ModelView.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -111,31 +103,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.ModelView.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
-            "DependBundleIDs": []
-        },
-        {
-            "Address": "UIHelp",
-            "AssetPath": "Packages/cn.etetet.statesync/Bundles/UI/UIHelp.prefab",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 6,
-            "DependBundleIDs": []
-        },
-        {
-            "Address": "UILobby",
-            "AssetPath": "Packages/cn.etetet.statesync/Bundles/UI/UILobby.prefab",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 7,
-            "DependBundleIDs": []
-        },
-        {
-            "Address": "UILogin",
-            "AssetPath": "Packages/cn.etetet.statesync/Bundles/UI/UILogin.prefab",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 8,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -143,7 +111,7 @@
             "AssetPath": "Packages/cn.etetet.twsloadingui/Assets/GameRes/YIUI/ETTWSLoadingUI/Prefabs/ETTWSLoadingUIPanel.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 9,
+            "BundleID": 5,
             "DependBundleIDs": []
         },
         {
@@ -151,7 +119,7 @@
             "AssetPath": "Packages/cn.etetet.twsloadingui/Assets/GameRes/YIUI/ETTWSLoadingUI/Prefabs/LoadingUIView.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 9,
+            "BundleID": 5,
             "DependBundleIDs": []
         },
         {
@@ -159,7 +127,7 @@
             "AssetPath": "Packages/cn.etetet.twsloginui/Assets/GameRes/YIUI/ETTWSLoginUI/Prefabs/ETTWSLoginUIPanel.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 6,
             "DependBundleIDs": []
         },
         {
@@ -167,7 +135,7 @@
             "AssetPath": "Packages/cn.etetet.twsloginui/Assets/GameRes/YIUI/ETTWSLoginUI/Prefabs/LoginUIView.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 6,
             "DependBundleIDs": []
         },
         {
@@ -175,7 +143,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Prefabs/ETTWSMainUIPanel.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 11,
+            "BundleID": 7,
             "DependBundleIDs": []
         },
         {
@@ -183,7 +151,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Prefabs/MainUIView.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 11,
+            "BundleID": 7,
             "DependBundleIDs": []
         },
         {
@@ -191,7 +159,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/autumn.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -199,7 +167,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/bottom.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -207,7 +175,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/bottom2.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -215,7 +183,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/build.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -223,7 +191,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/Comfort_bottom.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -231,7 +199,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/Comfort_frame.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -239,7 +207,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/edit.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -247,7 +215,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/elf.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -255,7 +223,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/Ferry.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -263,7 +231,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/homeland.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -271,7 +239,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/mail.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -279,7 +247,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/more_bottom.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -287,7 +255,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/Muchmore.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -295,7 +263,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/orders.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -303,7 +271,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/Pleasure.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -311,7 +279,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/Red_dots.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -319,7 +287,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/Renderings.jpg.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -327,7 +295,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/Set_up.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -335,7 +303,7 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/spring.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -343,12 +311,188 @@
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/summer.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
             "Address": "winter",
             "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas1/winter.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 8,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "1",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/1.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "10",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/10.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "11",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/11.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "12",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/12.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "13",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/13.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "14",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/14.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "15",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/15.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "16",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/16.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "17",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/17.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "2",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/2.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "3",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/3.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "4",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/4.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "5",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/5.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "6",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/6.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "7",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/7.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "8",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/8.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "9",
+            "AssetPath": "Packages/cn.etetet.twsmainui/Assets/GameRes/YIUI/ETTWSMainUI/Sprites/Atlas2/9.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Map_1",
+            "AssetPath": "Packages/cn.etetet.twsmap/Assets/GameRes/MapAtlas/Map_1.jpg",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 10,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Map_2",
+            "AssetPath": "Packages/cn.etetet.twsmap/Assets/GameRes/MapAtlas/Map_2.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 10,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_1",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Atlas/Role_1.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_2",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Atlas/Role_2.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Unit",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Unit/Unit.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 12,
@@ -491,8 +635,56 @@
             "DependBundleIDs": []
         },
         {
+            "Address": "ChapterConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/ChapterConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "GameLevelConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/GameLevelConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19,
+            "DependBundleIDs": []
+        },
+        {
             "Address": "ItemConfigCategory",
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/ItemConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "NumericLocalizationConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericLocalizationConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "NumericValueAffectConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueAffectConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "NumericValueCheckConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueCheckConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "NumericValueLimitConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueLimitConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 19,
@@ -601,21 +793,11 @@
             "DependBundleIDs": []
         },
         {
-            "BundleName": "defaultpackage_packages_cn_etetet_demores_bundles_unit_unit.bundle",
-            "UnityCRC": 0,
-            "FileHash": "152742708a3ef9487e52c8ea9358ed2f",
-            "FileCRC": "00000000",
-            "FileSize": 1480,
-            "Encrypted": false,
-            "Tags": [],
-            "DependBundleIDs": []
-        },
-        {
             "BundleName": "defaultpackage_packages_cn_etetet_demores_scenes_map1.bundle",
             "UnityCRC": 0,
             "FileHash": "1d0a4dc437caa86bf9f96e25e2447b3c",
             "FileCRC": "00000000",
-            "FileSize": 249992,
+            "FileSize": 6941,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -635,37 +817,7 @@
             "UnityCRC": 0,
             "FileHash": "21fc7736e26ea38ee9ed888b93cbe16a",
             "FileCRC": "00000000",
-            "FileSize": 2019484,
-            "Encrypted": false,
-            "Tags": [],
-            "DependBundleIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_packages_cn_etetet_statesync_bundles_ui_uihelp.bundle",
-            "UnityCRC": 0,
-            "FileHash": "253264dc30b197e802d988080057211b",
-            "FileCRC": "00000000",
-            "FileSize": 5066,
-            "Encrypted": false,
-            "Tags": [],
-            "DependBundleIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_packages_cn_etetet_statesync_bundles_ui_uilobby.bundle",
-            "UnityCRC": 0,
-            "FileHash": "376856d10cd241147a0db178c0cf57bc",
-            "FileCRC": "00000000",
-            "FileSize": 11002,
-            "Encrypted": false,
-            "Tags": [],
-            "DependBundleIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_packages_cn_etetet_statesync_bundles_ui_uilogin.bundle",
-            "UnityCRC": 0,
-            "FileHash": "2311f2741899243c2d8393f33fba899b",
-            "FileCRC": "00000000",
-            "FileSize": 29140,
+            "FileSize": 2081224,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -706,6 +858,46 @@
             "FileHash": "665b8d6e7651eb619ec19cc8b6131246",
             "FileCRC": "00000000",
             "FileSize": 1156309,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsmainui_assets_gameres_yiui_ettwsmainui_sprites_atlas2.bundle",
+            "UnityCRC": 0,
+            "FileHash": "f409da52c1eef039b29d35129d64ccfc",
+            "FileCRC": "00000000",
+            "FileSize": 1628003,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsmap_assets_gameres_mapatlas.bundle",
+            "UnityCRC": 0,
+            "FileHash": "dee26cb90354087a9ab14744b67f265f",
+            "FileCRC": "00000000",
+            "FileSize": 4160926,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_atlas.bundle",
+            "UnityCRC": 0,
+            "FileHash": "ceee76ca529dfe2f8becdbf58d17c8f3",
+            "FileCRC": "00000000",
+            "FileSize": 86565,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_unit_unit.bundle",
+            "UnityCRC": 0,
+            "FileHash": "d03daa5fde3f83e409f4df5e055b373c",
+            "FileCRC": "00000000",
+            "FileSize": 3789,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -775,7 +967,7 @@
             "UnityCRC": 0,
             "FileHash": "0c6a0998c1163285f8d4f2aabab40624",
             "FileCRC": "00000000",
-            "FileSize": 126,
+            "FileSize": 2661,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

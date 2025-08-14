@@ -79,6 +79,24 @@
 <var name="AOI4" value="2000044" alias="AOI_4" comment = "AOI_4 (Float)"/>
 <var name="AOI5" value="2000045" alias="AOI_5" comment = "AOI_5 (Float)"/>
 <var name="AOI6" value="2000046" alias="AOI_6" comment = "AOI_6 (Float)"/>
+    
+<!-- Critical -->
+<var name="Critical0" value="200005"  alias="暴击伤害_0" comment = "Critical_0 (Float)"/>
+<var name="Critical1" value="2000051"  alias="暴击伤害_1" comment = "Critical_1 (Float)"/>
+<var name="Critical2" value="2000052"  alias="暴击伤害_2" comment = "Critical_2 (Float)"/>
+<var name="Critical3" value="2000053"  alias="暴击伤害_3" comment = "Critical_3 (Float)"/>
+<var name="Critical4" value="2000054"  alias="暴击伤害_4" comment = "Critical_4 (Float)"/>
+<var name="Critical5" value="2000055"  alias="暴击伤害_5" comment = "Critical_5 (Float)"/>
+<var name="Critical6" value="2000056"  alias="暴击伤害_6" comment = "Critical_6 (Float)"/>
+    
+<!-- Skill -->
+<var name="Skill0" value="200006"  alias="技能伤害_0" comment = "Skill_0 (Float)"/>
+<var name="Skill1" value="2000061"  alias="技能伤害_1" comment = "Skill_1 (Float)"/>
+<var name="Skill2" value="2000062"  alias="技能伤害_2" comment = "Skill_2 (Float)"/>
+<var name="Skill3" value="2000063"  alias="技能伤害_3" comment = "Skill_3 (Float)"/>
+<var name="Skill4" value="2000064"  alias="技能伤害_4" comment = "Skill_4 (Float)"/>
+<var name="Skill5" value="2000065"  alias="技能伤害_5" comment = "Skill_5 (Float)"/>
+<var name="Skill6" value="2000066"  alias="技能伤害_6" comment = "Skill_6 (Float)"/>
 
 </enum>
 </module>

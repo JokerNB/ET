@@ -15,14 +15,18 @@ namespace ET.Server
             {
                 unit = UnitFactory.Create(gateMapComponent.Scene, player.UnitId, UnitType.Player);
                 unit.AddComponent<UnitDBSaveComponent>();
+                unit.AddComponent<KnapsackComponent>();
 
                 UnitCacheHelper.AddOrUpdateUnitAllCache(unit);
             }
-            else
-            {
-                if (unit.GetComponent<UnitDBSaveComponent>() == null)
-                    unit.AddComponent<UnitDBSaveComponent>();
-            }
+            //非缓存服需要存储数据的组件
+            if (unit.GetComponent<UnitDBSaveComponent>() == null)
+                unit.AddComponent<UnitDBSaveComponent>();
+            if (unit.GetComponent<NumericDataComponent>() == null)
+                unit.AddComponent<NumericDataComponent>();
+            if (unit.GetComponent<NumericNoticeComponent>() == null)
+                unit.AddComponent<NumericNoticeComponent>();
+            
 
             return (isNewUnit, unit);
         }

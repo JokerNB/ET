@@ -1,0 +1,11 @@
+﻿{
+    "Id": 0,
+    "Name": "twsmap",
+    "ScriptsReferences": 
+    {
+        "Hotfix": ["ET.TWS.Map"],
+        "HotfixView": ["ET.TWS.Map"],
+        "Model": ["ET.TWS.Map"],
+        "ModelView": ["ET.TWS.Map"]
+    }
+}
