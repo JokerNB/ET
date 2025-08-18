@@ -194,7 +194,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 8023439063275413302}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -224,3 +224,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BelongToUnitId: 0
+  unitType: 0

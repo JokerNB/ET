@@ -14,24 +14,16 @@ namespace ET.Client
             self.dirY = dirY;
 
             self.CreateMonster(configId).NoContext();
-            // self.AddComponent<NumericDataComponent>();
         }
-
+        
         [EntitySystem]
-        private static void Update(this ET.Client.MonsterComponent self)
+        private static void Destroy(this ET.Client.MonsterComponent self)
         {
-            if(self.go == null)
-                return;
-            //获取unit坐标进行移动
-            var unit = UnitHelper.GetMyUnitFromCurrentScene(self.Root().CurrentScene());
-            if (unit == null)
-                return;
-            var unitTr = unit.GetComponent<GameObjectComponent>().GameObject.transform;
-            var tr = self.go.transform;
-            
-            //无旋转移动
-            var newPos = Vector2.MoveTowards(tr.position, unitTr.position, Time.deltaTime * 1);
-            tr.position = newPos;
+            self.UnityEventTrigger.OnTriggerEnterAction -= self.OnTriggerEnterAction;
+            self.UnityEventTrigger.OnTriggerExitAction -= self.OnTriggerExitAction;
+            self.UnityEventTrigger.OnFixedUpdateAction -= self.OnFixedUpdate;
+
+            YIUIGameObjectPool.Inst.Put(self.go);
         }
 
         public static async ETTask CreateMonster(this MonsterComponent self, int monsterConfigId)
@@ -52,7 +44,9 @@ namespace ET.Client
             BoxCollider2D boxCollider2D = referenceCollector.Get<BoxCollider2D>("BoxCollider");
             boxCollider2D.size = sprite.bounds.size;
             boxCollider2D.offset = sprite.bounds.center;
-            boxCollider2D.enabled = true;
+
+            self.rigidbody2D = self.go.GetComponentInChildren<Rigidbody2D>();
+            self.rigidbody2D.simulated = true;
 
             self.InitColliderTrigger();
         }
@@ -74,11 +68,13 @@ namespace ET.Client
 
         public static void InitColliderTrigger(this MonsterComponent self)
         {
-            self.colliderTrigger = self.go.GetComponentInChildren<ColliderTrigger>();
-            self.colliderTrigger.OnTriggerEnterAction += self.OnTriggerEnterAction;
-            self.colliderTrigger.OnTriggerExitAction += self.OnTriggerExitAction;
-            self.colliderTrigger.BelongToUnitId = self.Id;
-            self.colliderTrigger.unitType = (int)self.UnitType;
+            self.UnityEventTrigger = self.go.GetComponentInChildren<UnityEventTrigger>();
+            self.UnityEventTrigger.OnTriggerEnterAction += self.OnTriggerEnterAction;
+            self.UnityEventTrigger.OnTriggerExitAction += self.OnTriggerExitAction;
+            self.UnityEventTrigger.BelongToUnitId = self.Id;
+            self.UnityEventTrigger.unitType = (int)self.UnitType;
+
+            self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdate;
         }
 
         public static void OnTriggerEnterAction(this MonsterComponent self, Collision2D collision2D, long unitId, int unitType)
@@ -93,6 +89,18 @@ namespace ET.Client
             if (unitType != (int)UnitType.Player)
                 return;
             Log.Error($"Monster_ExitAction {collision2D.gameObject.name} , unitId {unitId}");
+        }
+
+        public static void OnFixedUpdate(this MonsterComponent self)
+        {
+            var unit = UnitHelper.GetMyUnitFromCurrentScene(self.Root().CurrentScene());
+            if (unit == null)
+                return;
+            var unitTr = unit.GetComponent<GameObjectComponent>().GameObject.transform;
+            if (self.rigidbody2D == null)
+                return;
+            Vector2 pos = new Vector2(unitTr.position.x, unitTr.position.y);
+            self.rigidbody2D.MovePosition(self.rigidbody2D.position + (pos - self.rigidbody2D.position) * Time.fixedDeltaTime * 1);
         }
 
         public static void TestEnterChangeColor(this MonsterComponent self)

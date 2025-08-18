@@ -23,8 +23,13 @@ namespace ET.Client
         public Transform Transform { get; private set; }
 
         public Transform MainCameraTr;
-        
+
         //碰撞触发器
-        public ColliderTrigger colliderTrigger;
+        public UnityEventTrigger UnityEventTrigger;
+
+        public SpriteRenderer SpriteRenderer;
+
+        public float horizontalinput;
+        public float Verticalinput;
     }
 }
