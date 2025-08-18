@@ -212,6 +212,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.twsmonster": {
+      "version": "file:cn.etetet.twsmonster",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.twsnumericnotice": {
       "version": "file:cn.etetet.twsnumericnotice",
       "depth": 0,
@@ -282,6 +288,12 @@
         "cn.etetet.core": "4.0.0",
         "cn.etetet.yiuiinvoke": "4.0.1"
       }
+    },
+    "cn.etetet.yiuigameobjectpool": {
+      "version": "file:cn.etetet.yiuigameobjectpool",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "cn.etetet.yiuigm": {
       "version": "file:cn.etetet.yiuigm",

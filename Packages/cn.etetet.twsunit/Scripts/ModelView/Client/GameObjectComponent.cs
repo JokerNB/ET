@@ -3,7 +3,7 @@ using UnityEngine;
 namespace ET.Client
 {
     [ComponentOf(typeof(Unit))]
-    public class GameObjectComponent : Entity, IAwake, IDestroy, IUpdate
+    public class GameObjectComponent : Entity, IAwake<GameObject>, IDestroy, IUpdate
     {
         private GameObject gameObject;
 
@@ -23,5 +23,8 @@ namespace ET.Client
         public Transform Transform { get; private set; }
 
         public Transform MainCameraTr;
+        
+        //碰撞触发器
+        public ColliderTrigger colliderTrigger;
     }
 }

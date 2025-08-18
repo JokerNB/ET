@@ -7,11 +7,43 @@ namespace ET.Client
     public static partial class GameObjectComponentSystem
     {
         [EntitySystem]
-        private static void Awake(this GameObjectComponent self)
+        private static void Awake(this GameObjectComponent self, GameObject go)
         {
             self.MainCameraTr = Camera.main.transform;
             //初始化镜头位置
             self.MainCameraTr.position = new Vector3(0, 0, -10f);
+            self.GameObject = go;
+            self.InitColliderBox();
+            self.InitColliderTrigger();
+        }
+
+        public static void InitColliderBox(this GameObjectComponent self)
+        {
+            var sprite = self.GameObject.GetComponentInChildren<SpriteRenderer>().sprite;
+            var boxCollider2D = self.GameObject.GetComponentInChildren<BoxCollider2D>();
+            boxCollider2D.size = sprite.bounds.size;
+            boxCollider2D.offset = sprite.bounds.center;
+        }
+
+        public static void InitColliderTrigger(this GameObjectComponent self)
+        {
+            self.colliderTrigger = self.GameObject.GetComponentInChildren<ColliderTrigger>();
+            self.colliderTrigger.OnTriggerEnterAction += self.OnTriggerEnterAction;
+            self.colliderTrigger.OnTriggerExitAction += self.OnTriggerExitAction;
+            self.colliderTrigger.BelongToUnitId = self.GetParent<Unit>().Id;
+            self.colliderTrigger.unitType = (int)self.GetParent<Unit>().UnitType;
+        }
+
+        private static void OnTriggerEnterAction(this GameObjectComponent self, Collision2D collision2D, long unitId, int unitType)
+        {
+            var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterComponent>(unitId);
+            monsterComponent?.TestEnterChangeColor();
+        }
+
+        private static void OnTriggerExitAction(this GameObjectComponent self, Collision2D collision2D, long unitId, int unitType)
+        {
+            var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterComponent>(unitId);
+            monsterComponent?.TestExitChangeColor();
         }
 
         [EntitySystem]
@@ -58,6 +90,8 @@ namespace ET.Client
             else if (Verticalinput < 0)
                 dirY = -1;
 
+            //须保证顺序，地图计算需要根据相机位置
+            self.Root().CurrentScene().GetComponent<CameraComponent>().OrthographicCameraEdge();
             self.Root().CurrentScene().GetComponent<MapComponent>().RefreshMap(dirX, dirY);
         }
     }

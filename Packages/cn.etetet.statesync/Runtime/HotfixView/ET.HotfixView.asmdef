@@ -14,6 +14,7 @@
         "ET.SourceGeneratorAttribute",
         "ET.TWS.MainUI",
         "ET.TWS.Map",
+        "ET.TWS.Monster",
         "ET.UI",
         "ET.YIUIFramework",
         "ET.YooAssets",

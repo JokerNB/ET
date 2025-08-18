@@ -4,6 +4,7 @@ namespace ET.Client
 {
     [EntitySystemOf(typeof(MapChildComponent))]
     [FriendOfAttribute(typeof(ET.Client.MapComponent))]
+    [FriendOfAttribute(typeof(ET.Client.CameraComponent))]
     public static partial class MapChildComponentSystem
     {
         [EntitySystem]
@@ -30,19 +31,19 @@ namespace ET.Client
         {
             if (!self.go.activeSelf)
                 return true;
-            var mapComponent = self.GetParent<MapComponent>();
+            var cameraComponent = self.Root().CurrentScene().GetComponent<CameraComponent>();
             //摄像机宽高
-            var wh = mapComponent.cameraBoundSize;
+            var wh = cameraComponent.cameraBoundSize;
             //摄像机中心点
-            var cameraPos = mapComponent.MainCameraTr.position;
+            var cameraPos = cameraComponent.MainCameraTr.position;
             //摄像机左边
             float minX = cameraPos.x - wh.x * 0.5f;
             float maxX = cameraPos.x + wh.x * 0.5f;
             float minY = cameraPos.y - wh.y * 0.5f;
             float maxY = cameraPos.y + wh.y * 0.5f;
-            
-            bool isOverSizeX = self.spriteSize.x >= mapComponent.cameraBoundSize.x;
-            bool isOverSizeY = self.spriteSize.y >= mapComponent.cameraBoundSize.y;
+
+            bool isOverSizeX = self.spriteSize.x >= cameraComponent.cameraBoundSize.x;
+            bool isOverSizeY = self.spriteSize.y >= cameraComponent.cameraBoundSize.y;
 
             if (isOverSizeX)
             {
@@ -69,28 +70,15 @@ namespace ET.Client
                 self.isYTopInside = self.centerPos.y + self.spriteSize.y * 0.5f >= minY && self.centerPos.y + self.spriteSize.y * 0.5f <= maxY;
                 self.isYBottomInside = self.centerPos.y - self.spriteSize.y * 0.5f >= minY && self.centerPos.y - self.spriteSize.y * 0.5f <= maxY;
             }
-            
+
             bool isInX = self.isXLeftInside || self.isXRightInside;
             bool isInY = self.isYTopInside || self.isYBottomInside;
-            
+
             bool isNeedUpdate = !(isInX && isInY);
             if (isNeedUpdate)
                 self.go.SetActive(false);
 
             return isNeedUpdate;
-            // if (isXLeftInside)
-            // {
-            //     if (isInY)
-            //         return false;
-            // }
-            // else if(self.isXRightInside)
-            // {
-            //     if (isInY)
-            //         return false;
-            // }
-
-            // Log.Error($"isInX:{isInX}, isInY:{isInY}, {!isInX || !isInY}");
-            // return !isInX || !isInY;
         }
 
         /// <summary>
@@ -101,28 +89,28 @@ namespace ET.Client
         public static Vector2 GetRemain(this MapChildComponent self)
         {
             //摄像机宽高
-            MapComponent mapComponent = self.GetParent<MapComponent>();
+            var cameraComponent = self.Root().CurrentScene().GetComponent<CameraComponent>();
             //摄像机边界
-            float minX = mapComponent.cameraBoundPos.x;
-            float maxX = mapComponent.cameraBoundPos.z;
-            float minY = mapComponent.cameraBoundPos.y;
-            float maxY = mapComponent.cameraBoundPos.w;
-            
+            float minX = cameraComponent.cameraBoundPos.x;
+            float maxX = cameraComponent.cameraBoundPos.z;
+            float minY = cameraComponent.cameraBoundPos.y;
+            float maxY = cameraComponent.cameraBoundPos.w;
+
 
             float remainX = 0;
             float remainY = 0;
-            
-            bool isIgnoreX = self.spriteSize.x >= mapComponent.cameraBoundSize.x;
-            bool isIgnoreY = self.spriteSize.y >= mapComponent.cameraBoundSize.y;
+
+            bool isIgnoreX = self.spriteSize.x >= cameraComponent.cameraBoundSize.x;
+            bool isIgnoreY = self.spriteSize.y >= cameraComponent.cameraBoundSize.y;
             if (isIgnoreX)
             {
                 if (self.isXLeftInside || self.isXRightInside)
                 {
-                    remainX = Mathf.Abs(self.centerPos.x - mapComponent.MainCameraTr.position.x);
+                    remainX = Mathf.Abs(self.centerPos.x - cameraComponent.MainCameraTr.position.x);
                 }
                 else
                 {
-                    remainX = mapComponent.cameraBoundSize.x;
+                    remainX = cameraComponent.cameraBoundSize.x;
                 }
             }
             else
@@ -139,11 +127,11 @@ namespace ET.Client
             {
                 if (self.isYTopInside || self.isYBottomInside)
                 {
-                    remainY = Mathf.Abs(self.centerPos.y - mapComponent.MainCameraTr.position.y);
+                    remainY = Mathf.Abs(self.centerPos.y - cameraComponent.MainCameraTr.position.y);
                 }
                 else
                 {
-                    remainY = mapComponent.cameraBoundSize.y;
+                    remainY = cameraComponent.cameraBoundSize.y;
                 }
             }
             else

@@ -12,6 +12,7 @@
         "ET.TWS.KnapsackContainer",
         "ET.TWS.MainUI",
         "ET.TWS.Map",
+        "ET.TWS.Monster",
         "ET.TWS.NumericNotice",
         "ET.TWS.UnitCache",
         "Unity.Mathematics"

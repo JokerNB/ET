@@ -5,6 +5,7 @@ namespace ET.Client
 {
     [EntitySystemOf(typeof(MapComponent))]
     [FriendOfAttribute(typeof(ET.Client.MapChildComponent))]
+    [FriendOfAttribute(typeof(ET.Client.CameraComponent))]
     public static partial class MapComponentSystem
     {
         [EntitySystem]
@@ -26,15 +27,11 @@ namespace ET.Client
             self.spriteSize = new Vector2(self.Sprite.bounds.size.x, self.Sprite.bounds.size.y);
             //初始化位置
             self.MapSpriteRenderer.transform.position = Vector3.zero + new Vector3(0, 0, 10f);
-            //设置摄像机边界点
-            self.OrthographicCameraEdge();
-            //摄像机宽高
-            self.cameraBoundSize.x = self.cameraBoundPos.z - self.cameraBoundPos.x;
-            self.cameraBoundSize.y = self.cameraBoundPos.w - self.cameraBoundPos.y;
+            CameraComponent cameraComponent = self.Root().CurrentScene().GetComponent<CameraComponent>();
             //铺地图
-            int x = Mathf.CeilToInt(self.cameraBoundSize.x / self.spriteSize.x);
-            int y = Mathf.CeilToInt(self.cameraBoundSize.y / self.spriteSize.y);
-            self.UpdateMapChild(x, y, self.cameraBoundPos.x, self.cameraBoundPos.y);
+            int x = Mathf.CeilToInt(cameraComponent.cameraBoundSize.x / self.spriteSize.x);
+            int y = Mathf.CeilToInt(cameraComponent.cameraBoundSize.y / self.spriteSize.y);
+            self.UpdateMapChild(x, y, cameraComponent.cameraBoundPos.x, cameraComponent.cameraBoundPos.y);
             self.MapSpriteRenderer.gameObject.SetActive(false);
         }
 
@@ -60,28 +57,6 @@ namespace ET.Client
                 self.Sprite,
                 self.MapRoot, self.MapSpriteRenderer.gameObject, self.spriteSize);
             self.MapChildren.Add(mapChildComponent);
-        }
-
-        public static void OrthographicCameraEdge(this ET.Client.MapComponent self)
-        {
-            float CameraX = self.MainCameraTr.position.x;
-            float RotationX = self.MainCameraTr.rotation.x;
-            //相机大小
-            float CameraSize = self.MainCamera.orthographicSize;
-            //相机高度（y轴坐标）
-            float CameraY = self.MainCameraTr.position.y;
-
-            float CXSize = CameraSize * 2 * ((float)Screen.width / (float)Screen.height);
-            float CYSize = CameraSize * 2 / Mathf.Cos(RotationX * Mathf.Deg2Rad);
-
-            //左
-            self.cameraBoundPos.x = CameraX - CXSize / 2;
-            //下
-            self.cameraBoundPos.y = CameraY - CameraSize;
-            //右
-            self.cameraBoundPos.z = CameraX + CXSize / 2;
-            //上
-            self.cameraBoundPos.w = CameraY + CYSize / 2;
         }
 
         public static void CheckMapChild(this ET.Client.MapComponent self, int dirX, int dirY)
@@ -150,14 +125,16 @@ namespace ET.Client
             totalShow_X_Num = list_x.Count;
             totalShow_Y_Num = list_y.Count;
 
-            bool checkX = totalShow_X >= self.cameraBoundSize.x || Mathf.Abs(totalShow_X - self.cameraBoundSize.x) <= 0.1f;
-            bool checkY = totalShow_Y >= self.cameraBoundSize.y || Mathf.Abs(totalShow_Y - self.cameraBoundSize.y) <= 0.1f;
+            CameraComponent cameraComponent = self.Root().CurrentScene().GetComponent<CameraComponent>();
+
+            bool checkX = totalShow_X >= cameraComponent.cameraBoundSize.x || Mathf.Abs(totalShow_X - cameraComponent.cameraBoundSize.x) <= 0.1f;
+            bool checkY = totalShow_Y >= cameraComponent.cameraBoundSize.y || Mathf.Abs(totalShow_Y - cameraComponent.cameraBoundSize.y) <= 0.1f;
 
             if (checkX && checkY && dontNeedUpdateChildrenCount >= totalShow_X_Num * totalShow_Y_Num)
                 return;
 
-            float remainX = self.cameraBoundSize.x - totalShow_X;
-            float remainY = self.cameraBoundSize.y - totalShow_Y;
+            float remainX = cameraComponent.cameraBoundSize.x - totalShow_X;
+            float remainY = cameraComponent.cameraBoundSize.y - totalShow_Y;
             int x = Mathf.CeilToInt(remainX / self.spriteSize.x);
             int y = Mathf.CeilToInt(remainY / self.spriteSize.y);
 
@@ -252,10 +229,9 @@ namespace ET.Client
                 }
             }
         }
-        
+
         public static void RefreshMap(this ET.Client.MapComponent self, int dirX, int dirY)
         {
-            self.OrthographicCameraEdge();
             self.CheckMapChild(dirX, dirY);
         }
     }

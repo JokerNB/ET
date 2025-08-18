@@ -53,6 +53,10 @@ MonoBehaviour:
     Version: 
   - Name: cn.etetet.twsnumericnotice
     Version: 
+  - Name: cn.etetet.twsmonster
+    Version: 
+  - Name: cn.etetet.twsmap
+    Version: 
   - Name: cn.etetet.twsmainui
     Version: 
   - Name: cn.etetet.twsloginui
@@ -196,5 +200,5 @@ MonoBehaviour:
   - Name: cn.etetet.db
     Version: 1.0.0
   BanPackageInfo: []
-  LastUpdateTime: 1755096043
+  LastUpdateTime: 1755248255
   UpdateInterval: 3600

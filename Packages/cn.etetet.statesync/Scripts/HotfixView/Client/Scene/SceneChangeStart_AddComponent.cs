@@ -21,8 +21,10 @@ namespace ET.Client
                 //await SceneManager.LoadSceneAsync(currentScene.Name);
 
                 currentScene.AddComponent<OperaComponent>();
+                currentScene.AddComponent<CameraComponent>();
                 currentScene.AddComponent<ChapterComponent>();
                 currentScene.AddComponent<MapComponent>();
+                currentScene.AddComponent<MonsterManagerComponent>();
             }
             catch (Exception e)
             {

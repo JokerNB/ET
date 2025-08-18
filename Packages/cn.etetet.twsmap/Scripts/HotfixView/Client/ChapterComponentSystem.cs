@@ -30,7 +30,7 @@ namespace ET.Client
             // int chapterConfigId = self.CurrentSelectChapter;
             // int idx_GameLevel = self.CurrentSelectLevel;
             int chapterConfigId = 1;
-            int idx_GameLevel = 1;
+            int idx_GameLevel = 0;
             if (!self.isContainsGameLevel(chapterConfigId, idx_GameLevel))
             {
                 Log.Error($"Dont Contains GameLevelConfig, Please Check :{chapterConfigId}.{idx_GameLevel} ");

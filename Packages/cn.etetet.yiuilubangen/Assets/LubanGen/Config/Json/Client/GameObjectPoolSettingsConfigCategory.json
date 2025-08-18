@@ -1,0 +1,18 @@
+[
+  {
+    "id": "测试资源名称",
+    "timeout": 20,
+    "MaxCacheCount": 5,
+    "CacheTime": 10,
+    "MinCacheCount": 5,
+    "MaxCacheCountNewResName": "一个新的预制"
+  },
+  {
+    "id": "Monster",
+    "timeout": 0,
+    "MaxCacheCount": 100,
+    "CacheTime": 10,
+    "MinCacheCount": 100,
+    "MaxCacheCountNewResName": "Monster"
+  }
+]

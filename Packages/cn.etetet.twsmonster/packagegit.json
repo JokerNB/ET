@@ -1,0 +1,11 @@
+﻿{
+    "Id": 0,
+    "Name": "twsmonster",
+    "ScriptsReferences": 
+    {
+        "Hotfix": ["ET.TWS.Monster"],
+        "HotfixView": ["ET.TWS.Monster"],
+        "Model": ["ET.TWS.Monster"],
+        "ModelView": ["ET.TWS.Monster"]
+    }
+}

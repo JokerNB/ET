@@ -89,7 +89,9 @@ namespace ET.Client
             }
             
             Log.Debug("进入游戏成功！");
-
+            root.GetComponent<PlayerComponent>().MyId = netClient2MainLoginGame.PlayerId;
+            root.GetComponent<PlayerComponent>().Token = token;
+            
             await EventSystem.Instance.PublishAsync(root, new LoginFinish());
         }
     }

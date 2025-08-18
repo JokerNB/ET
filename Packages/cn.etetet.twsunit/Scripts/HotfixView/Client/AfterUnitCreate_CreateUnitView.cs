@@ -20,7 +20,7 @@ namespace ET.Client
             go.transform.position = Vector3.zero;
             go.GetComponentInChildren<SpriteRenderer>().sprite = sprite;
 
-            unit.AddComponent<GameObjectComponent>().GameObject = go;
+            unit.AddComponent<GameObjectComponent, GameObject>(go);
             unit.AddComponent<AnimatorComponent>();
             await ETTask.CompletedTask;
         }

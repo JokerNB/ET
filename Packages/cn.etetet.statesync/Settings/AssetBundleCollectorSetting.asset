@@ -224,3 +224,24 @@ MonoBehaviour:
         FilterRuleName: CollectSprite
         AssetTags: 
         UserData: 
+    - GroupName: Monster
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Packages/cn.etetet.twsmonster/Assets/GameRes/Atlas
+        CollectorGUID: 99ae9614b3b6405469f9c681d9e259c3
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectSprite
+        AssetTags: 
+        UserData: 
+      - CollectPath: Packages/cn.etetet.twsmonster/Assets/GameRes/Bundles
+        CollectorGUID: e93dad90bf85f11429a28d394ad02ab3
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectPrefab
+        AssetTags: 
+        UserData: 

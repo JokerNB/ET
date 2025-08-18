@@ -20,5 +20,27 @@
     "CriticalHit": 2,
     "SkillHit": 2,
     "ResName": "Role_2"
+  },
+  {
+    "Id": 1101,
+    "UnitType": 2,
+    "Name": "小萝卜",
+    "Des": "",
+    "Attack": 10,
+    "Hp": 20,
+    "CriticalHit": 0,
+    "SkillHit": 0,
+    "ResName": "Monster_1"
+  },
+  {
+    "Id": 1102,
+    "UnitType": 3,
+    "Name": "大罗卜",
+    "Des": "",
+    "Attack": 20,
+    "Hp": 40,
+    "CriticalHit": 0,
+    "SkillHit": 0,
+    "ResName": "Monster_2"
   }
 ]
