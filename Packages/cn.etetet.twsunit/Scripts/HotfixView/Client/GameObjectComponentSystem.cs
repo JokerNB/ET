@@ -9,9 +9,6 @@ namespace ET.Client
         [EntitySystem]
         private static void Awake(this GameObjectComponent self, GameObject go)
         {
-            self.MainCameraTr = Camera.main.transform;
-            //初始化镜头位置
-            self.MainCameraTr.position = new Vector3(0, 0, -10f);
             self.GameObject = go;
             self.SpriteRenderer = self.GameObject.GetComponentInChildren<SpriteRenderer>();
             self.InitColliderBox();
@@ -56,13 +53,13 @@ namespace ET.Client
 
         private static void OnTriggerEnterAction(this GameObjectComponent self, Collision2D collision2D, long unitId, int unitType)
         {
-            var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterComponent>(unitId);
+            var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterGameObjectComponent>(unitId);
             monsterComponent?.TestEnterChangeColor();
         }
 
         private static void OnTriggerExitAction(this GameObjectComponent self, Collision2D collision2D, long unitId, int unitType)
         {
-            var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterComponent>(unitId);
+            var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterGameObjectComponent>(unitId);
             monsterComponent?.TestExitChangeColor();
         }
 
@@ -82,12 +79,11 @@ namespace ET.Client
                 self.Verticalinput *= 0.6f;
             }
 
-            var x = Vector3.right * self.horizontalinput * Time.fixedDeltaTime * 10;
-            var y = Vector3.up * self.Verticalinput * Time.fixedDeltaTime * 10;
+            float speed0 = self.GetParent<Unit>().NumericComponent.GetAsFloat(ENumericType.Speed0);
+            var x = Vector3.right * self.horizontalinput * Time.fixedDeltaTime * speed0;
+            var y = Vector3.up * self.Verticalinput * Time.fixedDeltaTime * speed0;
             self.Transform.Translate(x);
             self.Transform.Translate(y);
-            self.MainCameraTr.Translate(x);
-            self.MainCameraTr.Translate(y);
             //计算相机边界，调整地图
             int dirX = 0;
             if (self.horizontalinput > 0)
@@ -110,8 +106,10 @@ namespace ET.Client
                 dirY = -1;
 
             //须保证顺序，地图计算需要根据相机位置
+            self.Root().CurrentScene().GetComponent<CameraComponent>().Translate(x);
+            self.Root().CurrentScene().GetComponent<CameraComponent>().Translate(y);
             self.Root().CurrentScene().GetComponent<CameraComponent>().OrthographicCameraEdge();
-            self.Root().CurrentScene().GetComponent<MapComponent>().RefreshMap(dirX, dirY);
+            self.Root().CurrentScene().GetComponent<MapManagerComponent>().RefreshMap(dirX, dirY);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace ET.Client
                 currentScene.AddComponent<OperaComponent>();
                 currentScene.AddComponent<CameraComponent>();
                 currentScene.AddComponent<ChapterComponent>();
-                currentScene.AddComponent<MapComponent>();
+                currentScene.AddComponent<MapManagerComponent>();
                 currentScene.AddComponent<MonsterManagerComponent>();
             }
             catch (Exception e)

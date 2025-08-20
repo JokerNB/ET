@@ -23,6 +23,9 @@ namespace ET
             ResName = _buf.ReadString();
             {int n0 = _buf.ReadSize(); CrossGameLevelAwards = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); CrossGameLevelAwards.Add(_e0);}}
             MapResName = _buf.ReadString();
+            TotalTime = _buf.ReadFloat();
+            {int n0 = _buf.ReadSize(); MonsterConfigData = new System.Collections.Generic.List<CreateMonsterData>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { CreateMonsterData _e0;  _e0 = global::ET.CreateMonsterData.DeserializeCreateMonsterData(_buf); MonsterConfigData.Add(_e0);}}
+            FinalMonsterConfigData = global::ET.CreateMonsterData.DeserializeCreateMonsterData(_buf);
 
             EndInit();
         }
@@ -56,6 +59,18 @@ namespace ET
         /// 地图资源
         /// </summary>
         public readonly string MapResName;
+        /// <summary>
+        /// 总时间/s
+        /// </summary>
+        public readonly float TotalTime;
+        /// <summary>
+        /// 怪物数据配置
+        /// </summary>
+        public readonly System.Collections.Generic.List<CreateMonsterData> MonsterConfigData;
+        /// <summary>
+        /// 最终Boss配置
+        /// </summary>
+        public readonly CreateMonsterData FinalMonsterConfigData;
     
         public const int __ID__ = -909516684;
         public override int GetTypeId() => __ID__;
@@ -74,6 +89,9 @@ namespace ET
             + "ResName:" + ResName + ","
             + "CrossGameLevelAwards:" + Luban.StringUtil.CollectionToString(CrossGameLevelAwards) + ","
             + "MapResName:" + MapResName + ","
+            + "TotalTime:" + TotalTime + ","
+            + "MonsterConfigData:" + Luban.StringUtil.CollectionToString(MonsterConfigData) + ","
+            + "FinalMonsterConfigData:" + FinalMonsterConfigData + ","
             + "}";
         }
 

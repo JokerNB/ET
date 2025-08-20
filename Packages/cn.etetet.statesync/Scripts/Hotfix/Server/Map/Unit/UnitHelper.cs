@@ -12,15 +12,10 @@ namespace ET.Server
             unitInfo.UnitId = unit.Id;
             unitInfo.ConfigId = unit.ConfigId;
             unitInfo.Type = (int)unit.UnitType;
-
-            foreach ((int key, long value) in nc.NumericDic)
-            {
-                unitInfo.KV.Add(key, value);
-            }
-
+            unitInfo.KV = new Dictionary<int, long>(nc.NumericDic);
             return unitInfo;
         }
-        
+
         // 获取看见unit的玩家，主要用于广播
         public static Dictionary<long, EntityRef<AOIEntity>> GetBeSeePlayers(this Unit self)
         {

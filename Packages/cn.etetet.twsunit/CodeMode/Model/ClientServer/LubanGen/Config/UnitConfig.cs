@@ -21,10 +21,7 @@ namespace ET
             UnitType = (UnitType)_buf.ReadInt();
             Name = _buf.ReadString();
             Des = _buf.ReadString();
-            Attack = _buf.ReadInt();
-            Hp = _buf.ReadInt();
-            CriticalHit = _buf.ReadInt();
-            SkillHit = _buf.ReadInt();
+            {int n0 = _buf.ReadSize(); NumericTypeValue = new System.Collections.Generic.Dictionary<ENumericType, long>(n0 * 3 / 2);for(var i0 = 0 ; i0 < n0 ; i0++) { ENumericType _k0;  _k0 = (ENumericType)_buf.ReadInt(); long _v0;  _v0 = _buf.ReadLong();     NumericTypeValue.Add(_k0, _v0);}}
             ResName = _buf.ReadString();
 
             EndInit();
@@ -52,21 +49,9 @@ namespace ET
         /// </summary>
         public readonly string Des;
         /// <summary>
-        /// 基础攻击
+        /// 数值
         /// </summary>
-        public readonly int Attack;
-        /// <summary>
-        /// 基础生命
-        /// </summary>
-        public readonly int Hp;
-        /// <summary>
-        /// 暴击伤害
-        /// </summary>
-        public readonly int CriticalHit;
-        /// <summary>
-        /// 技能伤害
-        /// </summary>
-        public readonly int SkillHit;
+        public readonly System.Collections.Generic.Dictionary<ENumericType, long> NumericTypeValue;
         /// <summary>
         /// 图片名称
         /// </summary>
@@ -87,10 +72,7 @@ namespace ET
             + "UnitType:" + UnitType + ","
             + "Name:" + Name + ","
             + "Des:" + Des + ","
-            + "Attack:" + Attack + ","
-            + "Hp:" + Hp + ","
-            + "CriticalHit:" + CriticalHit + ","
-            + "SkillHit:" + SkillHit + ","
+            + "NumericTypeValue:" + Luban.StringUtil.CollectionToString(NumericTypeValue) + ","
             + "ResName:" + ResName + ","
             + "}";
         }

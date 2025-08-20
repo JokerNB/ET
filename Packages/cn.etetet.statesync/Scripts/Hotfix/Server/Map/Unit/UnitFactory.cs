@@ -1,5 +1,4 @@
 ﻿using System;
-using Unity.Mathematics;
 
 namespace ET.Server
 {
@@ -12,11 +11,11 @@ namespace ET.Server
             {
                 case UnitType.Player:
                 {
-                    Unit unit = unitComponent.AddChildWithId<Unit, int, UnitType>(id, 1001, unitType);
+                    UnitConfig unitConfig = UnitConfigCategory.Instance.GetFirstUnitConfig();
+                    Unit unit = unitComponent.AddChildWithId<Unit, int, UnitType>(id, unitConfig.Id, unitConfig.UnitType);
 
                     NumericDataComponent numericComponent = unit.AddComponent<NumericDataComponent>();
-                    numericComponent.Set(ENumericType.Speed1, 6f); // 速度是6米每秒
-                    numericComponent.Set(ENumericType.AOI1, 15); // 视野15米
+                    numericComponent.InitSet(unitConfig.NumericTypeValue);
 
                     unitComponent.Add(unit);
 

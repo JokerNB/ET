@@ -18,5 +18,19 @@ namespace ET.Client
             EventSystem.Instance.Publish(unit.Scene(), new AfterUnitCreate() { Unit = unit });
             return unit;
         }
+
+        public static Unit CreateMonster(Scene currentScene, int monsterConfigId)
+        {
+            UnitComponent unitComponent = currentScene.GetComponent<UnitComponent>();
+            UnitConfig monsterConfig = UnitConfigCategory.Instance.Get(monsterConfigId);
+            UnitType unitType = monsterConfig.UnitType;
+            Unit unit = unitComponent.AddChild<Unit, int, UnitType>(monsterConfigId, unitType);
+            NumericDataComponent numericDataComponent = unit.AddComponent<NumericDataComponent>();
+            numericDataComponent.InitSet(monsterConfig.NumericTypeValue);
+            
+            EventSystem.Instance.Publish(unit.Scene(), new AfterMonsterCreate() { Unit = unit });
+
+            return unit;
+        }
     }
 }

@@ -18,7 +18,7 @@
             "$id": 2,
             "$type": "3|System.Collections.Generic.GenericEqualityComparer`1[[System.String, mscorlib]], mscorlib"
         },
-        "$rlength": 5,
+        "$rlength": 9,
         "$rcontent": [
             {
                 "$k": "yiuilubangen",
@@ -69,19 +69,59 @@
                     "Alias": null,
                     "Desc": null
                 }
+            },
+            {
+                "$k": "twsmap",
+                "$v": {
+                    "$id": 8,
+                    "$type": 4,
+                    "PackageName": "twsmap",
+                    "Alias": null,
+                    "Desc": null
+                }
+            },
+            {
+                "$k": "twsmmo",
+                "$v": {
+                    "$id": 9,
+                    "$type": 4,
+                    "PackageName": "twsmmo",
+                    "Alias": null,
+                    "Desc": null
+                }
+            },
+            {
+                "$k": "twsmonster",
+                "$v": {
+                    "$id": 10,
+                    "$type": 4,
+                    "PackageName": "twsmonster",
+                    "Alias": null,
+                    "Desc": null
+                }
+            },
+            {
+                "$k": "yiuigameobjectpool",
+                "$v": {
+                    "$id": 11,
+                    "$type": 4,
+                    "PackageName": "yiuigameobjectpool",
+                    "Alias": null,
+                    "Desc": null
+                }
             }
         ]
     },
     "LubanEditorConfigSettings": {
-        "$id": 8,
+        "$id": 12,
         "$type": "5|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[YIUILuban.Editor.LubanConfigEditorData, ET.YIUI.LubanTools.Editor]], mscorlib]], mscorlib",
         "comparer": $iref:2,
-        "$rlength": 5,
+        "$rlength": 9,
         "$rcontent": [
             {
                 "$k": "yiuilubangen",
                 "$v": {
-                    "$id": 9,
+                    "$id": 13,
                     "$type": "6|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[YIUILuban.Editor.LubanConfigEditorData, ET.YIUI.LubanTools.Editor]], mscorlib",
                     "comparer": $iref:2,
                     "$rlength": 13,
@@ -89,7 +129,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Config\\Datas\\AI.xlsx",
                             "$v": {
-                                "$id": 10,
+                                "$id": 14,
                                 "$type": "7|YIUILuban.Editor.LubanConfigEditorData, ET.YIUI.LubanTools.Editor",
                                 "Name": "AI.xlsx",
                                 "Alias": null,
@@ -100,7 +140,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Config\\Datas\\Unit.xlsx",
                             "$v": {
-                                "$id": 11,
+                                "$id": 15,
                                 "$type": 7,
                                 "Name": "Unit.xlsx",
                                 "Alias": null,
@@ -111,7 +151,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Localhost\\Datas\\StartMachine.xlsx",
                             "$v": {
-                                "$id": 12,
+                                "$id": 16,
                                 "$type": 7,
                                 "Name": "StartMachine.xlsx",
                                 "Alias": null,
@@ -122,7 +162,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Localhost\\Datas\\StartProcess.xlsx",
                             "$v": {
-                                "$id": 13,
+                                "$id": 17,
                                 "$type": 7,
                                 "Name": "StartProcess.xlsx",
                                 "Alias": null,
@@ -133,7 +173,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Localhost\\Datas\\StartScene.xlsx",
                             "$v": {
-                                "$id": 14,
+                                "$id": 18,
                                 "$type": 7,
                                 "Name": "StartScene.xlsx",
                                 "Alias": null,
@@ -144,7 +184,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Localhost\\Datas\\StartZone.xlsx",
                             "$v": {
-                                "$id": 15,
+                                "$id": 19,
                                 "$type": 7,
                                 "Name": "StartZone.xlsx",
                                 "Alias": null,
@@ -155,7 +195,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Release\\Datas\\StartMachine.xlsx",
                             "$v": {
-                                "$id": 16,
+                                "$id": 20,
                                 "$type": 7,
                                 "Name": "StartMachine.xlsx",
                                 "Alias": null,
@@ -166,7 +206,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Release\\Datas\\StartProcess.xlsx",
                             "$v": {
-                                "$id": 17,
+                                "$id": 21,
                                 "$type": 7,
                                 "Name": "StartProcess.xlsx",
                                 "Alias": null,
@@ -177,7 +217,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Release\\Datas\\StartScene.xlsx",
                             "$v": {
-                                "$id": 18,
+                                "$id": 22,
                                 "$type": 7,
                                 "Name": "StartScene.xlsx",
                                 "Alias": null,
@@ -188,7 +228,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Release\\Datas\\StartZone.xlsx",
                             "$v": {
-                                "$id": 19,
+                                "$id": 23,
                                 "$type": 7,
                                 "Name": "StartZone.xlsx",
                                 "Alias": null,
@@ -199,7 +239,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Release/Base\\__beans__.xlsx",
                             "$v": {
-                                "$id": 20,
+                                "$id": 24,
                                 "$type": 7,
                                 "Name": "__beans__.xlsx",
                                 "Alias": null,
@@ -210,7 +250,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Release/Base\\__enums__.xlsx",
                             "$v": {
-                                "$id": 21,
+                                "$id": 25,
                                 "$type": 7,
                                 "Name": "__enums__.xlsx",
                                 "Alias": null,
@@ -221,7 +261,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuilubangen/Luban/Release/Base\\__tables__.xlsx",
                             "$v": {
-                                "$id": 22,
+                                "$id": 26,
                                 "$type": 7,
                                 "Name": "__tables__.xlsx",
                                 "Alias": null,
@@ -235,10 +275,10 @@
             {
                 "$k": "twsknapsackcontainer",
                 "$v": {
-                    "$id": 23,
+                    "$id": 27,
                     "$type": 6,
                     "comparer": {
-                        "$id": 24,
+                        "$id": 28,
                         "$type": 3
                     },
                     "$rlength": 1,
@@ -246,7 +286,7 @@
                         {
                             "$k": "Packages/cn.etetet.twsknapsackcontainer/Luban/Config\\Datas\\Item.xlsx",
                             "$v": {
-                                "$id": 25,
+                                "$id": 29,
                                 "$type": 7,
                                 "Name": "Item.xlsx",
                                 "Alias": null,
@@ -260,10 +300,10 @@
             {
                 "$k": "twsrole",
                 "$v": {
-                    "$id": 26,
+                    "$id": 30,
                     "$type": 6,
                     "comparer": {
-                        "$id": 27,
+                        "$id": 31,
                         "$type": 3
                     },
                     "$rlength": 5,
@@ -271,7 +311,7 @@
                         {
                             "$k": "Packages/cn.etetet.twsrole/Luban/Config\\Datas\\RoleConfig.xlsx",
                             "$v": {
-                                "$id": 28,
+                                "$id": 32,
                                 "$type": 7,
                                 "Name": "RoleConfig.xlsx",
                                 "Alias": null,
@@ -282,7 +322,7 @@
                         {
                             "$k": "Packages/cn.etetet.twsrole/Luban/Config/Base\\__beans__.xlsx",
                             "$v": {
-                                "$id": 29,
+                                "$id": 33,
                                 "$type": 7,
                                 "Name": "__beans__.xlsx",
                                 "Alias": null,
@@ -293,7 +333,7 @@
                         {
                             "$k": "Packages/cn.etetet.twsrole/Luban/Config/Base\\__enums__.xlsx",
                             "$v": {
-                                "$id": 30,
+                                "$id": 34,
                                 "$type": 7,
                                 "Name": "__enums__.xlsx",
                                 "Alias": null,
@@ -304,7 +344,7 @@
                         {
                             "$k": "Packages/cn.etetet.twsrole/Luban/Config/Base\\__tables__.xlsx",
                             "$v": {
-                                "$id": 31,
+                                "$id": 35,
                                 "$type": 7,
                                 "Name": "__tables__.xlsx",
                                 "Alias": null,
@@ -315,7 +355,7 @@
                         {
                             "$k": "Packages/cn.etetet.twsrole/Luban/Config\\Datas\\Role.xlsx",
                             "$v": {
-                                "$id": 32,
+                                "$id": 36,
                                 "$type": 7,
                                 "Name": "Role.xlsx",
                                 "Alias": null,
@@ -329,10 +369,10 @@
             {
                 "$k": "twsunit",
                 "$v": {
-                    "$id": 33,
+                    "$id": 37,
                     "$type": 6,
                     "comparer": {
-                        "$id": 34,
+                        "$id": 38,
                         "$type": 3
                     },
                     "$rlength": 1,
@@ -340,7 +380,7 @@
                         {
                             "$k": "Packages/cn.etetet.twsunit/Luban/Config\\Datas\\Unit.xlsx",
                             "$v": {
-                                "$id": 35,
+                                "$id": 39,
                                 "$type": 7,
                                 "Name": "Unit.xlsx",
                                 "Alias": null,
@@ -354,15 +394,15 @@
             {
                 "$k": "yiuinumericconfig",
                 "$v": {
-                    "$id": 36,
+                    "$id": 40,
                     "$type": 6,
-                    "comparer": $iref:34,
+                    "comparer": $iref:38,
                     "$rlength": 6,
                     "$rcontent": [
                         {
                             "$k": "Packages/cn.etetet.yiuinumericconfig/Luban/Config\\Datas\\NumericLocalization.xlsx",
                             "$v": {
-                                "$id": 37,
+                                "$id": 41,
                                 "$type": 7,
                                 "Name": "NumericLocalization.xlsx",
                                 "Alias": null,
@@ -373,7 +413,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuinumericconfig/Luban/Config\\Datas\\NumericValueAffect.json",
                             "$v": {
-                                "$id": 38,
+                                "$id": 42,
                                 "$type": 7,
                                 "Name": "NumericValueAffect.json",
                                 "Alias": null,
@@ -384,7 +424,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuinumericconfig/Luban/Config\\Datas\\NumericValueCheck.json",
                             "$v": {
-                                "$id": 39,
+                                "$id": 43,
                                 "$type": 7,
                                 "Name": "NumericValueCheck.json",
                                 "Alias": null,
@@ -395,7 +435,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuinumericconfig/Luban/Config\\Datas\\NumericValueLimit.xlsx",
                             "$v": {
-                                "$id": 40,
+                                "$id": 44,
                                 "$type": 7,
                                 "Name": "NumericValueLimit.xlsx",
                                 "Alias": null,
@@ -406,7 +446,7 @@
                         {
                             "$k": "Packages/cn.etetet.yiuinumericconfig/Luban/Config\\Other\\NumericType.xlsx",
                             "$v": {
-                                "$id": 41,
+                                "$id": 45,
                                 "$type": 7,
                                 "Name": "NumericType.xlsx",
                                 "Alias": null,
@@ -417,11 +457,124 @@
                         {
                             "$k": "Packages/cn.etetet.yiuinumericconfig/Luban/Config\\Other\\NumericValueAffect.xlsx",
                             "$v": {
-                                "$id": 42,
+                                "$id": 46,
                                 "$type": 7,
                                 "Name": "NumericValueAffect.xlsx",
                                 "Alias": null,
                                 "Path": "Packages/cn.etetet.yiuinumericconfig/Luban/Config\\Other\\NumericValueAffect.xlsx",
+                                "Desc": null
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "$k": "twsmap",
+                "$v": {
+                    "$id": 47,
+                    "$type": 6,
+                    "comparer": {
+                        "$id": 48,
+                        "$type": 3
+                    },
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$k": "Packages/cn.etetet.twsmap/Luban/Config\\Datas\\Chapter.xlsx",
+                            "$v": {
+                                "$id": 49,
+                                "$type": 7,
+                                "Name": "Chapter.xlsx",
+                                "Alias": null,
+                                "Path": "Packages/cn.etetet.twsmap/Luban/Config\\Datas\\Chapter.xlsx",
+                                "Desc": null
+                            }
+                        },
+                        {
+                            "$k": "Packages/cn.etetet.twsmap/Luban/Config\\Datas\\GameLevel.xlsx",
+                            "$v": {
+                                "$id": 50,
+                                "$type": 7,
+                                "Name": "GameLevel.xlsx",
+                                "Alias": null,
+                                "Path": "Packages/cn.etetet.twsmap/Luban/Config\\Datas\\GameLevel.xlsx",
+                                "Desc": null
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "$k": "twsmmo",
+                "$v": {
+                    "$id": 51,
+                    "$type": 6,
+                    "comparer": $iref:48,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$k": "Packages/cn.etetet.twsmmo/Luban/Config\\Datas\\Cast.xlsx",
+                            "$v": {
+                                "$id": 52,
+                                "$type": 7,
+                                "Name": "Cast.xlsx",
+                                "Alias": null,
+                                "Path": "Packages/cn.etetet.twsmmo/Luban/Config\\Datas\\Cast.xlsx",
+                                "Desc": null
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "$k": "twsmonster",
+                "$v": {
+                    "$id": 53,
+                    "$type": 6,
+                    "comparer": $iref:48,
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$k": "Packages/cn.etetet.twsmonster/Luban/Config\\Datas\\GameObjectPoolSettings.xlsx",
+                            "$v": {
+                                "$id": 54,
+                                "$type": 7,
+                                "Name": "GameObjectPoolSettings.xlsx",
+                                "Alias": null,
+                                "Path": "Packages/cn.etetet.twsmonster/Luban/Config\\Datas\\GameObjectPoolSettings.xlsx",
+                                "Desc": null
+                            }
+                        },
+                        {
+                            "$k": "Packages/cn.etetet.twsmonster/Luban/Config\\Datas\\Monster.xlsx",
+                            "$v": {
+                                "$id": 55,
+                                "$type": 7,
+                                "Name": "Monster.xlsx",
+                                "Alias": null,
+                                "Path": "Packages/cn.etetet.twsmonster/Luban/Config\\Datas\\Monster.xlsx",
+                                "Desc": null
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "$k": "yiuigameobjectpool",
+                "$v": {
+                    "$id": 56,
+                    "$type": 6,
+                    "comparer": $iref:48,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$k": "Packages/cn.etetet.yiuigameobjectpool/Luban/Config\\Datas\\GameObjectPoolSettings.xlsx",
+                            "$v": {
+                                "$id": 57,
+                                "$type": 7,
+                                "Name": "GameObjectPoolSettings.xlsx",
+                                "Alias": null,
+                                "Path": "Packages/cn.etetet.yiuigameobjectpool/Luban/Config\\Datas\\GameObjectPoolSettings.xlsx",
                                 "Desc": null
                             }
                         }

@@ -9,8 +9,13 @@ namespace ET.Client
         private static void Awake(this ET.Client.CameraComponent self)
         {
             self.MainCamera = Camera.main;
-            self.MainCameraTr.position = new Vector3(0, 0, -50f);
+            self.MainCameraTr.position = new Vector3(0, 0, -10f);
             self.OrthographicCameraEdge();
+        }
+
+        public static void Translate(this ET.Client.CameraComponent self, Vector3 pos)
+        {
+            self.MainCameraTr.Translate(pos);
         }
 
         public static void OrthographicCameraEdge(this ET.Client.CameraComponent self)
@@ -33,10 +38,16 @@ namespace ET.Client
             self.cameraBoundPos.z = CameraX + CXSize / 2;
             //上
             self.cameraBoundPos.w = CameraY + CYSize / 2;
-            
+
             //摄像机宽高
             self.cameraBoundSize.x = self.cameraBoundPos.z - self.cameraBoundPos.x;
             self.cameraBoundSize.y = self.cameraBoundPos.w - self.cameraBoundPos.y;
+        }
+
+        public static bool CheckObjectInCamera(this ET.Client.CameraComponent self, Vector3 position)
+        {
+            var viewportPoint = self.MainCamera.WorldToViewportPoint(position);
+            return viewportPoint.x is >= 0 and <= 1 && viewportPoint.y is >= 0 and <= 1;
         }
     }
 }

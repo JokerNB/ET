@@ -225,3 +225,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BelongToUnitId: 0
   unitType: 0
+  isInCamera: 0

@@ -7,6 +7,6 @@ namespace ET.Client
     {
         public Dictionary<int, List<int>> ChapterLevelsDic = new Dictionary<int, List<int>>();
         public int CurrentSelectChapter = 0;
-        public int CurrentSelectLevel = 0;
+        public int CurrentSelectLevelIdx = 0;
     }
 }

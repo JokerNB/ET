@@ -140,7 +140,7 @@
     "alias": "当前血量",
     "desc": "当前血量",
     "not_grow": true,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -149,7 +149,7 @@
     "alias": "最大血量",
     "desc": "最大血量",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -158,7 +158,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -167,7 +167,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -176,7 +176,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -185,7 +185,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -194,7 +194,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -203,7 +203,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -212,7 +212,7 @@
     "alias": "速度",
     "desc": "速度",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -221,7 +221,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -230,7 +230,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -239,7 +239,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -248,7 +248,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -257,7 +257,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -266,7 +266,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -275,7 +275,7 @@
     "alias": "AOI",
     "desc": "AOI",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -284,7 +284,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -293,7 +293,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -302,7 +302,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -311,7 +311,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -320,7 +320,7 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
     "notice_type": 0
   },
   {
@@ -329,7 +329,142 @@
     "alias": "",
     "desc": "",
     "not_grow": false,
-    "need_save": true,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 200005,
+    "check": 4,
+    "alias": "暴击伤害",
+    "desc": "暴击伤害",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000051,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000052,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000053,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000054,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000055,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000056,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 200006,
+    "check": 4,
+    "alias": "技能伤害",
+    "desc": "技能伤害",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000061,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000062,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000063,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000064,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000065,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 2000066,
+    "check": 4,
+    "alias": "",
+    "desc": "",
+    "not_grow": false,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
+    "id": 200007,
+    "check": 1,
+    "alias": "普攻伤害",
+    "desc": "普攻伤害",
+    "not_grow": true,
+    "need_save": false,
     "notice_type": 0
   }
 ]

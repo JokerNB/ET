@@ -22,8 +22,6 @@ namespace ET.Client
 
         public Transform Transform { get; private set; }
 
-        public Transform MainCameraTr;
-
         //碰撞触发器
         public UnityEventTrigger UnityEventTrigger;
 

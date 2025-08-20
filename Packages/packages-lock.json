@@ -212,6 +212,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.twsmmo": {
+      "version": "file:cn.etetet.twsmmo",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.twsmonster": {
       "version": "file:cn.etetet.twsmonster",
       "depth": 0,

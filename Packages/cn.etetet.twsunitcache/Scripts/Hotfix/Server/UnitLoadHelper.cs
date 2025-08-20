@@ -23,7 +23,12 @@ namespace ET.Server
             if (unit.GetComponent<UnitDBSaveComponent>() == null)
                 unit.AddComponent<UnitDBSaveComponent>();
             if (unit.GetComponent<NumericDataComponent>() == null)
-                unit.AddComponent<NumericDataComponent>();
+            {
+                //TODO:数值组件未存档，后续针对需要存入数据库的数值进行存档
+                var numericDataComponent = unit.AddComponent<NumericDataComponent>();
+                UnitConfig unitConfig = UnitConfigCategory.Instance.Get(unit.ConfigId);
+                numericDataComponent.InitSet(unitConfig.NumericTypeValue);
+            }
             if (unit.GetComponent<NumericNoticeComponent>() == null)
                 unit.AddComponent<NumericNoticeComponent>();
             

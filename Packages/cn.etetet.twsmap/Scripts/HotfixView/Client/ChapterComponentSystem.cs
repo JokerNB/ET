@@ -43,13 +43,13 @@ namespace ET.Client
         public static void SetCurrentSelect(this ET.Client.ChapterComponent self, int chapterConfigId, int idx_GameLevel)
         {
             self.CurrentSelectChapter = chapterConfigId;
-            self.CurrentSelectLevel = idx_GameLevel;
+            self.CurrentSelectLevelIdx = idx_GameLevel;
         }
 
         public static void ClearCurrentSelect(this ET.Client.ChapterComponent self)
         {
             self.CurrentSelectChapter = 0;
-            self.CurrentSelectLevel = 0;
+            self.CurrentSelectLevelIdx = 0;
         }
     }
 }

@@ -224,6 +224,14 @@ MonoBehaviour:
         FilterRuleName: CollectSprite
         AssetTags: 
         UserData: 
+      - CollectPath: Packages/cn.etetet.twsmap/Assets/GameRes/Bundles
+        CollectorGUID: cea8fe8ecfffb534ebf4254e79daf45a
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectPrefab
+        AssetTags: 
+        UserData: 
     - GroupName: Monster
       GroupDesc: 
       AssetTags: 

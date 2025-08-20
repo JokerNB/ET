@@ -11,9 +11,6 @@ namespace ET
         public int ConfigId { get; set; } //配置表id
         public UnitType UnitType { get; set; }
 
-        [BsonElement]
-        private float3 position; //坐标
-
         protected override string ViewName
         {
             get
