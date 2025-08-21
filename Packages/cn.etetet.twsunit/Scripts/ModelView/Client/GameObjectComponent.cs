@@ -22,10 +22,8 @@ namespace ET.Client
 
         public Transform Transform { get; private set; }
 
-        //碰撞触发器
-        public UnityEventTrigger UnityEventTrigger;
-
         public SpriteRenderer SpriteRenderer;
+        public UnityEventTrigger UnityEventTrigger;
 
         public float horizontalinput;
         public float Verticalinput;

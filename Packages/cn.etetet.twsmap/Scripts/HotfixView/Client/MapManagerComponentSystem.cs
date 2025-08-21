@@ -11,7 +11,10 @@ namespace ET.Client
         [EntitySystem]
         private static void Awake(this ET.Client.MapManagerComponent self)
         {
-            self.MapRootTr = GameObject.Find("World").GetComponent<ReferenceCollector>().Get<Transform>("MapRoot");
+            var referenceCollector = GameObject.Find("World").GetComponent<ReferenceCollector>();
+            self.MapRootTr = referenceCollector.Get<Transform>("MapRoot");
+            self.MapNav = referenceCollector.Get<PolyNav2D>("PolyNav2D");
+            self.MapNavCollider = self.MapNav.gameObject.GetComponent<PolygonCollider2D>();
             self.InitMap().NoContext();
         }
 
@@ -47,6 +50,7 @@ namespace ET.Client
                 }
             }
             
+            self.RefreshNav();
         }
 
         public static void CreateMapChild(this ET.Client.MapManagerComponent self, Vector2 center_Child)
@@ -224,12 +228,30 @@ namespace ET.Client
                     }
                 }
             }
-            
         }
 
         public static void RefreshMap(this ET.Client.MapManagerComponent self, int dirX, int dirY)
         {
             self.CheckMapChild(dirX, dirY);
+            self.RefreshNav();
+        }
+
+        public static void RefreshNav(this ET.Client.MapManagerComponent self)
+        {
+            //TODO:根据地图资源设置可行走区域
+            //先根据照相机位置设置可行走区域
+            var cameraComponent = self.Root().CurrentScene().GetComponent<CameraComponent>();
+            var cameraBoundPos = cameraComponent.cameraBoundPos;
+            float offset = 20;
+            List<Vector2> points = new List<Vector2>()
+            {
+                new Vector2(cameraBoundPos.x - offset, cameraBoundPos.y - offset), //左下
+                new Vector2(cameraBoundPos.x - offset, cameraBoundPos.w + offset), //左上
+                new Vector2(cameraBoundPos.z + offset, cameraBoundPos.w + offset), //右上
+                new Vector2(cameraBoundPos.z + offset, cameraBoundPos.y - offset) //右下
+            };
+            self.MapNavCollider.SetPath(0, points);
+            self.MapNav.GenerateMap(true);
         }
     }
 }

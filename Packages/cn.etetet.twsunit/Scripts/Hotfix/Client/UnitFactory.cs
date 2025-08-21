@@ -25,6 +25,7 @@ namespace ET.Client
             UnitConfig monsterConfig = UnitConfigCategory.Instance.Get(monsterConfigId);
             UnitType unitType = monsterConfig.UnitType;
             Unit unit = unitComponent.AddChild<Unit, int, UnitType>(monsterConfigId, unitType);
+            unitComponent.Add(unit);
             NumericDataComponent numericDataComponent = unit.AddComponent<NumericDataComponent>();
             numericDataComponent.InitSet(monsterConfig.NumericTypeValue);
             

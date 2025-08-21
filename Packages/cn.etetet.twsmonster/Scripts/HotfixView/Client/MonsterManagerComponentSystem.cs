@@ -23,6 +23,7 @@ namespace ET.Client
 
     [EntitySystemOf(typeof(MonsterManagerComponent))]
     [FriendOfAttribute(typeof(ET.Client.ChapterComponent))]
+    [FriendOfAttribute(typeof(ET.UnitComponent))]
     public static partial class MonsterManagerComponentSystem
     {
         [EntitySystem]
@@ -40,12 +41,12 @@ namespace ET.Client
                 //先创建一次
                 self.CreateNormalMonster();
                 self.Timers_NormalMonster.Add(self.Root().GetComponent<TimerComponent>()
-                        .NewRepeatedTimer((long)(createMonsterData.Interval * 1000), TimerInvokeType.CreateNormalMonster,self));
+                        .NewRepeatedTimer((long)(createMonsterData.Interval * 1000), TimerInvokeType.CreateNormalMonster, self));
             }
 
             CreateMonsterData finalMonsterConfigData = gameLevelConfig.FinalMonsterConfigData;
             self.Timer_FinalMonster = self.Root().GetComponent<TimerComponent>()
-                    .NewRepeatedTimer((long)(finalMonsterConfigData.Interval * 1000), TimerInvokeType.CreateFinalMonster,self);
+                    .NewRepeatedTimer((long)(finalMonsterConfigData.Interval * 1000), TimerInvokeType.CreateFinalMonster, self);
 
             await ETTask.CompletedTask;
         }
@@ -69,16 +70,33 @@ namespace ET.Client
                 Log.Error("monster config doesn't exist");
                 return;
             }
-            
+
             for (int i = 0; i < createMonsterData.Value.CreateNum; i++)
             {
                 UnitFactory.CreateMonster(self.Root().CurrentScene(), createMonsterData.Value.MonsterConfigId);
             }
         }
 
+        public static void MoveAllMonster(this ET.Client.MonsterManagerComponent self)
+        {
+            var monsters = self.Root().CurrentScene().GetComponent<UnitComponent>().monsters;
+            foreach (Unit unit in monsters)
+            {
+                unit.GetComponent<MonsterGameObjectComponent>()?.Move();
+            }
+        }
+
         public static void CreateFinalMonster(this ET.Client.MonsterManagerComponent self)
         {
-            //清理所有小怪
+            //清理定时器
+            for (int i = 0; i < self.Timers_NormalMonster.Count; i++)
+            {
+                long time = self.Timers_NormalMonster[i];
+                self.Root().GetComponent<TimerComponent>().Remove(ref time);
+            }
+            self.Timers_NormalMonster.Clear();
+
+            //清理小怪
             self.Root().CurrentScene().GetComponent<UnitComponent>().RemoveAllMonster();
             GameLevelConfig gameLevelConfig = self.Root().CurrentScene().GetComponent<ChapterComponent>().GetGameLevelConfig();
             CreateMonsterData finalMonsterConfigData = gameLevelConfig.FinalMonsterConfigData;

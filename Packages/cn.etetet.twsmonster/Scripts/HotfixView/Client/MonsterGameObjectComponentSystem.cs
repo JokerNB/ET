@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
 
 namespace ET.Client
 {
@@ -18,10 +17,6 @@ namespace ET.Client
         [EntitySystem]
         private static void Destroy(this ET.Client.MonsterGameObjectComponent self)
         {
-            self.UnityEventTrigger.OnTriggerEnterAction -= self.OnTriggerEnterAction;
-            self.UnityEventTrigger.OnTriggerExitAction -= self.OnTriggerExitAction;
-            self.UnityEventTrigger.OnFixedUpdateAction -= self.OnFixedUpdate;
-
             YIUIGameObjectPool.Inst.Put(self.go);
         }
 
@@ -35,19 +30,14 @@ namespace ET.Client
                     .LoadAssetAsync<Sprite>($"Packages/cn.etetet.twsmonster/Assets/GameRes/Atlas/{self.GetParent<Unit>().Config().ResName}");
             spriteRenderer.sprite = sprite;
             self.goTr = self.go.transform;
-            self.goTr.position = self.GetCreatePosition(Random.Range(-1,2),Random.Range(-1,2));
             self.goTr.name = $"{self.Id}";
             self.spriteRenderer = spriteRenderer;
-
-            //初始化碰撞体范围
-            BoxCollider2D boxCollider2D = referenceCollector.Get<BoxCollider2D>("BoxCollider");
-            boxCollider2D.size = sprite.bounds.size;
-            boxCollider2D.offset = sprite.bounds.center;
-
-            self.rigidbody2D = self.go.GetComponentInChildren<Rigidbody2D>();
-            self.rigidbody2D.simulated = true;
-
+            self.agent = self.go.GetComponent<PolyNavAgent>();
+            Vector2 pos = self.GetCreatePosition(Random.Range(-1, 2), Random.Range(-1, 2));
+            self.agent.position = pos;
+            
             self.InitColliderTrigger();
+            self.InitAgent();
         }
 
         //坐标在屏幕外
@@ -65,41 +55,24 @@ namespace ET.Client
             return new Vector3(Random.Range(posX_Min, posX_Max), Random.Range(posY_Min, posY_Max));
         }
 
+        public static void InitAgent(this MonsterGameObjectComponent self)
+        {
+            var numericDataComponent = self.GetParent<Unit>().NumericComponent;
+            float speed = numericDataComponent.GetAsFloat(ENumericType.Speed0);
+            self.agent.maxSpeed = speed;
+        }
+
         public static void InitColliderTrigger(this MonsterGameObjectComponent self)
         {
             self.UnityEventTrigger = self.go.GetComponentInChildren<UnityEventTrigger>();
-            self.UnityEventTrigger.OnTriggerEnterAction += self.OnTriggerEnterAction;
-            self.UnityEventTrigger.OnTriggerExitAction += self.OnTriggerExitAction;
-            self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdate;
+            self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdateAction;
             self.UnityEventTrigger.BelongToUnitId = self.Id;
             self.UnityEventTrigger.unitType = (int)self.GetParent<Unit>().UnitType;
-
         }
 
-        public static void OnTriggerEnterAction(this MonsterGameObjectComponent self, Collision2D collision2D, long unitId, int unitType)
+        public static void OnFixedUpdateAction(this MonsterGameObjectComponent self)
         {
-            if (unitType != (int)UnitType.Player)
-                return;
-            Log.Error($"Monster_EnterAction {collision2D.gameObject.name} , unitId {unitId}");
-        }
-
-        public static void OnTriggerExitAction(this MonsterGameObjectComponent self, Collision2D collision2D, long unitId, int unitType)
-        {
-            if (unitType != (int)UnitType.Player)
-                return;
-            Log.Error($"Monster_ExitAction {collision2D.gameObject.name} , unitId {unitId}");
-        }
-
-        public static void OnFixedUpdate(this MonsterGameObjectComponent self)
-        {
-            var unit = UnitHelper.GetMyUnitFromCurrentScene(self.Root().CurrentScene());
-            if (unit == null)
-                return;
-            var unitTr = unit.GetComponent<GameObjectComponent>().GameObject.transform;
-            if (self.rigidbody2D == null)
-                return;
-            Vector2 pos = new Vector2(unitTr.position.x, unitTr.position.y);
-            self.rigidbody2D.MovePosition(self.rigidbody2D.position + (pos - self.rigidbody2D.position) * Time.fixedDeltaTime * 1);
+            self.Move();
         }
 
         public static void TestEnterChangeColor(this MonsterGameObjectComponent self)
@@ -116,9 +89,16 @@ namespace ET.Client
             self.spriteRenderer.color = Color.white;
         }
 
-        public static bool isInScreen(this MonsterGameObjectComponent self)
+        public static void Move(this MonsterGameObjectComponent self)
         {
-            return self.UnityEventTrigger.isInCamera;
+            if (self == null)
+                return;
+            var unit = UnitHelper.GetMyUnitFromCurrentScene(self.Root().CurrentScene());
+            if (unit == null)
+                return;
+            var unitTr = unit.GetComponent<GameObjectComponent>().GameObject.transform;
+            Vector2 pos = unitTr.position;
+            self.agent.SetDestination(pos);
         }
     }
 }

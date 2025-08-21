@@ -11,6 +11,7 @@ namespace ET.Client
         {
             self.GameObject = go;
             self.SpriteRenderer = self.GameObject.GetComponentInChildren<SpriteRenderer>();
+            self.UnityEventTrigger = self.GameObject.GetComponentInChildren<UnityEventTrigger>();
             self.InitColliderBox();
             self.InitColliderTrigger();
         }
@@ -25,10 +26,6 @@ namespace ET.Client
         [EntitySystem]
         private static void Destroy(this GameObjectComponent self)
         {
-            self.UnityEventTrigger.OnTriggerEnterAction -= self.OnTriggerEnterAction;
-            self.UnityEventTrigger.OnTriggerExitAction -= self.OnTriggerExitAction;
-            self.UnityEventTrigger.OnFixedUpdateAction -= self.OnFixedUpdate;
-
             UnityEngine.Object.Destroy(self.GameObject);
         }
 
@@ -45,19 +42,18 @@ namespace ET.Client
             self.UnityEventTrigger = self.GameObject.GetComponentInChildren<UnityEventTrigger>();
             self.UnityEventTrigger.OnTriggerEnterAction += self.OnTriggerEnterAction;
             self.UnityEventTrigger.OnTriggerExitAction += self.OnTriggerExitAction;
+            self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdate;
             self.UnityEventTrigger.BelongToUnitId = self.GetParent<Unit>().Id;
             self.UnityEventTrigger.unitType = (int)self.GetParent<Unit>().UnitType;
-
-            self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdate;
         }
 
-        private static void OnTriggerEnterAction(this GameObjectComponent self, Collision2D collision2D, long unitId, int unitType)
+        private static void OnTriggerEnterAction(this GameObjectComponent self, Collider2D collision2D, long unitId, int unitType)
         {
             var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterGameObjectComponent>(unitId);
             monsterComponent?.TestEnterChangeColor();
         }
 
-        private static void OnTriggerExitAction(this GameObjectComponent self, Collision2D collision2D, long unitId, int unitType)
+        private static void OnTriggerExitAction(this GameObjectComponent self, Collider2D collision2D, long unitId, int unitType)
         {
             var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterGameObjectComponent>(unitId);
             monsterComponent?.TestExitChangeColor();
@@ -65,10 +61,10 @@ namespace ET.Client
 
         public static void OnFixedUpdate(this GameObjectComponent self)
         {
-            self.MoveCamera();
+            self.Move();
         }
 
-        public static void MoveCamera(this ET.Client.GameObjectComponent self)
+        public static void Move(this ET.Client.GameObjectComponent self)
         {
             if (self.horizontalinput == 0 && self.Verticalinput == 0)
                 return;

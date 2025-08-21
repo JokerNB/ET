@@ -17,7 +17,7 @@ namespace ET.Client
 
             GlobalComponent globalComponent = scene.Root().GetComponent<GlobalComponent>();
             GameObject go = UnityEngine.Object.Instantiate(bundleGameObject, globalComponent.Unit, true);
-            go.transform.position = Vector3.zero;
+            go.transform.position = new Vector3(0, 0.001f, 0);
             go.GetComponentInChildren<SpriteRenderer>().sprite = sprite;
 
             unit.AddComponent<GameObjectComponent, GameObject>(go);

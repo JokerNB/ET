@@ -19,5 +19,7 @@ namespace ET.Client
         public Vector2 spriteSize = Vector2.zero;
         
         public Transform MapRootTr;
+        public PolyNav2D MapNav;
+        public PolygonCollider2D MapNavCollider;
     }
 }

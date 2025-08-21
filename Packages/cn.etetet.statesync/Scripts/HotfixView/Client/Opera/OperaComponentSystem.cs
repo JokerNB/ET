@@ -51,12 +51,22 @@ namespace ET.Client
             //     C2M_TransferMap c2MTransferMap = C2M_TransferMap.Create();
             //     self.Root().GetComponent<ClientSenderComponent>().Call(c2MTransferMap).NoContext();
             // }
-            if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                self.Root().CurrentScene().GetComponent<MapManagerComponent>().RefreshNav();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 self.Root().CurrentScene().GetComponent<MonsterManagerComponent>().StartBattle().NoContext();
             }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                self.Root().CurrentScene().GetComponent<MonsterManagerComponent>().MoveAllMonster();
+            }
         }
-        
+
         private static async ETTask Test1(this OperaComponent self)
         {
             Log.Debug($"Croutine 1 start1 ");
@@ -67,7 +77,7 @@ namespace ET.Client
 
             Log.Debug($"Croutine 1 end1");
         }
-            
+
         private static async ETTask Test2(this OperaComponent self)
         {
             ETCancellationToken oldCancellationToken = await ETTaskHelper.GetContextAsync<ETCancellationToken>();
@@ -76,13 +86,14 @@ namespace ET.Client
             {
                 await self.Root().GetComponent<TimerComponent>().WaitAsync(1000);
             }
+
             Log.Debug($"Croutine 2 end2");
         }
-        
+
         private static async ETTask TestCancelAfter(this OperaComponent self)
         {
             ETCancellationToken oldCancellationToken = await ETTaskHelper.GetContextAsync<ETCancellationToken>();
-            
+
             Log.Debug($"TestCancelAfter start");
             ETCancellationToken newCancellationToken = new();
             await self.Root().GetComponent<TimerComponent>().WaitAsync(3000).TimeoutAsync(newCancellationToken, 1000);
@@ -90,11 +101,12 @@ namespace ET.Client
             {
                 Log.Debug($"TestCancelAfter newCancellationToken is cancel!");
             }
-            
+
             if (oldCancellationToken != null && !oldCancellationToken.IsCancel())
             {
                 Log.Debug($"TestCancelAfter oldCancellationToken is not cancel!");
             }
+
             Log.Debug($"TestCancelAfter end");
         }
     }

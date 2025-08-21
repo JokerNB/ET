@@ -13,8 +13,8 @@ namespace ET.Client
 
         public SpriteRenderer spriteRenderer;
 
-        public Rigidbody2D rigidbody2D;
-
         public Transform monsterRoot;
+        
+        public PolyNavAgent agent;
     }
 }
