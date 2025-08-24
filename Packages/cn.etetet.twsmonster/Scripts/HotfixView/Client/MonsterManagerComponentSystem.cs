@@ -11,7 +11,7 @@ namespace ET.Client
             t?.CreateNormalMonster();
         }
     }
-    
+
     [Invoke(TimerInvokeType.CreateFinalMonster)]
     public class CreateFinalMonster_TimerHandler : ATimer<MonsterManagerComponent>
     {
@@ -23,13 +23,20 @@ namespace ET.Client
 
     [EntitySystemOf(typeof(MonsterManagerComponent))]
     [FriendOfAttribute(typeof(ET.Client.ChapterComponent))]
-    [FriendOfAttribute(typeof(ET.UnitComponent))]
+    [FriendOfAttribute(typeof(ET.Client.UnitComponent_Client))]
     public static partial class MonsterManagerComponentSystem
     {
         [EntitySystem]
         private static void Awake(this ET.Client.MonsterManagerComponent self)
         {
             self.MonsterRoot = GameObject.Find("World").GetComponent<ReferenceCollector>().Get<Transform>("MonsterRoot");
+        }
+
+        [EntitySystem]
+        private static void Destroy(this ET.Client.MonsterManagerComponent self)
+        {
+            self.Root().GetComponent<TimerComponent>().Remove(ref self.Timer_FinalMonster);
+            self.ClearNormalMonsterTimer();
         }
 
         public static async ETTask StartBattle(this ET.Client.MonsterManagerComponent self)
@@ -77,16 +84,18 @@ namespace ET.Client
             }
         }
 
-        public static void MoveAllMonster(this ET.Client.MonsterManagerComponent self)
+        public static void CreateFinalMonster(this ET.Client.MonsterManagerComponent self)
         {
-            var monsters = self.Root().CurrentScene().GetComponent<UnitComponent>().monsters;
-            foreach (Unit unit in monsters)
-            {
-                unit.GetComponent<MonsterGameObjectComponent>()?.Move();
-            }
+            self.ClearNormalMonsterTimer();
+
+            //清理小怪
+            self.Root().CurrentScene().GetComponent<UnitComponent_Client>().RemoveAllMonster();
+            GameLevelConfig gameLevelConfig = self.Root().CurrentScene().GetComponent<ChapterComponent>().GetGameLevelConfig();
+            CreateMonsterData finalMonsterConfigData = gameLevelConfig.FinalMonsterConfigData;
+            UnitFactory.CreateMonster(self.Root().CurrentScene(), finalMonsterConfigData.MonsterConfigId);
         }
 
-        public static void CreateFinalMonster(this ET.Client.MonsterManagerComponent self)
+        public static void ClearNormalMonsterTimer(this ET.Client.MonsterManagerComponent self)
         {
             //清理定时器
             for (int i = 0; i < self.Timers_NormalMonster.Count; i++)
@@ -94,13 +103,8 @@ namespace ET.Client
                 long time = self.Timers_NormalMonster[i];
                 self.Root().GetComponent<TimerComponent>().Remove(ref time);
             }
-            self.Timers_NormalMonster.Clear();
 
-            //清理小怪
-            self.Root().CurrentScene().GetComponent<UnitComponent>().RemoveAllMonster();
-            GameLevelConfig gameLevelConfig = self.Root().CurrentScene().GetComponent<ChapterComponent>().GetGameLevelConfig();
-            CreateMonsterData finalMonsterConfigData = gameLevelConfig.FinalMonsterConfigData;
-            UnitFactory.CreateMonster(self.Root().CurrentScene(), finalMonsterConfigData.MonsterConfigId);
+            self.Timers_NormalMonster.Clear();
         }
     }
 }

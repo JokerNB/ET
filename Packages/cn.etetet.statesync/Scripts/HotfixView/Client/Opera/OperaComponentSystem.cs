@@ -51,20 +51,20 @@ namespace ET.Client
             //     C2M_TransferMap c2MTransferMap = C2M_TransferMap.Create();
             //     self.Root().GetComponent<ClientSenderComponent>().Call(c2MTransferMap).NoContext();
             // }
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                self.Root().CurrentScene().GetComponent<MapManagerComponent>().RefreshNav();
-            }
 
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 self.Root().CurrentScene().GetComponent<MonsterManagerComponent>().StartBattle().NoContext();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                self.Root().CurrentScene().GetComponent<MonsterManagerComponent>().MoveAllMonster();
+                EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_TestCast
+                {
+                    castConfigId = 1
+                });
             }
+
         }
 
         private static async ETTask Test1(this OperaComponent self)

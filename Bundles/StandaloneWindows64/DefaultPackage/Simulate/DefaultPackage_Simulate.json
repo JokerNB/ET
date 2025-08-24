@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/8/21 20:39:16",
+    "PackageNote": "2025/8/24 6:59:30",
     "AssetList": [
         {
             "Address": "MainUIBG",
@@ -659,8 +659,32 @@
             "DependBundleIDs": []
         },
         {
+            "Address": "ActionConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/ActionConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 22,
+            "DependBundleIDs": []
+        },
+        {
             "Address": "AIConfigCategory",
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/AIConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 22,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "BuffConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/BuffConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 22,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "BulletConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/BulletConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 22,
@@ -865,7 +889,7 @@
             "UnityCRC": 0,
             "FileHash": "21fc7736e26ea38ee9ed888b93cbe16a",
             "FileCRC": "00000000",
-            "FileSize": 2115468,
+            "FileSize": 2172152,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1045,7 +1069,7 @@
             "UnityCRC": 0,
             "FileHash": "0c6a0998c1163285f8d4f2aabab40624",
             "FileCRC": "00000000",
-            "FileSize": 3420,
+            "FileSize": 3434,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

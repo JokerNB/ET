@@ -7,7 +7,7 @@ namespace ET.Client
     {
         protected override async ETTask Run(Scene scene, AfterMonsterCreate args)
         {
-            Unit unit = args.Unit;
+            Unit_Client unit = args.Unit;
             unit.AddComponent<MonsterGameObjectComponent>();
             await ETTask.CompletedTask;
         }

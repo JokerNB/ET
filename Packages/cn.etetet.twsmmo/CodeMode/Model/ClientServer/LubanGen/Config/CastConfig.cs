@@ -21,6 +21,10 @@ namespace ET
             TotalTime = _buf.ReadInt();
             SelectType = _buf.ReadInt();
             {int n0 = _buf.ReadSize(); SelectParam = new System.Collections.Generic.List<string>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { string _e0;  _e0 = _buf.ReadString(); SelectParam.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); HitAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); HitAction.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); HitActionTimes = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); HitActionTimes.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); SelfHitAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); SelfHitAction.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); SelfHitActionTimes = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); SelfHitActionTimes.Add(_e0);}}
 
             EndInit();
         }
@@ -46,6 +50,22 @@ namespace ET
         /// 目标选择参数
         /// </summary>
         public readonly System.Collections.Generic.List<string> SelectParam;
+        /// <summary>
+        /// 命中行为
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> HitAction;
+        /// <summary>
+        /// 技能命中时间点
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> HitActionTimes;
+        /// <summary>
+        /// 命中自身行为
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> SelfHitAction;
+        /// <summary>
+        /// 技能命中自身时间点
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> SelfHitActionTimes;
     
         public const int __ID__ = 944053121;
         public override int GetTypeId() => __ID__;
@@ -62,6 +82,10 @@ namespace ET
             + "TotalTime:" + TotalTime + ","
             + "SelectType:" + SelectType + ","
             + "SelectParam:" + Luban.StringUtil.CollectionToString(SelectParam) + ","
+            + "HitAction:" + Luban.StringUtil.CollectionToString(HitAction) + ","
+            + "HitActionTimes:" + Luban.StringUtil.CollectionToString(HitActionTimes) + ","
+            + "SelfHitAction:" + Luban.StringUtil.CollectionToString(SelfHitAction) + ","
+            + "SelfHitActionTimes:" + Luban.StringUtil.CollectionToString(SelfHitActionTimes) + ","
             + "}";
         }
 

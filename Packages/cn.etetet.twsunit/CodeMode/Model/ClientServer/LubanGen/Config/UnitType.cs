@@ -35,6 +35,10 @@ namespace ET
         /// 最终Boss
         /// </summary>
         FinalBoss = 5,
+        /// <summary>
+        /// 子弹
+        /// </summary>
+        Bullet = 6,
     }
 
 } 

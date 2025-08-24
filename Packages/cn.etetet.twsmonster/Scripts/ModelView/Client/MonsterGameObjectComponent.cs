@@ -2,11 +2,11 @@
 
 namespace ET.Client
 {
-    [ComponentOf(typeof(Unit))]
+    [ComponentOf(typeof(Unit_Client))]
     public class MonsterGameObjectComponent : Entity, IAwake, IDestroy
     {
         public GameObject go;
-        public Transform goTr;
+        public Transform goTr {get;set;}
 
         //碰撞触发器
         public UnityEventTrigger UnityEventTrigger;

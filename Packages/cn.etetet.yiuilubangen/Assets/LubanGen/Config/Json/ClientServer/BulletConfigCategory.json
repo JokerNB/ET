@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "Shape": 0,
+    "ShapeParam": [],
+    "TotalTime": 0,
+    "AwakeAction": [],
+    "Interval": 0,
+    "TickCastId": [],
+    "TickAction": [],
+    "DestroyAction": [],
+    "Model": ""
+  }
+]

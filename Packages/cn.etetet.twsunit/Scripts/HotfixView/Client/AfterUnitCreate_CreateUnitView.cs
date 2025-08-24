@@ -7,7 +7,7 @@ namespace ET.Client
     {
         protected override async ETTask Run(Scene scene, AfterUnitCreate args)
         {
-            Unit unit = args.Unit;
+            Unit_Client unit = args.Unit;
             // Unit View层
             string assetsPath = $"Packages/cn.etetet.twsunit/Assets/GameRes/";
             GameObject bundleGameObject = await scene.GetComponent<ResourcesLoaderComponent>()
@@ -22,6 +22,8 @@ namespace ET.Client
 
             unit.AddComponent<GameObjectComponent, GameObject>(go);
             unit.AddComponent<AnimatorComponent>();
+            unit.AddComponent<CastComponent>();
+            unit.AddComponent<BuffComponent>();
             await ETTask.CompletedTask;
         }
     }

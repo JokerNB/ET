@@ -12,7 +12,7 @@ namespace ET.Server
                 case UnitType.Player:
                 {
                     UnitConfig unitConfig = UnitConfigCategory.Instance.GetFirstUnitConfig();
-                    Unit unit = unitComponent.AddChildWithId<Unit, int, UnitType>(id, unitConfig.Id, unitConfig.UnitType);
+                    Unit unit = unitComponent.AddChildWithId<Unit, int>(id, unitConfig.Id);
 
                     NumericDataComponent numericComponent = unit.AddComponent<NumericDataComponent>();
                     numericComponent.InitSet(unitConfig.NumericTypeValue);

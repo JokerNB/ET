@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Unity.Mathematics;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace ET.Client
 {
@@ -27,7 +29,7 @@ namespace ET.Client
             var referenceCollector = self.go.GetComponent<ReferenceCollector>();
             var spriteRenderer = referenceCollector.Get<SpriteRenderer>("Sprite");
             Sprite sprite = await self.Root().CurrentScene().GetComponent<ResourcesLoaderComponent>()
-                    .LoadAssetAsync<Sprite>($"Packages/cn.etetet.twsmonster/Assets/GameRes/Atlas/{self.GetParent<Unit>().Config().ResName}");
+                    .LoadAssetAsync<Sprite>($"Packages/cn.etetet.twsmonster/Assets/GameRes/Atlas/{self.GetParent<Unit_Client>().Config().ResName}");
             spriteRenderer.sprite = sprite;
             self.goTr = self.go.transform;
             self.goTr.name = $"{self.Id}";
@@ -57,7 +59,7 @@ namespace ET.Client
 
         public static void InitAgent(this MonsterGameObjectComponent self)
         {
-            var numericDataComponent = self.GetParent<Unit>().NumericComponent;
+            var numericDataComponent = self.GetParent<Unit_Client>().NumericComponent;
             float speed = numericDataComponent.GetAsFloat(ENumericType.Speed0);
             self.agent.maxSpeed = speed;
         }
@@ -67,7 +69,7 @@ namespace ET.Client
             self.UnityEventTrigger = self.go.GetComponentInChildren<UnityEventTrigger>();
             self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdateAction;
             self.UnityEventTrigger.BelongToUnitId = self.Id;
-            self.UnityEventTrigger.unitType = (int)self.GetParent<Unit>().UnitType;
+            self.UnityEventTrigger.unitType = (int)self.GetParent<Unit_Client>().UnitType;
         }
 
         public static void OnFixedUpdateAction(this MonsterGameObjectComponent self)
@@ -93,12 +95,18 @@ namespace ET.Client
         {
             if (self == null)
                 return;
-            var unit = UnitHelper.GetMyUnitFromCurrentScene(self.Root().CurrentScene());
-            if (unit == null)
+            Unit_Client unit_Player = self.Root().CurrentScene().GetComponent<UnitComponent_Client>().Unit_Player;
+            if (unit_Player == null)
                 return;
-            var unitTr = unit.GetComponent<GameObjectComponent>().GameObject.transform;
+            var unitTr = unit_Player.GetComponent<GameObjectComponent>().GameObject.transform;
             Vector2 pos = unitTr.position;
             self.agent.SetDestination(pos);
+        }
+
+        public static void SetPos(this MonsterGameObjectComponent self, float3 pos)
+        {
+            Vector2 vector2 = new Vector2(pos.x, pos.y);
+            self.agent.position = vector2;
         }
     }
 }

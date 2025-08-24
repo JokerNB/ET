@@ -43,8 +43,8 @@ namespace ET.Client
             self.UnityEventTrigger.OnTriggerEnterAction += self.OnTriggerEnterAction;
             self.UnityEventTrigger.OnTriggerExitAction += self.OnTriggerExitAction;
             self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdate;
-            self.UnityEventTrigger.BelongToUnitId = self.GetParent<Unit>().Id;
-            self.UnityEventTrigger.unitType = (int)self.GetParent<Unit>().UnitType;
+            self.UnityEventTrigger.BelongToUnitId = self.GetParent<Unit_Client>().Id;
+            self.UnityEventTrigger.unitType = (int)self.GetParent<Unit_Client>().UnitType;
         }
 
         private static void OnTriggerEnterAction(this GameObjectComponent self, Collider2D collision2D, long unitId, int unitType)
@@ -75,7 +75,7 @@ namespace ET.Client
                 self.Verticalinput *= 0.6f;
             }
 
-            float speed0 = self.GetParent<Unit>().NumericComponent.GetAsFloat(ENumericType.Speed0);
+            float speed0 = self.GetParent<Unit_Client>().NumericComponent.GetAsFloat(ENumericType.Speed0);
             var x = Vector3.right * self.horizontalinput * Time.fixedDeltaTime * speed0;
             var y = Vector3.up * self.Verticalinput * Time.fixedDeltaTime * speed0;
             self.Transform.Translate(x);

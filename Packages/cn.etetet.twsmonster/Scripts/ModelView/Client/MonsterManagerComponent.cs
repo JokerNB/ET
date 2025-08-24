@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ET.Client
 {
     [ComponentOf(typeof(Scene))]
-    public class MonsterManagerComponent : Entity, IAwake
+    public class MonsterManagerComponent : Entity, IAwake, IDestroy
     {
         public Transform MonsterRoot;
         public List<long> Timers_NormalMonster = new List<long>();

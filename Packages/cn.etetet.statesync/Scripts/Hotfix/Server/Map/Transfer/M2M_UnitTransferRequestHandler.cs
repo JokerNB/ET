@@ -1,5 +1,4 @@
 ﻿using System;
-using Unity.Mathematics;
 
 namespace ET.Server
 {
@@ -24,8 +23,6 @@ namespace ET.Server
                 Entity entity = MongoHelper.Deserialize<Entity>(v);
                 unit.AddComponent(entity);
             }
-
-            unit.AddComponent<PathfindingComponent, string>(scene.Name);
 
             unit.AddComponent<MailBoxComponent, int>(MailBoxType.OrderedMessage);
 
