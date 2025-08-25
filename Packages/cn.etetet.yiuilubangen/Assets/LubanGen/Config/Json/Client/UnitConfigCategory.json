@@ -162,5 +162,13 @@
       ]
     ],
     "ResName": "Monster_2"
+  },
+  {
+    "Id": 2001,
+    "UnitType": 7,
+    "Name": "普通攻击",
+    "Des": "",
+    "NumericTypeValue": [],
+    "ResName": ""
   }
 ]

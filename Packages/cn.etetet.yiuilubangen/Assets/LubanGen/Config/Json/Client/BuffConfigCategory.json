@@ -1,10 +1,17 @@
 [
   {
-    "Id": 1,
-    "TotalTime": 0,
-    "Addaction": [],
+    "Id": 2001,
+    "TotalTime": 1000,
+    "Addaction": [
+      1002
+    ],
     "TickTime": 0,
     "TickAction": [],
-    "RemoveAction": []
+    "RemoveAction": [
+      1002
+    ],
+    "OwnerEffect": [
+      1
+    ]
   }
 ]

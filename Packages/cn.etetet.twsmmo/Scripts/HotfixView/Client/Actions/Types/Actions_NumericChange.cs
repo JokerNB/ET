@@ -2,7 +2,7 @@
 
 namespace ET.Client
 {
-    [Actions(ActionsType.NumericChange)]
+    [Actions(ActionType.NumericChange)]
     [FriendOfAttribute(typeof(ET.Client.Actions))]
     public class Actions_NumericChange : IActions
     {
@@ -13,8 +13,8 @@ namespace ET.Client
             if (owner == null || owner.IsDisposed)
                 return;
 
-            int numericType = int.Parse(actions.Config.Param[0]);
-            int numericValue = int.Parse(actions.Config.Param[1]);
+            int numericType = actions.Config.Param[0];
+            int numericValue = actions.Config.Param[1];
 
             switch (actionsRunType)
             {

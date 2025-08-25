@@ -14,12 +14,12 @@
         {
             //这里应该是根据各个项目实际情况，攻击力，防御力之类的一堆公式计算，得出一个伤害值
             //现在简化为直接读取固定伤害
-            int damage = int.Parse(actions.Config.Param[0]);
+            int damage = actions.Config.Param[0];
             int oldHp = target.NumericComponent.GetAsInt(ENumericType.Hp0);
             //扣血逻辑
             target.NumericComponent.Change(ENumericType.Hp0, damage);
             int newHp = target.NumericComponent.GetAsInt(ENumericType.Hp0);
-            
+            Log.Error($"CalcAttack {damage} , oldHp: {oldHp}, newHp: {newHp}");
             int res_damage = newHp - oldHp;
             if (res_damage != 0)
             {
@@ -42,6 +42,7 @@
         public static void Kill(Unit_Client killer, Unit_Client killed)
         {
             //此处击杀者有很多处理，例如红名，pk值，记录到被杀的仇恨列表，击杀排行榜记录等等的需求
+            killed.GetParent<UnitComponent_Client>().Remove(killed.Id);
         }
     }
 }

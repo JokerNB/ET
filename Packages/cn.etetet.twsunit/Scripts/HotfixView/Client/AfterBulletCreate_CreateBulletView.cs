@@ -1,4 +1,6 @@
-﻿namespace ET.Client
+﻿using UnityEngine;
+
+namespace ET.Client
 {
     [Event(SceneType.Current)]
     [FriendOfAttribute(typeof(ET.Client.BulletComponent))]
@@ -8,7 +10,8 @@
         {
             BulletComponent bulletComponent = a.Unit.AddComponent<BulletComponent, int>(a.bulledId);
             bulletComponent.ownerId = a.ownerId;
-            a.Unit.AddComponent<BulletGameObjectComponent>().SetPosition(a.pos);
+            //TODO:创建子弹实体
+            // a.Unit.AddComponent<GameObjectComponent,GameObject>().SetPosition(a.pos);
             await ETTask.CompletedTask;
         }
     }

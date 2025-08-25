@@ -6,15 +6,15 @@ namespace ET.Client
     public struct SceneChangeStart
     {
     }
-    
+
     public struct SceneChangeFinish
     {
     }
-    
+
     public struct AfterCreateClientScene
     {
     }
-    
+
     public struct AfterCreateCurrentScene
     {
     }
@@ -35,12 +35,12 @@ namespace ET.Client
     {
         public Unit_Client Unit;
     }
-    
+
     public struct AfterMonsterCreate
     {
         public Unit_Client Unit;
     }
-    
+
     public struct AfterBulletCreate
     {
         public Unit_Client Unit;

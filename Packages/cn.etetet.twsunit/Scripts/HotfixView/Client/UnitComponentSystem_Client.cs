@@ -25,7 +25,6 @@ namespace ET.Client
                 self.units.Add(unit);
             if(unit.UnitType == UnitType.Player)
                 self.Unit_Player = unit;
-                
         }
         
         public static Unit_Client Get(this UnitComponent_Client self, long id)
@@ -37,7 +36,13 @@ namespace ET.Client
         public static void Remove(this UnitComponent_Client self, long id)
         {
             Unit_Client unit = self.GetChild<Unit_Client>(id);
-            unit?.Dispose();
+            if (unit.IsMonster())
+                self.monsters.Remove(unit);
+            if (unit.isUnit())
+                self.units.Remove(unit);
+            if (unit.UnitType == UnitType.Player)
+                self.Unit_Player = default;
+            self.RemoveChild(id);
         }
 
         public static List<EntityRef<Unit_Client>> GetAllUnits(this UnitComponent_Client self)
@@ -54,7 +59,9 @@ namespace ET.Client
         {
             foreach (Unit_Client unit in self.monsters)
             {
-                self.Remove(unit.Id);
+                if (unit.isUnit())
+                    self.units.Remove(unit);
+                self.RemoveChild(unit.Id);
             }
 
             self.monsters.Clear();

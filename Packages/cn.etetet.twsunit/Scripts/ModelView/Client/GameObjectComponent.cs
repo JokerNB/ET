@@ -3,7 +3,7 @@ using UnityEngine;
 namespace ET.Client
 {
     [ComponentOf(typeof(Unit_Client))]
-    public class GameObjectComponent : Entity, IAwake<GameObject>, IDestroy, IUpdate
+    public class GameObjectComponent : Entity, IAwake<GameObject>, IDestroy
     {
         private GameObject gameObject;
 
@@ -21,11 +21,5 @@ namespace ET.Client
         }
 
         public Transform Transform { get; private set; }
-
-        public SpriteRenderer SpriteRenderer;
-        public UnityEventTrigger UnityEventTrigger;
-
-        public float horizontalinput;
-        public float Verticalinput;
     }
 }

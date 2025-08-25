@@ -3,7 +3,6 @@
 namespace ET.Client
 {
     [EntitySystemOf(typeof(Cast))]
-    [FriendOfAttribute(typeof(ET.Client.MonsterGameObjectComponent))]
     public static partial class CastSystem
     {
         [EntitySystem]
@@ -31,14 +30,20 @@ namespace ET.Client
         {
             int err = self.CastCheck();
             if (err != ErrorCode.ERR_Success)
+            {
+                self.Dispose();
                 return err;
+            }
 
             //选择目标
             self.SelectTarget();
 
             err = self.CastCheckBeforeBegin();
             if (err != ErrorCode.ERR_Success)
+            {
+                self.Dispose();
                 return err;
+            }
 
             self.CastBeginAsync().NoContext();
             return ErrorCode.ERR_Success;
@@ -61,6 +66,7 @@ namespace ET.Client
 
         public static void SelectTarget(this ET.Client.Cast self)
         {
+            self.Target.Clear();
             Unit_Client caster = self.Caster;
             CastConfig config = self.CastConfig;
 
@@ -69,8 +75,8 @@ namespace ET.Client
             int rang = 0;
             switch (config.SelectType)
             {
-                case 1: //选择身边一定范围内的一个人
-                    rang = int.Parse(config.SelectParam[0]);
+                case SelectType.OneWithInRange: //选择身边一定范围内的一个人
+                    rang = config.SelectParam[0];
                     foreach (Unit_Client unit in allUnits)
                     {
                         if (unit == caster)
@@ -88,8 +94,8 @@ namespace ET.Client
                     }
 
                     break;
-                case 2: //选择身边一定范围内的所有人
-                    rang = int.Parse(config.SelectParam[0]);
+                case SelectType.Circular: //选择身边一定范围内的所有人
+                    rang = config.SelectParam[0];
                     foreach (Unit_Client unit in allUnits)
                     {
                         if (math.length(unit.GetUnitPosition() - caster.GetUnitPosition()) < rang)
@@ -106,8 +112,8 @@ namespace ET.Client
         {
             switch (self.CastConfig.SelectType)
             {
-                case 1:
-                case 2:
+                case SelectType.OneWithInRange:
+                case SelectType.Circular:
                     if (self.Target.Count <= 0)
                     {
                         return ErrorCode.ERR_Cast_TargetIsNull;
@@ -122,8 +128,6 @@ namespace ET.Client
         public static async ETTask CastBeginAsync(this ET.Client.Cast self)
         {
             self.StartTime = TimeInfo.Instance.ServerNow();
-            //通知其他unit开始释放技能
-            //单机不需要
             Unit_Client caster = self.Caster;
             CastConfig castConfig = self.CastConfig;
             EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastStart
@@ -134,7 +138,10 @@ namespace ET.Client
                 TargetsId = self.Target
             });
             if (castConfig.Times.Count <= 0)
+            {
+                self.Dispose();
                 return;
+            }
             //技能实体
             long castInstanceId = 0;
             //技能释放实体
@@ -151,7 +158,6 @@ namespace ET.Client
                     return;
                 }
 
-                //TODO:创建出一系列技能行为
                 foreach (CastActionTime castActionTime in castConfig.TimesDic[time])
                 {
                     if (castActionTime.isSelfHit)
@@ -186,7 +192,7 @@ namespace ET.Client
         {
             CastConfig castConfig = self.CastConfig;
             self.SelectTarget();
-            if(self.Target.Count<=0)
+            if (self.Target.Count <= 0)
                 return;
             if (castConfig.SelfHitAction.Count > index)
             {
@@ -199,7 +205,7 @@ namespace ET.Client
         {
             CastConfig castConfig = self.CastConfig;
             self.SelectTarget();
-            if(self.Target.Count<=0)
+            if (self.Target.Count <= 0)
                 return;
             //技能命中消息
             //单机不需要
@@ -210,20 +216,19 @@ namespace ET.Client
                 casterId = caster.Id,
                 TargetsId = self.Target
             });
-            
+
             UnitComponent_Client unitComponent = self.Root().CurrentScene().GetComponent<UnitComponent_Client>();
             foreach (long unitId in self.Target)
             {
                 Unit_Client unit = unitComponent.Get(unitId);
-                if(unit == null || unit.IsDisposed)
+                if (unit == null || unit.IsDisposed)
                     continue;
                 if (castConfig.HitAction.Count > index)
                 {
                     int actionId = castConfig.HitAction[index];
-                    self.CreateActions(actionId,unit, ActionsRunType.CastHit);
+                    self.CreateActions(actionId, unit, ActionsRunType.CastHit);
                 }
             }
-            
         }
 
         public static void CastFinish(this ET.Client.Cast self)
@@ -233,13 +238,14 @@ namespace ET.Client
             if (self.CastConfig.TotalTime > 0)
             {
                 Unit_Client caster = self.Caster;
-                EventSystem.Instance.Publish(self.Root().CurrentScene(),new Event_CastFinish
+                EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastFinish
                 {
                     castId = self.Id,
                     casterId = caster.Id
                 });
             }
 
+            // self.GetParent<CastComponent>().RemoveChild(self.Id);
             self?.Dispose();
         }
 

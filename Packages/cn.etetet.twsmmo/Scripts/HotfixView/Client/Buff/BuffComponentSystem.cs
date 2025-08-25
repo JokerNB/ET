@@ -89,5 +89,10 @@ namespace ET.Client
                 Log.Error($"Buff 'Remove' error! buffCompId : {self.Id} , buffId: {buffId} , buffConfigId: {buff.Config?.Id ?? 0} , {e}");
             }
         }
+
+        public static Buff Get(this BuffComponent self, long buffId)
+        {
+            return self.GetChild<Buff>(buffId);
+        }
     }
 }

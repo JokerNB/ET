@@ -8,7 +8,19 @@ namespace ET.Client
         protected override async ETTask Run(Scene scene, AfterMonsterCreate args)
         {
             Unit_Client unit = args.Unit;
-            unit.AddComponent<MonsterGameObjectComponent>();
+            var parent = scene.GetComponent<MonsterManagerComponent>().MonsterRoot;
+            GameObject go = await YIUIGameObjectPool.Inst.Get("Monster", parent);
+            var referenceCollector = go.GetComponent<ReferenceCollector>();
+            var spriteRenderer = referenceCollector.Get<SpriteRenderer>("Sprite");
+            Sprite sprite = await scene.GetComponent<ResourcesLoaderComponent>()
+                    .LoadAssetAsync<Sprite>($"Packages/cn.etetet.twsmonster/Assets/GameRes/Atlas/{unit.Config().ResName}");
+            spriteRenderer.sprite = sprite;
+            go.name = unit.ConfigId.ToString();
+
+            unit.AddComponent<GameObjectComponent, GameObject>(go);
+            unit.AddComponent<MonsterMoveComponent>();
+            unit.AddComponent<CastComponent>();
+            unit.AddComponent<BuffComponent>();
             await ETTask.CompletedTask;
         }
     }

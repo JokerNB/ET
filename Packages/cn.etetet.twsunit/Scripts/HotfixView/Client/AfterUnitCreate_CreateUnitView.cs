@@ -22,6 +22,7 @@ namespace ET.Client
 
             unit.AddComponent<GameObjectComponent, GameObject>(go);
             unit.AddComponent<AnimatorComponent>();
+            unit.AddComponent<MoveComponent>();
             unit.AddComponent<CastComponent>();
             unit.AddComponent<BuffComponent>();
             await ETTask.CompletedTask;

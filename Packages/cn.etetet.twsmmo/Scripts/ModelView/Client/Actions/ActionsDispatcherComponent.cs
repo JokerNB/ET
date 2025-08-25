@@ -6,7 +6,7 @@ namespace ET.Client
     [CodeProcess]
     public class ActionsDispatcherComponent : Singleton<ActionsDispatcherComponent> , ISingletonAwake
     {
-        private Dictionary<int, IActions> dic;
+        private Dictionary<ActionType, IActions> dic;
 
         public void Awake()
         {
@@ -31,7 +31,7 @@ namespace ET.Client
             }
         }
 
-        public IActions Get(int type)
+        public IActions Get(ActionType type)
         {
             return this.dic.GetValueOrDefault(type);
         }

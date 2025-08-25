@@ -16,7 +16,7 @@ namespace ET.Client
 
             unit.AddComponent<ObjectWait>();
 
-            EventSystem.Instance.Publish(unit.Scene(), new AfterUnitCreate() { Unit = unit });
+            EventSystem.Instance.Publish(currentScene, new AfterUnitCreate() { Unit = unit });
             return unit;
         }
 
@@ -29,7 +29,7 @@ namespace ET.Client
             NumericDataComponent numericDataComponent = unit.AddComponent<NumericDataComponent>();
             numericDataComponent.InitSet(monsterConfig.NumericTypeValue);
 
-            EventSystem.Instance.Publish(unit.Scene(), new AfterMonsterCreate() { Unit = unit });
+            EventSystem.Instance.Publish(currentScene, new AfterMonsterCreate() { Unit = unit });
 
             return unit;
         }
@@ -38,7 +38,7 @@ namespace ET.Client
         {
             UnitComponent_Client unitComponent = currentScene.GetComponent<UnitComponent_Client>();
             Unit_Client unit = unitComponent.AddChild<Unit_Client, int>(unitConfigId);
-            EventSystem.Instance.Publish(unit.Scene(), new AfterBulletCreate
+            EventSystem.Instance.Publish(currentScene, new AfterBulletCreate
             {
                 Unit = unit,
                 pos = pos,
@@ -46,6 +46,15 @@ namespace ET.Client
                 ownerId = ownerId
             });
             unitComponent.Add(unit);
+            return unit;
+        }
+
+        public static Unit_Client CreateParticleUnit(Scene currentScene, int unitConfigId)
+        {
+            UnitComponent_Client unitComponent = currentScene.GetComponent<UnitComponent_Client>();
+            Unit_Client unit = unitComponent.AddChild<Unit_Client, int>(unitConfigId);
+            unitComponent.Add(unit);
+            unit.AddComponent<ObjectWait>();
             return unit;
         }
     }

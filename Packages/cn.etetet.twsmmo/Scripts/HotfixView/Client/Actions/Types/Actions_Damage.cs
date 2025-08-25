@@ -1,6 +1,6 @@
 ﻿namespace ET.Client
 {
-    [Actions(ActionsType.Damage)]
+    [Actions(ActionType.Damage)]
     [FriendOfAttribute(typeof(ET.Client.Cast))]
     public class Actions_Damage : IActions
     {

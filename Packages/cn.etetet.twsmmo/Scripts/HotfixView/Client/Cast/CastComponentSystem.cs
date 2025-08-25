@@ -18,5 +18,10 @@
             Cast cast = self.AddChild<Cast, int>(configId);
             return cast;
         }
+
+        public static Cast Get(this ET.Client.CastComponent self, long castId)
+        {
+            return self.GetChild<Cast>(castId);
+        }
     }
 }

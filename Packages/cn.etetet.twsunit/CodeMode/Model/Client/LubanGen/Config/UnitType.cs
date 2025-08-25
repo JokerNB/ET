@@ -39,6 +39,10 @@ namespace ET
         /// 子弹
         /// </summary>
         Bullet = 6,
+        /// <summary>
+        /// 特效
+        /// </summary>
+        ParticleEffect = 7,
     }
 
 } 

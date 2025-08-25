@@ -18,8 +18,8 @@ namespace ET
         public ActionConfig(ByteBuf _buf) 
         {
             Id = _buf.ReadInt();
-            ActionType = _buf.ReadInt();
-            {int n0 = _buf.ReadSize(); Param = new System.Collections.Generic.List<string>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { string _e0;  _e0 = _buf.ReadString(); Param.Add(_e0);}}
+            ActionType = (ActionType)_buf.ReadInt();
+            {int n0 = _buf.ReadSize(); Param = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); Param.Add(_e0);}}
 
             EndInit();
         }
@@ -36,11 +36,11 @@ namespace ET
         /// <summary>
         /// 技能行为类型
         /// </summary>
-        public readonly int ActionType;
+        public readonly ActionType ActionType;
         /// <summary>
         /// 参数
         /// </summary>
-        public readonly System.Collections.Generic.List<string> Param;
+        public readonly System.Collections.Generic.List<int> Param;
     
         public const int __ID__ = 1209614648;
         public override int GetTypeId() => __ID__;

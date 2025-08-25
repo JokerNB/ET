@@ -19,12 +19,17 @@ namespace ET
         {
             Id = _buf.ReadInt();
             TotalTime = _buf.ReadInt();
-            SelectType = _buf.ReadInt();
-            {int n0 = _buf.ReadSize(); SelectParam = new System.Collections.Generic.List<string>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { string _e0;  _e0 = _buf.ReadString(); SelectParam.Add(_e0);}}
+            SelectType = (SelectType)_buf.ReadInt();
+            {int n0 = _buf.ReadSize(); SelectParam = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); SelectParam.Add(_e0);}}
             {int n0 = _buf.ReadSize(); HitAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); HitAction.Add(_e0);}}
             {int n0 = _buf.ReadSize(); HitActionTimes = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); HitActionTimes.Add(_e0);}}
             {int n0 = _buf.ReadSize(); SelfHitAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); SelfHitAction.Add(_e0);}}
             {int n0 = _buf.ReadSize(); SelfHitActionTimes = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); SelfHitActionTimes.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); Buffs = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); Buffs.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); StartEffect = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); StartEffect.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); HitEffect = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); HitEffect.Add(_e0);}}
+            StartAnimation = _buf.ReadInt();
+            HitAnimation = _buf.ReadInt();
 
             EndInit();
         }
@@ -45,11 +50,11 @@ namespace ET
         /// <summary>
         /// 目标选择方式
         /// </summary>
-        public readonly int SelectType;
+        public readonly SelectType SelectType;
         /// <summary>
         /// 目标选择参数
         /// </summary>
-        public readonly System.Collections.Generic.List<string> SelectParam;
+        public readonly System.Collections.Generic.List<int> SelectParam;
         /// <summary>
         /// 命中行为
         /// </summary>
@@ -66,6 +71,26 @@ namespace ET
         /// 技能命中自身时间点
         /// </summary>
         public readonly System.Collections.Generic.List<int> SelfHitActionTimes;
+        /// <summary>
+        /// 命中Buff
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> Buffs;
+        /// <summary>
+        /// 技能开始时的自身特效
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> StartEffect;
+        /// <summary>
+        /// 技能命中时的目标特效
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> HitEffect;
+        /// <summary>
+        /// 起手动画
+        /// </summary>
+        public readonly int StartAnimation;
+        /// <summary>
+        /// 命中动画
+        /// </summary>
+        public readonly int HitAnimation;
     
         public const int __ID__ = 944053121;
         public override int GetTypeId() => __ID__;
@@ -86,6 +111,11 @@ namespace ET
             + "HitActionTimes:" + Luban.StringUtil.CollectionToString(HitActionTimes) + ","
             + "SelfHitAction:" + Luban.StringUtil.CollectionToString(SelfHitAction) + ","
             + "SelfHitActionTimes:" + Luban.StringUtil.CollectionToString(SelfHitActionTimes) + ","
+            + "Buffs:" + Luban.StringUtil.CollectionToString(Buffs) + ","
+            + "StartEffect:" + Luban.StringUtil.CollectionToString(StartEffect) + ","
+            + "HitEffect:" + Luban.StringUtil.CollectionToString(HitEffect) + ","
+            + "StartAnimation:" + StartAnimation + ","
+            + "HitAnimation:" + HitAnimation + ","
             + "}";
         }
 

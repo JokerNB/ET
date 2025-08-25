@@ -3,7 +3,6 @@
 namespace ET.Client
 {
     [EntitySystemOf(typeof(MapComponent))]
-    [FriendOfAttribute(typeof(ET.Client.MapManagerComponent))]
     [FriendOfAttribute(typeof(ET.Client.CameraComponent))]
     public static partial class MapComponentSystem
     {
@@ -40,10 +39,10 @@ namespace ET.Client
             float maxX = cameraPos.x + wh.x * 0.5f;
             float minY = cameraPos.y - wh.y * 0.5f;
             float maxY = cameraPos.y + wh.y * 0.5f;
-            
+
             bool isOverSizeX = self.spriteSize.x >= cameraComponent.cameraBoundSize.x;
             bool isOverSizeY = self.spriteSize.y >= cameraComponent.cameraBoundSize.y;
-            
+
             if (isOverSizeX)
             {
                 self.isXLeftInside = self.centerPos.x - self.spriteSize.x * 0.5f <= maxX &&
@@ -56,7 +55,7 @@ namespace ET.Client
                 self.isXLeftInside = self.centerPos.x - self.spriteSize.x * 0.5f >= minX && self.centerPos.x - self.spriteSize.x * 0.5f <= maxX;
                 self.isXRightInside = self.centerPos.x + self.spriteSize.x * 0.5f >= minX && self.centerPos.x + self.spriteSize.x * 0.5f <= maxX;
             }
-            
+
             if (isOverSizeY)
             {
                 self.isYBottomInside = self.centerPos.y - self.spriteSize.y * 0.5f >= minY - self.spriteSize.y &&
@@ -69,14 +68,14 @@ namespace ET.Client
                 self.isYTopInside = self.centerPos.y + self.spriteSize.y * 0.5f >= minY && self.centerPos.y + self.spriteSize.y * 0.5f <= maxY;
                 self.isYBottomInside = self.centerPos.y - self.spriteSize.y * 0.5f >= minY && self.centerPos.y - self.spriteSize.y * 0.5f <= maxY;
             }
-            
+
             bool isInX = self.isXLeftInside || self.isXRightInside;
             bool isInY = self.isYTopInside || self.isYBottomInside;
-            
+
             bool isNeedUpdate = !(isInX && isInY);
             if (isNeedUpdate)
                 self.go.SetActive(false);
-            
+
             return isNeedUpdate;
         }
 
@@ -150,10 +149,9 @@ namespace ET.Client
 
         public static void UpdatePos(this MapComponent self, float x, float y)
         {
-            self.centerPos.x = x;
-            self.centerPos.y = y;
+            self.centerPos = new Vector2(x, y);
             self.go.transform.localPosition = self.centerPos;
-            if(!self.go.activeSelf)
+            if (!self.go.activeSelf)
                 self.go.SetActive(true);
         }
     }

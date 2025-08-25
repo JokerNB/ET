@@ -27,7 +27,7 @@
 
         public static bool isUnit(this Unit_Client self)
         {
-            return self.UnitType is not UnitType.None and not UnitType.Bullet;
+            return self.UnitType is not UnitType.None and not UnitType.Bullet and not UnitType.ParticleEffect;
         }
     }
 }

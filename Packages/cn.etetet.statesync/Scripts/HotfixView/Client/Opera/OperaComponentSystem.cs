@@ -65,6 +65,11 @@ namespace ET.Client
                 });
             }
 
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                self.Root().CurrentScene().GetComponent<UnitComponent_Client>().RemoveAllMonster();
+            }
+
         }
 
         private static async ETTask Test1(this OperaComponent self)

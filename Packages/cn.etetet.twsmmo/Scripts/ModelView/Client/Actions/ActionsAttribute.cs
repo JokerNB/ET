@@ -2,9 +2,9 @@
 {
     public class ActionsAttribute : BaseAttribute
     {
-        public int ActionsType { get; }
+        public ActionType ActionsType { get; }
 
-        public ActionsAttribute(int actionsType)
+        public ActionsAttribute(ActionType actionsType)
         {
             this.ActionsType = actionsType;
         }

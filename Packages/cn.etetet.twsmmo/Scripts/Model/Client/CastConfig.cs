@@ -25,6 +25,7 @@ namespace ET
                     Index = i,
                     isSelfHit = true
                 });
+                Log.Error($"SelfHitActionTimes Add : {time}");
             }
 
             for (int i = 0; i < this.HitActionTimes.Count; i++)

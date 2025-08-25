@@ -47,13 +47,13 @@ namespace ET.Client
             {
                 //先创建一次
                 self.CreateNormalMonster();
-                self.Timers_NormalMonster.Add(self.Root().GetComponent<TimerComponent>()
-                        .NewRepeatedTimer((long)(createMonsterData.Interval * 1000), TimerInvokeType.CreateNormalMonster, self));
+                // self.Timers_NormalMonster.Add(self.Root().GetComponent<TimerComponent>()
+                //         .NewRepeatedTimer((long)(createMonsterData.Interval * 1000), TimerInvokeType.CreateNormalMonster, self));
             }
 
-            CreateMonsterData finalMonsterConfigData = gameLevelConfig.FinalMonsterConfigData;
-            self.Timer_FinalMonster = self.Root().GetComponent<TimerComponent>()
-                    .NewRepeatedTimer((long)(finalMonsterConfigData.Interval * 1000), TimerInvokeType.CreateFinalMonster, self);
+            // CreateMonsterData finalMonsterConfigData = gameLevelConfig.FinalMonsterConfigData;
+            // self.Timer_FinalMonster = self.Root().GetComponent<TimerComponent>()
+            //         .NewRepeatedTimer((long)(finalMonsterConfigData.Interval * 1000), TimerInvokeType.CreateFinalMonster, self);
 
             await ETTask.CompletedTask;
         }

@@ -4,8 +4,8 @@ using UnityEngine;
 namespace ET.Client
 {
     [EntitySystemOf(typeof(MapManagerComponent))]
-    [FriendOfAttribute(typeof(ET.Client.MapComponent))]
     [FriendOfAttribute(typeof(ET.Client.CameraComponent))]
+    [FriendOfAttribute(typeof(ET.Client.MapComponent))]
     public static partial class MapManagerComponentSystem
     {
         [EntitySystem]
@@ -14,6 +14,7 @@ namespace ET.Client
             var referenceCollector = GameObject.Find("World").GetComponent<ReferenceCollector>();
             self.MapRootTr = referenceCollector.Get<Transform>("MapRoot");
             self.MapNav = referenceCollector.Get<PolyNav2D>("PolyNav2D");
+            self.ParticleRootTr = referenceCollector.Get<Transform>("ParticleRoot");
             self.MapNavCollider = self.MapNav.gameObject.GetComponent<PolygonCollider2D>();
             self.InitMap().NoContext();
         }
@@ -49,7 +50,7 @@ namespace ET.Client
                     self.CreateMapChild(center_Child);
                 }
             }
-            
+
             self.RefreshNav();
         }
 

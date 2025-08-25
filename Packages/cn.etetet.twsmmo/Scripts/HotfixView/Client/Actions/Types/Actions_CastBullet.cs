@@ -1,6 +1,6 @@
 ﻿namespace ET.Client
 {
-    [Actions(ActionsType.CastBullet)]
+    [Actions(ActionType.CastBullet)]
     [FriendOfAttribute(typeof(ET.Client.Cast))]
     public class Actions_CastBullet : IActions
     {
@@ -20,8 +20,8 @@
                 if(unit == null)
                     continue;
 
-                int unitId = int.Parse(config.Param[0]);
-                int bulletId = int.Parse(config.Param[1]);
+                int unitId = config.Param[0];
+                int bulletId = config.Param[1];
 
                 Unit_Client bullet = UnitFactory.CreateBullet(cast.Root().CurrentScene(), ((Unit_Client)cast.Caster).Id, unitId, bulletId, unit.GetUnitPosition());
                 bullet.GetComponent<BulletComponent>().Start();

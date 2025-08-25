@@ -23,6 +23,7 @@ namespace ET
             TickTime = _buf.ReadInt();
             {int n0 = _buf.ReadSize(); TickAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); TickAction.Add(_e0);}}
             {int n0 = _buf.ReadSize(); RemoveAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); RemoveAction.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); OwnerEffect = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); OwnerEffect.Add(_e0);}}
 
             EndInit();
         }
@@ -56,6 +57,10 @@ namespace ET
         /// 效果
         /// </summary>
         public readonly System.Collections.Generic.List<int> RemoveAction;
+        /// <summary>
+        /// Buff自身特效
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> OwnerEffect;
     
         public const int __ID__ = -1370631787;
         public override int GetTypeId() => __ID__;
@@ -74,6 +79,7 @@ namespace ET
             + "TickTime:" + TickTime + ","
             + "TickAction:" + Luban.StringUtil.CollectionToString(TickAction) + ","
             + "RemoveAction:" + Luban.StringUtil.CollectionToString(RemoveAction) + ","
+            + "OwnerEffect:" + Luban.StringUtil.CollectionToString(OwnerEffect) + ","
             + "}";
         }
 

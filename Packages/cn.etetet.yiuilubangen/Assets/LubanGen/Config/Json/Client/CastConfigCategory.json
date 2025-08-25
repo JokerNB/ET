@@ -1,12 +1,25 @@
 [
   {
     "Id": 1,
-    "TotalTime": 0,
+    "TotalTime": 1000,
     "SelectType": 0,
-    "SelectParam": [],
-    "HitAction": [],
-    "HitActionTimes": [],
+    "SelectParam": [
+      10
+    ],
+    "HitAction": [
+      1001
+    ],
+    "HitActionTimes": [
+      0
+    ],
     "SelfHitAction": [],
-    "SelfHitActionTimes": []
+    "SelfHitActionTimes": [],
+    "Buffs": [],
+    "StartEffect": [
+      1
+    ],
+    "HitEffect": [],
+    "StartAnimation": 0,
+    "HitAnimation": 0
   }
 ]

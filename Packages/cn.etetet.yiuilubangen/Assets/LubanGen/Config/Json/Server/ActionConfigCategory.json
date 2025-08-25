@@ -1,7 +1,17 @@
 [
   {
-    "Id": 1,
-    "ActionType": 0,
-    "Param": []
+    "Id": 1001,
+    "ActionType": 1,
+    "Param": [
+      -10
+    ]
+  },
+  {
+    "Id": 1002,
+    "ActionType": 2,
+    "Param": [
+      1000,
+      12
+    ]
   }
 ]
