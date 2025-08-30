@@ -15,7 +15,7 @@ namespace ET.Client
     public static partial class UnitMoveComponentSystem
     {
         [EntitySystem]
-        private static void Awake(this ET.Client.UnitMoveComponent self, int castConfigId, long ownerUnitId)
+        private static void Awake(this UnitMoveComponent self, int castConfigId, long ownerUnitId)
         {
             self.castConfigId = castConfigId;
             self.ownerUnitId = ownerUnitId;
@@ -23,8 +23,12 @@ namespace ET.Client
         }
 
         [EntitySystem]
-        private static void Destroy(this ET.Client.UnitMoveComponent self)
+        private static void Destroy(this UnitMoveComponent self)
         {
+            self.castConfigId = default;
+            self.ownerUnitId = default;
+            self.moveSpeed = default;
+            self.dir = default;
             self.StopMove();
             self.UnRegisterUnityEventTrigger();
         }

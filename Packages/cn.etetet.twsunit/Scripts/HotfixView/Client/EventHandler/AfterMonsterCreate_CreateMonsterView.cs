@@ -12,10 +12,11 @@ namespace ET.Client
             GameObject go = await YIUIGameObjectPool.Inst.Get(unit.Config.ResName, parent);
             go.name = unit.ConfigId.ToString();
 
-            unit.AddComponent<GameObjectComponent, GameObject, bool>(go, true);
-            unit.AddComponent<MonsterMoveComponent>();
-            unit.AddComponent<CastComponent>();
-            unit.AddComponent<BuffComponent>();
+            bool isFromPool = unit.IsFromPool;
+            unit.AddComponent<GameObjectComponent, GameObject, bool>(go, true, isFromPool);
+            unit.AddComponent<MonsterMoveComponent>(isFromPool);
+            unit.AddComponent<CastComponent>(isFromPool);
+            unit.AddComponent<BuffComponent>(isFromPool);
             await ETTask.CompletedTask;
         }
     }

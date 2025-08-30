@@ -21,11 +21,12 @@ namespace ET.Client
 
         public static Unit_Client CreateMonster(Scene currentScene, int monsterConfigId)
         {
+            bool isFromPool = true;
             UnitComponent_Client unitComponent = currentScene.GetComponent<UnitComponent_Client>();
             UnitConfig monsterConfig = UnitConfigCategory.Instance.Get(monsterConfigId);
-            Unit_Client unit = unitComponent.AddChild<Unit_Client, int>(monsterConfigId);
+            Unit_Client unit = unitComponent.AddChild<Unit_Client, int>(monsterConfigId, isFromPool);
             unitComponent.Add(unit);
-            NumericDataComponent numericDataComponent = unit.AddComponent<NumericDataComponent>();
+            NumericDataComponent numericDataComponent = unit.AddComponent<NumericDataComponent>(isFromPool);
             numericDataComponent.InitSet(monsterConfig.NumericTypeValue);
             EventSystem.Instance.Publish(currentScene, new AfterMonsterCreate() { Unit = unit });
 

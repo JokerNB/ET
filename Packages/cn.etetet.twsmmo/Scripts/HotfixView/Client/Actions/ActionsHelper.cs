@@ -61,7 +61,6 @@
         public static void RunActions(Actions actions, ActionsRunType actionsRunType)
         {
             IActions actionsHandler = ActionsDispatcherComponent.Instance.Get(actions.Config.ActionType);
-            Log.Error($"RunActions {actions.ConfigId} , {actions.Config.ActionType}");
             if (actionsHandler == null)
             {
                 Unit_Client owner = actions.Owner;

@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/8/29 8:25:35",
+    "PackageNote": "2025/8/30 13:46:25",
     "AssetList": [
         {
             "Address": "MainUIBG",
@@ -1033,7 +1033,7 @@
             "UnityCRC": 0,
             "FileHash": "21fc7736e26ea38ee9ed888b93cbe16a",
             "FileCRC": "00000000",
-            "FileSize": 2189980,
+            "FileSize": 2190080,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

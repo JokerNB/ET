@@ -19,7 +19,7 @@
             Cast cast = self.Get(configId);
             if (cast != null)
                 return cast;
-            cast = self.AddChild<Cast, int, Unit_Client>(configId, ownerUnit);
+            cast = self.AddChild<Cast, int, Unit_Client>(configId, ownerUnit, true);
             self.Casts.Add(configId, cast);
             return cast;
         }

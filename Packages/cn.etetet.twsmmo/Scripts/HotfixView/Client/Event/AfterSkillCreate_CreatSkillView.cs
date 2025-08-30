@@ -11,10 +11,11 @@ namespace ET.Client
             Unit_Client ownerUnit = a.OwnerUnit;
             CastConfig castConfig = CastConfigCategory.Instance.Get(a.castConfigId);
             GameObject go = await YIUIGameObjectPool.Inst.Get(castConfig.ResName, scene.GetComponent<MapManagerComponent>().CastRootTr);
-            
-            skillUnit.AddComponent<GameObjectComponent, GameObject, bool>(go, true);
-            skillUnit.AddComponent<UnitMoveComponent, int, long>(a.castConfigId, ownerUnit.Id);
-            
+
+            bool isFromPoll = skillUnit.IsFromPool;
+            skillUnit.AddComponent<GameObjectComponent, GameObject, bool>(go, isFromPoll);
+            skillUnit.AddComponent<UnitMoveComponent, int, long>(a.castConfigId, ownerUnit.Id, isFromPoll);
+
             Cast cast = a.castSelf;
             cast.Cast(skillUnit);
 
