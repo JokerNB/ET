@@ -15,10 +15,10 @@ TagManager:
   - 
   - Map
   - Hidden
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Monster
+  - Cast
+  - Camera
   - 
   - 
   - 
