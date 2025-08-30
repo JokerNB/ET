@@ -6,45 +6,80 @@
     "Des": "带有强力攻击技能",
     "NumericTypeValue": [
       [
-        200007,
-        20
-      ],
-      [
-        200001,
-        100
-      ],
-      [
-        2000021,
-        100
-      ],
-      [
-        2000051,
-        10000
-      ],
-      [
-        2000061,
-        10000
-      ],
-      [
-        2000031,
-        10000
-      ],
-      [
-        100001,
+        400005,
         1
       ],
       [
-        100002,
+        400001,
         0
       ],
       [
-        100003,
+        400002,
         0
       ],
       [
-        100004,
+        2000011,
+        20
+      ],
+      [
+        200002,
+        100
+      ],
+      [
+        2000031,
+        100
+      ],
+      [
+        2000041,
+        1
+      ],
+      [
+        2000071,
+        50
+      ],
+      [
+        2000091,
+        10
+      ],
+      [
+        400004,
+        1
+      ],
+      [
+        400003,
+        1
+      ],
+      [
+        2000051,
+        100000
+      ],
+      [
+        2000061,
+        10
+      ],
+      [
+        2000081,
+        1
+      ],
+      [
+        2000101,
         0
       ]
+    ],
+    "InitCastDatas": [
+      {
+        "InitCastId": 1,
+        "InitCastPos": [
+          0,
+          0,
+          0
+        ],
+        "InitCastScale": [
+          1,
+          1,
+          1
+        ]
+      }
     ],
     "ResName": "Role_1"
   },
@@ -55,120 +90,393 @@
     "Des": "带有强力攻击技能",
     "NumericTypeValue": [
       [
-        200007,
-        30
-      ],
-      [
-        200001,
-        200
-      ],
-      [
-        2000021,
-        200
-      ],
-      [
-        2000051,
-        20000
-      ],
-      [
-        2000061,
-        20000
-      ],
-      [
-        2000031,
-        20000
-      ],
-      [
-        100001,
+        400005,
         1
       ],
       [
-        100002,
+        400001,
         0
       ],
       [
-        100003,
+        400002,
         0
       ],
       [
-        100004,
+        2000011,
+        20
+      ],
+      [
+        200002,
+        100
+      ],
+      [
+        2000031,
+        100
+      ],
+      [
+        2000041,
+        1
+      ],
+      [
+        2000071,
+        50
+      ],
+      [
+        2000091,
+        10
+      ],
+      [
+        400003,
+        1
+      ],
+      [
+        400004,
+        1
+      ],
+      [
+        2000051,
+        100000
+      ],
+      [
+        2000061,
+        10
+      ],
+      [
+        2000081,
+        1
+      ],
+      [
+        2000101,
         0
       ]
+    ],
+    "InitCastDatas": [
+      {
+        "InitCastId": 1,
+        "InitCastPos": [
+          0,
+          0,
+          0
+        ],
+        "InitCastScale": [
+          1,
+          1,
+          1
+        ]
+      }
     ],
     "ResName": "Role_2"
   },
   {
-    "Id": 1101,
+    "Id": 2001,
     "UnitType": 2,
-    "Name": "小萝卜",
+    "Name": "Stone",
     "Des": "",
     "NumericTypeValue": [
       [
-        200007,
+        2000011,
         10
       ],
       [
-        200001,
+        200002,
         20
-      ],
-      [
-        2000021,
-        20
-      ],
-      [
-        2000051,
-        0
-      ],
-      [
-        2000061,
-        0
       ],
       [
         2000031,
-        10000
+        20
+      ],
+      [
+        2000071,
+        10
+      ],
+      [
+        2000051,
+        50000
+      ],
+      [
+        2000061,
+        1
       ]
+    ],
+    "InitCastDatas": [
+      {
+        "InitCastId": 1,
+        "InitCastPos": [
+          0,
+          0,
+          0
+        ],
+        "InitCastScale": [
+          1,
+          1,
+          1
+        ]
+      }
     ],
     "ResName": "Monster_1"
   },
   {
-    "Id": 1102,
+    "Id": 2002,
     "UnitType": 3,
-    "Name": "大罗卜",
+    "Name": "Skeleton",
     "Des": "",
     "NumericTypeValue": [
       [
-        200007,
+        2000011,
+        10
+      ],
+      [
+        200002,
         20
       ],
       [
-        200001,
-        40
+        2000031,
+        20
       ],
       [
-        2000021,
-        40
+        2000071,
+        10
       ],
       [
         2000051,
-        0
+        50000
       ],
       [
         2000061,
-        0
-      ],
-      [
-        2000031,
-        20000
+        1
       ]
+    ],
+    "InitCastDatas": [
+      {
+        "InitCastId": 1,
+        "InitCastPos": [
+          0,
+          0,
+          0
+        ],
+        "InitCastScale": [
+          1,
+          1,
+          1
+        ]
+      }
     ],
     "ResName": "Monster_2"
   },
   {
-    "Id": 2001,
-    "UnitType": 7,
-    "Name": "普通攻击",
+    "Id": 2003,
+    "UnitType": 4,
+    "Name": "Bat",
+    "Des": "",
+    "NumericTypeValue": [
+      [
+        2000011,
+        10
+      ],
+      [
+        200002,
+        20
+      ],
+      [
+        2000031,
+        20
+      ],
+      [
+        2000071,
+        10
+      ],
+      [
+        2000051,
+        50000
+      ],
+      [
+        2000061,
+        1
+      ]
+    ],
+    "InitCastDatas": [
+      {
+        "InitCastId": 1,
+        "InitCastPos": [
+          0,
+          0,
+          0
+        ],
+        "InitCastScale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "ResName": "Monster_3"
+  },
+  {
+    "Id": 2004,
+    "UnitType": 5,
+    "Name": "Tree",
+    "Des": "",
+    "NumericTypeValue": [
+      [
+        2000011,
+        10
+      ],
+      [
+        200002,
+        20
+      ],
+      [
+        2000031,
+        20
+      ],
+      [
+        2000071,
+        10
+      ],
+      [
+        2000051,
+        50000
+      ],
+      [
+        2000061,
+        1
+      ]
+    ],
+    "InitCastDatas": [
+      {
+        "InitCastId": 1,
+        "InitCastPos": [
+          0,
+          0,
+          0
+        ],
+        "InitCastScale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "ResName": "Monster_4"
+  },
+  {
+    "Id": 3001,
+    "UnitType": 6,
+    "Name": "枪",
     "Des": "",
     "NumericTypeValue": [],
-    "ResName": ""
+    "InitCastDatas": [
+      {
+        "InitCastId": 1,
+        "InitCastPos": [
+          0,
+          0.5,
+          0
+        ],
+        "InitCastScale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "ResName": "qiang"
+  },
+  {
+    "Id": 3002,
+    "UnitType": 6,
+    "Name": "法杖",
+    "Des": "",
+    "NumericTypeValue": [],
+    "InitCastDatas": [
+      {
+        "InitCastId": 2,
+        "InitCastPos": [
+          0,
+          0.5,
+          0
+        ],
+        "InitCastScale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "ResName": "quanzhang"
+  },
+  {
+    "Id": 4001,
+    "UnitType": 7,
+    "Name": "普攻命中特效",
+    "Des": "",
+    "NumericTypeValue": [
+      [
+        500002,
+        1
+      ]
+    ],
+    "InitCastDatas": [],
+    "ResName": "AttackHit"
+  },
+  {
+    "Id": 4002,
+    "UnitType": 7,
+    "Name": "火箭爆炸",
+    "Des": "",
+    "NumericTypeValue": [
+      [
+        500002,
+        1
+      ]
+    ],
+    "InitCastDatas": [],
+    "ResName": "Boom"
+  },
+  {
+    "Id": 4003,
+    "UnitType": 7,
+    "Name": "燃烧瓶爆炸",
+    "Des": "",
+    "NumericTypeValue": [
+      [
+        500002,
+        1
+      ]
+    ],
+    "InitCastDatas": [],
+    "ResName": "Boom"
+  },
+  {
+    "Id": 4004,
+    "UnitType": 7,
+    "Name": "灼烧",
+    "Des": "",
+    "NumericTypeValue": [
+      [
+        500002,
+        0
+      ]
+    ],
+    "InitCastDatas": [],
+    "ResName": "Burn"
+  },
+  {
+    "Id": 1,
+    "UnitType": 8,
+    "Name": "子弹",
+    "Des": "碰撞后消失",
+    "NumericTypeValue": [],
+    "InitCastDatas": [],
+    "ResName": "None"
+  },
+  {
+    "Id": 2,
+    "UnitType": 9,
+    "Name": "技能",
+    "Des": "碰撞后不消失",
+    "NumericTypeValue": [],
+    "InitCastDatas": [],
+    "ResName": "None"
   }
 ]

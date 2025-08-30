@@ -5,8 +5,8 @@ using System.Linq;
 //此文件由数值系统自动生成，请不要手动修改
 namespace ET
 {
-    [Invoke(859002049334593)] //最大血量_0(200002),当前血量_0(200001)
-    public class NumericAffectInvokeHandler_859002049334593 : AInvokeHandler<NumericAffect, long>
+    [Invoke(859006344301890)] //最大血量_0(200003),当前血量_0(200002)
+    public class NumericAffectInvokeHandler_859006344301890 : AInvokeHandler<NumericAffect, long>
     {
         /*
         当前最大血量改变时

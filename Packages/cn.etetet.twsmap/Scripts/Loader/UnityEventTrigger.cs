@@ -20,25 +20,29 @@ namespace ET
         private void OnCollisionEnter2D(Collision2D other)
         {
             var unitId = other.gameObject.GetComponent<UnityEventTrigger>().BelongToUnitId;
-            this.OnCollisionEnterAction?.Invoke(other, unitId, this.unitType);
+            var unitType_Collider = other.gameObject.GetComponent<UnityEventTrigger>().unitType;
+            this.OnCollisionEnterAction?.Invoke(other, unitId, unitType_Collider);
         }
-
+        
         private void OnCollisionExit2D(Collision2D other)
         {
             var unitId = other.gameObject.GetComponent<UnityEventTrigger>().BelongToUnitId;
-            this.OnCollisionExitAction?.Invoke(other, unitId, this.unitType);
+            var unitType_Collider = other.gameObject.GetComponent<UnityEventTrigger>().unitType;
+            this.OnCollisionExitAction?.Invoke(other, unitId, unitType_Collider);
         }
-
+        
         private void OnTriggerEnter2D(Collider2D other)
         {
             var unitId = other.gameObject.GetComponent<UnityEventTrigger>().BelongToUnitId;
-            this.OnTriggerEnterAction?.Invoke(other, unitId, this.unitType);
+            var unitType_Collider = other.gameObject.GetComponent<UnityEventTrigger>().unitType;
+            this.OnTriggerEnterAction?.Invoke(other, unitId, unitType_Collider);
         }
-
+        
         private void OnTriggerExit2D(Collider2D other)
         {
             var unitId = other.gameObject.GetComponent<UnityEventTrigger>().BelongToUnitId;
-            this.OnTriggerExitAction?.Invoke(other, unitId, this.unitType);
+            var unitType_Collider = other.gameObject.GetComponent<UnityEventTrigger>().unitType;
+            this.OnTriggerExitAction?.Invoke(other, unitId, unitType_Collider);
         }
 
         private void FixedUpdate()

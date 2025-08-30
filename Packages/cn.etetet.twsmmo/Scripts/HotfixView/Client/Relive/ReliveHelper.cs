@@ -1,4 +1,4 @@
-﻿using Unity.Mathematics;
+﻿using UnityEngine;
 
 namespace ET.Client
 {
@@ -23,7 +23,7 @@ namespace ET.Client
             return ErrorCode.ERR_Success;
         }
 
-        public static int PointRelive(this Unit_Client unit, float3 pos)
+        public static int PointRelive(this Unit_Client unit, Vector2 pos)
         {
             if (unit.IsAlive())
                 return ErrorCode.ERR_Relive_Alive;
@@ -31,7 +31,7 @@ namespace ET.Client
             return ErrorCode.ERR_Success;
         }
 
-        public static void DoRelive(this Unit_Client unit, float3 pos, float hpRate)
+        public static void DoRelive(this Unit_Client unit, Vector2 pos, float hpRate)
         {
             if (unit.IsAlive())
                 return;

@@ -20,9 +20,37 @@ namespace ET
         /// </summary>
         Damage = 1,
         /// <summary>
-        /// 创建子弹
+        /// 创建技能
         /// </summary>
-        CastBullet = 2,
+        CreateCast = 2,
+        /// <summary>
+        /// 创建Buff
+        /// </summary>
+        CastBuff = 3,
+        /// <summary>
+        /// 创建特效
+        /// </summary>
+        CastParticle = 4,
+        /// <summary>
+        /// 移动方向直线移动
+        /// </summary>
+        DirLineMove = 5,
+        /// <summary>
+        /// 正前方直线移动
+        /// </summary>
+        ForwardLineMove = 6,
+        /// <summary>
+        /// 曲线移动
+        /// </summary>
+        CurveMove = 7,
+        /// <summary>
+        /// 随机位置
+        /// </summary>
+        RandomPos = 8,
+        /// <summary>
+        /// 随机方向直线移动
+        /// </summary>
+        RandomDirLineMove = 9,
     }
 
 } 

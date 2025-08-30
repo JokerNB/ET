@@ -57,15 +57,39 @@ namespace ET.Client
                 self.Root().CurrentScene().GetComponent<MonsterManagerComponent>().StartBattle().NoContext();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_TestCast
                 {
                     castConfigId = 1
                 });
             }
-
+            
             if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_TestCast
+                {
+                    castConfigId = 2
+                });
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_TestCast
+                {
+                    castConfigId = 4
+                });
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_TestCast
+                {
+                    castConfigId = 6
+                });
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha6))
             {
                 self.Root().CurrentScene().GetComponent<UnitComponent_Client>().RemoveAllMonster();
             }

@@ -8,9 +8,8 @@
         BuffAdd,
         BuffTick,
         BuffRemove,
+        CastStart,
         CastHit,
-        BulletAwake,
-        BulletDestroy,
-        BulletTick,
+        CastFinish,
     }
 }

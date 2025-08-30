@@ -1,17 +1,17 @@
 [
   {
-    "Id": 2001,
+    "Id": 1,
     "TotalTime": 1000,
-    "Addaction": [
-      1002
+    "AddAction": [
+      1001
     ],
-    "TickTime": 0,
-    "TickAction": [],
-    "RemoveAction": [
-      1002
+    "AddActionParam": [],
+    "TickTime": 0.2,
+    "TickAction": [
+      1001
     ],
-    "OwnerEffect": [
-      1
-    ]
+    "TickActionParam": [],
+    "RemoveAction": [],
+    "RemoveActionParam": []
   }
 ]

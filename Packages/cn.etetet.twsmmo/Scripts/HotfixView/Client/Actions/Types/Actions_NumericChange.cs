@@ -13,21 +13,25 @@ namespace ET.Client
             if (owner == null || owner.IsDisposed)
                 return;
 
-            int numericType = actions.Config.Param[0];
-            int numericValue = actions.Config.Param[1];
-
-            switch (actionsRunType)
+            Cast cast = actions.CastSelf;
+            
+            var numericType = actions.Config.NumericType;
+            var numericValueType = numericType.GetNumericValueType();
+            switch (numericValueType)
             {
-                case ActionsRunType.CastHit:
-                case ActionsRunType.BuffAdd:
-                    //根据参数，增加或减少对应属性的数值
-                    owner.NumericComponent.Change(numericType, numericValue);
+                case ENumericValueType.Int:
+                case ENumericValueType.Long:
+                case ENumericValueType.Float:
+                    owner.NumericComponent.Change(numericType, cast.CastConfig.SelfActionParam[actions.idx]);
                     break;
-                case ActionsRunType.BuffRemove:
-                    owner.NumericComponent.Change(numericType, numericValue);
+                case ENumericValueType.Bool:
+                    owner.NumericComponent.Change(numericType, cast.CastConfig.SelfActionParamBool[actions.idx]);
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(actionsRunType), actionsRunType, null);
+                {
+                    Log.Error($"Actions NumericChange ValueType not supported: {numericValueType}");
+                    return;
+                }
             }
         }
     }

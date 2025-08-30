@@ -3,32 +3,17 @@
     [FriendOfAttribute(typeof(ET.Client.Cast))]
     public static class CastHelper
     {
-        /// <summary>
-        /// 创建一个Cast
-        /// </summary>
-        /// <param name="caster"></param>
-        /// <param name="castConfigId"></param>
-        /// <returns></returns>
-        public static Cast Create(this Unit_Client caster, int castConfigId)
+        public static Cast CreateCast(this Unit_Client caster, int castConfigId)
         {
             CastComponent castComponent = caster.GetComponent<CastComponent>();
             if (castComponent == null)
                 return null;
+            Cast cast = castComponent.Get(castConfigId);
+            if (cast != null)
+                return cast;
 
-            Cast cast = castComponent.Create(castConfigId);
-            cast.Caster = caster;
+            cast = castComponent.Create(castConfigId, caster);
             return cast;
-        }
-
-        /// <summary>
-        /// 创建并释放一个Cast
-        /// </summary>
-        /// <param name="caster"></param>
-        /// <param name="castConfigId"></param>
-        /// <returns></returns>
-        public static int CreateAndCast(this Unit_Client caster, int castConfigId)
-        {
-            return Create(caster, castConfigId).Cast();
         }
     }
 }

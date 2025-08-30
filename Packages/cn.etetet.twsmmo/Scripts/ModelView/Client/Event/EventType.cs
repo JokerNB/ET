@@ -7,7 +7,6 @@ namespace ET.Client
         public long castId;
         public long casterId;
         public int castConfigId;
-        public List<long> TargetsId;
     }
     public struct Event_CastHit
     {
@@ -17,12 +16,6 @@ namespace ET.Client
     }
 
     public struct Event_CastFinish
-    {
-        public long castId;
-        public long casterId;
-    }
-
-    public struct Event_CastBreak
     {
         public long castId;
         public long casterId;
@@ -59,9 +52,32 @@ namespace ET.Client
         public long buffId;
         public int buffConfigId;
     }
-
+  
     public struct Event_TestCast
     {
         public int castConfigId;
     }
+    
+    
+    public struct AfterMonsterCreate
+    {
+        public EntityRef<Unit_Client> Unit;
+    }
+
+    public struct AfterSkillCreate
+    {
+        public EntityRef<Unit_Client> OwnerUnit;
+        public EntityRef<Unit_Client> SkillUnit;
+        public EntityRef<Cast> castSelf;
+        public int castConfigId;
+    }
+    
+    public struct AfterParticleCreate
+    {
+        public EntityRef<Unit_Client> Caster;
+        public EntityRef<Unit_Client> Owner;
+        public EntityRef<Unit_Client> Unit_Particle;
+
+    }
+    
 }

@@ -1,14 +1,63 @@
 [
   {
-    "Id": 1,
-    "Shape": 0,
-    "ShapeParam": [],
-    "TotalTime": 0,
+    "Id": 1001,
+    "Shape": 1,
+    "ShapeParam": [
+      "1"
+    ],
+    "TotalTime": 5000,
     "AwakeAction": [],
-    "Interval": 0,
-    "TickCastId": [],
+    "Interval": 100,
+    "TickCastId": [
+      3
+    ],
     "TickAction": [],
     "DestroyAction": [],
-    "Model": ""
+    "TargetNum": 0,
+    "TickLimit": 1,
+    "Tick1": [],
+    "Tick2": [
+      1005
+    ]
+  },
+  {
+    "Id": 1002,
+    "Shape": 1,
+    "ShapeParam": [
+      "5"
+    ],
+    "TotalTime": 10000,
+    "AwakeAction": [],
+    "Interval": 1000,
+    "TickCastId": [
+      5
+    ],
+    "TickAction": [],
+    "DestroyAction": [],
+    "TargetNum": 0,
+    "TickLimit": 0,
+    "Tick1": [
+      1007
+    ],
+    "Tick2": []
+  },
+  {
+    "Id": 1003,
+    "Shape": 1,
+    "ShapeParam": [
+      "2"
+    ],
+    "TotalTime": 500,
+    "AwakeAction": [],
+    "Interval": 100,
+    "TickCastId": [
+      7
+    ],
+    "TickAction": [],
+    "DestroyAction": [],
+    "TargetNum": 0,
+    "TickLimit": 2,
+    "Tick1": [],
+    "Tick2": []
   }
 ]

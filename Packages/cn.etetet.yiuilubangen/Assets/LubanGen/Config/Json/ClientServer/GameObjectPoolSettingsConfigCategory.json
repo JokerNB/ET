@@ -1,10 +1,42 @@
 [
   {
-    "id": "Monster",
+    "id": "Monster_1",
     "timeout": 0,
     "MaxCacheCount": 100,
     "CacheTime": 10,
     "MinCacheCount": 100,
-    "MaxCacheCountNewResName": "Monster"
+    "MaxCacheCountNewResName": "Monster_1"
+  },
+  {
+    "id": "Monster_2",
+    "timeout": 0,
+    "MaxCacheCount": 100,
+    "CacheTime": 10,
+    "MinCacheCount": 100,
+    "MaxCacheCountNewResName": "Monster_2"
+  },
+  {
+    "id": "Monster_3",
+    "timeout": 0,
+    "MaxCacheCount": 100,
+    "CacheTime": 10,
+    "MinCacheCount": 100,
+    "MaxCacheCountNewResName": "Monster_3"
+  },
+  {
+    "id": "Monster_4",
+    "timeout": 0,
+    "MaxCacheCount": 100,
+    "CacheTime": 10,
+    "MinCacheCount": 100,
+    "MaxCacheCountNewResName": "Monster_4"
+  },
+  {
+    "id": "qiangzidan",
+    "timeout": 0,
+    "MaxCacheCount": 100,
+    "CacheTime": 10,
+    "MinCacheCount": 100,
+    "MaxCacheCountNewResName": "qiangzidan"
   }
 ]

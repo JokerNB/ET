@@ -19,7 +19,7 @@ namespace ET
         {
             Id = _buf.ReadInt();
             ActionType = (ActionType)_buf.ReadInt();
-            {int n0 = _buf.ReadSize(); Param = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); Param.Add(_e0);}}
+            NumericType = (ENumericType)_buf.ReadInt();
 
             EndInit();
         }
@@ -38,9 +38,9 @@ namespace ET
         /// </summary>
         public readonly ActionType ActionType;
         /// <summary>
-        /// 参数
+        /// 数值类型
         /// </summary>
-        public readonly System.Collections.Generic.List<int> Param;
+        public readonly ENumericType NumericType;
     
         public const int __ID__ = 1209614648;
         public override int GetTypeId() => __ID__;
@@ -55,7 +55,7 @@ namespace ET
             return "{ "
             + "Id:" + Id + ","
             + "ActionType:" + ActionType + ","
-            + "Param:" + Luban.StringUtil.CollectionToString(Param) + ","
+            + "NumericType:" + NumericType + ","
             + "}";
         }
 

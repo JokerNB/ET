@@ -57,7 +57,6 @@ namespace ET.Client
             }
 
             self.ConfigIdBuffs.Add(configId, buff);
-            //TODO:buff添加通知
             EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_BuffAdd
             {
                 OwnerId = owner.Id,

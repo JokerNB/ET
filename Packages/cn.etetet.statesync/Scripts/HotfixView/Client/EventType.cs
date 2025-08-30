@@ -1,7 +1,4 @@
-﻿using System.Numerics;
-using Unity.Mathematics;
-
-namespace ET.Client
+﻿namespace ET.Client
 {
     public struct SceneChangeStart
     {
@@ -34,18 +31,5 @@ namespace ET.Client
     public struct AfterUnitCreate
     {
         public Unit_Client Unit;
-    }
-
-    public struct AfterMonsterCreate
-    {
-        public Unit_Client Unit;
-    }
-
-    public struct AfterBulletCreate
-    {
-        public Unit_Client Unit;
-        public float3 pos;
-        public int bulledId;
-        public long ownerId;
     }
 }

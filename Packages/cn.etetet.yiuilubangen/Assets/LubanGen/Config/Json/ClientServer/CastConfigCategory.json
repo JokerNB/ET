@@ -1,25 +1,536 @@
 [
   {
     "Id": 1,
-    "TotalTime": 1000,
-    "SelectType": 0,
-    "SelectParam": [
-      10
+    "CastType": 0,
+    "NumericTypeValue": [
+      [
+        300001,
+        1
+      ],
+      [
+        3000021,
+        1000
+      ],
+      [
+        3000031,
+        10000
+      ]
     ],
+    "SelfAction": [
+      1014
+    ],
+    "SelfActionParam": [
+      5000
+    ],
+    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
-    "HitActionTimes": [
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "qiangzidan",
+    "InitCastPos_L": [
+      1.2,
+      -4.07
+    ],
+    "InitCastPos_R": [
+      4.8,
+      -4.07
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 2,
+    "CastType": 0,
+    "NumericTypeValue": [
+      [
+        300001,
+        1
+      ],
+      [
+        3000021,
+        1
+      ],
+      [
+        3000031,
+        10000
+      ]
+    ],
+    "SelfAction": [],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "fazhangzidan",
+    "InitCastPos_L": [
+      0,
       0
     ],
-    "SelfHitAction": [],
-    "SelfHitActionTimes": [],
-    "Buffs": [],
-    "StartEffect": [
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 3,
+    "CastType": 0,
+    "NumericTypeValue": [
+      [
+        300001,
+        1
+      ],
+      [
+        3000021,
+        1
+      ],
+      [
+        3000031,
+        5000
+      ]
+    ],
+    "SelfAction": [
+      1016
+    ],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "banzhuan",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 4,
+    "CastType": 0,
+    "NumericTypeValue": [
+      [
+        300001,
+        1
+      ],
+      [
+        3000021,
+        1
+      ],
+      [
+        3000031,
+        5000
+      ]
+    ],
+    "SelfAction": [
+      1016
+    ],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "huixuanbiao",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 5,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [
+      1015
+    ],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [
+      1013
+    ],
+    "FinishActionParam": [
+      6
+    ],
+    "FinishActionParam_Bool": [],
+    "ResName": "huojian",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 6,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "huojianboom",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 7,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [
+      1017
+    ],
+    "SelfActionParam": [
+      0
+    ],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "leidian",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 8,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "lichang",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 9,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [
+      1018
+    ],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "liulian",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 10,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [
+      1017
+    ],
+    "SelfActionParam": [
+      20
+    ],
+    "SelfActionParam_Bool": [],
+    "HitAction": [],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [
+      1013
+    ],
+    "FinishActionParam": [
+      11
+    ],
+    "FinishActionParam_Bool": [],
+    "ResName": "ranshaoping",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 11,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [
+      1019
+    ],
+    "SelfActionParam": [
+      4003
+    ],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1020
+    ],
+    "HitActionParam": [
       1
     ],
-    "HitEffect": [],
-    "StartAnimation": 0,
-    "HitAnimation": 0
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "ranshaopingboom",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 12,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "shouweizhezidan",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 13,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "zuantoudan",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 14,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1001
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "zuqiu",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "Id": 15,
+    "CastType": 0,
+    "NumericTypeValue": [],
+    "SelfAction": [],
+    "SelfActionParam": [],
+    "SelfActionParam_Bool": [],
+    "HitAction": [
+      1012
+    ],
+    "HitActionParam": [],
+    "HitActionParam_Bool": [],
+    "FinishAction": [],
+    "FinishActionParam": [],
+    "FinishActionParam_Bool": [],
+    "ResName": "jitui",
+    "InitCastPos_L": [
+      0,
+      0
+    ],
+    "InitCastPos_R": [
+      0,
+      0
+    ],
+    "InitCastScale": [
+      1,
+      1,
+      1
+    ]
   }
 ]

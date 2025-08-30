@@ -12,7 +12,6 @@ namespace ET.Client
             self.AddComponent<ActionsTempComponent>();
 
             self.CreateTime = TimeInfo.Instance.ServerNow();
-            
         }
 
         [EntitySystem]
@@ -34,15 +33,16 @@ namespace ET.Client
         public static void AddActions(this Buff self)
         {
             long instanceId = self.InstanceId;
-            foreach (int i in self.Config.Addaction)
+            int idx = 0;
+            foreach (int i in self.Config.AddAction)
             {
                 try
                 {
-                    self.CreateActions(i, ActionsRunType.BuffAdd);
-
+                    self.CreateActions(i, idx, ActionsRunType.BuffAdd);
                     //可能在效果的过程中，本Buff被移除回池了，然后又从池里取出来了，所以如果值判断IsDisposed是不够的
                     if (self.InstanceId != instanceId)
                         break;
+                    idx++;
                 }
                 catch (Exception e)
                 {
@@ -55,13 +55,15 @@ namespace ET.Client
         public static void RemoveActions(this Buff self)
         {
             long instanceId = self.InstanceId;
+            int idx = 0;
             foreach (int i in self.Config.RemoveAction)
             {
                 try
                 {
-                    self.CreateActions(i, ActionsRunType.BuffRemove);
+                    self.CreateActions(i, idx, ActionsRunType.BuffRemove);
                     if (self.InstanceId != instanceId)
                         break;
+                    idx++;
                 }
                 catch (Exception e)
                 {
@@ -76,15 +78,15 @@ namespace ET.Client
             if (self.IsDisposed)
                 return;
             long instanceId = self.InstanceId;
+            int idx = 0;
             foreach (int i in self.Config.TickAction)
             {
                 try
                 {
-                    self.CreateActions(i, ActionsRunType.BuffTick);
+                    self.CreateActions(i,idx, ActionsRunType.BuffTick);
                     if (self.InstanceId != instanceId)
-                    {
                         break;
-                    }
+                    idx++;
                 }
                 catch (Exception e)
                 {
@@ -99,14 +101,14 @@ namespace ET.Client
                     }
                 }
             }
-            
-            if(self.InstanceId != instanceId)
+
+            if (self.InstanceId != instanceId)
                 return;
 
             if (self.Config.TickAction.Count > 0)
             {
                 Unit_Client owner = self.Owner;
-                if(owner == null)
+                if (owner == null)
                     return;
                 EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_BuffTick
                 {

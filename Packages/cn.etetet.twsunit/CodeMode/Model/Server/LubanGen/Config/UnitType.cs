@@ -20,29 +20,41 @@ namespace ET
         /// </summary>
         Player = 1,
         /// <summary>
-        /// 普通怪
+        /// 普通
         /// </summary>
         Monster = 2,
         /// <summary>
-        /// 精英怪
+        /// 精英
         /// </summary>
         EliteMonster = 3,
         /// <summary>
-        /// 小Boss
+        /// 统领
         /// </summary>
         LittleBoss = 4,
         /// <summary>
-        /// 最终Boss
+        /// 首领
         /// </summary>
         FinalBoss = 5,
         /// <summary>
-        /// 子弹
+        /// 武器
         /// </summary>
-        Bullet = 6,
+        Weapon = 6,
         /// <summary>
         /// 特效
         /// </summary>
         ParticleEffect = 7,
+        /// <summary>
+        /// 子弹
+        /// </summary>
+        Bullet = 8,
+        /// <summary>
+        /// 技能
+        /// </summary>
+        Cast = 9,
+        /// <summary>
+        /// 摄像机
+        /// </summary>
+        Camera = 10,
     }
 
 } 

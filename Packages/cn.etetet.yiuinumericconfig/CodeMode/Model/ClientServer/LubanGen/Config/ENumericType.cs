@@ -16,49 +16,9 @@ namespace ET
         /// </summary>
         None = 0,
         /// <summary>
-        /// 测试_0 (Int)
+        /// 无_0 (Int)
         /// </summary>
-        NumericTest0 = 100000,
-        /// <summary>
-        /// 临时1数据_0 (Int)
-        /// </summary>
-        Temp1Data0 = 990001,
-        /// <summary>
-        /// 临时2数据_0 (Int)
-        /// </summary>
-        Temp2Data0 = 990002,
-        /// <summary>
-        /// 临时3数据_0 (Int)
-        /// </summary>
-        Temp3Data0 = 990003,
-        /// <summary>
-        /// 临时4数据_0 (Int)
-        /// </summary>
-        Temp4Data0 = 990004,
-        /// <summary>
-        /// 临时5数据_0 (Int)
-        /// </summary>
-        Temp5Data0 = 990005,
-        /// <summary>
-        /// 临时6数据_0 (Int)
-        /// </summary>
-        Temp6Data0 = 990006,
-        /// <summary>
-        /// 临时7数据_0 (Int)
-        /// </summary>
-        Temp7Data0 = 990007,
-        /// <summary>
-        /// 临时8数据_0 (Int)
-        /// </summary>
-        Temp8Data0 = 990008,
-        /// <summary>
-        /// 临时9数据_0 (Int)
-        /// </summary>
-        Temp9Data0 = 990009,
-        /// <summary>
-        /// 临时10数据_0 (Int)
-        /// </summary>
-        Temp10Data0 = 990010,
+        None0 = 100000,
         /// <summary>
         /// 等级_0 (Int)
         /// </summary>
@@ -76,153 +36,465 @@ namespace ET
         /// </summary>
         Diamond0 = 100004,
         /// <summary>
+        /// 普攻伤害_0 (Int)
+        /// </summary>
+        NormalDamage0 = 200001,
+        /// <summary>
+        /// 普攻伤害_1 (Int)
+        /// </summary>
+        NormalDamage1 = 2000011,
+        /// <summary>
+        /// 普攻伤害_2 (Int)
+        /// </summary>
+        NormalDamage2 = 2000012,
+        /// <summary>
+        /// 普攻伤害_3 (Float)
+        /// </summary>
+        NormalDamage3 = 2000013,
+        /// <summary>
+        /// 普攻伤害_4 (Int)
+        /// </summary>
+        NormalDamage4 = 2000014,
+        /// <summary>
+        /// 普攻伤害_5 (Float)
+        /// </summary>
+        NormalDamage5 = 2000015,
+        /// <summary>
+        /// 普攻伤害_6 (Int)
+        /// </summary>
+        NormalDamage6 = 2000016,
+        /// <summary>
         /// 当前血量_0 (Int)
         /// </summary>
-        Hp0 = 200001,
+        Hp0 = 200002,
         /// <summary>
         /// 最大血量_0 (Int)
         /// </summary>
-        MaxHp0 = 200002,
+        MaxHp0 = 200003,
         /// <summary>
         /// 最大血量_1 (Int)
         /// </summary>
-        MaxHp1 = 2000021,
+        MaxHp1 = 2000031,
         /// <summary>
         /// 最大血量_2 (Int)
         /// </summary>
-        MaxHp2 = 2000022,
+        MaxHp2 = 2000032,
         /// <summary>
         /// 最大血量_3 (Float)
         /// </summary>
-        MaxHp3 = 2000023,
+        MaxHp3 = 2000033,
         /// <summary>
         /// 最大血量_4 (Int)
         /// </summary>
-        MaxHp4 = 2000024,
+        MaxHp4 = 2000034,
         /// <summary>
         /// 最大血量_5 (Float)
         /// </summary>
-        MaxHp5 = 2000025,
+        MaxHp5 = 2000035,
         /// <summary>
         /// 最大血量_6 (Int)
         /// </summary>
-        MaxHp6 = 2000026,
+        MaxHp6 = 2000036,
         /// <summary>
-        /// 速度_0 (Float)
+        /// 暴击伤害_0 (Int)
         /// </summary>
-        Speed0 = 200003,
+        CriticalDamage0 = 200004,
         /// <summary>
-        /// 速度_1 (Float)
+        /// 暴击伤害_1 (Int)
         /// </summary>
-        Speed1 = 2000031,
+        CriticalDamage1 = 2000041,
         /// <summary>
-        /// 速度_2 (Float)
+        /// 暴击伤害_2 (Int)
         /// </summary>
-        Speed2 = 2000032,
-        /// <summary>
-        /// 速度_3 (Float)
-        /// </summary>
-        Speed3 = 2000033,
-        /// <summary>
-        /// 速度_4 (Float)
-        /// </summary>
-        Speed4 = 2000034,
-        /// <summary>
-        /// 速度_5 (Float)
-        /// </summary>
-        Speed5 = 2000035,
-        /// <summary>
-        /// 速度_6 (Float)
-        /// </summary>
-        Speed6 = 2000036,
-        /// <summary>
-        /// AOI_0 (Float)
-        /// </summary>
-        AOI0 = 200004,
-        /// <summary>
-        /// AOI_1 (Float)
-        /// </summary>
-        AOI1 = 2000041,
-        /// <summary>
-        /// AOI_2 (Float)
-        /// </summary>
-        AOI2 = 2000042,
-        /// <summary>
-        /// AOI_3 (Float)
-        /// </summary>
-        AOI3 = 2000043,
-        /// <summary>
-        /// AOI_4 (Float)
-        /// </summary>
-        AOI4 = 2000044,
-        /// <summary>
-        /// AOI_5 (Float)
-        /// </summary>
-        AOI5 = 2000045,
-        /// <summary>
-        /// AOI_6 (Float)
-        /// </summary>
-        AOI6 = 2000046,
-        /// <summary>
-        /// 暴击伤害_0 (Float)
-        /// </summary>
-        Critical0 = 200005,
-        /// <summary>
-        /// 暴击伤害_1 (Float)
-        /// </summary>
-        Critical1 = 2000051,
-        /// <summary>
-        /// 暴击伤害_2 (Float)
-        /// </summary>
-        Critical2 = 2000052,
+        CriticalDamage2 = 2000042,
         /// <summary>
         /// 暴击伤害_3 (Float)
         /// </summary>
-        Critical3 = 2000053,
+        CriticalDamage3 = 2000043,
         /// <summary>
-        /// 暴击伤害_4 (Float)
+        /// 暴击伤害_4 (Int)
         /// </summary>
-        Critical4 = 2000054,
+        CriticalDamage4 = 2000044,
         /// <summary>
         /// 暴击伤害_5 (Float)
         /// </summary>
-        Critical5 = 2000055,
+        CriticalDamage5 = 2000045,
         /// <summary>
-        /// 暴击伤害_6 (Float)
+        /// 暴击伤害_6 (Int)
         /// </summary>
-        Critical6 = 2000056,
+        CriticalDamage6 = 2000046,
         /// <summary>
-        /// 技能伤害_0 (Float)
+        /// 速度_0 (Float)
         /// </summary>
-        Skill0 = 200006,
+        Speed0 = 200005,
         /// <summary>
-        /// 技能伤害_1 (Float)
+        /// 速度_1 (Float)
         /// </summary>
-        Skill1 = 2000061,
+        Speed1 = 2000051,
         /// <summary>
-        /// 技能伤害_2 (Float)
+        /// 速度_2 (Float)
         /// </summary>
-        Skill2 = 2000062,
+        Speed2 = 2000052,
         /// <summary>
-        /// 技能伤害_3 (Float)
+        /// 速度_3 (Float)
         /// </summary>
-        Skill3 = 2000063,
+        Speed3 = 2000053,
         /// <summary>
-        /// 技能伤害_4 (Float)
+        /// 速度_4 (Float)
         /// </summary>
-        Skill4 = 2000064,
+        Speed4 = 2000054,
         /// <summary>
-        /// 技能伤害_5 (Float)
+        /// 速度_5 (Float)
         /// </summary>
-        Skill5 = 2000065,
+        Speed5 = 2000055,
         /// <summary>
-        /// 技能伤害_6 (Float)
+        /// 速度_6 (Float)
         /// </summary>
-        Skill6 = 2000066,
+        Speed6 = 2000056,
         /// <summary>
-        /// 普攻伤害_0 (Int)
+        /// 防御_0 (Float)
         /// </summary>
-        NormalAttack0 = 200007,
+        Defense0 = 200006,
+        /// <summary>
+        /// 防御_1 (Float)
+        /// </summary>
+        Defense1 = 2000061,
+        /// <summary>
+        /// 防御_2 (Float)
+        /// </summary>
+        Defense2 = 2000062,
+        /// <summary>
+        /// 防御_3 (Float)
+        /// </summary>
+        Defense3 = 2000063,
+        /// <summary>
+        /// 防御_4 (Float)
+        /// </summary>
+        Defense4 = 2000064,
+        /// <summary>
+        /// 防御_5 (Float)
+        /// </summary>
+        Defense5 = 2000065,
+        /// <summary>
+        /// 防御_6 (Float)
+        /// </summary>
+        Defense6 = 2000066,
+        /// <summary>
+        /// 攻击范围_0 (Int)
+        /// </summary>
+        AttackRange0 = 200007,
+        /// <summary>
+        /// 攻击范围_1 (Int)
+        /// </summary>
+        AttackRange1 = 2000071,
+        /// <summary>
+        /// 攻击范围_2 (Int)
+        /// </summary>
+        AttackRange2 = 2000072,
+        /// <summary>
+        /// 攻击范围_3 (Float)
+        /// </summary>
+        AttackRange3 = 2000073,
+        /// <summary>
+        /// 攻击范围_4 (Int)
+        /// </summary>
+        AttackRange4 = 2000074,
+        /// <summary>
+        /// 攻击范围_5 (Float)
+        /// </summary>
+        AttackRange5 = 2000075,
+        /// <summary>
+        /// 攻击范围_6 (Int)
+        /// </summary>
+        AttackRange6 = 2000076,
+        /// <summary>
+        /// 攻击间隔_0 (Float)
+        /// </summary>
+        AttackInterval0 = 200008,
+        /// <summary>
+        /// 攻击间隔_1 (Float)
+        /// </summary>
+        AttackInterval1 = 2000081,
+        /// <summary>
+        /// 攻击间隔_2 (Float)
+        /// </summary>
+        AttackInterval2 = 2000082,
+        /// <summary>
+        /// 攻击间隔_3 (Float)
+        /// </summary>
+        AttackInterval3 = 2000083,
+        /// <summary>
+        /// 攻击间隔_4 (Float)
+        /// </summary>
+        AttackInterval4 = 2000084,
+        /// <summary>
+        /// 攻击间隔_5 (Float)
+        /// </summary>
+        AttackInterval5 = 2000085,
+        /// <summary>
+        /// 攻击间隔_6 (Float)
+        /// </summary>
+        AttackInterval6 = 2000086,
+        /// <summary>
+        /// 吸收范围_0 (Int)
+        /// </summary>
+        AbsorptionRange0 = 200009,
+        /// <summary>
+        /// 吸收范围_1 (Int)
+        /// </summary>
+        AbsorptionRange1 = 2000091,
+        /// <summary>
+        /// 吸收范围_2 (Int)
+        /// </summary>
+        AbsorptionRange2 = 2000092,
+        /// <summary>
+        /// 吸收范围_3 (Float)
+        /// </summary>
+        AbsorptionRange3 = 2000093,
+        /// <summary>
+        /// 吸收范围_4 (Int)
+        /// </summary>
+        AbsorptionRange4 = 2000094,
+        /// <summary>
+        /// 吸收范围_5 (Float)
+        /// </summary>
+        AbsorptionRange5 = 2000095,
+        /// <summary>
+        /// 吸收范围_6 (Int)
+        /// </summary>
+        AbsorptionRange6 = 2000096,
+        /// <summary>
+        /// 暴击率_0 (Float)
+        /// </summary>
+        CriticalRate0 = 200010,
+        /// <summary>
+        /// 暴击率_1 (Float)
+        /// </summary>
+        CriticalRate1 = 2000101,
+        /// <summary>
+        /// 暴击率_2 (Float)
+        /// </summary>
+        CriticalRate2 = 2000102,
+        /// <summary>
+        /// 暴击率_3 (Float)
+        /// </summary>
+        CriticalRate3 = 2000103,
+        /// <summary>
+        /// 暴击率_4 (Float)
+        /// </summary>
+        CriticalRate4 = 2000104,
+        /// <summary>
+        /// 暴击率_5 (Float)
+        /// </summary>
+        CriticalRate5 = 2000105,
+        /// <summary>
+        /// 暴击率_6 (Float)
+        /// </summary>
+        CriticalRate6 = 2000106,
+        /// <summary>
+        /// 技能物体个数_0 (Int)
+        /// </summary>
+        SkillNum0 = 300001,
+        /// <summary>
+        /// 技能触发间隔_0 (Long)
+        /// </summary>
+        SkillTickInterval0 = 300002,
+        /// <summary>
+        /// 技能触发间隔_1 (Long)
+        /// </summary>
+        SkillTickInterval1 = 3000021,
+        /// <summary>
+        /// 技能触发间隔_2 (Long)
+        /// </summary>
+        SkillTickInterval2 = 3000022,
+        /// <summary>
+        /// 技能触发间隔_3 (Float)
+        /// </summary>
+        SkillTickInterval3 = 3000023,
+        /// <summary>
+        /// 技能触发间隔_4 (Long)
+        /// </summary>
+        SkillTickInterval4 = 3000024,
+        /// <summary>
+        /// 技能触发间隔_5 (Float)
+        /// </summary>
+        SkillTickInterval5 = 3000025,
+        /// <summary>
+        /// 技能触发间隔_6 (Long)
+        /// </summary>
+        SkillTickInterval6 = 3000026,
+        /// <summary>
+        /// 技能移动速度_0 (Float)
+        /// </summary>
+        SkillMoveSpeed0 = 300003,
+        /// <summary>
+        /// 技能移动速度_1 (Float)
+        /// </summary>
+        SkillMoveSpeed1 = 3000031,
+        /// <summary>
+        /// 技能移动速度_2 (Float)
+        /// </summary>
+        SkillMoveSpeed2 = 3000032,
+        /// <summary>
+        /// 技能移动速度_3 (Float)
+        /// </summary>
+        SkillMoveSpeed3 = 3000033,
+        /// <summary>
+        /// 技能移动速度_4 (Float)
+        /// </summary>
+        SkillMoveSpeed4 = 3000034,
+        /// <summary>
+        /// 技能移动速度_5 (Float)
+        /// </summary>
+        SkillMoveSpeed5 = 3000035,
+        /// <summary>
+        /// 技能移动速度_6 (Float)
+        /// </summary>
+        SkillMoveSpeed6 = 3000036,
+        /// <summary>
+        /// 技能持续时间_0 (Long)
+        /// </summary>
+        SkillDuration0 = 300004,
+        /// <summary>
+        /// 技能持续时间_1 (Long)
+        /// </summary>
+        SkillDuration1 = 3000041,
+        /// <summary>
+        /// 技能持续时间_2 (Long)
+        /// </summary>
+        SkillDuration2 = 3000042,
+        /// <summary>
+        /// 技能持续时间_3 (Float)
+        /// </summary>
+        SkillDuration3 = 3000043,
+        /// <summary>
+        /// 技能持续时间_4 (Long)
+        /// </summary>
+        SkillDuration4 = 3000044,
+        /// <summary>
+        /// 技能持续时间_5 (Float)
+        /// </summary>
+        SkillDuration5 = 3000045,
+        /// <summary>
+        /// 技能持续时间_6 (Long)
+        /// </summary>
+        SkillDuration6 = 3000046,
+        /// <summary>
+        /// 子技能物体个数_0 (Int)
+        /// </summary>
+        SkillChildNum0 = 300005,
+        /// <summary>
+        /// 子技能攻击范围_0 (Int)
+        /// </summary>
+        SkillChildAttackRange0 = 300006,
+        /// <summary>
+        /// 子技能攻击范围_1 (Int)
+        /// </summary>
+        SkillChildAttackRange1 = 3000061,
+        /// <summary>
+        /// 子技能攻击范围_2 (Int)
+        /// </summary>
+        SkillChildAttackRange2 = 3000062,
+        /// <summary>
+        /// 子技能攻击范围_3 (Float)
+        /// </summary>
+        SkillChildAttackRange3 = 3000063,
+        /// <summary>
+        /// 子技能攻击范围_4 (Int)
+        /// </summary>
+        SkillChildAttackRange4 = 3000064,
+        /// <summary>
+        /// 子技能攻击范围_5 (Float)
+        /// </summary>
+        SkillChildAttackRange5 = 3000065,
+        /// <summary>
+        /// 子技能攻击范围_6 (Int)
+        /// </summary>
+        SkillChildAttackRange6 = 3000066,
+        /// <summary>
+        /// 子技能持续时间_0 (Long)
+        /// </summary>
+        SkillChildDuration0 = 300007,
+        /// <summary>
+        /// 子技能持续时间_1 (Long)
+        /// </summary>
+        SkillChildDuration1 = 3000071,
+        /// <summary>
+        /// 子技能持续时间_2 (Long)
+        /// </summary>
+        SkillChildDuration2 = 3000072,
+        /// <summary>
+        /// 子技能持续时间_3 (Float)
+        /// </summary>
+        SkillChildDuration3 = 3000073,
+        /// <summary>
+        /// 子技能持续时间_4 (Long)
+        /// </summary>
+        SkillChildDuration4 = 3000074,
+        /// <summary>
+        /// 子技能持续时间_5 (Float)
+        /// </summary>
+        SkillChildDuration5 = 3000075,
+        /// <summary>
+        /// 子技能持续时间_6 (Long)
+        /// </summary>
+        SkillChildDuration6 = 3000076,
+        /// <summary>
+        /// 子技能移动速度_0 (Float)
+        /// </summary>
+        SkillChildMoveSpeed0 = 300008,
+        /// <summary>
+        /// 子技能移动速度_1 (Float)
+        /// </summary>
+        SkillChildMoveSpeed1 = 3000081,
+        /// <summary>
+        /// 子技能移动速度_2 (Float)
+        /// </summary>
+        SkillChildMoveSpeed2 = 3000082,
+        /// <summary>
+        /// 子技能移动速度_3 (Float)
+        /// </summary>
+        SkillChildMoveSpeed3 = 3000083,
+        /// <summary>
+        /// 子技能移动速度_4 (Float)
+        /// </summary>
+        SkillChildMoveSpeed4 = 3000084,
+        /// <summary>
+        /// 子技能移动速度_5 (Float)
+        /// </summary>
+        SkillChildMoveSpeed5 = 3000085,
+        /// <summary>
+        /// 子技能移动速度_6 (Float)
+        /// </summary>
+        SkillChildMoveSpeed6 = 3000086,
+        /// <summary>
+        /// 对局经验值_0 (Int)
+        /// </summary>
+        BattleExp0 = 400001,
+        /// <summary>
+        /// 对局金币_0 (Int)
+        /// </summary>
+        BattleGold0 = 400002,
+        /// <summary>
+        /// 对局经验值倍率_0 (Float)
+        /// </summary>
+        BattleExpRate0 = 400003,
+        /// <summary>
+        /// 对局金币倍率_0 (Float)
+        /// </summary>
+        BattleGoldRate0 = 400004,
+        /// <summary>
+        /// 对局等级_0 (Int)
+        /// </summary>
+        BattleLevel0 = 400005,
+        /// <summary>
+        /// 禁止移动_0 (Bool)
+        /// </summary>
+        ForbidMove0 = 500001,
+        /// <summary>
+        /// 禁止跟随_0 (Bool)
+        /// </summary>
+        ForbidFollow0 = 500002,
     }
 
 } 

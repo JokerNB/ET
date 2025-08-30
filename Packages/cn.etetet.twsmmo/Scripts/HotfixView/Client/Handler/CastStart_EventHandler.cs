@@ -8,15 +8,6 @@
             //技能释放流程的开始，此处可以自行接入行为树或状态机之类的
             //开始播放技能前摇，播放技能特效、音效等等
             Log.Error($"-> 玩家 {a.casterId} 开始释放 {a.castConfigId} 技能 {a.castId}");
-            Unit_Client unit = scene.GetComponent<UnitComponent_Client>().Get(a.casterId);
-            if (unit == null)
-                return;
-            CastConfig castConfig = CastConfigCategory.Instance.Get(a.castConfigId);
-            foreach (int effectConfigId in castConfig.StartEffect)
-            {
-                ParticleEffectHelper.CreateParticle(unit, effectConfigId).NoContext();
-            }
-
             await ETTask.CompletedTask;
         }
     }

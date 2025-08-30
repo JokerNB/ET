@@ -258,8 +258,8 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.twsmmo/Assets/GameRes/Bundles
-        CollectorGUID: 6ab558ba3624d6d429b409c3aa8c97a9
+      - CollectPath: Packages/cn.etetet.twsmmo/Assets/GameRes
+        CollectorGUID: 3445a92c010af1c479b05967635d1fa5
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory

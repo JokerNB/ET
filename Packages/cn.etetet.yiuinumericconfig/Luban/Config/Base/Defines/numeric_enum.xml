@@ -6,37 +6,7 @@
 
 
 <!-- 数值测试 -->
-<var name="NumericTest0" value="100000"  alias="测试_0" comment = "测试_0 (Int)"/> 
-
-<!-- 临时1数据 -->
-<var name="Temp1Data0" value="990001"  alias="临时1数据_0" comment = "临时1数据_0 (Int)"/> 
-
-<!-- 临时2数据 -->
-<var name="Temp2Data0" value="990002"  alias="临时2数据_0" comment = "临时2数据_0 (Int)"/> 
-
-<!-- 临时3数据 -->
-<var name="Temp3Data0" value="990003"  alias="临时3数据_0" comment = "临时3数据_0 (Int)"/> 
-
-<!-- 临时4数据 -->
-<var name="Temp4Data0" value="990004"  alias="临时4数据_0" comment = "临时4数据_0 (Int)"/> 
-
-<!-- 临时5数据 -->
-<var name="Temp5Data0" value="990005"  alias="临时5数据_0" comment = "临时5数据_0 (Int)"/> 
-
-<!-- 临时6数据 -->
-<var name="Temp6Data0" value="990006"  alias="临时6数据_0" comment = "临时6数据_0 (Int)"/> 
-
-<!-- 临时7数据 -->
-<var name="Temp7Data0" value="990007"  alias="临时7数据_0" comment = "临时7数据_0 (Int)"/> 
-
-<!-- 临时8数据 -->
-<var name="Temp8Data0" value="990008"  alias="临时8数据_0" comment = "临时8数据_0 (Int)"/> 
-
-<!-- 临时9数据 -->
-<var name="Temp9Data0" value="990009"  alias="临时9数据_0" comment = "临时9数据_0 (Int)"/> 
-
-<!-- 临时10数据 -->
-<var name="Temp10Data0" value="990010"  alias="临时10数据_0" comment = "临时10数据_0 (Int)"/> 
+<var name="None0" value="100000"  alias="无_0" comment = "无_0 (Int)"/> 
 
 <!-- 等级 -->
 <var name="Level0" value="100001"  alias="等级_0" comment = "等级_0 (Int)"/> 
@@ -50,56 +20,170 @@
 <!-- 钻石 -->
 <var name="Diamond0" value="100004"  alias="钻石_0" comment = "钻石_0 (Int)"/> 
 
+<!-- 普攻伤害 -->
+<var name="NormalDamage0" value="200001"  alias="普攻伤害_0" comment = "普攻伤害_0 (Int)"/> 
+<var name="NormalDamage1" value="2000011" alias="普攻伤害_1" comment = "普攻伤害_1 (Int)"/>
+<var name="NormalDamage2" value="2000012" alias="普攻伤害_2" comment = "普攻伤害_2 (Int)"/>
+<var name="NormalDamage3" value="2000013" alias="普攻伤害_3" comment = "普攻伤害_3 (Float)"/>
+<var name="NormalDamage4" value="2000014" alias="普攻伤害_4" comment = "普攻伤害_4 (Int)"/>
+<var name="NormalDamage5" value="2000015" alias="普攻伤害_5" comment = "普攻伤害_5 (Float)"/>
+<var name="NormalDamage6" value="2000016" alias="普攻伤害_6" comment = "普攻伤害_6 (Int)"/>
+
 <!-- 当前血量 -->
-<var name="Hp0" value="200001"  alias="当前血量_0" comment = "当前血量_0 (Int)"/> 
+<var name="Hp0" value="200002"  alias="当前血量_0" comment = "当前血量_0 (Int)"/> 
 
 <!-- 最大血量 -->
-<var name="MaxHp0" value="200002"  alias="最大血量_0" comment = "最大血量_0 (Int)"/> 
-<var name="MaxHp1" value="2000021" alias="最大血量_1" comment = "最大血量_1 (Int)"/>
-<var name="MaxHp2" value="2000022" alias="最大血量_2" comment = "最大血量_2 (Int)"/>
-<var name="MaxHp3" value="2000023" alias="最大血量_3" comment = "最大血量_3 (Float)"/>
-<var name="MaxHp4" value="2000024" alias="最大血量_4" comment = "最大血量_4 (Int)"/>
-<var name="MaxHp5" value="2000025" alias="最大血量_5" comment = "最大血量_5 (Float)"/>
-<var name="MaxHp6" value="2000026" alias="最大血量_6" comment = "最大血量_6 (Int)"/>
-
-<!-- 速度 -->
-<var name="Speed0" value="200003"  alias="速度_0" comment = "速度_0 (Float)"/> 
-<var name="Speed1" value="2000031" alias="速度_1" comment = "速度_1 (Float)"/>
-<var name="Speed2" value="2000032" alias="速度_2" comment = "速度_2 (Float)"/>
-<var name="Speed3" value="2000033" alias="速度_3" comment = "速度_3 (Float)"/>
-<var name="Speed4" value="2000034" alias="速度_4" comment = "速度_4 (Float)"/>
-<var name="Speed5" value="2000035" alias="速度_5" comment = "速度_5 (Float)"/>
-<var name="Speed6" value="2000036" alias="速度_6" comment = "速度_6 (Float)"/>
-
-<!-- AOI -->
-<var name="AOI0" value="200004"  alias="AOI_0" comment = "AOI_0 (Float)"/> 
-<var name="AOI1" value="2000041" alias="AOI_1" comment = "AOI_1 (Float)"/>
-<var name="AOI2" value="2000042" alias="AOI_2" comment = "AOI_2 (Float)"/>
-<var name="AOI3" value="2000043" alias="AOI_3" comment = "AOI_3 (Float)"/>
-<var name="AOI4" value="2000044" alias="AOI_4" comment = "AOI_4 (Float)"/>
-<var name="AOI5" value="2000045" alias="AOI_5" comment = "AOI_5 (Float)"/>
-<var name="AOI6" value="2000046" alias="AOI_6" comment = "AOI_6 (Float)"/>
+<var name="MaxHp0" value="200003"  alias="最大血量_0" comment = "最大血量_0 (Int)"/> 
+<var name="MaxHp1" value="2000031" alias="最大血量_1" comment = "最大血量_1 (Int)"/>
+<var name="MaxHp2" value="2000032" alias="最大血量_2" comment = "最大血量_2 (Int)"/>
+<var name="MaxHp3" value="2000033" alias="最大血量_3" comment = "最大血量_3 (Float)"/>
+<var name="MaxHp4" value="2000034" alias="最大血量_4" comment = "最大血量_4 (Int)"/>
+<var name="MaxHp5" value="2000035" alias="最大血量_5" comment = "最大血量_5 (Float)"/>
+<var name="MaxHp6" value="2000036" alias="最大血量_6" comment = "最大血量_6 (Int)"/>
 
 <!-- 暴击伤害 -->
-<var name="Critical0" value="200005"  alias="暴击伤害_0" comment = "暴击伤害_0 (Float)"/> 
-<var name="Critical1" value="2000051" alias="暴击伤害_1" comment = "暴击伤害_1 (Float)"/>
-<var name="Critical2" value="2000052" alias="暴击伤害_2" comment = "暴击伤害_2 (Float)"/>
-<var name="Critical3" value="2000053" alias="暴击伤害_3" comment = "暴击伤害_3 (Float)"/>
-<var name="Critical4" value="2000054" alias="暴击伤害_4" comment = "暴击伤害_4 (Float)"/>
-<var name="Critical5" value="2000055" alias="暴击伤害_5" comment = "暴击伤害_5 (Float)"/>
-<var name="Critical6" value="2000056" alias="暴击伤害_6" comment = "暴击伤害_6 (Float)"/>
+<var name="CriticalDamage0" value="200004"  alias="暴击伤害_0" comment = "暴击伤害_0 (Int)"/> 
+<var name="CriticalDamage1" value="2000041" alias="暴击伤害_1" comment = "暴击伤害_1 (Int)"/>
+<var name="CriticalDamage2" value="2000042" alias="暴击伤害_2" comment = "暴击伤害_2 (Int)"/>
+<var name="CriticalDamage3" value="2000043" alias="暴击伤害_3" comment = "暴击伤害_3 (Float)"/>
+<var name="CriticalDamage4" value="2000044" alias="暴击伤害_4" comment = "暴击伤害_4 (Int)"/>
+<var name="CriticalDamage5" value="2000045" alias="暴击伤害_5" comment = "暴击伤害_5 (Float)"/>
+<var name="CriticalDamage6" value="2000046" alias="暴击伤害_6" comment = "暴击伤害_6 (Int)"/>
 
-<!-- 技能伤害 -->
-<var name="Skill0" value="200006"  alias="技能伤害_0" comment = "技能伤害_0 (Float)"/> 
-<var name="Skill1" value="2000061" alias="技能伤害_1" comment = "技能伤害_1 (Float)"/>
-<var name="Skill2" value="2000062" alias="技能伤害_2" comment = "技能伤害_2 (Float)"/>
-<var name="Skill3" value="2000063" alias="技能伤害_3" comment = "技能伤害_3 (Float)"/>
-<var name="Skill4" value="2000064" alias="技能伤害_4" comment = "技能伤害_4 (Float)"/>
-<var name="Skill5" value="2000065" alias="技能伤害_5" comment = "技能伤害_5 (Float)"/>
-<var name="Skill6" value="2000066" alias="技能伤害_6" comment = "技能伤害_6 (Float)"/>
+<!-- 速度 -->
+<var name="Speed0" value="200005"  alias="速度_0" comment = "速度_0 (Float)"/> 
+<var name="Speed1" value="2000051" alias="速度_1" comment = "速度_1 (Float)"/>
+<var name="Speed2" value="2000052" alias="速度_2" comment = "速度_2 (Float)"/>
+<var name="Speed3" value="2000053" alias="速度_3" comment = "速度_3 (Float)"/>
+<var name="Speed4" value="2000054" alias="速度_4" comment = "速度_4 (Float)"/>
+<var name="Speed5" value="2000055" alias="速度_5" comment = "速度_5 (Float)"/>
+<var name="Speed6" value="2000056" alias="速度_6" comment = "速度_6 (Float)"/>
 
-<!-- 普攻伤害 -->
-<var name="NormalAttack0" value="200007"  alias="普攻伤害_0" comment = "普攻伤害_0 (Int)"/> 
+<!-- 防御 -->
+<var name="Defense0" value="200006"  alias="防御_0" comment = "防御_0 (Float)"/> 
+<var name="Defense1" value="2000061" alias="防御_1" comment = "防御_1 (Float)"/>
+<var name="Defense2" value="2000062" alias="防御_2" comment = "防御_2 (Float)"/>
+<var name="Defense3" value="2000063" alias="防御_3" comment = "防御_3 (Float)"/>
+<var name="Defense4" value="2000064" alias="防御_4" comment = "防御_4 (Float)"/>
+<var name="Defense5" value="2000065" alias="防御_5" comment = "防御_5 (Float)"/>
+<var name="Defense6" value="2000066" alias="防御_6" comment = "防御_6 (Float)"/>
+
+<!-- 攻击范围 -->
+<var name="AttackRange0" value="200007"  alias="攻击范围_0" comment = "攻击范围_0 (Int)"/> 
+<var name="AttackRange1" value="2000071" alias="攻击范围_1" comment = "攻击范围_1 (Int)"/>
+<var name="AttackRange2" value="2000072" alias="攻击范围_2" comment = "攻击范围_2 (Int)"/>
+<var name="AttackRange3" value="2000073" alias="攻击范围_3" comment = "攻击范围_3 (Float)"/>
+<var name="AttackRange4" value="2000074" alias="攻击范围_4" comment = "攻击范围_4 (Int)"/>
+<var name="AttackRange5" value="2000075" alias="攻击范围_5" comment = "攻击范围_5 (Float)"/>
+<var name="AttackRange6" value="2000076" alias="攻击范围_6" comment = "攻击范围_6 (Int)"/>
+
+<!-- 攻击间隔 -->
+<var name="AttackInterval0" value="200008"  alias="攻击间隔_0" comment = "攻击间隔_0 (Float)"/> 
+<var name="AttackInterval1" value="2000081" alias="攻击间隔_1" comment = "攻击间隔_1 (Float)"/>
+<var name="AttackInterval2" value="2000082" alias="攻击间隔_2" comment = "攻击间隔_2 (Float)"/>
+<var name="AttackInterval3" value="2000083" alias="攻击间隔_3" comment = "攻击间隔_3 (Float)"/>
+<var name="AttackInterval4" value="2000084" alias="攻击间隔_4" comment = "攻击间隔_4 (Float)"/>
+<var name="AttackInterval5" value="2000085" alias="攻击间隔_5" comment = "攻击间隔_5 (Float)"/>
+<var name="AttackInterval6" value="2000086" alias="攻击间隔_6" comment = "攻击间隔_6 (Float)"/>
+
+<!-- 吸收范围 -->
+<var name="AbsorptionRange0" value="200009"  alias="吸收范围_0" comment = "吸收范围_0 (Int)"/> 
+<var name="AbsorptionRange1" value="2000091" alias="吸收范围_1" comment = "吸收范围_1 (Int)"/>
+<var name="AbsorptionRange2" value="2000092" alias="吸收范围_2" comment = "吸收范围_2 (Int)"/>
+<var name="AbsorptionRange3" value="2000093" alias="吸收范围_3" comment = "吸收范围_3 (Float)"/>
+<var name="AbsorptionRange4" value="2000094" alias="吸收范围_4" comment = "吸收范围_4 (Int)"/>
+<var name="AbsorptionRange5" value="2000095" alias="吸收范围_5" comment = "吸收范围_5 (Float)"/>
+<var name="AbsorptionRange6" value="2000096" alias="吸收范围_6" comment = "吸收范围_6 (Int)"/>
+
+<!-- 暴击率 -->
+<var name="CriticalRate0" value="200010"  alias="暴击率_0" comment = "暴击率_0 (Float)"/> 
+<var name="CriticalRate1" value="2000101" alias="暴击率_1" comment = "暴击率_1 (Float)"/>
+<var name="CriticalRate2" value="2000102" alias="暴击率_2" comment = "暴击率_2 (Float)"/>
+<var name="CriticalRate3" value="2000103" alias="暴击率_3" comment = "暴击率_3 (Float)"/>
+<var name="CriticalRate4" value="2000104" alias="暴击率_4" comment = "暴击率_4 (Float)"/>
+<var name="CriticalRate5" value="2000105" alias="暴击率_5" comment = "暴击率_5 (Float)"/>
+<var name="CriticalRate6" value="2000106" alias="暴击率_6" comment = "暴击率_6 (Float)"/>
+
+<!-- 技能物体个数 -->
+<var name="SkillNum0" value="300001"  alias="技能物体个数_0" comment = "技能物体个数_0 (Int)"/> 
+
+<!-- 技能触发间隔 -->
+<var name="SkillTickInterval0" value="300002"  alias="技能触发间隔_0" comment = "技能触发间隔_0 (Long)"/> 
+<var name="SkillTickInterval1" value="3000021" alias="技能触发间隔_1" comment = "技能触发间隔_1 (Long)"/>
+<var name="SkillTickInterval2" value="3000022" alias="技能触发间隔_2" comment = "技能触发间隔_2 (Long)"/>
+<var name="SkillTickInterval3" value="3000023" alias="技能触发间隔_3" comment = "技能触发间隔_3 (Float)"/>
+<var name="SkillTickInterval4" value="3000024" alias="技能触发间隔_4" comment = "技能触发间隔_4 (Long)"/>
+<var name="SkillTickInterval5" value="3000025" alias="技能触发间隔_5" comment = "技能触发间隔_5 (Float)"/>
+<var name="SkillTickInterval6" value="3000026" alias="技能触发间隔_6" comment = "技能触发间隔_6 (Long)"/>
+
+<!-- 技能移动速度 -->
+<var name="SkillMoveSpeed0" value="300003"  alias="技能移动速度_0" comment = "技能移动速度_0 (Float)"/> 
+<var name="SkillMoveSpeed1" value="3000031" alias="技能移动速度_1" comment = "技能移动速度_1 (Float)"/>
+<var name="SkillMoveSpeed2" value="3000032" alias="技能移动速度_2" comment = "技能移动速度_2 (Float)"/>
+<var name="SkillMoveSpeed3" value="3000033" alias="技能移动速度_3" comment = "技能移动速度_3 (Float)"/>
+<var name="SkillMoveSpeed4" value="3000034" alias="技能移动速度_4" comment = "技能移动速度_4 (Float)"/>
+<var name="SkillMoveSpeed5" value="3000035" alias="技能移动速度_5" comment = "技能移动速度_5 (Float)"/>
+<var name="SkillMoveSpeed6" value="3000036" alias="技能移动速度_6" comment = "技能移动速度_6 (Float)"/>
+
+<!-- 技能持续时间 -->
+<var name="SkillDuration0" value="300004"  alias="技能持续时间_0" comment = "技能持续时间_0 (Long)"/> 
+<var name="SkillDuration1" value="3000041" alias="技能持续时间_1" comment = "技能持续时间_1 (Long)"/>
+<var name="SkillDuration2" value="3000042" alias="技能持续时间_2" comment = "技能持续时间_2 (Long)"/>
+<var name="SkillDuration3" value="3000043" alias="技能持续时间_3" comment = "技能持续时间_3 (Float)"/>
+<var name="SkillDuration4" value="3000044" alias="技能持续时间_4" comment = "技能持续时间_4 (Long)"/>
+<var name="SkillDuration5" value="3000045" alias="技能持续时间_5" comment = "技能持续时间_5 (Float)"/>
+<var name="SkillDuration6" value="3000046" alias="技能持续时间_6" comment = "技能持续时间_6 (Long)"/>
+
+<!-- 子技能物体个数 -->
+<var name="SkillChildNum0" value="300005"  alias="子技能物体个数_0" comment = "子技能物体个数_0 (Int)"/> 
+
+<!-- 子技能攻击范围 -->
+<var name="SkillChildAttackRange0" value="300006"  alias="子技能攻击范围_0" comment = "子技能攻击范围_0 (Int)"/> 
+<var name="SkillChildAttackRange1" value="3000061" alias="子技能攻击范围_1" comment = "子技能攻击范围_1 (Int)"/>
+<var name="SkillChildAttackRange2" value="3000062" alias="子技能攻击范围_2" comment = "子技能攻击范围_2 (Int)"/>
+<var name="SkillChildAttackRange3" value="3000063" alias="子技能攻击范围_3" comment = "子技能攻击范围_3 (Float)"/>
+<var name="SkillChildAttackRange4" value="3000064" alias="子技能攻击范围_4" comment = "子技能攻击范围_4 (Int)"/>
+<var name="SkillChildAttackRange5" value="3000065" alias="子技能攻击范围_5" comment = "子技能攻击范围_5 (Float)"/>
+<var name="SkillChildAttackRange6" value="3000066" alias="子技能攻击范围_6" comment = "子技能攻击范围_6 (Int)"/>
+
+<!-- 子技能持续时间 -->
+<var name="SkillChildDuration0" value="300007"  alias="子技能持续时间_0" comment = "子技能持续时间_0 (Long)"/> 
+<var name="SkillChildDuration1" value="3000071" alias="子技能持续时间_1" comment = "子技能持续时间_1 (Long)"/>
+<var name="SkillChildDuration2" value="3000072" alias="子技能持续时间_2" comment = "子技能持续时间_2 (Long)"/>
+<var name="SkillChildDuration3" value="3000073" alias="子技能持续时间_3" comment = "子技能持续时间_3 (Float)"/>
+<var name="SkillChildDuration4" value="3000074" alias="子技能持续时间_4" comment = "子技能持续时间_4 (Long)"/>
+<var name="SkillChildDuration5" value="3000075" alias="子技能持续时间_5" comment = "子技能持续时间_5 (Float)"/>
+<var name="SkillChildDuration6" value="3000076" alias="子技能持续时间_6" comment = "子技能持续时间_6 (Long)"/>
+
+<!-- 子技能移动速度 -->
+<var name="SkillChildMoveSpeed0" value="300008"  alias="子技能移动速度_0" comment = "子技能移动速度_0 (Float)"/> 
+<var name="SkillChildMoveSpeed1" value="3000081" alias="子技能移动速度_1" comment = "子技能移动速度_1 (Float)"/>
+<var name="SkillChildMoveSpeed2" value="3000082" alias="子技能移动速度_2" comment = "子技能移动速度_2 (Float)"/>
+<var name="SkillChildMoveSpeed3" value="3000083" alias="子技能移动速度_3" comment = "子技能移动速度_3 (Float)"/>
+<var name="SkillChildMoveSpeed4" value="3000084" alias="子技能移动速度_4" comment = "子技能移动速度_4 (Float)"/>
+<var name="SkillChildMoveSpeed5" value="3000085" alias="子技能移动速度_5" comment = "子技能移动速度_5 (Float)"/>
+<var name="SkillChildMoveSpeed6" value="3000086" alias="子技能移动速度_6" comment = "子技能移动速度_6 (Float)"/>
+
+<!-- 对局经验值 -->
+<var name="BattleExp0" value="400001"  alias="对局经验值_0" comment = "对局经验值_0 (Int)"/> 
+
+<!-- 对局金币 -->
+<var name="BattleGold0" value="400002"  alias="对局金币_0" comment = "对局金币_0 (Int)"/> 
+
+<!-- 对局经验值倍率 -->
+<var name="BattleExpRate0" value="400003"  alias="对局经验值倍率_0" comment = "对局经验值倍率_0 (Float)"/> 
+
+<!-- 对局金币倍率 -->
+<var name="BattleGoldRate0" value="400004"  alias="对局金币倍率_0" comment = "对局金币倍率_0 (Float)"/> 
+
+<!-- 对局等级 -->
+<var name="BattleLevel0" value="400005"  alias="对局等级_0" comment = "对局等级_0 (Int)"/> 
+
+<!-- 禁止移动 -->
+<var name="ForbidMove0" value="500001"  alias="禁止移动_0" comment = "禁止移动_0 (Bool)"/> 
+
+<!-- 禁止跟随 -->
+<var name="ForbidFollow0" value="500002"  alias="禁止跟随_0" comment = "禁止跟随_0 (Bool)"/> 
 
 </enum>
 </module>

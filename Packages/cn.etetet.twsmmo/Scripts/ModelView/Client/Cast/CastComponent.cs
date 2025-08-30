@@ -6,8 +6,8 @@ namespace ET.Client
     /// 释放组件，释放技能
     /// </summary>
     [ComponentOf(typeof(Unit_Client))]
-    public class CastComponent : Entity, IAwake,IDestroy
+    public class CastComponent : Entity, IAwake, IDestroy
     {
-        public Dictionary<long,EntityRef<Cast>> Casts = new Dictionary<long, EntityRef<Cast>>();
+        public Dictionary<int, EntityRef<Cast>> Casts = new Dictionary<int, EntityRef<Cast>>();
     }
 }

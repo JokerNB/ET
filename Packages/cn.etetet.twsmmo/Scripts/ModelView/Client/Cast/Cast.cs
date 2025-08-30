@@ -3,16 +3,14 @@
 namespace ET.Client
 {
     [ChildOf(typeof(CastComponent))]
-    public class Cast : Entity, IAwake<int>, IDestroy
+    public class Cast : Entity, IAwake<int, Unit_Client>, IDestroy, INumericHandlerDynamic<Cast, NumericChange>
     {
         public int ConfigId;
 
         public CastConfig CastConfig => CastConfigCategory.Instance.Get(this.ConfigId);
 
-        public EntityRef<Unit_Client> Caster;
-        
-        public List<long> Target = new List<long>();
+        public EntityRef<Unit_Client> OwnerUnit;
 
-        public long StartTime;
+        public long Timer = default;
     }
 }

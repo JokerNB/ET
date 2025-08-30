@@ -64,11 +64,11 @@ namespace ET
         /// </summary>
         public readonly float TotalTime;
         /// <summary>
-        /// 怪物数据配置
+        /// 怪物数据配置（Id，间隔，数量）
         /// </summary>
         public readonly System.Collections.Generic.List<CreateMonsterData> MonsterConfigData;
         /// <summary>
-        /// 最终Boss配置
+        /// 最终Boss配置（Id，间隔，数量）
         /// </summary>
         public readonly CreateMonsterData FinalMonsterConfigData;
     

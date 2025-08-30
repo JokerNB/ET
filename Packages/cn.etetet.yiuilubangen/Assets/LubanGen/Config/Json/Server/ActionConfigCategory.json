@@ -2,16 +2,111 @@
   {
     "Id": 1001,
     "ActionType": 1,
-    "Param": [
-      -10
-    ]
+    "NumericType": 200002
   },
   {
     "Id": 1002,
+    "ActionType": 0,
+    "NumericType": 2000051
+  },
+  {
+    "Id": 1003,
+    "ActionType": 0,
+    "NumericType": 2000071
+  },
+  {
+    "Id": 1004,
+    "ActionType": 0,
+    "NumericType": 2000031
+  },
+  {
+    "Id": 1005,
+    "ActionType": 0,
+    "NumericType": 400003
+  },
+  {
+    "Id": 1006,
+    "ActionType": 0,
+    "NumericType": 2000061
+  },
+  {
+    "Id": 1007,
+    "ActionType": 0,
+    "NumericType": 2000081
+  },
+  {
+    "Id": 1008,
+    "ActionType": 0,
+    "NumericType": 2000091
+  },
+  {
+    "Id": 1009,
+    "ActionType": 0,
+    "NumericType": 2000011
+  },
+  {
+    "Id": 1010,
+    "ActionType": 0,
+    "NumericType": 400004
+  },
+  {
+    "Id": 1011,
+    "ActionType": 0,
+    "NumericType": 3000021
+  },
+  {
+    "Id": 1012,
+    "ActionType": 0,
+    "NumericType": 200002
+  },
+  {
+    "Id": 1013,
     "ActionType": 2,
-    "Param": [
-      1000,
-      12
-    ]
+    "NumericType": 0
+  },
+  {
+    "Id": 1014,
+    "ActionType": 5,
+    "NumericType": 0
+  },
+  {
+    "Id": 1015,
+    "ActionType": 6,
+    "NumericType": 0
+  },
+  {
+    "Id": 1016,
+    "ActionType": 7,
+    "NumericType": 0
+  },
+  {
+    "Id": 1017,
+    "ActionType": 8,
+    "NumericType": 0
+  },
+  {
+    "Id": 1018,
+    "ActionType": 9,
+    "NumericType": 0
+  },
+  {
+    "Id": 1019,
+    "ActionType": 4,
+    "NumericType": 0
+  },
+  {
+    "Id": 1020,
+    "ActionType": 3,
+    "NumericType": 0
+  },
+  {
+    "Id": 1021,
+    "ActionType": 0,
+    "NumericType": 500001
+  },
+  {
+    "Id": 1023,
+    "ActionType": 0,
+    "NumericType": 500002
   }
 ]

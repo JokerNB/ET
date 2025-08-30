@@ -26,7 +26,10 @@ namespace ET
             {int n0 = _buf.ReadSize(); TickCastId = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); TickCastId.Add(_e0);}}
             {int n0 = _buf.ReadSize(); TickAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); TickAction.Add(_e0);}}
             {int n0 = _buf.ReadSize(); DestroyAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); DestroyAction.Add(_e0);}}
-            Model = _buf.ReadString();
+            TargetNum = _buf.ReadInt();
+            TickLimit = _buf.ReadInt();
+            {int n0 = _buf.ReadSize(); Tick1 = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); Tick1.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); Tick2 = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); Tick2.Add(_e0);}}
 
             EndInit();
         }
@@ -73,9 +76,21 @@ namespace ET
         /// </summary>
         public readonly System.Collections.Generic.List<int> DestroyAction;
         /// <summary>
-        /// 模型
+        /// 目标个数
         /// </summary>
-        public readonly string Model;
+        public readonly int TargetNum;
+        /// <summary>
+        /// 结算次数限制
+        /// </summary>
+        public readonly int TickLimit;
+        /// <summary>
+        /// 1档（0.5s）
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> Tick1;
+        /// <summary>
+        /// 1档（1s）
+        /// </summary>
+        public readonly System.Collections.Generic.List<int> Tick2;
     
         public const int __ID__ = 284876548;
         public override int GetTypeId() => __ID__;
@@ -97,7 +112,10 @@ namespace ET
             + "TickCastId:" + Luban.StringUtil.CollectionToString(TickCastId) + ","
             + "TickAction:" + Luban.StringUtil.CollectionToString(TickAction) + ","
             + "DestroyAction:" + Luban.StringUtil.CollectionToString(DestroyAction) + ","
-            + "Model:" + Model + ","
+            + "TargetNum:" + TargetNum + ","
+            + "TickLimit:" + TickLimit + ","
+            + "Tick1:" + Luban.StringUtil.CollectionToString(Tick1) + ","
+            + "Tick2:" + Luban.StringUtil.CollectionToString(Tick2) + ","
             + "}";
         }
 

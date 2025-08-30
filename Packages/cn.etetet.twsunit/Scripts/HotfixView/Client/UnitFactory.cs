@@ -1,5 +1,4 @@
-﻿using System.Numerics;
-using Unity.Mathematics;
+﻿using UnityEngine;
 
 namespace ET.Client
 {
@@ -28,24 +27,8 @@ namespace ET.Client
             unitComponent.Add(unit);
             NumericDataComponent numericDataComponent = unit.AddComponent<NumericDataComponent>();
             numericDataComponent.InitSet(monsterConfig.NumericTypeValue);
-
             EventSystem.Instance.Publish(currentScene, new AfterMonsterCreate() { Unit = unit });
 
-            return unit;
-        }
-
-        public static Unit_Client CreateBullet(Scene currentScene, long ownerId, int unitConfigId, int bulletId, float3 pos)
-        {
-            UnitComponent_Client unitComponent = currentScene.GetComponent<UnitComponent_Client>();
-            Unit_Client unit = unitComponent.AddChild<Unit_Client, int>(unitConfigId);
-            EventSystem.Instance.Publish(currentScene, new AfterBulletCreate
-            {
-                Unit = unit,
-                pos = pos,
-                bulledId = bulletId,
-                ownerId = ownerId
-            });
-            unitComponent.Add(unit);
             return unit;
         }
 
@@ -55,6 +38,10 @@ namespace ET.Client
             Unit_Client unit = unitComponent.AddChild<Unit_Client, int>(unitConfigId);
             unitComponent.Add(unit);
             unit.AddComponent<ObjectWait>();
+            unit.AddComponent<NumericDataComponent>();
+            unit.NumericComponent.InitSet(unit.Config.NumericTypeValue);
+            EventSystem.Instance.Publish(currentScene, new AfterParticleCreate());
+
             return unit;
         }
     }

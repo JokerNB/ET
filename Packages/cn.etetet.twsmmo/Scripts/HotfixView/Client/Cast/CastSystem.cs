@@ -1,32 +1,88 @@
-﻿using Unity.Mathematics;
+﻿using UnityEngine;
 
 namespace ET.Client
 {
+    [Invoke(TimerInvokeType.CastRepeatedTick)]
+    public class CastRepeatedTick_Handler : ATimer<Cast>
+    {
+        protected override void Run(Cast t)
+        {
+            t?.CreateCastUnit();
+        }
+    }
+
+    [NumericHandlerDynamic(SceneType.Current, ENumericType.SkillTickInterval0, 0)]
+    public class CastNumericChangeEventHandler_SkillTickInterval0 : NumericHandlerDynamicSystem<Cast, Cast, NumericChange>
+    {
+        protected override async ETTask Run(Cast self, Cast entity, NumericChange data)
+        {
+            Log.Error("SkillInterval");
+            self.UnRegisterTimer();
+            self.RegisterTimer();
+            await ETTask.CompletedTask;
+        }
+    }
+
     [EntitySystemOf(typeof(Cast))]
     public static partial class CastSystem
     {
         [EntitySystem]
-        private static void Awake(this ET.Client.Cast self, int args2)
+        private static void Awake(this ET.Client.Cast self, int configId, Unit_Client ownerUnit)
         {
-            self.ConfigId = args2;
+            self.ConfigId = configId;
+            self.OwnerUnit = ownerUnit;
             self.AddComponent<ActionsTempComponent>();
+            var numericDataComponent = self.AddComponent<NumericDataComponent>();
+            numericDataComponent.InitSet(self.CastConfig.NumericTypeValue);
+            self.CreateCastUnit();
+            self.RegisterTimer();
         }
 
         [EntitySystem]
         private static void Destroy(this ET.Client.Cast self)
         {
             self.ConfigId = default;
-            self.Caster = default;
-            self.Target.Clear();
-            self.StartTime = default;
+            self.OwnerUnit = default;
+            self.UnRegisterTimer();
+        }
+
+        public static void RegisterTimer(this ET.Client.Cast self)
+        {
+            long interval = self.GetComponent<NumericDataComponent>().GetAsLong(ENumericType.SkillTickInterval0);
+            self.Timer = self.Root().GetComponent<TimerComponent>().NewRepeatedTimer(interval, TimerInvokeType.CastRepeatedTick, self);
+        }
+
+        public static void UnRegisterTimer(this ET.Client.Cast self)
+        {
+            self.Root().GetComponent<TimerComponent>().Remove(ref self.Timer);
+        }
+
+        public static void CreateCastUnit(this ET.Client.Cast self)
+        {
+            if (Time.timeScale <= 0)
+                return;
+            int childNum = self.GetComponent<NumericDataComponent>().GetAsInt(ENumericType.SkillNum0);
+            if (childNum == 0)
+                return;
+            UnitComponent_Client unitComponentClient = self.Root().CurrentScene().GetComponent<UnitComponent_Client>();
+            for (int i = 0; i < childNum; i++)
+            {
+                Unit_Client skillUnit = unitComponentClient.AddChild<Unit_Client, int>(1);
+                unitComponentClient.Add(skillUnit);
+                EventSystem.Instance.Publish(self.Root().CurrentScene(), new AfterSkillCreate
+                {
+                    OwnerUnit = self.OwnerUnit,
+                    SkillUnit = skillUnit,
+                    castConfigId = self.ConfigId,
+                    castSelf = self
+                });
+            }
         }
 
         /// <summary>
         /// 释放Cast
         /// </summary>
-        /// <param name="self"></param>
-        /// <returns></returns>
-        public static int Cast(this ET.Client.Cast self)
+        public static int Cast(this ET.Client.Cast self, Unit_Client skillUnit)
         {
             int err = self.CastCheck();
             if (err != ErrorCode.ERR_Success)
@@ -35,17 +91,7 @@ namespace ET.Client
                 return err;
             }
 
-            //选择目标
-            self.SelectTarget();
-
-            err = self.CastCheckBeforeBegin();
-            if (err != ErrorCode.ERR_Success)
-            {
-                self.Dispose();
-                return err;
-            }
-
-            self.CastBeginAsync().NoContext();
+            self.CastBeginAsync(skillUnit).NoContext();
             return ErrorCode.ERR_Success;
         }
 
@@ -58,200 +104,60 @@ namespace ET.Client
         {
             if (self == null || self.IsDisposed)
                 return ErrorCode.ERR_Cast_ArgsError;
-            Entity unit = self.Caster;
+            Unit_Client unit = self.OwnerUnit;
             if (unit == null || unit.IsDisposed)
                 return ErrorCode.ERR_Cast_CasterIsNull;
             return ErrorCode.ERR_Success;
         }
 
-        public static void SelectTarget(this ET.Client.Cast self)
+        public static async ETTask CastBeginAsync(this ET.Client.Cast self, Unit_Client skillUnit)
         {
-            self.Target.Clear();
-            Unit_Client caster = self.Caster;
-            CastConfig config = self.CastConfig;
+            Unit_Client caster = self.OwnerUnit;
 
-            var allUnits = self.Root().CurrentScene().GetComponent<UnitComponent_Client>().GetAllUnits();
-            //case多的时候可以做逻辑分发
-            int rang = 0;
-            switch (config.SelectType)
-            {
-                case SelectType.OneWithInRange: //选择身边一定范围内的一个人
-                    rang = config.SelectParam[0];
-                    foreach (Unit_Client unit in allUnits)
-                    {
-                        if (unit == caster)
-                        {
-                            //不选择自己
-                            continue;
-                        }
-
-                        if (math.length(unit.GetUnitPosition() - caster.GetUnitPosition()) < rang)
-                        {
-                            //选择找到的第一个
-                            self.Target.Add(unit.Id);
-                            break;
-                        }
-                    }
-
-                    break;
-                case SelectType.Circular: //选择身边一定范围内的所有人
-                    rang = config.SelectParam[0];
-                    foreach (Unit_Client unit in allUnits)
-                    {
-                        if (math.length(unit.GetUnitPosition() - caster.GetUnitPosition()) < rang)
-                        {
-                            self.Target.Add(unit.Id);
-                        }
-                    }
-
-                    break;
-            }
-        }
-
-        public static int CastCheckBeforeBegin(this ET.Client.Cast self)
-        {
-            switch (self.CastConfig.SelectType)
-            {
-                case SelectType.OneWithInRange:
-                case SelectType.Circular:
-                    if (self.Target.Count <= 0)
-                    {
-                        return ErrorCode.ERR_Cast_TargetIsNull;
-                    }
-
-                    break;
-            }
-
-            return ErrorCode.ERR_Success;
-        }
-
-        public static async ETTask CastBeginAsync(this ET.Client.Cast self)
-        {
-            self.StartTime = TimeInfo.Instance.ServerNow();
-            Unit_Client caster = self.Caster;
             CastConfig castConfig = self.CastConfig;
             EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastStart
             {
                 castId = self.Id,
                 casterId = caster.Id,
                 castConfigId = self.ConfigId,
-                TargetsId = self.Target
             });
-            if (castConfig.Times.Count <= 0)
-            {
-                self.Dispose();
-                return;
-            }
-            //技能实体
-            long castInstanceId = 0;
-            //技能释放实体
-            long casterInstanceId = 0;
 
-            foreach (int time in castConfig.Times)
+            int idx = 0;
+            foreach (int actionId in castConfig.SelfAction)
             {
-                castInstanceId = self.InstanceId;
-                casterInstanceId = caster.InstanceId;
-                await self.Root().GetComponent<TimerComponent>().WaitTillAsync(self.StartTime + time);
-                if (!self.CheckAsyncInvalid(castInstanceId, casterInstanceId))
-                {
-                    Log.Error($"Cast AsyncInvalid {castInstanceId} {casterInstanceId}");
-                    return;
-                }
-
-                foreach (CastActionTime castActionTime in castConfig.TimesDic[time])
-                {
-                    if (castActionTime.isSelfHit)
-                    {
-                        self.HandleSelfHit(castActionTime.Index);
-                    }
-                    else
-                    {
-                        self.HandleTargetHit(castActionTime.Index);
-                    }
-                }
+                self.CreateActions(actionId, idx, self.OwnerUnit, skillUnit, ActionsRunType.CastStart);
+                idx++;
             }
 
-            if (castConfig.TotalTime > 0)
-            {
-                castInstanceId = self.InstanceId;
-                casterInstanceId = caster.InstanceId;
-
-                await self.Root().GetComponent<TimerComponent>().WaitTillAsync(self.StartTime + castConfig.TotalTime);
-
-                if (!self.CheckAsyncInvalid(castInstanceId, casterInstanceId))
-                {
-                    Log.Error($"Cast AsyncInvalid {castInstanceId} {casterInstanceId}");
-                    return;
-                }
-            }
-
-            self.CastFinish();
+            await ETTask.CompletedTask;
         }
 
-        public static void HandleSelfHit(this Cast self, int index)
+        public static void CastFinish(this ET.Client.Cast self, Unit_Client skillUnit)
         {
-            CastConfig castConfig = self.CastConfig;
-            self.SelectTarget();
-            if (self.Target.Count <= 0)
-                return;
-            if (castConfig.SelfHitAction.Count > index)
-            {
-                int actionId = castConfig.SelfHitAction[index];
-                self.CreateActions(actionId, self.Caster, ActionsRunType.CastHit);
-            }
-        }
+            Unit_Client caster = self.OwnerUnit;
 
-        public static void HandleTargetHit(this Cast self, int index)
-        {
-            CastConfig castConfig = self.CastConfig;
-            self.SelectTarget();
-            if (self.Target.Count <= 0)
-                return;
-            //技能命中消息
-            //单机不需要
-            Unit_Client caster = self.Caster;
-            EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastHit
+            EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastFinish
             {
                 castId = self.Id,
-                casterId = caster.Id,
-                TargetsId = self.Target
+                casterId = caster.Id
             });
 
-            UnitComponent_Client unitComponent = self.Root().CurrentScene().GetComponent<UnitComponent_Client>();
-            foreach (long unitId in self.Target)
+            if (self.CastConfig.FinishAction.Count > 0)
             {
-                Unit_Client unit = unitComponent.Get(unitId);
-                if (unit == null || unit.IsDisposed)
-                    continue;
-                if (castConfig.HitAction.Count > index)
+                int idx = 0;
+                foreach (int actionsId in self.CastConfig.FinishAction)
                 {
-                    int actionId = castConfig.HitAction[index];
-                    self.CreateActions(actionId, unit, ActionsRunType.CastHit);
+                    self.CreateActions(actionsId, idx, caster, skillUnit, ActionsRunType.CastFinish);
+                    idx++;
                 }
             }
-        }
 
-        public static void CastFinish(this ET.Client.Cast self)
-        {
-            //self.CastConfig.TotalTime<=0
-            //没有持续时间，就是瞬发的技能流程，可以不用通知结束，客户端自行结束
-            if (self.CastConfig.TotalTime > 0)
-            {
-                Unit_Client caster = self.Caster;
-                EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastFinish
-                {
-                    castId = self.Id,
-                    casterId = caster.Id
-                });
-            }
-
-            // self.GetParent<CastComponent>().RemoveChild(self.Id);
             self?.Dispose();
         }
 
         public static bool CheckAsyncInvalid(this Cast self, long castInstanceId, long casterInstanceId)
         {
-            Unit_Client caster = self.Caster;
+            Unit_Client caster = self.OwnerUnit;
             if (caster == null)
                 return false;
             if (self.InstanceId != castInstanceId || caster.InstanceId != casterInstanceId)

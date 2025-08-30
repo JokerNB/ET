@@ -19,11 +19,13 @@ namespace ET
         {
             Id = _buf.ReadInt();
             TotalTime = _buf.ReadInt();
-            {int n0 = _buf.ReadSize(); Addaction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); Addaction.Add(_e0);}}
-            TickTime = _buf.ReadInt();
+            {int n0 = _buf.ReadSize(); AddAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); AddAction.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); AddActionParam = new System.Collections.Generic.List<long>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { long _e0;  _e0 = _buf.ReadLong(); AddActionParam.Add(_e0);}}
+            TickTime = _buf.ReadFloat();
             {int n0 = _buf.ReadSize(); TickAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); TickAction.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); TickActionParam = new System.Collections.Generic.List<long>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { long _e0;  _e0 = _buf.ReadLong(); TickActionParam.Add(_e0);}}
             {int n0 = _buf.ReadSize(); RemoveAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); RemoveAction.Add(_e0);}}
-            {int n0 = _buf.ReadSize(); OwnerEffect = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); OwnerEffect.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); RemoveActionParam = new System.Collections.Generic.List<long>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { long _e0;  _e0 = _buf.ReadLong(); RemoveActionParam.Add(_e0);}}
 
             EndInit();
         }
@@ -44,23 +46,31 @@ namespace ET
         /// <summary>
         /// 效果
         /// </summary>
-        public readonly System.Collections.Generic.List<int> Addaction;
+        public readonly System.Collections.Generic.List<int> AddAction;
+        /// <summary>
+        /// 效果参数
+        /// </summary>
+        public readonly System.Collections.Generic.List<long> AddActionParam;
         /// <summary>
         /// Tick间隔时间
         /// </summary>
-        public readonly int TickTime;
+        public readonly float TickTime;
         /// <summary>
         /// 效果
         /// </summary>
         public readonly System.Collections.Generic.List<int> TickAction;
         /// <summary>
+        /// 效果参数
+        /// </summary>
+        public readonly System.Collections.Generic.List<long> TickActionParam;
+        /// <summary>
         /// 效果
         /// </summary>
         public readonly System.Collections.Generic.List<int> RemoveAction;
         /// <summary>
-        /// Buff自身特效
+        /// 效果参数
         /// </summary>
-        public readonly System.Collections.Generic.List<int> OwnerEffect;
+        public readonly System.Collections.Generic.List<long> RemoveActionParam;
     
         public const int __ID__ = -1370631787;
         public override int GetTypeId() => __ID__;
@@ -75,11 +85,13 @@ namespace ET
             return "{ "
             + "Id:" + Id + ","
             + "TotalTime:" + TotalTime + ","
-            + "Addaction:" + Luban.StringUtil.CollectionToString(Addaction) + ","
+            + "AddAction:" + Luban.StringUtil.CollectionToString(AddAction) + ","
+            + "AddActionParam:" + Luban.StringUtil.CollectionToString(AddActionParam) + ","
             + "TickTime:" + TickTime + ","
             + "TickAction:" + Luban.StringUtil.CollectionToString(TickAction) + ","
+            + "TickActionParam:" + Luban.StringUtil.CollectionToString(TickActionParam) + ","
             + "RemoveAction:" + Luban.StringUtil.CollectionToString(RemoveAction) + ","
-            + "OwnerEffect:" + Luban.StringUtil.CollectionToString(OwnerEffect) + ","
+            + "RemoveActionParam:" + Luban.StringUtil.CollectionToString(RemoveActionParam) + ","
             + "}";
         }
 

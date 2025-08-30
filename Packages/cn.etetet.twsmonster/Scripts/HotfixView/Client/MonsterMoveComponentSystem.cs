@@ -1,5 +1,4 @@
-﻿using Unity.Mathematics;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace ET.Client
@@ -22,10 +21,10 @@ namespace ET.Client
 
         public static void Init(this ET.Client.MonsterMoveComponent self)
         {
-            GameObject gameObject = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>().GameObject;
-            self.spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
-            self.agent = gameObject.GetComponent<PolyNavAgent>();
-            self.UnityEventTrigger = gameObject.GetComponentInChildren<UnityEventTrigger>();
+            self.GameObject = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>().GameObject;
+            self.spriteRenderer = self.GameObject.GetComponentInChildren<SpriteRenderer>();
+            self.agent = self.GameObject.GetComponent<PolyNavAgent>();
+            self.UnityEventTrigger = self.GameObject.GetComponent<UnityEventTrigger>();
             self.SetPos(self.GetCreatePosition(Random.Range(-1, 2), Random.Range(-1, 2)));
             self.InitColliderTrigger();
             self.InitAgent();
@@ -89,12 +88,13 @@ namespace ET.Client
             var unitTr = unit_Player.GetComponent<GameObjectComponent>().GameObject.transform;
             Vector2 pos = unitTr.position;
             self.agent.SetDestination(pos);
+            self.spriteRenderer.flipX = pos.x < self.Transform.position.x;
         }
 
-        public static void SetPos(this MonsterMoveComponent self, float3 pos)
+        public static void SetPos(this MonsterMoveComponent self, Vector2 pos)
         {
-            Vector2 vector2 = new Vector2(pos.x, pos.y);
-            self.agent.position = vector2;
+            self.agent.position = pos;
+            self.spriteRenderer.flipX = pos.x < self.Transform.position.x;
         }
     }
 }

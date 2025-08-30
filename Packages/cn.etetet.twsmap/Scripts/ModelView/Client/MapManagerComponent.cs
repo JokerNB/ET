@@ -20,6 +20,7 @@ namespace ET.Client
 
         public Transform MapRootTr { get; set; }
         public Transform ParticleRootTr { get; set; }
+        public Transform CastRootTr { get; set; }
         public PolyNav2D MapNav;
         public PolygonCollider2D MapNavCollider;
     }
