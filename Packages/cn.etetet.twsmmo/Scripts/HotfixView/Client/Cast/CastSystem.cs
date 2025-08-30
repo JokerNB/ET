@@ -132,27 +132,28 @@ namespace ET.Client
             await ETTask.CompletedTask;
         }
 
-        public static void CastFinish(this ET.Client.Cast self, Unit_Client skillUnit)
+        public static async ETTask CastHit(this ET.Client.Cast self, long targetUnitId, Unit_Client skillUnit)
         {
             Unit_Client caster = self.OwnerUnit;
+            var castConfig = self.CastConfig;
 
-            EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastFinish
+            EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastHit
             {
                 castId = self.Id,
-                casterId = caster.Id
+                casterId = caster.Id,
+                TargetId = targetUnitId
             });
 
-            if (self.CastConfig.FinishAction.Count > 0)
+            var unitComponentClient = self.Root().CurrentScene().GetComponent<UnitComponent_Client>();
+            int idx = 0;
+            foreach (int actionId in castConfig.HitAction)
             {
-                int idx = 0;
-                foreach (int actionsId in self.CastConfig.FinishAction)
-                {
-                    self.CreateActions(actionsId, idx, caster, skillUnit, ActionsRunType.CastFinish);
-                    idx++;
-                }
+                Unit_Client hitOwnerUnit = unitComponentClient.Get(targetUnitId);
+                self.CreateActions(actionId, idx, hitOwnerUnit, skillUnit, ActionsRunType.CastHit);
+                idx++;
             }
 
-            self?.Dispose();
+            await ETTask.CompletedTask;
         }
 
         public static bool CheckAsyncInvalid(this Cast self, long castInstanceId, long casterInstanceId)

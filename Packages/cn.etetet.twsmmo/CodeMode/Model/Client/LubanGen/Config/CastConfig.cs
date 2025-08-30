@@ -22,13 +22,8 @@ namespace ET
             {int n0 = _buf.ReadSize(); NumericTypeValue = new System.Collections.Generic.Dictionary<ENumericType, long>(n0 * 3 / 2);for(var i0 = 0 ; i0 < n0 ; i0++) { ENumericType _k0;  _k0 = (ENumericType)_buf.ReadInt(); long _v0;  _v0 = _buf.ReadLong();     NumericTypeValue.Add(_k0, _v0);}}
             {int n0 = _buf.ReadSize(); SelfAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); SelfAction.Add(_e0);}}
             {int n0 = _buf.ReadSize(); SelfActionParam = new System.Collections.Generic.List<long>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { long _e0;  _e0 = _buf.ReadLong(); SelfActionParam.Add(_e0);}}
-            {int n0 = _buf.ReadSize(); SelfActionParamBool = new System.Collections.Generic.List<bool>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { bool _e0;  _e0 = _buf.ReadBool(); SelfActionParamBool.Add(_e0);}}
             {int n0 = _buf.ReadSize(); HitAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); HitAction.Add(_e0);}}
             {int n0 = _buf.ReadSize(); HitActionParam = new System.Collections.Generic.List<long>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { long _e0;  _e0 = _buf.ReadLong(); HitActionParam.Add(_e0);}}
-            {int n0 = _buf.ReadSize(); HitActionParamBool = new System.Collections.Generic.List<bool>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { bool _e0;  _e0 = _buf.ReadBool(); HitActionParamBool.Add(_e0);}}
-            {int n0 = _buf.ReadSize(); FinishAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); FinishAction.Add(_e0);}}
-            {int n0 = _buf.ReadSize(); FinishActionParam = new System.Collections.Generic.List<long>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { long _e0;  _e0 = _buf.ReadLong(); FinishActionParam.Add(_e0);}}
-            {int n0 = _buf.ReadSize(); FinishActionParamBool = new System.Collections.Generic.List<bool>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { bool _e0;  _e0 = _buf.ReadBool(); FinishActionParamBool.Add(_e0);}}
             ResName = _buf.ReadString();
             {int n0 = _buf.ReadSize(); InitCastPosL = new System.Collections.Generic.List<float>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { float _e0;  _e0 = _buf.ReadFloat(); InitCastPosL.Add(_e0);}}
             {int n0 = _buf.ReadSize(); InitCastPosR = new System.Collections.Generic.List<float>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { float _e0;  _e0 = _buf.ReadFloat(); InitCastPosR.Add(_e0);}}
@@ -63,10 +58,6 @@ namespace ET
         /// </summary>
         public readonly System.Collections.Generic.List<long> SelfActionParam;
         /// <summary>
-        /// 自身行为参数
-        /// </summary>
-        public readonly System.Collections.Generic.List<bool> SelfActionParamBool;
-        /// <summary>
         /// 命中行为
         /// </summary>
         public readonly System.Collections.Generic.List<int> HitAction;
@@ -74,22 +65,6 @@ namespace ET
         /// 命中行为参数
         /// </summary>
         public readonly System.Collections.Generic.List<long> HitActionParam;
-        /// <summary>
-        /// 命中行为参数
-        /// </summary>
-        public readonly System.Collections.Generic.List<bool> HitActionParamBool;
-        /// <summary>
-        /// 结束行为
-        /// </summary>
-        public readonly System.Collections.Generic.List<int> FinishAction;
-        /// <summary>
-        /// 结束行为参数
-        /// </summary>
-        public readonly System.Collections.Generic.List<long> FinishActionParam;
-        /// <summary>
-        /// 结束行为参数
-        /// </summary>
-        public readonly System.Collections.Generic.List<bool> FinishActionParamBool;
         /// <summary>
         /// 资源名称
         /// </summary>
@@ -123,13 +98,8 @@ namespace ET
             + "NumericTypeValue:" + Luban.StringUtil.CollectionToString(NumericTypeValue) + ","
             + "SelfAction:" + Luban.StringUtil.CollectionToString(SelfAction) + ","
             + "SelfActionParam:" + Luban.StringUtil.CollectionToString(SelfActionParam) + ","
-            + "SelfActionParamBool:" + Luban.StringUtil.CollectionToString(SelfActionParamBool) + ","
             + "HitAction:" + Luban.StringUtil.CollectionToString(HitAction) + ","
             + "HitActionParam:" + Luban.StringUtil.CollectionToString(HitActionParam) + ","
-            + "HitActionParamBool:" + Luban.StringUtil.CollectionToString(HitActionParamBool) + ","
-            + "FinishAction:" + Luban.StringUtil.CollectionToString(FinishAction) + ","
-            + "FinishActionParam:" + Luban.StringUtil.CollectionToString(FinishActionParam) + ","
-            + "FinishActionParamBool:" + Luban.StringUtil.CollectionToString(FinishActionParamBool) + ","
             + "ResName:" + ResName + ","
             + "InitCastPosL:" + Luban.StringUtil.CollectionToString(InitCastPosL) + ","
             + "InitCastPosR:" + Luban.StringUtil.CollectionToString(InitCastPosR) + ","

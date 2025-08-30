@@ -14,8 +14,6 @@
                 owner.GetComponent<BuffComponent>().CreateAndAdd((int)cast.CastConfig.SelfActionParam[0]);
             if (actionsRunType == ActionsRunType.CastHit)
                 owner.GetComponent<BuffComponent>().CreateAndAdd((int)cast.CastConfig.HitActionParam[0]);
-            if (actionsRunType == ActionsRunType.CastFinish)
-                owner.GetComponent<BuffComponent>().CreateAndAdd((int)cast.CastConfig.FinishActionParam[0]);
         }
     }
 }

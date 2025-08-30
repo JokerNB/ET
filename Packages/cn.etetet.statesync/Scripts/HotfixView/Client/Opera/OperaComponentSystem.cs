@@ -69,7 +69,7 @@ namespace ET.Client
             {
                 EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_TestCast
                 {
-                    castConfigId = 2
+                    castConfigId = 3
                 });
             }
             

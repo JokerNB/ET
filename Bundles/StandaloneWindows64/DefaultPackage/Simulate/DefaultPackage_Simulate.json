@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/8/30 13:46:25",
+    "PackageNote": "2025/8/30 17:57:02",
     "AssetList": [
         {
             "Address": "MainUIBG",
@@ -485,6 +485,14 @@
         {
             "Address": "AttackHit",
             "AssetPath": "Packages/cn.etetet.twsmmo/Assets/GameRes/Effect/AttackHit.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "banzhuan",
+            "AssetPath": "Packages/cn.etetet.twsmmo/Assets/GameRes/Effect/banzhuan.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 12,
@@ -1033,7 +1041,7 @@
             "UnityCRC": 0,
             "FileHash": "21fc7736e26ea38ee9ed888b93cbe16a",
             "FileCRC": "00000000",
-            "FileSize": 2190080,
+            "FileSize": 2191888,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1113,7 +1121,7 @@
             "UnityCRC": 0,
             "FileHash": "97d3f64298f02f99e846626db2000e44",
             "FileCRC": "00000000",
-            "FileSize": 4121994,
+            "FileSize": 4127811,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1233,7 +1241,7 @@
             "UnityCRC": 0,
             "FileHash": "0c6a0998c1163285f8d4f2aabab40624",
             "FileCRC": "00000000",
-            "FileSize": 6184,
+            "FileSize": 6162,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

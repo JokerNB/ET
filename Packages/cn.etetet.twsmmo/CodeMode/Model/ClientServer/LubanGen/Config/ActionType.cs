@@ -51,6 +51,22 @@ namespace ET
         /// 随机方向直线移动
         /// </summary>
         RandomDirLineMove = 9,
+        /// <summary>
+        /// 碰撞销毁自身
+        /// </summary>
+        HitDestroySelf = 10,
+        /// <summary>
+        /// 向上抛物线
+        /// </summary>
+        UpParabola = 11,
+        /// <summary>
+        /// 碰撞转向
+        /// </summary>
+        HitRotate = 12,
+        /// <summary>
+        /// 技能持续时间结束，自动销毁
+        /// </summary>
+        AutoDispose = 13,
     }
 
 } 

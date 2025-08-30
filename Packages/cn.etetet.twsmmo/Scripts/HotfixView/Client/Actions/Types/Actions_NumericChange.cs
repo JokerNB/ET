@@ -16,23 +16,7 @@ namespace ET.Client
             Cast cast = actions.CastSelf;
             
             var numericType = actions.Config.NumericType;
-            var numericValueType = numericType.GetNumericValueType();
-            switch (numericValueType)
-            {
-                case ENumericValueType.Int:
-                case ENumericValueType.Long:
-                case ENumericValueType.Float:
-                    owner.NumericComponent.Change(numericType, cast.CastConfig.SelfActionParam[actions.idx]);
-                    break;
-                case ENumericValueType.Bool:
-                    owner.NumericComponent.Change(numericType, cast.CastConfig.SelfActionParamBool[actions.idx]);
-                    break;
-                default:
-                {
-                    Log.Error($"Actions NumericChange ValueType not supported: {numericValueType}");
-                    return;
-                }
-            }
+            owner.NumericComponent.Change(numericType, cast.CastConfig.SelfActionParam[actions.idx]);
         }
     }
 }

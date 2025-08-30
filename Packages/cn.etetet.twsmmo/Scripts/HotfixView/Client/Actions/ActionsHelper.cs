@@ -15,7 +15,8 @@
         {
             Actions actions = self.GetComponent<ActionsTempComponent>().CreateActions(configId, idx);
             actions.Caster = self.OwnerUnit;
-            actions.Owner = Owner;
+            if (Owner != null)
+                actions.Owner = Owner;
             actions.SkillUnit = skillUnit;
 
             RunActions(actions, actionsRunType, autoRun, autoDispose);

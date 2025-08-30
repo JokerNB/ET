@@ -38,5 +38,13 @@
     "CacheTime": 10,
     "MinCacheCount": 100,
     "MaxCacheCountNewResName": "qiangzidan"
+  },
+  {
+    "id": "banzhuan",
+    "timeout": 0,
+    "MaxCacheCount": 5,
+    "CacheTime": 10,
+    "MinCacheCount": 10,
+    "MaxCacheCountNewResName": "banzhuan"
   }
 ]

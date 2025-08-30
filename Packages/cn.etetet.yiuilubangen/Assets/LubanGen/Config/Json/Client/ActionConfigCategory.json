@@ -105,8 +105,28 @@
     "NumericType": 500001
   },
   {
-    "Id": 1023,
+    "Id": 1022,
     "ActionType": 0,
     "NumericType": 500002
+  },
+  {
+    "Id": 1023,
+    "ActionType": 10,
+    "NumericType": 0
+  },
+  {
+    "Id": 1024,
+    "ActionType": 11,
+    "NumericType": 0
+  },
+  {
+    "Id": 1025,
+    "ActionType": 13,
+    "NumericType": 3000041
+  },
+  {
+    "Id": 1026,
+    "ActionType": 12,
+    "NumericType": 0
   }
 ]

@@ -9,11 +9,11 @@
       ],
       [
         3000021,
-        1000
+        500
       ],
       [
         3000031,
-        10000
+        30000
       ]
     ],
     "SelfAction": [
@@ -22,15 +22,11 @@
     "SelfActionParam": [
       5000
     ],
-    "SelfActionParam_Bool": [],
     "HitAction": [
-      1001
+      1001,
+      1023
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "qiangzidan",
     "InitCastPos_L": [
       1.2,
@@ -65,15 +61,10 @@
     ],
     "SelfAction": [],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "fazhangzidan",
     "InitCastPos_L": [
       0,
@@ -99,26 +90,26 @@
       ],
       [
         3000021,
-        1
+        1000
       ],
       [
         3000031,
-        5000
+        10000
+      ],
+      [
+        3000041,
+        3000
       ]
     ],
     "SelfAction": [
-      1016
+      1024,
+      1025
     ],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "banzhuan",
     "InitCastPos_L": [
       0,
@@ -155,15 +146,10 @@
       1016
     ],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "huixuanbiao",
     "InitCastPos_L": [
       0,
@@ -187,19 +173,10 @@
       1015
     ],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [
-      1013
-    ],
-    "FinishActionParam": [
-      6
-    ],
-    "FinishActionParam_Bool": [],
     "ResName": "huojian",
     "InitCastPos_L": [
       0,
@@ -221,15 +198,10 @@
     "NumericTypeValue": [],
     "SelfAction": [],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "huojianboom",
     "InitCastPos_L": [
       0,
@@ -255,15 +227,10 @@
     "SelfActionParam": [
       0
     ],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "leidian",
     "InitCastPos_L": [
       0,
@@ -285,15 +252,10 @@
     "NumericTypeValue": [],
     "SelfAction": [],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "lichang",
     "InitCastPos_L": [
       0,
@@ -317,15 +279,10 @@
       1018
     ],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "liulian",
     "InitCastPos_L": [
       0,
@@ -351,17 +308,8 @@
     "SelfActionParam": [
       20
     ],
-    "SelfActionParam_Bool": [],
     "HitAction": [],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [
-      1013
-    ],
-    "FinishActionParam": [
-      11
-    ],
-    "FinishActionParam_Bool": [],
     "ResName": "ranshaoping",
     "InitCastPos_L": [
       0,
@@ -387,17 +335,12 @@
     "SelfActionParam": [
       4003
     ],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1020
     ],
     "HitActionParam": [
       1
     ],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "ranshaopingboom",
     "InitCastPos_L": [
       0,
@@ -419,15 +362,10 @@
     "NumericTypeValue": [],
     "SelfAction": [],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "shouweizhezidan",
     "InitCastPos_L": [
       0,
@@ -449,15 +387,10 @@
     "NumericTypeValue": [],
     "SelfAction": [],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "zuantoudan",
     "InitCastPos_L": [
       0,
@@ -479,15 +412,10 @@
     "NumericTypeValue": [],
     "SelfAction": [],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "zuqiu",
     "InitCastPos_L": [
       0,
@@ -509,15 +437,10 @@
     "NumericTypeValue": [],
     "SelfAction": [],
     "SelfActionParam": [],
-    "SelfActionParam_Bool": [],
     "HitAction": [
       1012
     ],
     "HitActionParam": [],
-    "HitActionParam_Bool": [],
-    "FinishAction": [],
-    "FinishActionParam": [],
-    "FinishActionParam_Bool": [],
     "ResName": "jitui",
     "InitCastPos_L": [
       0,

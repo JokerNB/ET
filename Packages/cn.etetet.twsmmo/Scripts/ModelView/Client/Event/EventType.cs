@@ -12,7 +12,7 @@ namespace ET.Client
     {
         public long castId;
         public long casterId;
-        public List<long> TargetsId;
+        public long TargetId;
     }
 
     public struct Event_CastFinish
