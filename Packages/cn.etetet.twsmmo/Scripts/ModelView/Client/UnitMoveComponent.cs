@@ -10,5 +10,6 @@ namespace ET.Client
         public int castConfigId;
         public long ownerUnitId;
         public ContactPoint2D contactPoint;
+        public Rigidbody2D rigidbody;
     }
 }

@@ -27,7 +27,12 @@
 
         public static bool isUnit(this Unit_Client self)
         {
-            return self.UnitType is not UnitType.None and not UnitType.ParticleEffect;
+            return self.UnitType is not UnitType.None and not UnitType.ParticleEffect and not UnitType.EnergyBlock;
+        }
+
+        public static bool isEnergyBlock(this Unit_Client self)
+        {
+            return self.UnitType is UnitType.EnergyBlock;
         }
     }
 }

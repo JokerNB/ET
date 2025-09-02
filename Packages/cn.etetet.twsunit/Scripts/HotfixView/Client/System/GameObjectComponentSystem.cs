@@ -11,6 +11,8 @@ namespace ET.Client
         {
             self.GameObject = go;
             self.isInGamePool = isInGamePool;
+            self.sprite = self.GameObject.Get<SpriteRenderer>("sprite");
+            self.unityEventTrigger = self.GameObject.Get<UnityEventTrigger>("unityEventTrigger");
         }
 
         [EntitySystem]
@@ -26,10 +28,30 @@ namespace ET.Client
         {
             self.Transform.position = position;
         }
+        
+        public static void SetLocalPosition(this GameObjectComponent self, Vector2 position)
+        {
+            self.Transform.localPosition = position;
+        }
+        
+        public static void SetScale(this GameObjectComponent self, Vector2 scale)
+        {
+            self.Transform.localScale = scale;
+        }
 
         public static void SetRotation(this GameObjectComponent self, Quaternion rotation)
         {
             self.Transform.rotation = rotation;
+        }
+        
+        public static void SetLocalRotation(this GameObjectComponent self, Quaternion rotation)
+        {
+            self.Transform.localRotation = rotation;
+        }
+
+        public static void SetGameObjectParent(this GameObjectComponent self, Transform parent)
+        {
+            self.Transform.SetParent(parent);
         }
     }
 }

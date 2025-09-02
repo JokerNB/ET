@@ -128,5 +128,25 @@
     "Id": 1026,
     "ActionType": 12,
     "NumericType": 0
+  },
+  {
+    "Id": 1027,
+    "ActionType": 14,
+    "NumericType": 0
+  },
+  {
+    "Id": 1028,
+    "ActionType": 15,
+    "NumericType": 0
+  },
+  {
+    "Id": 1029,
+    "ActionType": 16,
+    "NumericType": 0
+  },
+  {
+    "Id": 1030,
+    "ActionType": 17,
+    "NumericType": 0
   }
 ]

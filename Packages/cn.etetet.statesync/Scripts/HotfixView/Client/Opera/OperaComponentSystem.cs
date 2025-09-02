@@ -93,7 +93,15 @@ namespace ET.Client
             {
                 self.Root().CurrentScene().GetComponent<UnitComponent_Client>().RemoveAllMonster();
             }
-
+            
+            if (Input.GetKeyDown(KeyCode.Alpha0))
+            {
+                var allEnergyBlocks = self.Root().CurrentScene().GetComponent<UnitComponent_Client>().GetAllEnergyBlocks();
+                foreach (Unit_Client energyBlock in allEnergyBlocks)
+                {
+                    energyBlock.GetComponent<EnergyBlockComponent>().Collect();
+                }
+            }
         }
 
         private static async ETTask Test1(this OperaComponent self)

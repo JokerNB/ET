@@ -17,7 +17,7 @@ namespace ET.Client
             GameObject go = UnityEngine.Object.Instantiate(bundleGameObject, globalComponent.Unit, true);
             go.transform.position = new Vector3(0, 0.001f, 0);
 
-            unit.AddComponent<GameObjectComponent, GameObject, bool>(go, false);
+            unit.AddComponent<GameObjectComponent, GameObject, bool>(go, false, true);
             unit.AddComponent<AnimatorComponent>();
             unit.AddComponent<PlayerMoveComponent>();
             unit.AddComponent<CastComponent>();

@@ -496,7 +496,7 @@
   },
   {
     "id": 200009,
-    "check": 1,
+    "check": 4,
     "alias": "吸收范围",
     "desc": "吸收范围",
     "not_grow": false,
@@ -505,7 +505,7 @@
   },
   {
     "id": 2000091,
-    "check": 1,
+    "check": 4,
     "alias": "",
     "desc": "",
     "not_grow": false,
@@ -514,7 +514,7 @@
   },
   {
     "id": 2000092,
-    "check": 1,
+    "check": 4,
     "alias": "",
     "desc": "",
     "not_grow": false,
@@ -532,7 +532,7 @@
   },
   {
     "id": 2000094,
-    "check": 1,
+    "check": 4,
     "alias": "",
     "desc": "",
     "not_grow": false,
@@ -550,7 +550,7 @@
   },
   {
     "id": 2000096,
-    "check": 1,
+    "check": 4,
     "alias": "",
     "desc": "",
     "not_grow": false,
@@ -812,204 +812,6 @@
   {
     "id": 3000046,
     "check": 2,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 300005,
-    "check": 1,
-    "alias": "子技能物体个数",
-    "desc": "子技能物体个数",
-    "not_grow": true,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 300006,
-    "check": 1,
-    "alias": "子技能攻击范围",
-    "desc": "子技能攻击范围",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000061,
-    "check": 1,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000062,
-    "check": 1,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000063,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000064,
-    "check": 1,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000065,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000066,
-    "check": 1,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 300007,
-    "check": 2,
-    "alias": "子技能持续时间",
-    "desc": "子技能持续时间",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000071,
-    "check": 2,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000072,
-    "check": 2,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000073,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000074,
-    "check": 2,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000075,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000076,
-    "check": 2,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 300008,
-    "check": 4,
-    "alias": "子技能移动速度",
-    "desc": "子技能移动速度",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000081,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000082,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000083,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000084,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000085,
-    "check": 4,
-    "alias": "",
-    "desc": "",
-    "not_grow": false,
-    "need_save": false,
-    "notice_type": 0
-  },
-  {
-    "id": 3000086,
-    "check": 4,
     "alias": "",
     "desc": "",
     "not_grow": false,

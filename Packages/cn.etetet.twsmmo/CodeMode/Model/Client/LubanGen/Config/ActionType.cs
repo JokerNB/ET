@@ -67,6 +67,22 @@ namespace ET
         /// 技能持续时间结束，自动销毁
         /// </summary>
         AutoDispose = 13,
+        /// <summary>
+        /// 回旋移动
+        /// </summary>
+        ManeuverMove = 14,
+        /// <summary>
+        /// 设置位置
+        /// </summary>
+        SetPos = 15,
+        /// <summary>
+        /// 根据父级设置位置
+        /// </summary>
+        SetPosByParent = 16,
+        /// <summary>
+        /// 向鼠标位置移动
+        /// </summary>
+        MoveToMouse = 17,
     }
 
 } 

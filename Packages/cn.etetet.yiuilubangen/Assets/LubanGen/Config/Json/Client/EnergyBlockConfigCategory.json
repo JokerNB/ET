@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "NumericDataType": [
+      [
+        400001,
+        20
+      ],
+      [
+        2000051,
+        5000
+      ]
+    ],
+    "ResName": "nengliangkuai_s"
+  },
+  {
+    "Id": 2,
+    "NumericDataType": [
+      [
+        400001,
+        50
+      ],
+      [
+        2000051,
+        5000
+      ]
+    ],
+    "ResName": "nengliangkuai_m"
+  },
+  {
+    "Id": 3,
+    "NumericDataType": [
+      [
+        400001,
+        100
+      ],
+      [
+        2000051,
+        5000
+      ]
+    ],
+    "ResName": "nengliangkuai_l"
+  }
+]

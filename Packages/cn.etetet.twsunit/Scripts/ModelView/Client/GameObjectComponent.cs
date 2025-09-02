@@ -23,5 +23,8 @@ namespace ET.Client
         public Transform Transform { get; private set; }
 
         public bool isInGamePool { get; set; } = false;
+
+        public SpriteRenderer sprite { get; set; }
+        public UnityEventTrigger unityEventTrigger { get; set; }
     }
 }

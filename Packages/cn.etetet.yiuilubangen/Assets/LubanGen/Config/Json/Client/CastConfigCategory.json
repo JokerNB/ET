@@ -13,33 +13,27 @@
       ],
       [
         3000031,
-        30000
+        60000
       ]
     ],
     "SelfAction": [
-      1014
+      1029,
+      1030
     ],
-    "SelfActionParam": [
-      5000
-    ],
+    "SelfActionParam": [],
     "HitAction": [
       1001,
       1023
     ],
     "HitActionParam": [],
     "ResName": "qiangzidan",
-    "InitCastPos_L": [
-      1.2,
-      -4.07
-    ],
-    "InitCastPos_R": [
-      4.8,
-      -4.07
+    "InitCastPos": [
+      0,
+      0
     ],
     "InitCastScale": [
-      1,
-      1,
-      1
+      0.15,
+      0.15
     ]
   },
   {
@@ -59,18 +53,16 @@
         10000
       ]
     ],
-    "SelfAction": [],
+    "SelfAction": [
+      1029
+    ],
     "SelfActionParam": [],
     "HitAction": [
       1001
     ],
     "HitActionParam": [],
     "ResName": "fazhangzidan",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -94,7 +86,7 @@
       ],
       [
         3000031,
-        10000
+        110000
       ],
       [
         3000041,
@@ -102,6 +94,7 @@
       ]
     ],
     "SelfAction": [
+      1028,
       1024,
       1025
     ],
@@ -111,18 +104,13 @@
     ],
     "HitActionParam": [],
     "ResName": "banzhuan",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
     "InitCastScale": [
-      1,
-      1,
-      1
+      0.5,
+      0.5
     ]
   },
   {
@@ -135,15 +123,20 @@
       ],
       [
         3000021,
-        1
+        1000
       ],
       [
         3000031,
-        5000
+        110000
+      ],
+      [
+        3000041,
+        3000
       ]
     ],
     "SelfAction": [
-      1016
+      1028,
+      1027
     ],
     "SelfActionParam": [],
     "HitAction": [
@@ -151,11 +144,7 @@
     ],
     "HitActionParam": [],
     "ResName": "huixuanbiao",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -178,18 +167,13 @@
     ],
     "HitActionParam": [],
     "ResName": "huojian",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
     "InitCastScale": [
-      1,
-      1,
-      1
+      0.04,
+      0.04
     ]
   },
   {
@@ -203,11 +187,7 @@
     ],
     "HitActionParam": [],
     "ResName": "huojianboom",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -232,11 +212,7 @@
     ],
     "HitActionParam": [],
     "ResName": "leidian",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -257,11 +233,7 @@
     ],
     "HitActionParam": [],
     "ResName": "lichang",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -284,11 +256,7 @@
     ],
     "HitActionParam": [],
     "ResName": "liulian",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -311,11 +279,7 @@
     "HitAction": [],
     "HitActionParam": [],
     "ResName": "ranshaoping",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -342,11 +306,7 @@
       1
     ],
     "ResName": "ranshaopingboom",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -367,11 +327,7 @@
     ],
     "HitActionParam": [],
     "ResName": "shouweizhezidan",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -392,11 +348,7 @@
     ],
     "HitActionParam": [],
     "ResName": "zuantoudan",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -417,11 +369,7 @@
     ],
     "HitActionParam": [],
     "ResName": "zuqiu",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],
@@ -442,11 +390,7 @@
     ],
     "HitActionParam": [],
     "ResName": "jitui",
-    "InitCastPos_L": [
-      0,
-      0
-    ],
-    "InitCastPos_R": [
+    "InitCastPos": [
       0,
       0
     ],

@@ -236,15 +236,15 @@ namespace ET
         /// </summary>
         AttackInterval6 = 2000086,
         /// <summary>
-        /// 吸收范围_0 (Int)
+        /// 吸收范围_0 (Float)
         /// </summary>
         AbsorptionRange0 = 200009,
         /// <summary>
-        /// 吸收范围_1 (Int)
+        /// 吸收范围_1 (Float)
         /// </summary>
         AbsorptionRange1 = 2000091,
         /// <summary>
-        /// 吸收范围_2 (Int)
+        /// 吸收范围_2 (Float)
         /// </summary>
         AbsorptionRange2 = 2000092,
         /// <summary>
@@ -252,7 +252,7 @@ namespace ET
         /// </summary>
         AbsorptionRange3 = 2000093,
         /// <summary>
-        /// 吸收范围_4 (Int)
+        /// 吸收范围_4 (Float)
         /// </summary>
         AbsorptionRange4 = 2000094,
         /// <summary>
@@ -260,7 +260,7 @@ namespace ET
         /// </summary>
         AbsorptionRange5 = 2000095,
         /// <summary>
-        /// 吸收范围_6 (Int)
+        /// 吸收范围_6 (Float)
         /// </summary>
         AbsorptionRange6 = 2000096,
         /// <summary>
@@ -379,94 +379,6 @@ namespace ET
         /// 技能持续时间_6 (Long)
         /// </summary>
         SkillDuration6 = 3000046,
-        /// <summary>
-        /// 子技能物体个数_0 (Int)
-        /// </summary>
-        SkillChildNum0 = 300005,
-        /// <summary>
-        /// 子技能攻击范围_0 (Int)
-        /// </summary>
-        SkillChildAttackRange0 = 300006,
-        /// <summary>
-        /// 子技能攻击范围_1 (Int)
-        /// </summary>
-        SkillChildAttackRange1 = 3000061,
-        /// <summary>
-        /// 子技能攻击范围_2 (Int)
-        /// </summary>
-        SkillChildAttackRange2 = 3000062,
-        /// <summary>
-        /// 子技能攻击范围_3 (Float)
-        /// </summary>
-        SkillChildAttackRange3 = 3000063,
-        /// <summary>
-        /// 子技能攻击范围_4 (Int)
-        /// </summary>
-        SkillChildAttackRange4 = 3000064,
-        /// <summary>
-        /// 子技能攻击范围_5 (Float)
-        /// </summary>
-        SkillChildAttackRange5 = 3000065,
-        /// <summary>
-        /// 子技能攻击范围_6 (Int)
-        /// </summary>
-        SkillChildAttackRange6 = 3000066,
-        /// <summary>
-        /// 子技能持续时间_0 (Long)
-        /// </summary>
-        SkillChildDuration0 = 300007,
-        /// <summary>
-        /// 子技能持续时间_1 (Long)
-        /// </summary>
-        SkillChildDuration1 = 3000071,
-        /// <summary>
-        /// 子技能持续时间_2 (Long)
-        /// </summary>
-        SkillChildDuration2 = 3000072,
-        /// <summary>
-        /// 子技能持续时间_3 (Float)
-        /// </summary>
-        SkillChildDuration3 = 3000073,
-        /// <summary>
-        /// 子技能持续时间_4 (Long)
-        /// </summary>
-        SkillChildDuration4 = 3000074,
-        /// <summary>
-        /// 子技能持续时间_5 (Float)
-        /// </summary>
-        SkillChildDuration5 = 3000075,
-        /// <summary>
-        /// 子技能持续时间_6 (Long)
-        /// </summary>
-        SkillChildDuration6 = 3000076,
-        /// <summary>
-        /// 子技能移动速度_0 (Float)
-        /// </summary>
-        SkillChildMoveSpeed0 = 300008,
-        /// <summary>
-        /// 子技能移动速度_1 (Float)
-        /// </summary>
-        SkillChildMoveSpeed1 = 3000081,
-        /// <summary>
-        /// 子技能移动速度_2 (Float)
-        /// </summary>
-        SkillChildMoveSpeed2 = 3000082,
-        /// <summary>
-        /// 子技能移动速度_3 (Float)
-        /// </summary>
-        SkillChildMoveSpeed3 = 3000083,
-        /// <summary>
-        /// 子技能移动速度_4 (Float)
-        /// </summary>
-        SkillChildMoveSpeed4 = 3000084,
-        /// <summary>
-        /// 子技能移动速度_5 (Float)
-        /// </summary>
-        SkillChildMoveSpeed5 = 3000085,
-        /// <summary>
-        /// 子技能移动速度_6 (Float)
-        /// </summary>
-        SkillChildMoveSpeed6 = 3000086,
         /// <summary>
         /// 对局经验值_0 (Int)
         /// </summary>

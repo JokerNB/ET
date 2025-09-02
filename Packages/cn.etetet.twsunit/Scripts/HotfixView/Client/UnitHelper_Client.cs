@@ -17,13 +17,13 @@ namespace ET.Client
             return currentScene.GetComponent<UnitComponent_Client>().Get(playerComponent.MyId);
         }
 
-        public static Vector2 GetUnitPosition(this Unit_Client unit)
+        public static Vector2 GetSelfPosition(this Unit_Client unit)
         {
             if (unit == null || unit.IsDisposed)
                 return Vector2.zero;
             return unit.GetComponent<GameObjectComponent>().Transform.position;
         }
-
+        
         public static void SetUnitPosition(this Unit_Client unit, Vector2 pos)
         {
             if (unit == null || unit.IsDisposed)
@@ -39,11 +39,6 @@ namespace ET.Client
             if (unit == null || unit.IsDisposed)
                 return;
             unit.GetComponent<GameObjectComponent>().SetRotation(pos);
-        }
-
-        public static void UnitMoveByDir(this Unit_Client unit, Vector2 dir)
-        {
-            
         }
     }
 }

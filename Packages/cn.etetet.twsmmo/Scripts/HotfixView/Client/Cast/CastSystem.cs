@@ -67,7 +67,7 @@ namespace ET.Client
             UnitComponent_Client unitComponentClient = self.Root().CurrentScene().GetComponent<UnitComponent_Client>();
             for (int i = 0; i < childNum; i++)
             {
-                Unit_Client skillUnit = unitComponentClient.AddChild<Unit_Client, int>(1);
+                Unit_Client skillUnit = unitComponentClient.AddChild<Unit_Client, int>(UnitConfigCategory.Instance.castUnitConfig.Id);
                 unitComponentClient.Add(skillUnit);
                 EventSystem.Instance.Publish(self.Root().CurrentScene(), new AfterSkillCreate
                 {

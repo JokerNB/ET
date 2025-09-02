@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AssetBundleCollectorSetting
   m_EditorClassIdentifier: 
   ShowPackageView: 1
-  ShowEditorAlias: 0
+  ShowEditorAlias: 1
   UniqueBundleName: 1
   Packages:
   - PackageName: DefaultPackage
@@ -253,16 +253,24 @@ MonoBehaviour:
         FilterRuleName: CollectPrefab
         AssetTags: 
         UserData: 
-    - GroupName: BattleEffect
+    - GroupName: MMO
       GroupDesc: 
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.twsmmo/Assets/GameRes
-        CollectorGUID: 3445a92c010af1c479b05967635d1fa5
+      - CollectPath: Packages/cn.etetet.twsmmo/Assets/GameRes/Effect
+        CollectorGUID: a714c4cd5fbc4e249b323ebb81d599d6
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory
         FilterRuleName: CollectPrefab
+        AssetTags: 
+        UserData: 
+      - CollectPath: Packages/cn.etetet.twsmmo/Assets/GameRes/Atlas
+        CollectorGUID: 52bcb879891bdc8448a579ac0fc2b350
+        CollectorType: 2
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
         AssetTags: 
         UserData: 

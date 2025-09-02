@@ -2,19 +2,17 @@
 
 namespace ET.Client
 {
-    
     [EntitySystemOf(typeof(UnitComponent_Client))]
     public static partial class UnitComponentSystem_Client
     {
         [EntitySystem]
         private static void Awake(this ET.Client.UnitComponent_Client self)
         {
-
         }
+
         [EntitySystem]
         private static void Destroy(this ET.Client.UnitComponent_Client self)
         {
-
         }
 
         public static void Add(this UnitComponent_Client self, Unit_Client unit)
@@ -23,10 +21,12 @@ namespace ET.Client
                 self.monsters.Add(unit);
             if (unit.isUnit())
                 self.units.Add(unit);
-            if(unit.UnitType == UnitType.Player)
+            if (unit.isEnergyBlock())
+                self.energyBlocks.Add(unit);
+            if (unit.UnitType == UnitType.Player)
                 self.Unit_Player = unit;
         }
-        
+
         public static Unit_Client Get(this UnitComponent_Client self, long id)
         {
             Unit_Client unit = self.GetChild<Unit_Client>(id);
@@ -40,6 +40,8 @@ namespace ET.Client
                 self.monsters.Remove(unit);
             if (unit.isUnit())
                 self.units.Remove(unit);
+            if (unit.isEnergyBlock())
+                self.energyBlocks.Remove(unit);
             if (unit.UnitType == UnitType.Player)
                 self.Unit_Player = default;
             self.RemoveChild(id);
@@ -49,10 +51,15 @@ namespace ET.Client
         {
             return self.units;
         }
-        
+
         public static List<EntityRef<Unit_Client>> GetAllMonster(this UnitComponent_Client self)
         {
             return self.monsters;
+        }
+        
+        public static List<EntityRef<Unit_Client>> GetAllEnergyBlocks(this UnitComponent_Client self)
+        {
+            return self.energyBlocks;
         }
 
         public static void RemoveAllMonster(this UnitComponent_Client self)

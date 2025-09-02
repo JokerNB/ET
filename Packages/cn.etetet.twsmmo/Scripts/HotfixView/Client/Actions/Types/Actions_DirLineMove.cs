@@ -31,9 +31,8 @@ namespace ET.Client
             float verticalinput = owner.GetComponent<PlayerMoveComponent>().Verticalinput;
             bool flipX = owner.GetComponent<PlayerMoveComponent>().SpriteRenderer.flipX;
 
-
             Vector2 moveDir = new Vector2(horizontalinput, verticalinput).normalized;
-            skillUnit.GetComponent<UnitMoveComponent>().InitAndMove(flipX, moveDir, speed, owner.GetUnitPosition());
+            skillUnit.GetComponent<UnitMoveComponent>().InitAndMove(flipX, moveDir, speed);
         }
 
         public void DoOtherMove(Unit_Client unitClient, Unit_Client skillUnit)

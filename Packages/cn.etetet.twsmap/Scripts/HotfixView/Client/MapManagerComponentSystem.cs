@@ -16,8 +16,11 @@ namespace ET.Client
             self.MapNav = referenceCollector.Get<PolyNav2D>("PolyNav2D");
             self.ParticleRootTr = referenceCollector.Get<Transform>("ParticleRoot");
             self.CastRootTr = referenceCollector.Get<Transform>("CastRoot");
+            self.EnergyBlockRootTr = referenceCollector.Get<Transform>("EnergyBlockRoot");
             self.MapNavCollider = self.MapNav.gameObject.GetComponent<PolygonCollider2D>();
             self.InitMap().NoContext();
+
+            self.AddComponent<EnergyBlockManagerComponent>();
         }
 
         public static async ETTask InitMap(this ET.Client.MapManagerComponent self)

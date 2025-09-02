@@ -2,6 +2,16 @@
 
 namespace ET.Client
 {
+    [NumericHandlerDynamic(SceneType.Current, ENumericType.AbsorptionRange0, 1)]
+    public class Player_SkillTickInterval0 : NumericHandlerDynamicSystem<PlayerMoveComponent, Unit_Client, NumericChange>
+    {
+        protected override async ETTask Run(PlayerMoveComponent self, Unit_Client entity, NumericChange data)
+        {
+            self?.InitEnergyBlockCollider();
+            await ETTask.CompletedTask;
+        }
+    }
+
     [EntitySystemOf(typeof(PlayerMoveComponent))]
     public static partial class PlayerMoveComponentSystem
     {
@@ -9,11 +19,13 @@ namespace ET.Client
         private static void Awake(this ET.Client.PlayerMoveComponent self)
         {
             self.GameObject = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>().GameObject;
-            self.SpriteRenderer = self.GameObject.GetComponentInChildren<SpriteRenderer>();
+            self.SpriteRenderer = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>().sprite;
             //默认朝右
             self.ChangeSpriteRendererFlip(false);
-            self.UnityEventTrigger = self.GameObject.GetComponentInChildren<UnityEventTrigger>();
+            self.UnityEventTrigger = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>().unityEventTrigger;
             self.InitColliderTrigger();
+
+            self.InitEnergyBlockCollider();
         }
 
         [EntitySystem]
@@ -26,31 +38,42 @@ namespace ET.Client
         [EntitySystem]
         private static void Destroy(this ET.Client.PlayerMoveComponent self)
         {
-            self.UnityEventTrigger.OnTriggerEnterAction -= self.OnTriggerEnterAction;
-            self.UnityEventTrigger.OnTriggerExitAction -= self.OnTriggerExitAction;
+            self.UnityEventTrigger.OnCollisionEnterAction -= self.OnCollisionEnterAction;
+            self.UnityEventTrigger.OnCollisionExitAction -= self.OnCollisionExitAction;
             self.UnityEventTrigger.OnFixedUpdateAction -= self.OnFixedUpdate;
         }
 
         public static void InitColliderTrigger(this PlayerMoveComponent self)
         {
-            self.UnityEventTrigger = self.GameObject.GetComponentInChildren<UnityEventTrigger>();
-            self.UnityEventTrigger.OnTriggerEnterAction += self.OnTriggerEnterAction;
-            self.UnityEventTrigger.OnTriggerExitAction += self.OnTriggerExitAction;
-            self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdate;
             self.UnityEventTrigger.BelongToUnitId = self.GetParent<Unit_Client>().Id;
             self.UnityEventTrigger.unitType = (int)self.GetParent<Unit_Client>().UnitType;
+            self.UnityEventTrigger.OnCollisionEnterAction += self.OnCollisionEnterAction;
+            self.UnityEventTrigger.OnCollisionExitAction += self.OnCollisionExitAction;
+            self.UnityEventTrigger.OnFixedUpdateAction += self.OnFixedUpdate;
         }
 
-        private static void OnTriggerEnterAction(this PlayerMoveComponent self, Collider2D collision2D, long unitId, int unitType)
+        public static void InitEnergyBlockCollider(this PlayerMoveComponent self)
         {
-            var monsterComponent = self.Root().CurrentScene().GetComponent<UnitComponent_Client>()?.GetChild<MonsterMoveComponent>(unitId);
-            monsterComponent?.TestEnterChangeColor();
+            var range = self.GetParent<Unit_Client>().NumericComponent.GetAsFloat(ENumericType.AbsorptionRange0);
+            var collider2D = self.GameObject.Get<CircleCollider2D>("EnergyBlockCollider");
+            collider2D.radius = range;
         }
 
-        private static void OnTriggerExitAction(this PlayerMoveComponent self, Collider2D collision2D, long unitId, int unitType)
+        private static void OnCollisionEnterAction(this PlayerMoveComponent self, Collision2D collision2D, long unitId, int unitType)
         {
-            var monsterComponent = self.Root().CurrentScene().GetComponent<MonsterManagerComponent>()?.GetChild<MonsterMoveComponent>(unitId);
-            monsterComponent?.TestExitChangeColor();
+            //monster cast energyblock
+            if (unitType == (int)UnitType.EnergyBlock)
+            {
+                var unitClient = self.Root().CurrentScene().GetComponent<UnitComponent_Client>().Get(unitId);
+                unitClient.GetComponent<EnergyBlockComponent>().Collect();
+            }
+            
+        }
+
+        private static void OnCollisionExitAction(this PlayerMoveComponent self, Collision2D collision2D, long unitId, int unitType)
+        {
+            //monster cast energyblock
+
         }
 
         public static void OnFixedUpdate(this PlayerMoveComponent self)

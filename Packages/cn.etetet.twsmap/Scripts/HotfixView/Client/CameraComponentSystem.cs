@@ -17,26 +17,13 @@ namespace ET.Client
         [EntitySystem]
         private static void Destroy(this ET.Client.CameraComponent self)
         {
-            // self.UnRegisterUnityEventTrigger();
         }
 
         public static void InitUnityEventTrigger(this ET.Client.CameraComponent self)
         {
             var unityEventTrigger = self.MainCameraTr.gameObject.GetComponent<UnityEventTrigger>();
             unityEventTrigger.unitType = (int)UnitType.Camera;
-            // unityEventTrigger.OnTriggerEnterAction += self.OnTriggerEnter;
         }
-        //
-        // public static void UnRegisterUnityEventTrigger(this ET.Client.CameraComponent self)
-        // {
-        //     var unityEventTrigger = self.MainCameraTr.gameObject.GetComponent<UnityEventTrigger>();
-        //     unityEventTrigger.OnTriggerEnterAction -= self.OnTriggerEnter;
-        // }
-        //
-        // public static void OnTriggerEnter(this CameraComponent self, Collider2D collision2D, long unitId, int unitType)
-        // {
-        //     Log.Error($"OnTriggerEnter, {unitId} {(UnitType)unitType}");
-        // }
 
         public static void Translate(this ET.Client.CameraComponent self, Vector3 pos)
         {
@@ -67,6 +54,11 @@ namespace ET.Client
             //摄像机宽高
             self.cameraBoundSize.x = self.cameraBoundPos.z - self.cameraBoundPos.x;
             self.cameraBoundSize.y = self.cameraBoundPos.w - self.cameraBoundPos.y;
+        }
+
+        public static Vector2 GetInputMousePos(this ET.Client.CameraComponent self)
+        {
+            return self.MainCamera.ScreenToWorldPoint(Input.mousePosition);
         }
     }
 }

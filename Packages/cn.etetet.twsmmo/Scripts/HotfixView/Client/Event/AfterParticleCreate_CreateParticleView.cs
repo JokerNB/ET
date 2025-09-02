@@ -26,7 +26,7 @@ namespace ET.Client
                 go.transform.SetParent(owner.Root().CurrentScene().GetComponent<MapManagerComponent>().ParticleRootTr, false);
 
             var config = particleUnit.Config;
-            particleUnit.AddComponent<GameObjectComponent, GameObject, bool>(go, false);
+            particleUnit.AddComponent<GameObjectComponent, GameObject, bool>(go, false, true);
             InitCastData initCastData = config.InitCastDatas[0];
             go.transform.localPosition = new Vector3(initCastData.InitCastPos[0], initCastData.InitCastPos[1], initCastData.InitCastPos[2]);
             go.transform.localScale = new Vector3(initCastData.InitCastScale[0], initCastData.InitCastScale[1], initCastData.InitCastScale[2]);
@@ -36,7 +36,7 @@ namespace ET.Client
 
         public static async ETTask OutDurationTime(Unit_Client unit)
         {
-            float time = unit.NumericComponent.GetAsFloat(ENumericType.SkillChildDuration0);
+            float time = unit.NumericComponent.GetAsFloat(ENumericType.SkillDuration0);
             if (time <= 0)
                 return;
             long instanceId = unit.InstanceId;

@@ -19,7 +19,7 @@ namespace ET.Client
         {
             if (unit.IsAlive())
                 return ErrorCode.ERR_Relive_Alive;
-            unit.DoRelive(unit.GetUnitPosition(), 1);
+            unit.DoRelive(unit.GetSelfPosition(), 1);
             return ErrorCode.ERR_Success;
         }
 

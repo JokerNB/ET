@@ -39,7 +39,7 @@
       ],
       [
         2000091,
-        10
+        10000
       ],
       [
         400004,
@@ -51,7 +51,7 @@
       ],
       [
         2000051,
-        100000
+        50000
       ],
       [
         2000061,
@@ -123,7 +123,7 @@
       ],
       [
         2000091,
-        10
+        10000
       ],
       [
         400003,
@@ -464,17 +464,26 @@
   {
     "Id": 1,
     "UnitType": 8,
-    "Name": "子弹",
-    "Des": "碰撞后消失",
+    "Name": "技能",
+    "Des": "",
     "NumericTypeValue": [],
     "InitCastDatas": [],
     "ResName": "None"
   },
   {
     "Id": 2,
+    "UnitType": 10,
+    "Name": "能量块",
+    "Des": "",
+    "NumericTypeValue": [],
+    "InitCastDatas": [],
+    "ResName": "None"
+  },
+  {
+    "Id": 3,
     "UnitType": 9,
-    "Name": "技能",
-    "Des": "碰撞后不消失",
+    "Name": "摄像机",
+    "Des": "",
     "NumericTypeValue": [],
     "InitCastDatas": [],
     "ResName": "None"

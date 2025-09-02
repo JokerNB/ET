@@ -13,7 +13,7 @@ namespace ET.Client
             GameObject go = await YIUIGameObjectPool.Inst.Get(castConfig.ResName, scene.GetComponent<MapManagerComponent>().CastRootTr);
 
             bool isFromPoll = skillUnit.IsFromPool;
-            skillUnit.AddComponent<GameObjectComponent, GameObject, bool>(go, isFromPoll);
+            skillUnit.AddComponent<GameObjectComponent, GameObject, bool>(go, isFromPoll, true);
             skillUnit.AddComponent<UnitMoveComponent, int, long>(a.castConfigId, ownerUnit.Id, isFromPoll);
 
             Cast cast = a.castSelf;

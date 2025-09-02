@@ -46,5 +46,77 @@
     "CacheTime": 10,
     "MinCacheCount": 10,
     "MaxCacheCountNewResName": "banzhuan"
+  },
+  {
+    "id": "huixuanbiao",
+    "timeout": 0,
+    "MaxCacheCount": 5,
+    "CacheTime": 10,
+    "MinCacheCount": 10,
+    "MaxCacheCountNewResName": "huixuanbiao"
+  },
+  {
+    "id": "huojian",
+    "timeout": 0,
+    "MaxCacheCount": 5,
+    "CacheTime": 10,
+    "MinCacheCount": 10,
+    "MaxCacheCountNewResName": "huojian"
+  },
+  {
+    "id": "liulian",
+    "timeout": 0,
+    "MaxCacheCount": 5,
+    "CacheTime": 10,
+    "MinCacheCount": 10,
+    "MaxCacheCountNewResName": "liulian"
+  },
+  {
+    "id": "ranshaoping",
+    "timeout": 0,
+    "MaxCacheCount": 5,
+    "CacheTime": 10,
+    "MinCacheCount": 10,
+    "MaxCacheCountNewResName": "ranshaoping"
+  },
+  {
+    "id": "zuantoudan",
+    "timeout": 0,
+    "MaxCacheCount": 5,
+    "CacheTime": 10,
+    "MinCacheCount": 10,
+    "MaxCacheCountNewResName": "zuantoudan"
+  },
+  {
+    "id": "zuqiu",
+    "timeout": 0,
+    "MaxCacheCount": 5,
+    "CacheTime": 10,
+    "MinCacheCount": 10,
+    "MaxCacheCountNewResName": "zuqiu"
+  },
+  {
+    "id": "nengliangkuai_s",
+    "timeout": 0,
+    "MaxCacheCount": 0,
+    "CacheTime": 50,
+    "MinCacheCount": -1,
+    "MaxCacheCountNewResName": "nengliangkuai_s"
+  },
+  {
+    "id": "nengliangkuai_m",
+    "timeout": 0,
+    "MaxCacheCount": 0,
+    "CacheTime": 50,
+    "MinCacheCount": -1,
+    "MaxCacheCountNewResName": "nengliangkuai_m"
+  },
+  {
+    "id": "nengliangkuai_l",
+    "timeout": 0,
+    "MaxCacheCount": 0,
+    "CacheTime": 50,
+    "MinCacheCount": -1,
+    "MaxCacheCountNewResName": "nengliangkuai_l"
   }
 ]

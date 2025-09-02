@@ -15,32 +15,15 @@ namespace ET.Client
             if (unitClient == null || unitClient.IsDisposed)
                 return;
             Cast cast = actions.CastSelf;
-            if (unitClient.UnitType == ET.UnitType.Player)
-            {
-                float speed = cast.GetComponent<NumericDataComponent>().GetAsFloat(ENumericType.SkillMoveSpeed0);
-                this.DoPlayerMove(unitClient, skillUnit, speed);
-            }
-            else
-                this.DoOtherMove(unitClient, skillUnit);
-        }
-
-        public void DoPlayerMove(Unit_Client owner, Unit_Client skillUnit, float speed)
-        {
-            float horizontalinput = owner.GetComponent<PlayerMoveComponent>().horizontalinput;
-            float verticalinput = owner.GetComponent<PlayerMoveComponent>().Verticalinput;
-            bool flipX = owner.GetComponent<PlayerMoveComponent>().SpriteRenderer.flipX;
-
+            float speed = cast.GetComponent<NumericDataComponent>().GetAsFloat(ENumericType.SkillMoveSpeed0);
+            float horizontalinput = unitClient.GetComponent<PlayerMoveComponent>().horizontalinput;
+            bool flipX = unitClient.GetComponent<PlayerMoveComponent>().SpriteRenderer.flipX;
 
             if (Mathf.Abs(horizontalinput) <= 0.001f)
-                horizontalinput = 0.2f;
-                
-            Vector2 moveDir = new Vector2(horizontalinput, 1).normalized;
-            skillUnit.GetComponent<UnitMoveComponent>().InitAndMove(flipX, moveDir, speed, owner.GetUnitPosition());
-        }
+                horizontalinput = flipX ? -0.2f : 0.2f;
 
-        public void DoOtherMove(Unit_Client unitClient, Unit_Client skillUnit)
-        {
+            Vector2 moveDir = new Vector2(horizontalinput, 1).normalized;
+            skillUnit.GetComponent<UnitMoveComponent>().InitAndMove(flipX, moveDir, speed);
         }
     }
 }
-

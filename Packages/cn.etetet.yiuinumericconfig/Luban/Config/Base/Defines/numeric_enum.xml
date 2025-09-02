@@ -87,13 +87,13 @@
 <var name="AttackInterval6" value="2000086" alias="攻击间隔_6" comment = "攻击间隔_6 (Float)"/>
 
 <!-- 吸收范围 -->
-<var name="AbsorptionRange0" value="200009"  alias="吸收范围_0" comment = "吸收范围_0 (Int)"/> 
-<var name="AbsorptionRange1" value="2000091" alias="吸收范围_1" comment = "吸收范围_1 (Int)"/>
-<var name="AbsorptionRange2" value="2000092" alias="吸收范围_2" comment = "吸收范围_2 (Int)"/>
+<var name="AbsorptionRange0" value="200009"  alias="吸收范围_0" comment = "吸收范围_0 (Float)"/> 
+<var name="AbsorptionRange1" value="2000091" alias="吸收范围_1" comment = "吸收范围_1 (Float)"/>
+<var name="AbsorptionRange2" value="2000092" alias="吸收范围_2" comment = "吸收范围_2 (Float)"/>
 <var name="AbsorptionRange3" value="2000093" alias="吸收范围_3" comment = "吸收范围_3 (Float)"/>
-<var name="AbsorptionRange4" value="2000094" alias="吸收范围_4" comment = "吸收范围_4 (Int)"/>
+<var name="AbsorptionRange4" value="2000094" alias="吸收范围_4" comment = "吸收范围_4 (Float)"/>
 <var name="AbsorptionRange5" value="2000095" alias="吸收范围_5" comment = "吸收范围_5 (Float)"/>
-<var name="AbsorptionRange6" value="2000096" alias="吸收范围_6" comment = "吸收范围_6 (Int)"/>
+<var name="AbsorptionRange6" value="2000096" alias="吸收范围_6" comment = "吸收范围_6 (Float)"/>
 
 <!-- 暴击率 -->
 <var name="CriticalRate0" value="200010"  alias="暴击率_0" comment = "暴击率_0 (Float)"/> 
@@ -133,36 +133,6 @@
 <var name="SkillDuration4" value="3000044" alias="技能持续时间_4" comment = "技能持续时间_4 (Long)"/>
 <var name="SkillDuration5" value="3000045" alias="技能持续时间_5" comment = "技能持续时间_5 (Float)"/>
 <var name="SkillDuration6" value="3000046" alias="技能持续时间_6" comment = "技能持续时间_6 (Long)"/>
-
-<!-- 子技能物体个数 -->
-<var name="SkillChildNum0" value="300005"  alias="子技能物体个数_0" comment = "子技能物体个数_0 (Int)"/> 
-
-<!-- 子技能攻击范围 -->
-<var name="SkillChildAttackRange0" value="300006"  alias="子技能攻击范围_0" comment = "子技能攻击范围_0 (Int)"/> 
-<var name="SkillChildAttackRange1" value="3000061" alias="子技能攻击范围_1" comment = "子技能攻击范围_1 (Int)"/>
-<var name="SkillChildAttackRange2" value="3000062" alias="子技能攻击范围_2" comment = "子技能攻击范围_2 (Int)"/>
-<var name="SkillChildAttackRange3" value="3000063" alias="子技能攻击范围_3" comment = "子技能攻击范围_3 (Float)"/>
-<var name="SkillChildAttackRange4" value="3000064" alias="子技能攻击范围_4" comment = "子技能攻击范围_4 (Int)"/>
-<var name="SkillChildAttackRange5" value="3000065" alias="子技能攻击范围_5" comment = "子技能攻击范围_5 (Float)"/>
-<var name="SkillChildAttackRange6" value="3000066" alias="子技能攻击范围_6" comment = "子技能攻击范围_6 (Int)"/>
-
-<!-- 子技能持续时间 -->
-<var name="SkillChildDuration0" value="300007"  alias="子技能持续时间_0" comment = "子技能持续时间_0 (Long)"/> 
-<var name="SkillChildDuration1" value="3000071" alias="子技能持续时间_1" comment = "子技能持续时间_1 (Long)"/>
-<var name="SkillChildDuration2" value="3000072" alias="子技能持续时间_2" comment = "子技能持续时间_2 (Long)"/>
-<var name="SkillChildDuration3" value="3000073" alias="子技能持续时间_3" comment = "子技能持续时间_3 (Float)"/>
-<var name="SkillChildDuration4" value="3000074" alias="子技能持续时间_4" comment = "子技能持续时间_4 (Long)"/>
-<var name="SkillChildDuration5" value="3000075" alias="子技能持续时间_5" comment = "子技能持续时间_5 (Float)"/>
-<var name="SkillChildDuration6" value="3000076" alias="子技能持续时间_6" comment = "子技能持续时间_6 (Long)"/>
-
-<!-- 子技能移动速度 -->
-<var name="SkillChildMoveSpeed0" value="300008"  alias="子技能移动速度_0" comment = "子技能移动速度_0 (Float)"/> 
-<var name="SkillChildMoveSpeed1" value="3000081" alias="子技能移动速度_1" comment = "子技能移动速度_1 (Float)"/>
-<var name="SkillChildMoveSpeed2" value="3000082" alias="子技能移动速度_2" comment = "子技能移动速度_2 (Float)"/>
-<var name="SkillChildMoveSpeed3" value="3000083" alias="子技能移动速度_3" comment = "子技能移动速度_3 (Float)"/>
-<var name="SkillChildMoveSpeed4" value="3000084" alias="子技能移动速度_4" comment = "子技能移动速度_4 (Float)"/>
-<var name="SkillChildMoveSpeed5" value="3000085" alias="子技能移动速度_5" comment = "子技能移动速度_5 (Float)"/>
-<var name="SkillChildMoveSpeed6" value="3000086" alias="子技能移动速度_6" comment = "子技能移动速度_6 (Float)"/>
 
 <!-- 对局经验值 -->
 <var name="BattleExp0" value="400001"  alias="对局经验值_0" comment = "对局经验值_0 (Int)"/> 

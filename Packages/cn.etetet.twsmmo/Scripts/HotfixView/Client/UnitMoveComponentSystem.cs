@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.Mathematics;
+using UnityEngine;
 
 namespace ET.Client
 {
@@ -10,6 +11,8 @@ namespace ET.Client
         {
             self.castConfigId = castConfigId;
             self.ownerUnitId = ownerUnitId;
+            var gameObject = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>().GameObject;
+            self.rigidbody = gameObject.Get<Rigidbody2D>("rigidbody");
             self.InitUnityEventTrigger();
         }
 
@@ -26,36 +29,17 @@ namespace ET.Client
         public static void InitUnityEventTrigger(this ET.Client.UnitMoveComponent self)
         {
             var gameObjectComponent = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>();
-            var unityEventTrigger = gameObjectComponent.GameObject.GetComponent<UnityEventTrigger>();
+            var unityEventTrigger = gameObjectComponent.unityEventTrigger;
             unityEventTrigger.BelongToUnitId = self.GetParent<Unit_Client>().Id;
-            unityEventTrigger.unitType = (int)self.GetParent<Unit_Client>().UnitType;
-            unityEventTrigger.OnTriggerEnterAction += self.OnTriggerEnterAction;
-            unityEventTrigger.OnTriggerExitAction += self.OnTriggerExitAction;
+            unityEventTrigger.unitType = (int)UnitType.Cast;
             unityEventTrigger.OnCollisionEnterAction += self.OnCollisionEnterAction;
         }
 
         public static void UnRegisterUnityEventTrigger(this ET.Client.UnitMoveComponent self)
         {
             var gameObjectComponent = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>();
-            var unityEventTrigger = gameObjectComponent.GameObject.GetComponent<UnityEventTrigger>();
-            unityEventTrigger.OnTriggerEnterAction -= self.OnTriggerEnterAction;
-            unityEventTrigger.OnTriggerExitAction -= self.OnTriggerExitAction;
+            var unityEventTrigger = gameObjectComponent.unityEventTrigger;
             unityEventTrigger.OnCollisionEnterAction -= self.OnCollisionEnterAction;
-        }
-
-        public static void OnTriggerEnterAction(this UnitMoveComponent self, Collider2D collider, long unitId, int unitType)
-        {
-            Log.Error($"UnitMoveComponent.OnTriggerEnterAction: unitId:{unitId} unitType:{unitType}");
-            if (unitType == (int)UnitType.Camera && self.GetParent<Unit_Client>().UnitType == UnitType.Bullet)
-            {
-                //子弹消失
-                self.Root().CurrentScene().GetComponent<UnitComponent_Client>().Remove(self.GetParent<Unit_Client>().Id);
-            }
-        }
-
-        public static void OnTriggerExitAction(this UnitMoveComponent self, Collider2D collider, long unitId, int unitType)
-        {
-            Log.Error($"UnitMoveComponent.OnTriggerExitAction: unitId:{unitId} unitType:{unitType}");
         }
 
         public static void OnCollisionEnterAction(this UnitMoveComponent self, Collision2D collider, long unitId, int unitType)
@@ -71,13 +55,11 @@ namespace ET.Client
             cast.CastHit(unitId, self.GetParent<Unit_Client>()).NoContext();
         }
 
-        public static void InitAndMove(this ET.Client.UnitMoveComponent self, bool flipX, Vector2 dir, float speed, Vector2 ownerUnitPos)
+        public static void InitAndMove(this ET.Client.UnitMoveComponent self, bool flipX, Vector2 dir, float speed)
         {
             var gameObjectComponent = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>();
-            SpriteRenderer spriteRenderer = gameObjectComponent.GameObject.GetComponentInChildren<SpriteRenderer>();
+            SpriteRenderer spriteRenderer = gameObjectComponent.sprite;
             spriteRenderer.flipX = flipX;
-            gameObjectComponent.Transform.localPosition = ownerUnitPos;
-            gameObjectComponent.Transform.localScale = Vector2.one;
             self.dir = dir;
             self.moveSpeed = speed;
             self.SetRotateByDir();
@@ -87,17 +69,16 @@ namespace ET.Client
         public static void StartMove(this ET.Client.UnitMoveComponent self)
         {
             var gameObjectComponent = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>();
-            Transform transform = gameObjectComponent.Transform;
             if (self.dir == Vector2.zero)
             {
-                var spriteRenderer = gameObjectComponent.GameObject.GetComponentInChildren<SpriteRenderer>();
+                var spriteRenderer = gameObjectComponent.sprite;
                 if (spriteRenderer.flipX)
                     self.dir = Vector2.left;
                 else
                     self.dir = Vector2.right;
             }
 
-            var rigidbody2D = gameObjectComponent.GameObject.GetComponent<Rigidbody2D>();
+            var rigidbody2D = self.rigidbody;
             rigidbody2D.AddForce(self.dir * self.moveSpeed, ForceMode2D.Impulse);
         }
 
@@ -106,7 +87,7 @@ namespace ET.Client
             float horizontalinput = self.dir.x;
             float verticalinput = self.dir.y;
             var gameObjectComponent = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>();
-            SpriteRenderer spriteRenderer = gameObjectComponent.GameObject.GetComponentInChildren<SpriteRenderer>();
+            SpriteRenderer spriteRenderer = gameObjectComponent.sprite;
             bool flipX = spriteRenderer.flipX;
             int dir = 0;
             if (horizontalinput > 0)
@@ -144,11 +125,57 @@ namespace ET.Client
         public static void Contact(this ET.Client.UnitMoveComponent self, Vector2 dir)
         {
             var gameObjectComponent = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>();
-            SpriteRenderer spriteRenderer = gameObjectComponent.GameObject.GetComponentInChildren<SpriteRenderer>();
+            SpriteRenderer spriteRenderer = gameObjectComponent.sprite;
             spriteRenderer.flipX = dir.x < 0;
 
             self.dir = dir;
             self.SetRotateByDir();
+        }
+
+        public static async ETTask MoveByManeuver(this UnitMoveComponent self, Vector2 dir, float speed)
+        {
+            var gameObjectComponent = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>();
+            var spriteRenderer = gameObjectComponent.sprite;
+
+            self.dir = dir;
+            self.moveSpeed = speed;
+
+            if (self.dir == Vector2.zero)
+            {
+                if (spriteRenderer.flipX)
+                    self.dir = Vector2.left;
+                else
+                    self.dir = Vector2.right;
+            }
+
+            var rigidbody2D = self.rigidbody;
+            rigidbody2D.AddForce(self.dir * self.moveSpeed, ForceMode2D.Impulse);
+
+            long forwardMoveTime = 1000;
+            await self.Root().GetComponent<TimerComponent>().WaitAsync(forwardMoveTime);
+            self.dir = -self.dir;
+            self.moveSpeed *= 3f;
+            spriteRenderer.flipX = !spriteRenderer.flipX;
+            rigidbody2D.AddForce(self.dir * self.moveSpeed, ForceMode2D.Impulse);
+        }
+
+        public static void MoveToMouse(this ET.Client.UnitMoveComponent self, Vector2 dir, float speed)
+        {
+            self.dir = dir;
+            self.moveSpeed = speed;
+
+            var gameObjectComponent = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>();
+
+            float dot_X = Vector2.Dot(gameObjectComponent.Transform.right, dir);
+            float dot_Y = Vector2.Dot(gameObjectComponent.Transform.up, dir);
+            float angle = Mathf.Acos(Vector2.Dot(gameObjectComponent.Transform.right.normalized, dir.normalized)) * Mathf.Rad2Deg;
+            if (dot_Y < 0)
+                angle = -angle;
+            var quaternion = Quaternion.Euler(0, 0, angle);
+            gameObjectComponent.SetRotation(quaternion);
+
+            var rigidbody2D = self.rigidbody;
+            rigidbody2D.AddForce(self.dir * self.moveSpeed, ForceMode2D.Impulse);
         }
     }
 }

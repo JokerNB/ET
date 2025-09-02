@@ -25,8 +25,7 @@ namespace ET
             {int n0 = _buf.ReadSize(); HitAction = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); HitAction.Add(_e0);}}
             {int n0 = _buf.ReadSize(); HitActionParam = new System.Collections.Generic.List<long>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { long _e0;  _e0 = _buf.ReadLong(); HitActionParam.Add(_e0);}}
             ResName = _buf.ReadString();
-            {int n0 = _buf.ReadSize(); InitCastPosL = new System.Collections.Generic.List<float>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { float _e0;  _e0 = _buf.ReadFloat(); InitCastPosL.Add(_e0);}}
-            {int n0 = _buf.ReadSize(); InitCastPosR = new System.Collections.Generic.List<float>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { float _e0;  _e0 = _buf.ReadFloat(); InitCastPosR.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); InitCastPos = new System.Collections.Generic.List<float>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { float _e0;  _e0 = _buf.ReadFloat(); InitCastPos.Add(_e0);}}
             {int n0 = _buf.ReadSize(); InitCastScale = new System.Collections.Generic.List<float>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { float _e0;  _e0 = _buf.ReadFloat(); InitCastScale.Add(_e0);}}
 
             EndInit();
@@ -72,11 +71,7 @@ namespace ET
         /// <summary>
         /// 初始位置
         /// </summary>
-        public readonly System.Collections.Generic.List<float> InitCastPosL;
-        /// <summary>
-        /// 初始位置
-        /// </summary>
-        public readonly System.Collections.Generic.List<float> InitCastPosR;
+        public readonly System.Collections.Generic.List<float> InitCastPos;
         /// <summary>
         /// 初始缩放
         /// </summary>
@@ -101,8 +96,7 @@ namespace ET
             + "HitAction:" + Luban.StringUtil.CollectionToString(HitAction) + ","
             + "HitActionParam:" + Luban.StringUtil.CollectionToString(HitActionParam) + ","
             + "ResName:" + ResName + ","
-            + "InitCastPosL:" + Luban.StringUtil.CollectionToString(InitCastPosL) + ","
-            + "InitCastPosR:" + Luban.StringUtil.CollectionToString(InitCastPosR) + ","
+            + "InitCastPos:" + Luban.StringUtil.CollectionToString(InitCastPos) + ","
             + "InitCastScale:" + Luban.StringUtil.CollectionToString(InitCastScale) + ","
             + "}";
         }

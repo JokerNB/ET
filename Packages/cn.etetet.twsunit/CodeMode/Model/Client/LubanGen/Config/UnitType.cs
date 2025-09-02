@@ -44,17 +44,17 @@ namespace ET
         /// </summary>
         ParticleEffect = 7,
         /// <summary>
-        /// 子弹
-        /// </summary>
-        Bullet = 8,
-        /// <summary>
         /// 技能
         /// </summary>
-        Cast = 9,
+        Cast = 8,
         /// <summary>
         /// 摄像机
         /// </summary>
-        Camera = 10,
+        Camera = 9,
+        /// <summary>
+        /// 能量块
+        /// </summary>
+        EnergyBlock = 10,
     }
 
 } 

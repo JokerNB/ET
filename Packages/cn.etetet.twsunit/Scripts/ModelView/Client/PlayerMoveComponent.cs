@@ -4,7 +4,7 @@ using UnityEngine;
 namespace ET.Client
 {
     [ComponentOf(typeof(Unit_Client))]
-    public class PlayerMoveComponent : Entity, IAwake, IUpdate, IDestroy
+    public class PlayerMoveComponent : Entity, IAwake, IUpdate, IDestroy, INumericHandlerDynamic<Unit_Client, NumericChange>
     {
         private GameObject gameObject;
 
