@@ -149,6 +149,9 @@
 <!-- 对局等级 -->
 <var name="BattleLevel0" value="400005"  alias="对局等级_0" comment = "对局等级_0 (Int)"/> 
 
+<!-- 对局持续时间 -->
+<var name="BattleDuration0" value="400006"  alias="对局持续时间_0" comment = "对局持续时间_0 (Long)"/> 
+
 <!-- 禁止移动 -->
 <var name="ForbidMove0" value="500001"  alias="禁止移动_0" comment = "禁止移动_0 (Bool)"/> 
 

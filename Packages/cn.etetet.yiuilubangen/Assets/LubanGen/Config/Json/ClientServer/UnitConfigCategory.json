@@ -66,20 +66,12 @@
         0
       ]
     ],
-    "InitCastDatas": [
-      {
-        "InitCastId": 1,
-        "InitCastPos": [
-          0,
-          0,
-          0
-        ],
-        "InitCastScale": [
-          1,
-          1,
-          1
-        ]
-      }
+    "InitCastConfigIds": [
+      1
+    ],
+    "InitScale": [
+      0.3,
+      0.3
     ],
     "ResName": "Role_1"
   },
@@ -150,20 +142,12 @@
         0
       ]
     ],
-    "InitCastDatas": [
-      {
-        "InitCastId": 1,
-        "InitCastPos": [
-          0,
-          0,
-          0
-        ],
-        "InitCastScale": [
-          1,
-          1,
-          1
-        ]
-      }
+    "InitCastConfigIds": [
+      1
+    ],
+    "InitScale": [
+      0.3,
+      0.3
     ],
     "ResName": "Role_2"
   },
@@ -179,11 +163,11 @@
       ],
       [
         200002,
-        20
+        40
       ],
       [
         2000031,
-        20
+        40
       ],
       [
         2000071,
@@ -191,27 +175,17 @@
       ],
       [
         2000051,
-        50000
+        10000
       ],
       [
         2000061,
         1
       ]
     ],
-    "InitCastDatas": [
-      {
-        "InitCastId": 1,
-        "InitCastPos": [
-          0,
-          0,
-          0
-        ],
-        "InitCastScale": [
-          1,
-          1,
-          1
-        ]
-      }
+    "InitCastConfigIds": [],
+    "InitScale": [
+      0.4,
+      0.4
     ],
     "ResName": "Monster_1"
   },
@@ -239,27 +213,17 @@
       ],
       [
         2000051,
-        50000
+        10000
       ],
       [
         2000061,
         1
       ]
     ],
-    "InitCastDatas": [
-      {
-        "InitCastId": 1,
-        "InitCastPos": [
-          0,
-          0,
-          0
-        ],
-        "InitCastScale": [
-          1,
-          1,
-          1
-        ]
-      }
+    "InitCastConfigIds": [],
+    "InitScale": [
+      0.4,
+      0.4
     ],
     "ResName": "Monster_2"
   },
@@ -287,27 +251,17 @@
       ],
       [
         2000051,
-        50000
+        10000
       ],
       [
         2000061,
         1
       ]
     ],
-    "InitCastDatas": [
-      {
-        "InitCastId": 1,
-        "InitCastPos": [
-          0,
-          0,
-          0
-        ],
-        "InitCastScale": [
-          1,
-          1,
-          1
-        ]
-      }
+    "InitCastConfigIds": [],
+    "InitScale": [
+      0.3,
+      0.3
     ],
     "ResName": "Monster_3"
   },
@@ -335,27 +289,17 @@
       ],
       [
         2000051,
-        50000
+        10000
       ],
       [
         2000061,
         1
       ]
     ],
-    "InitCastDatas": [
-      {
-        "InitCastId": 1,
-        "InitCastPos": [
-          0,
-          0,
-          0
-        ],
-        "InitCastScale": [
-          1,
-          1,
-          1
-        ]
-      }
+    "InitCastConfigIds": [],
+    "InitScale": [
+      0.4,
+      0.4
     ],
     "ResName": "Monster_4"
   },
@@ -365,21 +309,10 @@
     "Name": "枪",
     "Des": "",
     "NumericTypeValue": [],
-    "InitCastDatas": [
-      {
-        "InitCastId": 1,
-        "InitCastPos": [
-          0,
-          0.5,
-          0
-        ],
-        "InitCastScale": [
-          1,
-          1,
-          1
-        ]
-      }
+    "InitCastConfigIds": [
+      1
     ],
+    "InitScale": [],
     "ResName": "qiang"
   },
   {
@@ -388,21 +321,10 @@
     "Name": "法杖",
     "Des": "",
     "NumericTypeValue": [],
-    "InitCastDatas": [
-      {
-        "InitCastId": 2,
-        "InitCastPos": [
-          0,
-          0.5,
-          0
-        ],
-        "InitCastScale": [
-          1,
-          1,
-          1
-        ]
-      }
+    "InitCastConfigIds": [
+      2
     ],
+    "InitScale": [],
     "ResName": "quanzhang"
   },
   {
@@ -416,7 +338,8 @@
         1
       ]
     ],
-    "InitCastDatas": [],
+    "InitCastConfigIds": [],
+    "InitScale": [],
     "ResName": "AttackHit"
   },
   {
@@ -430,7 +353,8 @@
         1
       ]
     ],
-    "InitCastDatas": [],
+    "InitCastConfigIds": [],
+    "InitScale": [],
     "ResName": "Boom"
   },
   {
@@ -444,7 +368,8 @@
         1
       ]
     ],
-    "InitCastDatas": [],
+    "InitCastConfigIds": [],
+    "InitScale": [],
     "ResName": "Boom"
   },
   {
@@ -458,7 +383,8 @@
         0
       ]
     ],
-    "InitCastDatas": [],
+    "InitCastConfigIds": [],
+    "InitScale": [],
     "ResName": "Burn"
   },
   {
@@ -467,7 +393,8 @@
     "Name": "技能",
     "Des": "",
     "NumericTypeValue": [],
-    "InitCastDatas": [],
+    "InitCastConfigIds": [],
+    "InitScale": [],
     "ResName": "None"
   },
   {
@@ -476,7 +403,8 @@
     "Name": "能量块",
     "Des": "",
     "NumericTypeValue": [],
-    "InitCastDatas": [],
+    "InitCastConfigIds": [],
+    "InitScale": [],
     "ResName": "None"
   },
   {
@@ -485,7 +413,8 @@
     "Name": "摄像机",
     "Des": "",
     "NumericTypeValue": [],
-    "InitCastDatas": [],
+    "InitCastConfigIds": [],
+    "InitScale": [],
     "ResName": "None"
   }
 ]

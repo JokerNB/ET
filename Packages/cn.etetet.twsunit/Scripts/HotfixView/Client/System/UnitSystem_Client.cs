@@ -13,6 +13,7 @@
         private static void Destroy(this Unit_Client self)
         {
             self.ConfigId = default;
+            self.castConfigIds.Clear();
         }
 
         public static UnitConfig Config(this Unit_Client self)
@@ -33,6 +34,16 @@
         public static bool isEnergyBlock(this Unit_Client self)
         {
             return self.UnitType is UnitType.EnergyBlock;
+        }
+
+        public static void AddCast(this Unit_Client self, int castConfigId)
+        {
+            self.castConfigIds.Add(castConfigId);
+        }
+        
+        public static void RemoveCast(this Unit_Client self, int castConfigId)
+        {
+            self.castConfigIds.Remove(castConfigId);
         }
     }
 }

@@ -14,13 +14,15 @@
             self.Casts.Clear();
         }
 
-        public static Cast Create(this ET.Client.CastComponent self, int configId, Unit_Client ownerUnit)
+        public static Cast Create(this ET.Client.CastComponent self, int configId)
         {
             Cast cast = self.Get(configId);
             if (cast != null)
                 return cast;
+            Unit_Client ownerUnit = self.GetParent<Unit_Client>();
             cast = self.AddChild<Cast, int, Unit_Client>(configId, ownerUnit, true);
             self.Casts.Add(configId, cast);
+            ownerUnit.AddCast(configId);
             return cast;
         }
 
@@ -42,6 +44,8 @@
                 Cast cast = self.Casts[configId];
                 self.RemoveChild(cast.Id);
                 self.Casts.Remove(configId);
+                Unit_Client ownerUnit = self.GetParent<Unit_Client>();
+                ownerUnit.RemoveCast(configId);
             }
         }
     }

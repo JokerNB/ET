@@ -22,7 +22,8 @@ namespace ET
             Name = _buf.ReadString();
             Des = _buf.ReadString();
             {int n0 = _buf.ReadSize(); NumericTypeValue = new System.Collections.Generic.Dictionary<ENumericType, long>(n0 * 3 / 2);for(var i0 = 0 ; i0 < n0 ; i0++) { ENumericType _k0;  _k0 = (ENumericType)_buf.ReadInt(); long _v0;  _v0 = _buf.ReadLong();     NumericTypeValue.Add(_k0, _v0);}}
-            {int n0 = _buf.ReadSize(); InitCastDatas = new System.Collections.Generic.List<InitCastData>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { InitCastData _e0;  _e0 = global::ET.InitCastData.DeserializeInitCastData(_buf); InitCastDatas.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); InitCastConfigIds = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); InitCastConfigIds.Add(_e0);}}
+            {int n0 = _buf.ReadSize(); InitScale = new System.Collections.Generic.List<float>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { float _e0;  _e0 = _buf.ReadFloat(); InitScale.Add(_e0);}}
             ResName = _buf.ReadString();
 
             EndInit();
@@ -56,7 +57,11 @@ namespace ET
         /// <summary>
         /// 初始化技能数据
         /// </summary>
-        public readonly System.Collections.Generic.List<InitCastData> InitCastDatas;
+        public readonly System.Collections.Generic.List<int> InitCastConfigIds;
+        /// <summary>
+        /// 初始缩放
+        /// </summary>
+        public readonly System.Collections.Generic.List<float> InitScale;
         /// <summary>
         /// 资源名称
         /// </summary>
@@ -67,7 +72,6 @@ namespace ET
 
         public  void ResolveRef()
         {
-            foreach (var _e in InitCastDatas) { _e?.ResolveRef(); }
             EndRef();
         }
 
@@ -79,7 +83,8 @@ namespace ET
             + "Name:" + Name + ","
             + "Des:" + Des + ","
             + "NumericTypeValue:" + Luban.StringUtil.CollectionToString(NumericTypeValue) + ","
-            + "InitCastDatas:" + Luban.StringUtil.CollectionToString(InitCastDatas) + ","
+            + "InitCastConfigIds:" + Luban.StringUtil.CollectionToString(InitCastConfigIds) + ","
+            + "InitScale:" + Luban.StringUtil.CollectionToString(InitScale) + ","
             + "ResName:" + ResName + ","
             + "}";
         }

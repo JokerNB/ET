@@ -12,7 +12,7 @@
             if (cast != null)
                 return cast;
 
-            cast = castComponent.Create(castConfigId, caster);
+            cast = castComponent.Create(castConfigId);
             return cast;
         }
     }

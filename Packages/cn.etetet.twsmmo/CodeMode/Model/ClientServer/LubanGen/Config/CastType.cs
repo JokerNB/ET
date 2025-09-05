@@ -20,13 +20,9 @@ namespace ET
         /// </summary>
         PassiveCast = 1,
         /// <summary>
-        /// 辅助技能
+        /// 一次性技能，针对当前某个技能进行数据调整
         /// </summary>
-        AuxiliaryCast = 2,
-        /// <summary>
-        /// 技能升级
-        /// </summary>
-        CastLevelUp = 3,
+        OnceCast = 2,
     }
 
 } 

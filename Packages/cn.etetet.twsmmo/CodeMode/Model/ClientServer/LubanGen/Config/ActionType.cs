@@ -83,6 +83,10 @@ namespace ET
         /// 向鼠标位置移动
         /// </summary>
         MoveToMouse = 17,
+        /// <summary>
+        /// 向玩家移动
+        /// </summary>
+        MoveToPlayer = 18,
     }
 
 } 

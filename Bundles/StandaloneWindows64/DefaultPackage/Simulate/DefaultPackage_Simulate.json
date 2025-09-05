@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/9/2 18:16:56",
+    "PackageNote": "2025/9/4 22:01:02",
     "AssetList": [
         {
             "Address": "MainUIBG",
@@ -547,6 +547,14 @@
             "DependBundleIDs": []
         },
         {
+            "Address": "lichang",
+            "AssetPath": "Packages/cn.etetet.twsmmo/Assets/GameRes/Effect/PlayerCast/lichang.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14,
+            "DependBundleIDs": []
+        },
+        {
             "Address": "liulian",
             "AssetPath": "Packages/cn.etetet.twsmmo/Assets/GameRes/Effect/PlayerCast/liulian.prefab",
             "AssetGUID": "",
@@ -1057,7 +1065,7 @@
             "UnityCRC": 0,
             "FileHash": "21fc7736e26ea38ee9ed888b93cbe16a",
             "FileCRC": "00000000",
-            "FileSize": 2207540,
+            "FileSize": 2214128,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1157,7 +1165,7 @@
             "UnityCRC": 0,
             "FileHash": "76829103b4c4813c10c8bc05358a39a6",
             "FileCRC": "00000000",
-            "FileSize": 56297,
+            "FileSize": 64403,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1177,7 +1185,7 @@
             "UnityCRC": 0,
             "FileHash": "c3ae032f1d4b8b566826ad6da9075791",
             "FileCRC": "00000000",
-            "FileSize": 40600,
+            "FileSize": 43659,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1197,7 +1205,7 @@
             "UnityCRC": 0,
             "FileHash": "2b696aea96d36f51180cd3fa30309809",
             "FileCRC": "00000000",
-            "FileSize": 11741,
+            "FileSize": 12504,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1207,7 +1215,7 @@
             "UnityCRC": 0,
             "FileHash": "5e40abb43ac67c3707a83c2fe4c7211e",
             "FileCRC": "00000000",
-            "FileSize": 13726,
+            "FileSize": 14489,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1277,7 +1285,7 @@
             "UnityCRC": 0,
             "FileHash": "0c6a0998c1163285f8d4f2aabab40624",
             "FileCRC": "00000000",
-            "FileSize": 6048,
+            "FileSize": 5938,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

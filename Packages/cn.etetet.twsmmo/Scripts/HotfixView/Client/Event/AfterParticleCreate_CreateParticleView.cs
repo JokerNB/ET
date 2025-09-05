@@ -25,11 +25,7 @@ namespace ET.Client
             else
                 go.transform.SetParent(owner.Root().CurrentScene().GetComponent<MapManagerComponent>().ParticleRootTr, false);
 
-            var config = particleUnit.Config;
             particleUnit.AddComponent<GameObjectComponent, GameObject, bool>(go, false, true);
-            InitCastData initCastData = config.InitCastDatas[0];
-            go.transform.localPosition = new Vector3(initCastData.InitCastPos[0], initCastData.InitCastPos[1], initCastData.InitCastPos[2]);
-            go.transform.localScale = new Vector3(initCastData.InitCastScale[0], initCastData.InitCastScale[1], initCastData.InitCastScale[2]);
 
             OutDurationTime(particleUnit).NoContext();
         }

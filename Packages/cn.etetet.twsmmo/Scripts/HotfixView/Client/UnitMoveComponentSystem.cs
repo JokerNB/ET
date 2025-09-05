@@ -23,6 +23,7 @@ namespace ET.Client
             self.ownerUnitId = default;
             self.moveSpeed = default;
             self.dir = default;
+            self.contactPoint = default;
             self.UnRegisterUnityEventTrigger();
         }
 

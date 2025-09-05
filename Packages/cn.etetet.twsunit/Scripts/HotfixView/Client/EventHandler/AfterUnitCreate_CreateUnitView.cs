@@ -16,12 +16,18 @@ namespace ET.Client
             GlobalComponent globalComponent = scene.Root().GetComponent<GlobalComponent>();
             GameObject go = UnityEngine.Object.Instantiate(bundleGameObject, globalComponent.Unit, true);
             go.transform.position = new Vector3(0, 0.001f, 0);
+            go.transform.localScale = new Vector3(unit.Config.InitScale[0], unit.Config.InitScale[1]);
 
             unit.AddComponent<GameObjectComponent, GameObject, bool>(go, false, true);
             unit.AddComponent<AnimatorComponent>();
             unit.AddComponent<PlayerMoveComponent>();
-            unit.AddComponent<CastComponent>();
+            var castComponent = unit.AddComponent<CastComponent>();
             unit.AddComponent<BuffComponent>();
+            
+            // foreach (int castConfigId in unit.Config.InitCastConfigIds)
+            // {
+            //     castComponent.Create(castConfigId);
+            // }
             await ETTask.CompletedTask;
         }
     }

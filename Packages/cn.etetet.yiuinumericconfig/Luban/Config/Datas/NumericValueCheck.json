@@ -97,6 +97,7 @@
 {"id":"400003", "check":"Float","alias":"对局经验值倍率","desc":"对局经验值倍率","not_grow":true,"need_save":false,"notice_type":0},
 {"id":"400004", "check":"Float","alias":"对局金币倍率","desc":"对局金币倍率","not_grow":true,"need_save":false,"notice_type":0},
 {"id":"400005", "check":"Int","alias":"对局等级","desc":"对局等级","not_grow":true,"need_save":false,"notice_type":0},
+{"id":"400006", "check":"Long","alias":"对局持续时间","desc":"对局持续时间","not_grow":true,"need_save":false,"notice_type":0},
 {"id":"500001", "check":"Bool","alias":"禁止移动","desc":"禁止移动","not_grow":true,"need_save":false,"notice_type":0},
 {"id":"500002", "check":"Bool","alias":"禁止跟随","desc":"禁止跟随","not_grow":true,"need_save":false,"notice_type":0}
 ]

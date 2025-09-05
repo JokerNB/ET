@@ -864,6 +864,15 @@
     "notice_type": 0
   },
   {
+    "id": 400006,
+    "check": 2,
+    "alias": "对局持续时间",
+    "desc": "对局持续时间",
+    "not_grow": true,
+    "need_save": false,
+    "notice_type": 0
+  },
+  {
     "id": 500001,
     "check": 3,
     "alias": "禁止移动",

@@ -7,7 +7,7 @@ namespace ET.Client
     {
         protected override void Run(Cast t)
         {
-            t?.CreateCastUnit();
+            t?.CreateCastUnit().NoContext();
         }
     }
 
@@ -16,7 +16,6 @@ namespace ET.Client
     {
         protected override async ETTask Run(Cast self, Cast entity, NumericChange data)
         {
-            Log.Error("SkillInterval");
             self.UnRegisterTimer();
             self.RegisterTimer();
             await ETTask.CompletedTask;
@@ -34,7 +33,7 @@ namespace ET.Client
             self.AddComponent<ActionsTempComponent>();
             var numericDataComponent = self.AddComponent<NumericDataComponent>();
             numericDataComponent.InitSet(self.CastConfig.NumericTypeValue);
-            self.CreateCastUnit();
+            self.CreateCastUnit().NoContext();
             self.RegisterTimer();
         }
 
@@ -57,7 +56,7 @@ namespace ET.Client
             self.Root().GetComponent<TimerComponent>().Remove(ref self.Timer);
         }
 
-        public static void CreateCastUnit(this ET.Client.Cast self)
+        public static async ETTask CreateCastUnit(this ET.Client.Cast self)
         {
             if (Time.timeScale <= 0)
                 return;
@@ -69,13 +68,17 @@ namespace ET.Client
             {
                 Unit_Client skillUnit = unitComponentClient.AddChild<Unit_Client, int>(UnitConfigCategory.Instance.castUnitConfig.Id);
                 unitComponentClient.Add(skillUnit);
-                EventSystem.Instance.Publish(self.Root().CurrentScene(), new AfterSkillCreate
+                await EventSystem.Instance.PublishAsync(self.Root().CurrentScene(), new AfterSkillCreate
                 {
                     OwnerUnit = self.OwnerUnit,
                     SkillUnit = skillUnit,
                     castConfigId = self.ConfigId,
                     castSelf = self
                 });
+                
+                self.Cast(skillUnit);
+                
+                await self.Root().GetComponent<TimerComponent>().WaitAsync(100);
             }
         }
 
@@ -129,6 +132,13 @@ namespace ET.Client
                 idx++;
             }
 
+            //一次性技能
+            if (castConfig.CastType == CastType.OnceCast)
+            {
+                await self.CastHit(caster.Id, skillUnit);
+                await self.CastFinish();
+            }
+
             await ETTask.CompletedTask;
         }
 
@@ -137,7 +147,7 @@ namespace ET.Client
             Unit_Client caster = self.OwnerUnit;
             var castConfig = self.CastConfig;
 
-            EventSystem.Instance.Publish(self.Root().CurrentScene(), new Event_CastHit
+            await EventSystem.Instance.PublishAsync(self.Root().CurrentScene(), new Event_CastHit
             {
                 castId = self.Id,
                 casterId = caster.Id,
@@ -153,6 +163,12 @@ namespace ET.Client
                 idx++;
             }
 
+            await ETTask.CompletedTask;
+        }
+
+        public static async ETTask CastFinish(this ET.Client.Cast self)
+        {
+            self.GetParent<CastComponent>().Remove(self.ConfigId);
             await ETTask.CompletedTask;
         }
 

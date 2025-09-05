@@ -11,6 +11,7 @@ namespace ET.Client
             var parent = scene.GetComponent<MonsterManagerComponent>().MonsterRoot;
             GameObject go = await YIUIGameObjectPool.Inst.Get(unit.Config.ResName, parent);
             go.name = unit.ConfigId.ToString();
+            go.transform.localScale = new Vector3(unit.Config.InitScale[0], unit.Config.InitScale[1]);
 
             bool isFromPool = unit.IsFromPool;
             unit.AddComponent<GameObjectComponent, GameObject, bool>(go, true, isFromPool);

@@ -148,5 +148,10 @@
     "Id": 1030,
     "ActionType": 17,
     "NumericType": 0
+  },
+  {
+    "Id": 1031,
+    "ActionType": 18,
+    "NumericType": 0
   }
 ]

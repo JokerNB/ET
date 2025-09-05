@@ -28,5 +28,8 @@ namespace ET.Client
         }
 
         public Transform Transform { get; private set; }
+
+        public long InScreenTimer;
+        public long AttackTimer;
     }
 }

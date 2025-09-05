@@ -41,6 +41,8 @@ namespace ET.Client
             self.UnityEventTrigger.OnCollisionEnterAction -= self.OnCollisionEnterAction;
             self.UnityEventTrigger.OnCollisionExitAction -= self.OnCollisionExitAction;
             self.UnityEventTrigger.OnFixedUpdateAction -= self.OnFixedUpdate;
+            self.SpriteRenderer = null;
+            self.UnityEventTrigger = null;
         }
 
         public static void InitColliderTrigger(this PlayerMoveComponent self)
@@ -67,7 +69,17 @@ namespace ET.Client
                 var unitClient = self.Root().CurrentScene().GetComponent<UnitComponent_Client>().Get(unitId);
                 unitClient.GetComponent<EnergyBlockComponent>().Collect();
             }
-            
+        }
+        
+        public static async ETTask DoFlash(this PlayerMoveComponent self)
+        {
+            if (self == null || self.IsDisposed || self.SpriteRenderer == null)
+                return;
+            self.SpriteRenderer.color = Color.red;
+            await self.Root().GetComponent<TimerComponent>().WaitAsync(100);
+            if (self == null || self.IsDisposed || self.SpriteRenderer == null)
+                return;
+            self.SpriteRenderer.color = Color.white;
         }
 
         private static void OnCollisionExitAction(this PlayerMoveComponent self, Collision2D collision2D, long unitId, int unitType)

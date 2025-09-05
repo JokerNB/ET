@@ -25,14 +25,14 @@
             //扣血逻辑
             target.NumericComponent.Change(numericType, damage);
             int newHp = target.NumericComponent.GetAsInt(numericType);
-            Log.Error($"CalcAttack {damage} , oldHp: {oldHp}, newHp: {newHp}");
 
+            Log.Error($"oldHp == {oldHp} , newHp == {newHp}");
             if (damage != 0)
             {
                 //TODO:伤害飘字
             }
 
-            if (oldHp > 0 && newHp == 0)
+            if (oldHp >= 0 && newHp <= 0)
             {
                 //处理死亡逻辑
                 target.GetParent<UnitComponent_Client>().Remove(target.Id);

@@ -400,6 +400,10 @@ namespace ET
         /// </summary>
         BattleLevel0 = 400005,
         /// <summary>
+        /// 对局持续时间_0 (Long)
+        /// </summary>
+        BattleDuration0 = 400006,
+        /// <summary>
         /// 禁止移动_0 (Bool)
         /// </summary>
         ForbidMove0 = 500001,

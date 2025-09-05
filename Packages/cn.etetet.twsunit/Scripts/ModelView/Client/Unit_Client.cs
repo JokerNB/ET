@@ -1,4 +1,6 @@
-﻿namespace ET.Client
+﻿using System.Collections.Generic;
+
+namespace ET.Client
 {
     [ChildOf(typeof(UnitComponent_Client))]
     public partial class Unit_Client : Entity, IAwake<int>, IDestroy
@@ -14,5 +16,10 @@
                 return $"{this.GetType().FullName} ({this.Id})";
             }
         }
+        
+        /// <summary>
+        /// 技能id列表
+        /// </summary>
+        public HashSet<int> castConfigIds = new HashSet<int>();
     }
 }

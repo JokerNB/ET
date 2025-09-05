@@ -47,8 +47,8 @@ namespace ET.Client
             {
                 //先创建一次
                 self.CreateNormalMonster();
-                self.Timers_NormalMonster.Add(self.Root().GetComponent<TimerComponent>()
-                        .NewRepeatedTimer((long)(createMonsterData.Interval * 1000), TimerInvokeType.CreateNormalMonster, self));
+                // self.Timers_NormalMonster.Add(self.Root().GetComponent<TimerComponent>()
+                //         .NewRepeatedTimer((long)(createMonsterData.Interval * 1000), TimerInvokeType.CreateNormalMonster, self));
             }
 
             // CreateMonsterData finalMonsterConfigData = gameLevelConfig.FinalMonsterConfigData;
@@ -78,7 +78,8 @@ namespace ET.Client
                 return;
             }
 
-            for (int i = 0; i < createMonsterData.Value.CreateNum; i++)
+            // for (int i = 0; i < createMonsterData.Value.CreateNum; i++)
+            for (int i = 0; i < 1; i++)
             {
                 UnitFactory.CreateMonster(self.Root().CurrentScene(), createMonsterData.Value.MonsterConfigId);
             }

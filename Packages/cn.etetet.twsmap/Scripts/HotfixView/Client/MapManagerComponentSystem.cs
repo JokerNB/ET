@@ -247,7 +247,7 @@ namespace ET.Client
             //先根据照相机位置设置可行走区域
             var cameraComponent = self.Root().CurrentScene().GetComponent<CameraComponent>();
             var cameraBoundPos = cameraComponent.cameraBoundPos;
-            float offset = 20;
+            float offset = 2;
             List<Vector2> points = new List<Vector2>()
             {
                 new Vector2(cameraBoundPos.x - offset, cameraBoundPos.y - offset), //左下
