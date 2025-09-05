@@ -30,10 +30,13 @@ namespace ET.Client
             self.u_UIBase = self.GetParent<YIUIChild>();
             self.u_UIWindow = self.UIBase.GetComponent<YIUIWindowComponent>();
             self.u_UIView = self.UIBase.GetComponent<YIUIViewComponent>();
-            self.UIWindow.WindowOption = EWindowOption.None;
+            self.UIWindow.WindowOption = EWindowOption.BanOpenTween|EWindowOption.BanCloseTween;
             self.UIView.ViewWindowType = EViewWindowType.View;
-            self.UIView.StackOption = EViewStackOption.VisibleTween;
+            self.UIView.StackOption = EViewStackOption.None;
 
+            self.u_ComPlayGame = self.UIBase.ComponentTable.FindComponent<YIUIFramework.YIUIClickEffect>("u_ComPlayGame");
+            self.u_EventClick = self.UIBase.EventTable.FindEvent<UIEventP0>("u_EventClick");
+            self.u_EventClickHandle = self.u_EventClick.Add(self,MainUIViewComponent.OnEventClickInvoke);
 
         }
     }

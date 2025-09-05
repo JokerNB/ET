@@ -22,6 +22,10 @@ namespace ET.Client
         public YIUIWindowComponent UIWindow => u_UIWindow;
         public EntityRef<YIUIViewComponent> u_UIView;
         public YIUIViewComponent UIView => u_UIView;
+        public YIUIFramework.YIUIClickEffect u_ComPlayGame;
+        public UIEventP0 u_EventClick;
+        public UIEventHandleP0 u_EventClickHandle;
+        public const string OnEventClickInvoke = "MainUIViewComponent.OnEventClickInvoke";
 
     }
 }

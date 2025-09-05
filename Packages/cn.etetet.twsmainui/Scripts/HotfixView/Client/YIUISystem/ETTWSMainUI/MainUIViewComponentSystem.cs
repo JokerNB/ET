@@ -31,6 +31,12 @@ namespace ET.Client
         }
 
         #region YIUIEvent开始
+        
+        [YIUIInvoke(MainUIViewComponent.OnEventClickInvoke)]
+        private static void OnEventClickInvoke(this MainUIViewComponent self)
+        {
+
+        }
         #endregion YIUIEvent结束
     }
 }
