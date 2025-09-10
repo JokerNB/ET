@@ -1,1 +1,3 @@
-{ "reference": "ET.Core" }
+{
+    "reference": "XET.FUI"
+}

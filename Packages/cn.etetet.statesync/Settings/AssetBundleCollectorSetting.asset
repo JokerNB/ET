@@ -94,7 +94,7 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.twscommonui/Res
+      - CollectPath: Packages/cn.etetet.twsui/Res
         CollectorGUID: d263d926e816633418f2fdc312f620cf
         CollectorType: 0
         AddressRuleName: AddressByFileName

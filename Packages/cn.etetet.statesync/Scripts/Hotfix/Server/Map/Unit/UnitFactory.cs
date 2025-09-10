@@ -16,9 +16,9 @@ namespace ET.Server
                     unit.AddComponent<MoveComponent>();
                     unit.Position = new float3(-10, 0, -10);
 			
-                    NumericComponent numericComponent = unit.AddComponent<NumericComponent>();
-                    numericComponent.Set(NumericType.Speed, 6f); // 速度是6米每秒
-                    numericComponent.Set(NumericType.AOI, 15000); // 视野15米
+                    NumericDataComponent numericComponent = unit.AddComponent<NumericDataComponent>();
+                    numericComponent.Set(ENumericType.Speed1,6); // 速度是6米每秒
+                    numericComponent.Set(ENumericType.AOI1,15); // 视野15米
                     
                     unitComponent.Add(unit);
                     // 加入aoi
