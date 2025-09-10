@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7byugqz6">
+  <resources>
+    <component id="kgrj0" name="BG.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="" path="../Packages/cn.etetet.twscommonui/Res" packageCount="2"/>
+</packageDescription>
