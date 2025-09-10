@@ -11,27 +11,38 @@ namespace ET.Server
 
             await TransferHelper.Transfer(unit, sceneInstanceId, sceneName);
         }
-        
 
         public static async ETTask Transfer(Unit unit, ActorId sceneInstanceId, string sceneName)
         {
             Scene root = unit.Root();
-            
+
             // location加锁
             long unitId = unit.Id;
             
+            unit.GetComponent<UnitDBSaveComponent>().SaveChangeNoWait();
+
             M2M_UnitTransferRequest request = M2M_UnitTransferRequest.Create();
             request.OldActorId = unit.GetActorId();
             request.Unit = unit.ToBson();
+            
             foreach (Entity entity in unit.Components.Values)
             {
                 if (entity is ITransfer)
                 {
+                    string name = entity.GetType().FullName;
                     request.Entitys.Add(entity.ToBson());
+                    request.Types.Add(name);
                 }
             }
+
+            foreach (var kv in unit.GetComponent<UnitDBSaveComponent>().Bytes)
+            {
+                request.Entitys.Add(kv.Value);
+                request.Types.Add(kv.Key.FullName);
+            }
+
             unit.Dispose();
-            
+
             await root.GetComponent<LocationProxyComponent>().Lock(LocationType.Unit, unitId, request.OldActorId);
             await root.GetComponent<MessageSender>().Call(sceneInstanceId, request);
         }

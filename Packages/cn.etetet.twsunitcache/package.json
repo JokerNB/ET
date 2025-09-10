@@ -1,0 +1,16 @@
+﻿{
+  "name": "cn.etetet.twsunitcache",
+  "displayName": "ET.TWS.UnitCache",
+  "version": "0.0.0",
+  "unity": "2022.3",
+  "description": "高级缓存服",
+  "author": {
+    "name": "TWS"
+  },
+  "repository": {},
+  "relatedPackages": {},
+  "dependencies": {},
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@ET-Packages"
+  }
+}

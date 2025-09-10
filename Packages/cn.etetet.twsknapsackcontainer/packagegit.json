@@ -1,0 +1,9 @@
+﻿{
+    "Id": 0,
+    "Name": "twsknapsackcontainer",
+    "ScriptsReferences": 
+    {
+        "Hotfix": ["ET.TWS.KnapsackContainer"],
+        "Model": ["ET.TWS.KnapsackContainer"]
+    }
+}

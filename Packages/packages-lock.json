@@ -196,8 +196,26 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.twsknapsackcontainer": {
+      "version": "file:cn.etetet.twsknapsackcontainer",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.twsui": {
       "version": "file:cn.etetet.twscommonui",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "cn.etetet.twsunit": {
+      "version": "file:cn.etetet.twsunit",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "cn.etetet.twsunitcache": {
+      "version": "file:cn.etetet.twsunitcache",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -256,10 +274,7 @@
       "version": "file:cn.etetet.yiuilubangen",
       "depth": 0,
       "source": "embedded",
-      "dependencies": {
-        "cn.etetet.core": "1.0.0",
-        "cn.etetet.loader": "1.0.0"
-      }
+      "dependencies": {}
     },
     "cn.etetet.yiuinumeric": {
       "version": "file:cn.etetet.yiuinumeric",

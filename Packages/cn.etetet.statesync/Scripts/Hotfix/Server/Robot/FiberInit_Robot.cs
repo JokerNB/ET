@@ -16,11 +16,13 @@
             
             root.SceneType = SceneType.StateSync;
 
-            await EventSystem.Instance.PublishAsync(root, new AppStartInitFinish());
-            await LoginHelper.Login(root, "127.0.0.1:10101", root.Name, "");
-            await EnterMapHelper.EnterMapAsync(root);
+            // await EventSystem.Instance.PublishAsync(root, new AppStartInitFinish());
+            // await LoginHelper.Login(root, "127.0.0.1:10101", root.Name, "");
+            // await EnterMapHelper.EnterMapAsync(root);
             
             root.AddComponent<AIComponent, int>(1);
+
+            await ETTask.CompletedTask;
         }
     }
 }

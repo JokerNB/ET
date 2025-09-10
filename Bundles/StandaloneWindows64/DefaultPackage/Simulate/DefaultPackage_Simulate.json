@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/9/10 16:13:38",
+    "PackageNote": "2025/9/10 17:56:06",
     "AssetList": [
         {
             "Address": "Unit",
@@ -115,6 +115,14 @@
             "DependBundleIDs": []
         },
         {
+            "Address": "ItemConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/ItemConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5,
+            "DependBundleIDs": []
+        },
+        {
             "Address": "NumericLocalizationConfigCategory",
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericLocalizationConfigCategory.bytes",
             "AssetGUID": "",
@@ -191,7 +199,7 @@
             "UnityCRC": 0,
             "FileHash": "ce7e47b0a172656892651cbca85508e2",
             "FileCRC": "00000000",
-            "FileSize": 851564,
+            "FileSize": 1183908,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -211,7 +219,7 @@
             "UnityCRC": 0,
             "FileHash": "45d28134004acf2881a1289685447b89",
             "FileCRC": "00000000",
-            "FileSize": 884,
+            "FileSize": 916,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

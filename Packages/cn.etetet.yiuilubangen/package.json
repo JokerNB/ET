@@ -14,10 +14,7 @@
     "url": "https://github.com/ET-Packages/cn.etetet.yiuiluban"
   },
   "relatedPackages": {},
-  "dependencies": {
-    "cn.etetet.core": "1.0.0",
-    "cn.etetet.loader": "1.0.0"
-  },
+  "dependencies": {},
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@ET-Packages"
   }

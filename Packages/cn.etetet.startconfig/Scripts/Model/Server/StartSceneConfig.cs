@@ -13,6 +13,8 @@ namespace ET
         private readonly Dictionary<long, MultiMap<int, StartSceneConfig>> zoneSceneByType = new();
         
         private readonly MultiMap<int, StartSceneConfig> sceneByType = new();
+
+        public StartSceneConfig loginCenterConfig { get; private set; }
         
         public List<StartSceneConfig> GetByProcess(int process)
         {
@@ -58,6 +60,11 @@ namespace ET
                     this.zoneSceneByType.Add(startSceneConfig.Zone, new MultiMap<int, StartSceneConfig>());
                 }
                 this.zoneSceneByType[startSceneConfig.Zone].Add(startSceneConfig.Type, startSceneConfig);
+
+                if (this.loginCenterConfig == null && startSceneConfig.Type == SceneType.LoginCenter)
+                {
+                    this.loginCenterConfig = startSceneConfig;
+                }
             }
         }
     }

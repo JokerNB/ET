@@ -1,0 +1,25 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace ET.Server
+{
+    [FriendOfAttribute(typeof(ET.Server.UnitComponent))]
+    public static partial class UnitComponentSystem
+    {
+        public static void Add(this UnitComponent self, Unit unit)
+        {
+        }
+
+        public static Unit Get(this UnitComponent self, long id)
+        {
+            Unit unit = self.GetChild<Unit>(id);
+            return unit;
+        }
+
+        public static void Remove(this UnitComponent self, long id)
+        {
+            Unit unit = self.GetChild<Unit>(id);
+            unit?.Dispose();
+        }
+    }
+}
