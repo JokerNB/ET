@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "cn.etetet.db": "1.0.0",
+    "cn.etetet.mongodb": "1.0.3",
     "cn.etetet.packagemanager": "1.0.7",
     "cn.etetet.statesync": "3.0.11",
     "cn.etetet.xetfui": "0.0.9",
