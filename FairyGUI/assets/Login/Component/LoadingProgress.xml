@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="455,56">
+  <displayList>
+    <image id="n11_u1lv" name="n11" src="u1lv9" fileName="Atlas/LoadingBG.png" xy="0,0" size="455,56">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <list id="n9_u1lv" name="ItemList" xy="0,0" size="455,56" layout="flow_hz" margin="3,0,5,0" colGap="2" lineItemCount="14" defaultItem="ui://24sdw5inu1lv6" autoClearItems="true" scrollItemToViewOnClick="false">
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>

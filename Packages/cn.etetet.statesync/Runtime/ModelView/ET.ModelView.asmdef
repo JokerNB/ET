@@ -3,12 +3,11 @@
     "rootNamespace": "ET",
     "references": [
         "ET.Core",
-        "ET.Init",
         "ET.Loader",
         "ET.Model",
         "ET.ReferenceCollector",
         "ET.SourceGeneratorAttribute",
-        "ET.UI",
+        "ET.TWS.TileMap",
         "ET.YooAssets",
         "Unity.Mathematics",
         "XET.FUI"

@@ -21,7 +21,5 @@ namespace ET.Client
         }
 
         public Transform Transform { get; private set; }
-
-        public SpriteRenderer sprite { get; set; }
     }
 }

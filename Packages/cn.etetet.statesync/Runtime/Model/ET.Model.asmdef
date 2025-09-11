@@ -2,13 +2,16 @@
     "name": "ET.Model",
     "rootNamespace": "ET",
     "references": [
+        "",
         "ET.Core",
         "ET.MemoryPack",
         "ET.Recast",
         "ET.SourceGeneratorAttribute",
+        "ET.TWS.KnapsackContainer",
+        "ET.TWS.TileMap",
+        "ET.TWS.UnitCache",
         "ET.YooAssets",
-        "Unity.Mathematics",
-        "XET.FUI"
+        "Unity.Mathematics"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -21,5 +24,8 @@
         "IS_COMPILING || UNITY_EDITOR"
     ],
     "versionDefines": [],
-    "noEngineReferences": true
+    "noEngineReferences": true,
+    "optionalUnityReferences": [],
+    "additionalReferences": [],
+    "compilerOptions": ""
 }

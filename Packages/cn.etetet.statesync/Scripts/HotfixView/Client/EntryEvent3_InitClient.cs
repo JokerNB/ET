@@ -16,7 +16,7 @@ namespace ET.Client
 
             root.AddComponent<FUIAssetComponent, bool>(true);
             var fuiComponent = root.AddComponent<FUIComponent>();
-            await fuiComponent.ShowPanelAsync<BG>();
+            await fuiComponent.ShowPanelAsync<LoginUI>();
 
             await EventSystem.Instance.PublishAsync(root, new AppStartInitFinish());
         }

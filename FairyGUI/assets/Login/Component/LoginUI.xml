@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" remark="Main">
+  <displayList>
+    <image id="n3_u1lv" name="n3" src="u1lv2" fileName="Atlas/BG.png" xy="-120,0" size="2160,1080" aspect="true">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <component id="n8_u1lv" name="LoadingProgress" src="u1lv8" fileName="Component/LoadingProgress.xml" xy="732,412"/>
+    <image id="n9_u1lv" name="n9" src="u1lva" fileName="Atlas/LoadingText.png" xy="882,490"/>
+  </displayList>
+</component>

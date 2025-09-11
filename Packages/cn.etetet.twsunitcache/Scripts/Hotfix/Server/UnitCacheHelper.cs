@@ -16,7 +16,7 @@ namespace ET.Server
                 return null;
 
             Unit unit = null;
-            int indexOf = queryUnit.ComponentNameLIst.IndexOf("ET.Unit");
+            int indexOf = queryUnit.ComponentNameLIst.IndexOf(typeof(Unit).FullName);
             if (indexOf >= 0)
             {
                 if (queryUnit.EntityList[indexOf] != null)

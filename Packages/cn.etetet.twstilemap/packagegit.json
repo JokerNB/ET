@@ -1,0 +1,11 @@
+﻿{
+    "Id": 0,
+    "Name": "twstilemap",
+    "ScriptsReferences": 
+    {
+        "Hotfix": ["ET.TWS.TileMap"],
+        "HotfixView": ["ET.TWS.TileMap"],
+        "Model": ["ET.TWS.TileMap"],
+        "ModelView": ["ET.TWS.TileMap"]
+    }
+}

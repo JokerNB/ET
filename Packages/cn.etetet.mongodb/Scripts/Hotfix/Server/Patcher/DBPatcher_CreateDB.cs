@@ -6,7 +6,6 @@ namespace ET.Server
     {
         public static async ETTask Create(DBComponent dbComponent, int zone)
         {
-            Log.Info("Create DB");
             switch (zone)
             {
                 case 1: // 游戏区
@@ -15,10 +14,15 @@ namespace ET.Server
                     // 给Unit.ConfigId创建一个索引
                     await dbComponent.CreateIndex(Builders<Unit>.IndexKeys.Ascending(v => v.ConfigId));
                     // 插入初始数据……
+                    await dbComponent.CreateCollection<KnapsackComponent>();
                     break;
                 case 2: // 机器人区
                     break;
                 case 3: // 路由区
+                    break;
+                case 1000: //登录服
+                    await dbComponent.CreateCollection<Account>();
+                    await dbComponent.CreateCollection<RoleInfo>();
                     break;
             }
             await ETTask.CompletedTask;

@@ -19,12 +19,7 @@ namespace ET.Client
 
             unit.AddComponent<GameObjectComponent, GameObject>(go);
             unit.AddComponent<AnimatorComponent>();
-            unit.AddComponent<PlayerMoveComponent>();
-            
-            // foreach (int castConfigId in unit.Config.InitCastConfigIds)
-            // {
-            //     castComponent.Create(castConfigId);
-            // }
+
             await ETTask.CompletedTask;
         }
     }

@@ -8,22 +8,14 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/9/10 17:56:06",
+    "PackageNote": "2025/9/11 13:56:53",
     "AssetList": [
-        {
-            "Address": "Unit",
-            "AssetPath": "Packages/cn.etetet.demores/Bundles/Unit/Unit.prefab",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 0,
-            "DependBundleIDs": []
-        },
         {
             "Address": "Map1",
             "AssetPath": "Packages/cn.etetet.demores/Scenes/Map1.unity",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 1,
+            "BundleID": 0,
             "DependBundleIDs": []
         },
         {
@@ -31,7 +23,7 @@
             "AssetPath": "Packages/cn.etetet.demores/Scenes/Map2.unity",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 2,
+            "BundleID": 1,
             "DependBundleIDs": []
         },
         {
@@ -39,7 +31,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Hotfix.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 2,
             "DependBundleIDs": []
         },
         {
@@ -47,7 +39,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Hotfix.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 2,
             "DependBundleIDs": []
         },
         {
@@ -55,7 +47,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.HotfixView.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 2,
             "DependBundleIDs": []
         },
         {
@@ -63,7 +55,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.HotfixView.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 2,
             "DependBundleIDs": []
         },
         {
@@ -71,7 +63,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Model.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 2,
             "DependBundleIDs": []
         },
         {
@@ -79,7 +71,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Model.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 2,
             "DependBundleIDs": []
         },
         {
@@ -87,7 +79,7 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.ModelView.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 2,
             "DependBundleIDs": []
         },
         {
@@ -95,12 +87,28 @@
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.ModelView.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
+            "BundleID": 2,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Login_atlas0",
+            "AssetPath": "Packages/cn.etetet.twsui/Res/Login/Login_atlas0.png",
+            "AssetGUID": "",
+            "AssetTags": [],
             "BundleID": 3,
             "DependBundleIDs": []
         },
         {
-            "Address": "Common_fui",
-            "AssetPath": "Packages/cn.etetet.twsui/Res/Common_fui.bytes",
+            "Address": "Login_fui",
+            "AssetPath": "Packages/cn.etetet.twsui/Res/Login/Login_fui.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 3,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_1",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_1.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 4,
@@ -165,21 +173,11 @@
     ],
     "BundleList": [
         {
-            "BundleName": "defaultpackage_packages_cn_etetet_demores_bundles_unit_unit.bundle",
-            "UnityCRC": 0,
-            "FileHash": "939a8ae470d8e9523acfbe0e097a5933",
-            "FileCRC": "00000000",
-            "FileSize": 1430,
-            "Encrypted": false,
-            "Tags": [],
-            "DependBundleIDs": []
-        },
-        {
             "BundleName": "defaultpackage_packages_cn_etetet_demores_scenes_map1.bundle",
             "UnityCRC": 0,
             "FileHash": "a44c2e41b4bd62cf70e61cb988734306",
             "FileCRC": "00000000",
-            "FileSize": 239328,
+            "FileSize": 24994,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -199,17 +197,27 @@
             "UnityCRC": 0,
             "FileHash": "ce7e47b0a172656892651cbca85508e2",
             "FileCRC": "00000000",
-            "FileSize": 1183908,
+            "FileSize": 1183236,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
         },
         {
-            "BundleName": "defaultpackage_packages_cn_etetet_twsui_res.bundle",
+            "BundleName": "defaultpackage_packages_cn_etetet_twsui_res_login.bundle",
             "UnityCRC": 0,
-            "FileHash": "3791b785e615ce589a5155d99c0bf38d",
+            "FileHash": "40a591389fcf28d6d3445f295201756e",
             "FileCRC": "00000000",
-            "FileSize": 306,
+            "FileSize": 1684400,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_1.bundle",
+            "UnityCRC": 0,
+            "FileHash": "45fe95455f8a8b1bb893e4228856a033",
+            "FileCRC": "00000000",
+            "FileSize": 3370,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

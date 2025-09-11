@@ -20,12 +20,12 @@ namespace ET.Server
 
 	    private static IMongoCollection<T> GetCollection<T>(this DBComponent self, string collection = null)
 	    {
-		    string name = collection ?? typeof (T).Name;
+		    string name = collection ?? typeof (T).FullName;
 		    if (!self.CollectionDic.Contains(name))
 		    {
 			    throw new Exception($"数据库不存在表:{name}, 请在DBVersion中追加表");
 		    }
-		    return self.database.GetCollection<T>(collection ?? typeof (T).Name);
+		    return self.database.GetCollection<T>(collection ?? typeof (T).FullName);
 	    }
 
 	    private static IMongoCollection<Entity> GetCollection(this DBComponent self, string name)
@@ -48,7 +48,7 @@ namespace ET.Server
         
 	    public static async ETTask CreateCollection<T>(this DBComponent self)
 	    {
-		    string name = typeof(T).Name;
+		    string name = typeof(T).FullName;
 		    if (self.CollectionDic.Contains(name))
 		    {
 			    Log.Error($"重复创建表:{name}");
@@ -206,7 +206,7 @@ namespace ET.Server
 	    {
 		    if (collection == null)
 		    {
-			    collection = typeof (T).Name;
+			    collection = typeof (T).FullName;
 		    }
 		    
 		    using (await self.Root().GetComponent<CoroutineLockComponent>().Wait(CoroutineLockType.MongoDB, RandomGenerator.RandInt64() % DBComponent.TaskCount))
@@ -223,14 +223,14 @@ namespace ET.Server
 	    {
 		    if (entity == null)
 		    {
-			    Log.Error($"save entity is null: {typeof (T).Name}");
+			    Log.Error($"save entity is null: {typeof (T).FullName}");
 
 			    return;
 		    }
 		    
 		    if (collection == null)
 		    {
-			    collection = entity.GetType().Name;
+			    collection = entity.GetType().FullName;
 		    }
 
 		    using (await self.Root().GetComponent<CoroutineLockComponent>().Wait(CoroutineLockType.MongoDB, entity.Id % DBComponent.TaskCount))
@@ -243,14 +243,14 @@ namespace ET.Server
 	    {
 		    if (entity == null)
 		    {
-			    Log.Error($"save entity is null: {typeof (T).Name}");
+			    Log.Error($"save entity is null: {typeof (T).FullName}");
 
 			    return;
 		    }
 
 		    if (collection == null)
 		    {
-			    collection = entity.GetType().Name;
+			    collection = entity.GetType().FullName;
 		    }
 
 		    using (await self.Root().GetComponent<CoroutineLockComponent>().Wait(CoroutineLockType.MongoDB, taskId % DBComponent.TaskCount))
@@ -276,7 +276,7 @@ namespace ET.Server
 					    continue;
 				    }
 
-				    await self.GetCollection(entity.GetType().Name)
+				    await self.GetCollection(entity.GetType().FullName)
 						    .ReplaceOneAsync(d => d.Id == entity.Id, entity, new ReplaceOptions { IsUpsert = true });
 			    }
 		    }

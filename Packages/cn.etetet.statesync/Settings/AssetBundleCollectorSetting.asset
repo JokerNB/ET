@@ -81,8 +81,8 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.demores/Bundles/Unit
-        CollectorGUID: 2f805b95f651fcc47a8ad0cc32706c38
+      - CollectPath: Packages/cn.etetet.twsunit/Assets/GameRes
+        CollectorGUID: bf0231645d8d7a646ae9d3a8ee6bbba6
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately

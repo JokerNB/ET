@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="24sdw5in">
+  <resources>
+    <component id="u1lv0" name="LoginUI.xml" path="/Component/" exported="true"/>
+    <image id="u1lv2" name="BG.png" path="/Atlas/" exported="true"/>
+    <image id="u1lv6" name="LoadingItem.png" path="/Atlas/" exported="true"/>
+    <component id="u1lv8" name="LoadingProgress.xml" path="/Component/" exported="true"/>
+    <image id="u1lv9" name="LoadingBG.png" path="/Atlas/" exported="true" scale="9grid" scale9grid="50,7,100,14"/>
+    <image id="u1lva" name="LoadingText.png" path="/Atlas/" exported="true"/>
+  </resources>
+  <publish name="" path="../Packages/cn.etetet.twsui/Res/{publish_file_name}/" packageCount="2" maxAtlasSize="2048"/>
+</packageDescription>
