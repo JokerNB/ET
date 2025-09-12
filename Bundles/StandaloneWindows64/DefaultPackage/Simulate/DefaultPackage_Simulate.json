@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/9/11 19:01:06",
+    "PackageNote": "2025/9/12 20:36:59",
     "AssetList": [
         {
             "Address": "Map1",
@@ -123,11 +123,763 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "Role_1",
-            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_1.prefab",
+            "Address": "Role_027",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_027/Role_027.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 5,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_028",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_028/Role_028.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_029",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_029/Role_029.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_030",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_030/Role_030.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 8,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_031",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_031/Role_031.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_032",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_032/Role_032.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 10,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_033",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_033/Role_033.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_034",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_034/Role_034.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_035",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_035/Role_035.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 13,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_036",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_036/Role_036.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_037",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_037/Role_037.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 15,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_038",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_038/Role_038.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 16,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_039",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_039/Role_039.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 17,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_040",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_040/Role_040.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 18,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_041",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_041/Role_041.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_042",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_042/Role_042.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 20,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_043",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_043/Role_043.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 21,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_044",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_044/Role_044.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 22,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_045",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_045/Role_045.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 23,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_046",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_046/Role_046.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 24,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_047",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_047/Role_047.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 25,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_048",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_048/Role_048.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 26,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_049",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_049/Role_049.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 27,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_050",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_050/Role_050.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 28,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_051",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_051/Role_051.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 29,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_052",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_052/Role_052.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 30,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_053",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_053/Role_053.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 31,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_054",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_054/Role_054.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 32,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_055",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_055/Role_055.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_056",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_056/Role_056.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_057",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_057/Role_057.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_058",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_058/Role_058.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 36,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_059",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_059/Role_059.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 37,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_060",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_060/Role_060.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 38,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_061",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_061/Role_061.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 39,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_062",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_062/Role_062.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 40,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_063",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_063/Role_063.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 41,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_064",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_064/Role_064.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 42,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_065",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_065/Role_065.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 43,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_066",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_066/Role_066.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 44,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_067",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_067/Role_067.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 45,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_068",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_068/Role_068.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 46,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_069",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_069/Role_069.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 47,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_070",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_070/Role_070.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 48,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_071",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_071/Role_071.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 49,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_072",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_072/Role_072.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 50,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_073",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_073/Role_073.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 51,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_074",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_074/Role_074.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 52,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_075",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_075/Role_075.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 53,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_076",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_076/Role_076.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 54,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_077",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_077/Role_077.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 55,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_078",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_078/Role_078.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 56,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_079",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_079/Role_079.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 57,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_080",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_080/Role_080.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 58,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_081",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_081/Role_081.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 59,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_082",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_082/Role_082.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 60,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_083",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_083/Role_083.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 61,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_084",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_084/Role_084.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 62,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_085",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_085/Role_085.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 63,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_086",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_086/Role_086.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 64,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_087",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_087/Role_087.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 65,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_088",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_088/Role_088.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 66,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_089",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_089/Role_089.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 67,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_090",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_090/Role_090.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 68,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_091",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_091/Role_091.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 69,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_092",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_092/Role_092.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 70,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_093",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_093/Role_093.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 71,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_094",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_094/Role_094.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 72,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_095",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_095/Role_095.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 73,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_096",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_096/Role_096.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 74,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_097",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_097/Role_097.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 75,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_098",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_098/Role_098.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 76,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_099",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_099/Role_099.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 77,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_100",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_100/Role_100.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 78,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_101",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_101/Role_101.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 79,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_102",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_102/Role_102.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 80,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_103",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_103/Role_103.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 81,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_104",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_104/Role_104.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 82,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_105",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_105/Role_105.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 83,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_106",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_106/Role_106.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 84,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_107",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_107/Role_107.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 85,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_108",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_108/Role_108.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 86,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_109",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_109/Role_109.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 87,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_110",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_110/Role_110.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 88,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_111",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_111/Role_111.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 89,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_112",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_112/Role_112.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 90,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_113",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_113/Role_113.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 91,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_114",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_114/Role_114.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 92,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_115",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_115/Role_115.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 93,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_116",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_116/Role_116.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 94,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_117",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_117/Role_117.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 95,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_118",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_118/Role_118.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 96,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_119",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_119/Role_119.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 97,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_120",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_120/Role_120.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 98,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Role_121",
+            "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_121/Role_121.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 99,
             "DependBundleIDs": []
         },
         {
@@ -135,7 +887,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/AIConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 100,
             "DependBundleIDs": []
         },
         {
@@ -143,7 +895,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/ItemConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 100,
             "DependBundleIDs": []
         },
         {
@@ -151,7 +903,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericLocalizationConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 100,
             "DependBundleIDs": []
         },
         {
@@ -159,7 +911,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueAffectConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 100,
             "DependBundleIDs": []
         },
         {
@@ -167,7 +919,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueCheckConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 100,
             "DependBundleIDs": []
         },
         {
@@ -175,7 +927,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueLimitConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 100,
             "DependBundleIDs": []
         },
         {
@@ -183,7 +935,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/UnitConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 100,
             "DependBundleIDs": []
         }
     ],
@@ -213,7 +965,7 @@
             "UnityCRC": 0,
             "FileHash": "ce7e47b0a172656892651cbca85508e2",
             "FileCRC": "00000000",
-            "FileSize": 1193968,
+            "FileSize": 1193956,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -239,11 +991,951 @@
             "DependBundleIDs": []
         },
         {
-            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_1.bundle",
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_027_role_027.bundle",
             "UnityCRC": 0,
-            "FileHash": "45fe95455f8a8b1bb893e4228856a033",
+            "FileHash": "3aaafef6b9fa0c7f1c624aa92e63fb6b",
             "FileCRC": "00000000",
-            "FileSize": 3370,
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_028_role_028.bundle",
+            "UnityCRC": 0,
+            "FileHash": "bb5eac40e728ed7bbcdc2b42e13a6a99",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_029_role_029.bundle",
+            "UnityCRC": 0,
+            "FileHash": "287624647ab17897076fd86f8d0e1dd8",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_030_role_030.bundle",
+            "UnityCRC": 0,
+            "FileHash": "71cc91e555906041a29e0ef899e40de1",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_031_role_031.bundle",
+            "UnityCRC": 0,
+            "FileHash": "42d632d36d64bf5b962e46c9db2cce09",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_032_role_032.bundle",
+            "UnityCRC": 0,
+            "FileHash": "31feae475253dc8c97f1bb3721bf5005",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_033_role_033.bundle",
+            "UnityCRC": 0,
+            "FileHash": "7cd836781984a5e48efb06bd6ed15420",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_034_role_034.bundle",
+            "UnityCRC": 0,
+            "FileHash": "c86e48e209a99a74a2914e85afc77601",
+            "FileCRC": "00000000",
+            "FileSize": 3157,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_035_role_035.bundle",
+            "UnityCRC": 0,
+            "FileHash": "3718e3a1aae3e599f94e1907947237e8",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_036_role_036.bundle",
+            "UnityCRC": 0,
+            "FileHash": "4402175efd4c21d78ef38314ca45a81f",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_037_role_037.bundle",
+            "UnityCRC": 0,
+            "FileHash": "329972846bb81bb5a61d3ad93b55ddb7",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_038_role_038.bundle",
+            "UnityCRC": 0,
+            "FileHash": "4967236f8e749428ca72baa7f6cc4186",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_039_role_039.bundle",
+            "UnityCRC": 0,
+            "FileHash": "a2ba903a6c8cdaabbf63142780e8d719",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_040_role_040.bundle",
+            "UnityCRC": 0,
+            "FileHash": "d575892b1ec1e9ccf6f23708a9946d42",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_041_role_041.bundle",
+            "UnityCRC": 0,
+            "FileHash": "26560001d995ca586bfc1b4f44204c5e",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_042_role_042.bundle",
+            "UnityCRC": 0,
+            "FileHash": "093e525043e4ed1fc23cc48caa8eb3e6",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_043_role_043.bundle",
+            "UnityCRC": 0,
+            "FileHash": "ec7f8e5a4d53603057b53cfb46451a2a",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_044_role_044.bundle",
+            "UnityCRC": 0,
+            "FileHash": "88bf4709d7df0304589d0d70447d676e",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_045_role_045.bundle",
+            "UnityCRC": 0,
+            "FileHash": "7329d3e4cbf6f6bc0eee091853144cd9",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_046_role_046.bundle",
+            "UnityCRC": 0,
+            "FileHash": "49d130d2edbe0a801b1f8a72098b17b7",
+            "FileCRC": "00000000",
+            "FileSize": 3158,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_047_role_047.bundle",
+            "UnityCRC": 0,
+            "FileHash": "506b4172021231203daa74c29272c2b3",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_048_role_048.bundle",
+            "UnityCRC": 0,
+            "FileHash": "6ddf628aa49fb96a1d0a8bf01e9da797",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_049_role_049.bundle",
+            "UnityCRC": 0,
+            "FileHash": "1513620e89b7393b361fc399e44f47b2",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_050_role_050.bundle",
+            "UnityCRC": 0,
+            "FileHash": "df34e7542226817f679b6fd75c28bdcd",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_051_role_051.bundle",
+            "UnityCRC": 0,
+            "FileHash": "9469c57bd02d14c076f1d490286885c6",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_052_role_052.bundle",
+            "UnityCRC": 0,
+            "FileHash": "67a5f32dd791a8dd7eaa6c4d4f5bef58",
+            "FileCRC": "00000000",
+            "FileSize": 3156,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_053_role_053.bundle",
+            "UnityCRC": 0,
+            "FileHash": "6268494c41d70ab22bad05ef14867ccd",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_054_role_054.bundle",
+            "UnityCRC": 0,
+            "FileHash": "1a408a7bd2a8dd52d961def867acd190",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_055_role_055.bundle",
+            "UnityCRC": 0,
+            "FileHash": "d5d6a013ef2acd60dd3721495a74a6fa",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_056_role_056.bundle",
+            "UnityCRC": 0,
+            "FileHash": "5f627b6b91c813baf2ac74d2a5f01e8d",
+            "FileCRC": "00000000",
+            "FileSize": 3155,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_057_role_057.bundle",
+            "UnityCRC": 0,
+            "FileHash": "cf35f2088f598030c5628aebfe83f0b3",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_058_role_058.bundle",
+            "UnityCRC": 0,
+            "FileHash": "532e056d8565ce094d41892186f16d18",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_059_role_059.bundle",
+            "UnityCRC": 0,
+            "FileHash": "21e89a2b5e428315f64fe220581a856a",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_060_role_060.bundle",
+            "UnityCRC": 0,
+            "FileHash": "27765455da7d1a58d386111f47125086",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_061_role_061.bundle",
+            "UnityCRC": 0,
+            "FileHash": "7e4dcee09e2e71e05647fa8de30b8ac7",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_062_role_062.bundle",
+            "UnityCRC": 0,
+            "FileHash": "e264ce7cef19f9847399feb5320342de",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_063_role_063.bundle",
+            "UnityCRC": 0,
+            "FileHash": "5d0e3e25e477d104bb38ee56c189b0f7",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_064_role_064.bundle",
+            "UnityCRC": 0,
+            "FileHash": "a042d686d965507c794d687d1b2295fc",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_065_role_065.bundle",
+            "UnityCRC": 0,
+            "FileHash": "ec5078a43160f220bf170f4a0c45828a",
+            "FileCRC": "00000000",
+            "FileSize": 3158,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_066_role_066.bundle",
+            "UnityCRC": 0,
+            "FileHash": "521b68b4c128d5e676cee78c49e37f2b",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_067_role_067.bundle",
+            "UnityCRC": 0,
+            "FileHash": "de23456a97e8d958355f9fca2d65dce4",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_068_role_068.bundle",
+            "UnityCRC": 0,
+            "FileHash": "ebfa183067dbba535a3a6b75d3076dd3",
+            "FileCRC": "00000000",
+            "FileSize": 3158,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_069_role_069.bundle",
+            "UnityCRC": 0,
+            "FileHash": "34ecbecafc6304be650c3415f9412e73",
+            "FileCRC": "00000000",
+            "FileSize": 3156,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_070_role_070.bundle",
+            "UnityCRC": 0,
+            "FileHash": "d0106f8c27a117a4f46b6b9b9b9f3a64",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_071_role_071.bundle",
+            "UnityCRC": 0,
+            "FileHash": "e2eb19720bd1b78f7971cfcae52b8f10",
+            "FileCRC": "00000000",
+            "FileSize": 3157,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_072_role_072.bundle",
+            "UnityCRC": 0,
+            "FileHash": "bd2cf42585f3976cd685fc7ee338afc6",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_073_role_073.bundle",
+            "UnityCRC": 0,
+            "FileHash": "e331626cf8eb2a3fafc63ce18bd8e9bb",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_074_role_074.bundle",
+            "UnityCRC": 0,
+            "FileHash": "0c323e5c00ebe91b632342ec2843bfa1",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_075_role_075.bundle",
+            "UnityCRC": 0,
+            "FileHash": "d8dd542540017df720fc3b2ac84de290",
+            "FileCRC": "00000000",
+            "FileSize": 3157,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_076_role_076.bundle",
+            "UnityCRC": 0,
+            "FileHash": "cb016534df168a112156ec3cabff40ad",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_077_role_077.bundle",
+            "UnityCRC": 0,
+            "FileHash": "3d7535b5cce8787e58044f90417cf4ae",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_078_role_078.bundle",
+            "UnityCRC": 0,
+            "FileHash": "848392eba0d6d6bbc9a8f78d97199b46",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_079_role_079.bundle",
+            "UnityCRC": 0,
+            "FileHash": "d50c55f3c638f06e24da4f5adfb6d2ee",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_080_role_080.bundle",
+            "UnityCRC": 0,
+            "FileHash": "67cd1aef7238e8cd1c912fe2de546ca4",
+            "FileCRC": "00000000",
+            "FileSize": 3157,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_081_role_081.bundle",
+            "UnityCRC": 0,
+            "FileHash": "907064dfdef56f5776ef445f5d778667",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_082_role_082.bundle",
+            "UnityCRC": 0,
+            "FileHash": "5c2755b32cefbf66417de176c877ff24",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_083_role_083.bundle",
+            "UnityCRC": 0,
+            "FileHash": "97d51278498b27d830cd90549c64c529",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_084_role_084.bundle",
+            "UnityCRC": 0,
+            "FileHash": "5e36f1d7e06dd6eab38447a0d34552ae",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_085_role_085.bundle",
+            "UnityCRC": 0,
+            "FileHash": "6afde68c334833a96c4bddd2b63d6900",
+            "FileCRC": "00000000",
+            "FileSize": 3158,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_086_role_086.bundle",
+            "UnityCRC": 0,
+            "FileHash": "6d8d087518d570290c11446030c4ec90",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_087_role_087.bundle",
+            "UnityCRC": 0,
+            "FileHash": "3d5b6d706e8dfa05b30a57ced7241190",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_088_role_088.bundle",
+            "UnityCRC": 0,
+            "FileHash": "57b7bbb5f1c8f29b0dd99039a5ada0d7",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_089_role_089.bundle",
+            "UnityCRC": 0,
+            "FileHash": "dc24211907793ca84f4c793b6ea72d6e",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_090_role_090.bundle",
+            "UnityCRC": 0,
+            "FileHash": "0dc1ec80e78976f7191370917c4447b1",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_091_role_091.bundle",
+            "UnityCRC": 0,
+            "FileHash": "a1cae71da59667e9d984b62b9e46fefb",
+            "FileCRC": "00000000",
+            "FileSize": 3158,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_092_role_092.bundle",
+            "UnityCRC": 0,
+            "FileHash": "62f69bf1767607c4ea7b2f01e6b23d20",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_093_role_093.bundle",
+            "UnityCRC": 0,
+            "FileHash": "9ae2e13b325c9fef6b20cf3c66940092",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_094_role_094.bundle",
+            "UnityCRC": 0,
+            "FileHash": "5d04134ed4aa3bc1d39b6c5b00f144d5",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_095_role_095.bundle",
+            "UnityCRC": 0,
+            "FileHash": "babeb7f0bfcf871d05e2ae58f35c03dd",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_096_role_096.bundle",
+            "UnityCRC": 0,
+            "FileHash": "03d71f9921e7165344c34ff500c4e4ba",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_097_role_097.bundle",
+            "UnityCRC": 0,
+            "FileHash": "d263b07b0d1f99c6f3895b7057173327",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_098_role_098.bundle",
+            "UnityCRC": 0,
+            "FileHash": "3d24b8d201af328b8fe60aab7c6c711d",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_099_role_099.bundle",
+            "UnityCRC": 0,
+            "FileHash": "e4a0a97d35a26b71bfb8f274f3c2145f",
+            "FileCRC": "00000000",
+            "FileSize": 3157,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_100_role_100.bundle",
+            "UnityCRC": 0,
+            "FileHash": "8ffcbaf0489f3561219ed337bb61292c",
+            "FileCRC": "00000000",
+            "FileSize": 3157,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_101_role_101.bundle",
+            "UnityCRC": 0,
+            "FileHash": "2717b05507b1ed7a2d681283bf4e1e90",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_102_role_102.bundle",
+            "UnityCRC": 0,
+            "FileHash": "ef5e8d7e073e73822b48cd9b646d00d9",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_103_role_103.bundle",
+            "UnityCRC": 0,
+            "FileHash": "b512c33d710272b172b669f726e1902d",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_104_role_104.bundle",
+            "UnityCRC": 0,
+            "FileHash": "2fdedf71a76d701918d0fdfbd24d244c",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_105_role_105.bundle",
+            "UnityCRC": 0,
+            "FileHash": "caffa3de986a2076252629872b841ad4",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_106_role_106.bundle",
+            "UnityCRC": 0,
+            "FileHash": "ae3716c01a967784a0887d8a463bc333",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_107_role_107.bundle",
+            "UnityCRC": 0,
+            "FileHash": "787f3e2f07f2587c28afdaa2523cd3be",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_108_role_108.bundle",
+            "UnityCRC": 0,
+            "FileHash": "85c708d7bd0cff949145d184d6331230",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_109_role_109.bundle",
+            "UnityCRC": 0,
+            "FileHash": "e47902f81801c89a9aea33e21508a98b",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_110_role_110.bundle",
+            "UnityCRC": 0,
+            "FileHash": "63c4afad7b30de8882ab2e9d740b6db5",
+            "FileCRC": "00000000",
+            "FileSize": 3161,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_111_role_111.bundle",
+            "UnityCRC": 0,
+            "FileHash": "f33f8219f3a594862f3d018e4ef7066d",
+            "FileCRC": "00000000",
+            "FileSize": 3155,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_112_role_112.bundle",
+            "UnityCRC": 0,
+            "FileHash": "8a39a4986c43a4d8c1a01cc7c06c2fc8",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_113_role_113.bundle",
+            "UnityCRC": 0,
+            "FileHash": "13667a62495ba472fcb64d864a84719f",
+            "FileCRC": "00000000",
+            "FileSize": 3157,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_114_role_114.bundle",
+            "UnityCRC": 0,
+            "FileHash": "d46c3c69e99a2332fe5af8f1a8cbc16b",
+            "FileCRC": "00000000",
+            "FileSize": 3158,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_115_role_115.bundle",
+            "UnityCRC": 0,
+            "FileHash": "6e492f3be2240be432297c2c321603b2",
+            "FileCRC": "00000000",
+            "FileSize": 3158,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_116_role_116.bundle",
+            "UnityCRC": 0,
+            "FileHash": "cd85991884db0ba622c50592f101ad19",
+            "FileCRC": "00000000",
+            "FileSize": 3158,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_117_role_117.bundle",
+            "UnityCRC": 0,
+            "FileHash": "87ea673ae8881210f60eadeba173a38f",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_118_role_118.bundle",
+            "UnityCRC": 0,
+            "FileHash": "107aa5fb1c404e971a9075e518d5b055",
+            "FileCRC": "00000000",
+            "FileSize": 3162,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_119_role_119.bundle",
+            "UnityCRC": 0,
+            "FileHash": "fc8c0d8c60b94c260795df8fb5117461",
+            "FileCRC": "00000000",
+            "FileSize": 3159,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_120_role_120.bundle",
+            "UnityCRC": 0,
+            "FileHash": "f537a462aebece350770fe1e6742b317",
+            "FileCRC": "00000000",
+            "FileSize": 3160,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsunit_assets_gameres_bundles_role_121_role_121.bundle",
+            "UnityCRC": 0,
+            "FileHash": "0442a41e5842e35a694cf752a39ab05c",
+            "FileCRC": "00000000",
+            "FileSize": 3154,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -253,7 +1945,7 @@
             "UnityCRC": 0,
             "FileHash": "45d28134004acf2881a1289685447b89",
             "FileCRC": "00000000",
-            "FileSize": 916,
+            "FileSize": 918,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

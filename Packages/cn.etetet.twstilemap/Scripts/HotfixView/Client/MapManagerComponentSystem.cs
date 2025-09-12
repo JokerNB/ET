@@ -60,7 +60,6 @@ namespace ET.Client
             self.tileMap_BaseGo = referenceCollector.Get<GameObject>("Tilemap_Base");
             self.tileMap_BuildGo = referenceCollector.Get<GameObject>("Tilemap_Build");
             self.tileMap_ShowGo = referenceCollector.Get<GameObject>("Tilemap_Show");
-            Log.Error($"{self.tileMap_BaseGo.name} , {self.tileMap_BuildGo.name} , {self.tileMap_ShowGo.name}");
 
             self.tileMap_Base = self.tileMap_BaseGo.GetComponent<Tilemap>();
             self.tileMap_Build = self.tileMap_BuildGo.GetComponent<Tilemap>();
@@ -74,8 +73,6 @@ namespace ET.Client
             self.Camera = Camera.main;
 
             self.GenerateTilesAroundCamera();
-            Log.Error(self.tileMap_Base.layoutGrid.cellSize.ToString());
-            Log.Error(self.tileMap_Show.layoutGrid.cellSize.ToString());
         }
 
         public static void GenerateTilesAroundCamera(this ET.Client.MapManagerComponent self)

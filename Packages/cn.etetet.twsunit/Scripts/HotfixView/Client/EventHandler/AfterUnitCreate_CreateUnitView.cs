@@ -10,8 +10,10 @@ namespace ET.Client
             Unit_Client unit = args.Unit;
             // Unit View层
             string assetsPath = $"Packages/cn.etetet.twsunit/Assets/GameRes/";
-            GameObject bundleGameObject = await scene.GetComponent<ResourcesLoaderComponent>()
-                    .LoadAssetAsync<GameObject>($"{assetsPath}Bundles/{unit.Config.ResName}.prefab");
+            // GameObject bundleGameObject = await scene.GetComponent<ResourcesLoaderComponent>()
+            //         .LoadAssetAsync<GameObject>($"{assetsPath}Bundles/{unit.Config.ResName}/{unit.Config.ResName}.prefab");
+            GameObject bundleGameObject =
+                    await scene.GetComponent<ResourcesLoaderComponent>().LoadAssetAsync<GameObject>($"{unit.Config.ResName}");
 
             GlobalComponent globalComponent = scene.Root().GetComponent<GlobalComponent>();
             GameObject go = UnityEngine.Object.Instantiate(bundleGameObject, globalComponent.Unit, true);

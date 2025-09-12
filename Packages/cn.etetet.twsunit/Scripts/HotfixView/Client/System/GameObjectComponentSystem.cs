@@ -10,6 +10,7 @@ namespace ET.Client
         private static void Awake(this GameObjectComponent self, GameObject go)
         {
             self.GameObject = go;
+            go.GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
 
         [EntitySystem]
