@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/9/11 13:56:53",
+    "PackageNote": "2025/9/11 19:01:06",
     "AssetList": [
         {
             "Address": "Map1",
@@ -91,11 +91,27 @@
             "DependBundleIDs": []
         },
         {
+            "Address": "Tile_1",
+            "AssetPath": "Packages/cn.etetet.twstilemap/Assets/Sprites/Tile_1.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 3,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Tile_2",
+            "AssetPath": "Packages/cn.etetet.twstilemap/Assets/Sprites/Tile_2.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 3,
+            "DependBundleIDs": []
+        },
+        {
             "Address": "Login_atlas0",
             "AssetPath": "Packages/cn.etetet.twsui/Res/Login/Login_atlas0.png",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -103,7 +119,7 @@
             "AssetPath": "Packages/cn.etetet.twsui/Res/Login/Login_fui.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 3,
+            "BundleID": 4,
             "DependBundleIDs": []
         },
         {
@@ -111,7 +127,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_1.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 4,
+            "BundleID": 5,
             "DependBundleIDs": []
         },
         {
@@ -119,7 +135,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/AIConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 6,
             "DependBundleIDs": []
         },
         {
@@ -127,7 +143,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/ItemConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 6,
             "DependBundleIDs": []
         },
         {
@@ -135,7 +151,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericLocalizationConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 6,
             "DependBundleIDs": []
         },
         {
@@ -143,7 +159,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueAffectConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 6,
             "DependBundleIDs": []
         },
         {
@@ -151,7 +167,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueCheckConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 6,
             "DependBundleIDs": []
         },
         {
@@ -159,7 +175,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueLimitConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 6,
             "DependBundleIDs": []
         },
         {
@@ -167,7 +183,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/UnitConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 6,
             "DependBundleIDs": []
         }
     ],
@@ -177,7 +193,7 @@
             "UnityCRC": 0,
             "FileHash": "a44c2e41b4bd62cf70e61cb988734306",
             "FileCRC": "00000000",
-            "FileSize": 24994,
+            "FileSize": 25423,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -197,7 +213,17 @@
             "UnityCRC": 0,
             "FileHash": "ce7e47b0a172656892651cbca85508e2",
             "FileCRC": "00000000",
-            "FileSize": 1183236,
+            "FileSize": 1193968,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twstilemap_assets_sprites.bundle",
+            "UnityCRC": 0,
+            "FileHash": "9c0d5adc58c7795c3df72c4bf0a41f3f",
+            "FileCRC": "00000000",
+            "FileSize": 195825,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

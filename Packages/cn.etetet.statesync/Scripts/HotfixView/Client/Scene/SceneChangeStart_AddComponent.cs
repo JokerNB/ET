@@ -18,9 +18,8 @@ namespace ET.Client
                 await resourcesLoaderComponent.LoadSceneAsync($"Packages/cn.etetet.demores/Scenes/{currentScene.Name}.unity", LoadSceneMode.Single);
                 // 切换到map场景
 
-                //await SceneManager.LoadSceneAsync(currentScene.Name);
-
                 currentScene.AddComponent<OperaComponent>();
+                currentScene.AddComponent<MapManagerComponent>();
             }
             catch (Exception e)
             {
