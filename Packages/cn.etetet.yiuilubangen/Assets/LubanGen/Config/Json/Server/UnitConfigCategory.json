@@ -1,18 +1,243 @@
 [
   {
-    "Id": 1001,
-    "UnitType": 1,
-    "Name": "米克尔",
-    "Des": "带有强力攻击技能",
-    "NumericTypeValue": [],
-    "ResName": "Role_027"
+    "Id": 1,
+    "UnitType": 21,
+    "Name": "",
+    "Des": "管理者",
+    "NumericTypeValue": [
+      [
+        100000,
+        1000
+      ],
+      [
+        100001,
+        0
+      ],
+      [
+        100002,
+        0
+      ],
+      [
+        100003,
+        2
+      ]
+    ],
+    "ResName": ""
   },
   {
-    "Id": 1002,
+    "Id": 1027,
     "UnitType": 1,
-    "Name": "米克尔1",
-    "Des": "带有强力攻击技能",
+    "Name": "农民_1",
+    "Des": "种植小麦、蔬菜、水果等农作物。",
     "NumericTypeValue": [],
-    "ResName": "Role_2"
+    "ResName": ""
+  },
+  {
+    "Id": 1028,
+    "UnitType": 2,
+    "Name": "樵夫_1",
+    "Des": "饲养牛羊、鸡、猪等家畜，产出肉类、羊毛、皮革、鸡蛋等。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1029,
+    "UnitType": 3,
+    "Name": "渔夫_1",
+    "Des": "砍伐数目，获取木材。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1030,
+    "UnitType": 4,
+    "Name": "矿工_1",
+    "Des": "开采石料、铁、铜、金、煤等矿产资源。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1031,
+    "UnitType": 5,
+    "Name": "面包师_1",
+    "Des": "从河流或海洋中捞捕鱼类。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1032,
+    "UnitType": 6,
+    "Name": "厨师_1",
+    "Des": "将小麦磨成面粉，再烤制成面包等。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1033,
+    "UnitType": 7,
+    "Name": "铁匠_1",
+    "Des": "将各种食材加工成高级菜肴。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1034,
+    "UnitType": 8,
+    "Name": "木匠_1",
+    "Des": "将铁锭加工成工具、武器、钉子等。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1035,
+    "UnitType": 9,
+    "Name": "裁缝_1",
+    "Des": "将木材加工成家具、建材、工具柄等。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1036,
+    "UnitType": 10,
+    "Name": "陶工_1",
+    "Des": "将羊毛、棉花、皮革加工成衣物、皮革制品。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1037,
+    "UnitType": 11,
+    "Name": "酿酒师_1",
+    "Des": "制作陶器、砖块等。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1038,
+    "UnitType": 12,
+    "Name": "珠宝匠_1",
+    "Des": "酿造啤酒、葡萄酒等。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1039,
+    "UnitType": 13,
+    "Name": "商人_1",
+    "Des": "制作金银首饰、奢侈品等。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1040,
+    "UnitType": 14,
+    "Name": "医生_1",
+    "Des": "运营商店，买卖商品。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1041,
+    "UnitType": 15,
+    "Name": "教师_1",
+    "Des": "治疗生病的居民。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1042,
+    "UnitType": 16,
+    "Name": "牧师_1",
+    "Des": "在学校中教育儿童。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1043,
+    "UnitType": 17,
+    "Name": "士兵_1",
+    "Des": "在教堂提供精神服务，维持居民幸福度和稳定度。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1044,
+    "UnitType": 18,
+    "Name": "车夫_1",
+    "Des": "维持治安，抵御外敌。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1045,
+    "UnitType": 19,
+    "Name": "吟游诗人_1",
+    "Des": "负责在仓库、生产建筑和市场之间运输货物，提高物流效率。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1046,
+    "UnitType": 20,
+    "Name": "演员_1",
+    "Des": "在酒馆表演，提升娱乐度。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1047,
+    "UnitType": 21,
+    "Name": "管理者_1",
+    "Des": "在剧院表演。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1048,
+    "UnitType": 22,
+    "Name": "税务官_1",
+    "Des": "高效的收取税金，但可能降低居民幸福度。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1049,
+    "UnitType": 23,
+    "Name": "学者_1",
+    "Des": "在大学中进行研究，解锁新技术，新建筑。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1050,
+    "UnitType": 24,
+    "Name": "贵族_1",
+    "Des": "消耗大量奢侈品，提供高额税收，但对生活环境要求极高。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1051,
+    "UnitType": 25,
+    "Name": "工程师_1",
+    "Des": "操作和维护复杂的机械。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1052,
+    "UnitType": 26,
+    "Name": "冒险者_1",
+    "Des": "探索外部区域，带回稀有资源、宝物或触发特殊事件，但可能有伤亡风险。",
+    "NumericTypeValue": [],
+    "ResName": ""
+  },
+  {
+    "Id": 1053,
+    "UnitType": 27,
+    "Name": "小偷_1",
+    "Des": "偷盗居民财产。",
+    "NumericTypeValue": [],
+    "ResName": ""
   }
 ]

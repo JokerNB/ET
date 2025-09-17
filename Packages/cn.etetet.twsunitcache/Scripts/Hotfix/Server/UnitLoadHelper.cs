@@ -13,7 +13,7 @@ namespace ET.Server
             bool isNewUnit = unit == null;
             if (isNewUnit)
             {
-                unit = UnitFactory.Create(gateMapComponent.Scene, player.UnitId, UnitType.Player);
+                unit = UnitFactory.Create(gateMapComponent.Scene, player.UnitId, UnitType.Clerk);
                 unit.AddComponent<UnitDBSaveComponent>();
                 unit.AddComponent<KnapsackComponent>();
 

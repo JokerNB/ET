@@ -11,6 +11,7 @@ namespace ET.Client
             UIObjectFactory.Clear();
             
             LoginBinder.BindAll();
+            MainBinder.BindAll();
             // <last line>
         }
     }

@@ -1,0 +1,19 @@
+[
+  {
+    "Id": 1,
+    "LandType": 4,
+    "Desc": "农田，可种植农作物",
+    "NumericTypeValue": [
+      [
+        200011,
+        0
+      ]
+    ],
+    "CellData": [
+      1,
+      1
+    ],
+    "PrefabName": "",
+    "UIName": ""
+  }
+]

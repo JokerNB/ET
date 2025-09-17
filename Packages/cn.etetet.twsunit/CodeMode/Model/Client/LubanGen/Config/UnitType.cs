@@ -12,13 +12,117 @@ namespace ET
     public enum UnitType
     {
         /// <summary>
-        /// 无
+        /// 无业游民
         /// </summary>
         None = 0,
         /// <summary>
-        /// 玩家
+        /// 农民
         /// </summary>
-        Player = 1,
+        Famer = 1,
+        /// <summary>
+        /// 樵夫
+        /// </summary>
+        LumberJack = 2,
+        /// <summary>
+        /// 渔夫
+        /// </summary>
+        FisherMan = 3,
+        /// <summary>
+        /// 矿工
+        /// </summary>
+        Miner = 4,
+        /// <summary>
+        /// 面包师
+        /// </summary>
+        Baker = 5,
+        /// <summary>
+        /// 厨师
+        /// </summary>
+        Cook = 6,
+        /// <summary>
+        /// 铁匠
+        /// </summary>
+        BlackSmith = 7,
+        /// <summary>
+        /// 木匠
+        /// </summary>
+        Carpenter = 8,
+        /// <summary>
+        /// 裁缝
+        /// </summary>
+        Tailor = 9,
+        /// <summary>
+        /// 陶工
+        /// </summary>
+        Potter = 10,
+        /// <summary>
+        /// 酿酒师
+        /// </summary>
+        Brewer = 11,
+        /// <summary>
+        /// 珠宝匠
+        /// </summary>
+        Jeweler = 12,
+        /// <summary>
+        /// 商人
+        /// </summary>
+        Merchant = 13,
+        /// <summary>
+        /// 医生
+        /// </summary>
+        Physician = 14,
+        /// <summary>
+        /// 教师
+        /// </summary>
+        Teacher = 15,
+        /// <summary>
+        /// 牧师
+        /// </summary>
+        Priest = 16,
+        /// <summary>
+        /// 士兵
+        /// </summary>
+        Soldier = 17,
+        /// <summary>
+        /// 车夫
+        /// </summary>
+        CartDriver = 18,
+        /// <summary>
+        /// 吟游诗人
+        /// </summary>
+        Bard = 19,
+        /// <summary>
+        /// 演员
+        /// </summary>
+        Actor = 20,
+        /// <summary>
+        /// 管理者
+        /// </summary>
+        Clerk = 21,
+        /// <summary>
+        /// 税务官
+        /// </summary>
+        TxCollector = 22,
+        /// <summary>
+        /// 学者
+        /// </summary>
+        Scholar = 23,
+        /// <summary>
+        /// 贵族
+        /// </summary>
+        Noble = 24,
+        /// <summary>
+        /// 工程师
+        /// </summary>
+        Engineer = 25,
+        /// <summary>
+        /// 冒险者
+        /// </summary>
+        Adventurer = 26,
+        /// <summary>
+        /// 小偷
+        /// </summary>
+        Chief = 27,
     }
 
 } 

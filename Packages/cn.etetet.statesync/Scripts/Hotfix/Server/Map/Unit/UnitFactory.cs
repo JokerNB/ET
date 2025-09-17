@@ -9,7 +9,7 @@ namespace ET.Server
             UnitComponent unitComponent = scene.GetComponent<UnitComponent>();
             switch (unitType)
             {
-                case UnitType.Player:
+                case UnitType.Clerk:
                 {
                     UnitConfig unitConfig = UnitConfigCategory.Instance.Get(1001);
                     Unit unit = unitComponent.AddChildWithId<Unit, int>(id, unitConfig.Id);

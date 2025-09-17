@@ -22,6 +22,8 @@ namespace ET.Client
         [EntitySystem]
         private static void Update(this ET.Client.MapManagerComponent self)
         {
+            if(!self.isStartUp)
+               return; 
             int2 currentCell = self.GetMousePosition();
             if (Input.GetMouseButtonDown(0))
             {
@@ -42,11 +44,11 @@ namespace ET.Client
             {
                 self.isDragging = false;
                 self.FillRectangle();
-                self.tileMap_Show.RefreshAllTiles();
+                self.tileMap_Build.RefreshAllTiles();
             }
 
             if (Input.GetMouseButton(1))
-                self.ClearTileAt(currentCell, self.tileMap_Show);
+                self.ClearTileAt(currentCell, self.tileMap_Build);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -57,19 +59,14 @@ namespace ET.Client
         public static async ETTask InitMap(this ET.Client.MapManagerComponent self)
         {
             var referenceCollector = GameObject.Find("World").GetComponent<ReferenceCollector>();
-            self.tileMap_BaseGo = referenceCollector.Get<GameObject>("Tilemap_Base");
+            self.tileMap_FloorGo = referenceCollector.Get<GameObject>("Tilemap_Floor");
             self.tileMap_BuildGo = referenceCollector.Get<GameObject>("Tilemap_Build");
-            self.tileMap_ShowGo = referenceCollector.Get<GameObject>("Tilemap_Show");
 
-            self.tileMap_Base = self.tileMap_BaseGo.GetComponent<Tilemap>();
+            self.tileMap_Floor = self.tileMap_FloorGo.GetComponent<Tilemap>();
             self.tileMap_Build = self.tileMap_BuildGo.GetComponent<Tilemap>();
-            self.tileMap_Show = self.tileMap_ShowGo.GetComponent<Tilemap>();
 
-            // self.tileMap_Base.layoutGrid.cellSize = new Vector3(8, 8, 0);
-            // self.tileMap_Show.layoutGrid.cellSize = new Vector3(2.56f, 2.56f, 0);
-            // self.tileMap_Build.layoutGrid.cellSize = new Vector3(1f, 1f, 0);
-            self.Sprite = await self.Root().CurrentScene().GetComponent<ResourcesLoaderComponent>().LoadAssetAsync<Sprite>("Tile_1");
-            self.Sprite_Show = await self.Root().CurrentScene().GetComponent<ResourcesLoaderComponent>().LoadAssetAsync<Sprite>("Tile_2");
+            self.Sprite_Floor = await self.Root().CurrentScene().GetComponent<ResourcesLoaderComponent>().LoadAssetAsync<Sprite>("Tile_1");
+            self.Sprite_Build = await self.Root().CurrentScene().GetComponent<ResourcesLoaderComponent>().LoadAssetAsync<Sprite>("Tile_2");
             self.Camera = Camera.main;
 
             self.GenerateTilesAroundCamera();
@@ -82,8 +79,8 @@ namespace ET.Client
             Vector3 topRight = self.Camera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, self.Camera.orthographicSize));
 
             // 计算需要覆盖的网格范围
-            Vector3Int minCell = self.tileMap_Base.WorldToCell(bottomLeft);
-            Vector3Int maxCell = self.tileMap_Base.WorldToCell(topRight);
+            Vector3Int minCell = self.tileMap_Floor.WorldToCell(bottomLeft);
+            Vector3Int maxCell = self.tileMap_Floor.WorldToCell(topRight);
 
             // 计算需要填充的单元格数量（+1 确保完全覆盖）
             int numCellsX = maxCell.x - minCell.x + 1;
@@ -100,18 +97,18 @@ namespace ET.Client
             }
 
             // 可选：优化性能，一次性更新所有 Tile
-            self.tileMap_Base.RefreshAllTiles();
+            self.tileMap_Floor.RefreshAllTiles();
         }
 
         public static Tile CreateDefaultTile(this ET.Client.MapManagerComponent self, Vector3Int pos)
         {
             Tile tile = ScriptableObject.CreateInstance<Tile>();
-            tile.sprite = self.Sprite;
+            tile.sprite = self.Sprite_Floor;
             tile.color = Color.white;
             // 只在空的位置放置 Tile
-            if (!self.tileMap_Base.HasTile(pos))
+            if (!self.tileMap_Floor.HasTile(pos))
             {
-                self.tileMap_Base.SetTile(pos, tile);
+                self.tileMap_Floor.SetTile(pos, tile);
             }
 
             return tile;
@@ -120,12 +117,12 @@ namespace ET.Client
         public static Tile CreateShowTile(this ET.Client.MapManagerComponent self, Vector3Int pos)
         {
             Tile tile = ScriptableObject.CreateInstance<Tile>();
-            tile.sprite = self.Sprite_Show;
-            tile.color = Color.yellow;
+            tile.sprite = self.Sprite_Build;
+            tile.color = Color.white;
             // 只在空的位置放置 Tile
-            if (!self.tileMap_Show.HasTile(pos))
+            if (!self.tileMap_Build.HasTile(pos))
             {
-                self.tileMap_Show.SetTile(pos, tile);
+                self.tileMap_Build.SetTile(pos, tile);
             }
 
             return tile;
@@ -136,7 +133,7 @@ namespace ET.Client
             Camera camera = Camera.main;
             var mouseWorldPosition = camera.ScreenToWorldPoint(Input.mousePosition);
             mouseWorldPosition.z = 0;
-            var cellPos = self.tileMap_Show.WorldToCell(mouseWorldPosition);
+            var cellPos = self.tileMap_Build.WorldToCell(mouseWorldPosition);
             return new int2(cellPos.x, cellPos.y);
         }
 
@@ -199,6 +196,12 @@ namespace ET.Client
             }
         }
 
+        //绘制环形
+        public static void FileRing(this ET.Client.MapManagerComponent self)
+        {
+            
+        }
+
         // 矩形预览（可以用于显示半透明预览）
         public static void PreviewRectangle(this ET.Client.MapManagerComponent self, int2 start, int2 end)
         {
@@ -212,14 +215,14 @@ namespace ET.Client
 
             foreach (var point in points)
             {
-                self.ClearTileAt(point, self.tileMap_Show);
+                self.ClearTileAt(point, self.tileMap_Build);
             }
         }
 
         // 擦除单个 tile
         public static void EraseTile(this ET.Client.MapManagerComponent self, int2 cell)
         {
-            self.ClearTileAt(cell, self.tileMap_Show);
+            self.ClearTileAt(cell, self.tileMap_Build);
         }
 
         // Bresenham 直线算法
@@ -259,11 +262,11 @@ namespace ET.Client
         private static void RotateTileAt(this ET.Client.MapManagerComponent self, int2 cell)
         {
             Vector3Int pos = new Vector3Int(cell.x, cell.y, 0);
-            if (self.tileMap_Show.HasTile(pos))
+            if (self.tileMap_Build.HasTile(pos))
             {
-                Matrix4x4 oldMatrix = self.tileMap_Show.GetTransformMatrix(pos);
+                Matrix4x4 oldMatrix = self.tileMap_Build.GetTransformMatrix(pos);
                 Matrix4x4 newMatrix = oldMatrix * Matrix4x4.Rotate(Quaternion.Euler(0, 0, -90));
-                self.tileMap_Show.SetTransformMatrix(pos, newMatrix);
+                self.tileMap_Build.SetTransformMatrix(pos, newMatrix);
             }
         }
     }

@@ -16,153 +16,69 @@ namespace ET
         /// </summary>
         None = 0,
         /// <summary>
-        /// 测试_0 (Int)
-        /// </summary>
-        NumericTest0 = 100000,
-        /// <summary>
-        /// 临时1数据_0 (Int)
-        /// </summary>
-        Temp1Data0 = 990001,
-        /// <summary>
-        /// 临时2数据_0 (Int)
-        /// </summary>
-        Temp2Data0 = 990002,
-        /// <summary>
-        /// 临时3数据_0 (Int)
-        /// </summary>
-        Temp3Data0 = 990003,
-        /// <summary>
-        /// 临时4数据_0 (Int)
-        /// </summary>
-        Temp4Data0 = 990004,
-        /// <summary>
-        /// 临时5数据_0 (Int)
-        /// </summary>
-        Temp5Data0 = 990005,
-        /// <summary>
-        /// 临时6数据_0 (Int)
-        /// </summary>
-        Temp6Data0 = 990006,
-        /// <summary>
-        /// 临时7数据_0 (Int)
-        /// </summary>
-        Temp7Data0 = 990007,
-        /// <summary>
-        /// 临时8数据_0 (Int)
-        /// </summary>
-        Temp8Data0 = 990008,
-        /// <summary>
-        /// 临时9数据_0 (Int)
-        /// </summary>
-        Temp9Data0 = 990009,
-        /// <summary>
-        /// 临时10数据_0 (Int)
-        /// </summary>
-        Temp10Data0 = 990010,
-        /// <summary>
-        /// 等级_0 (Int)
-        /// </summary>
-        Level0 = 100001,
-        /// <summary>
-        /// 经验值_0 (Int)
-        /// </summary>
-        Exp0 = 100002,
-        /// <summary>
         /// 金钱_0 (Int)
         /// </summary>
-        Money0 = 100003,
+        Money0 = 100000,
         /// <summary>
         /// 钻石_0 (Int)
         /// </summary>
-        Diamond0 = 100004,
+        Diamond0 = 100001,
         /// <summary>
-        /// 当前血量_0 (Int)
+        /// 声望值_0 (Int)
         /// </summary>
-        Hp0 = 200001,
+        Prestige0 = 100002,
         /// <summary>
-        /// 最大血量_0 (Int)
+        /// 人口上限_0 (Int)
         /// </summary>
-        MaxHp0 = 200002,
+        PopulationLimit0 = 100003,
         /// <summary>
-        /// 最大血量_1 (Int)
+        /// 心情值_0 (Int)
         /// </summary>
-        MaxHp1 = 2000021,
+        Feeling0 = 200000,
         /// <summary>
-        /// 最大血量_2 (Int)
+        /// 薪资值_0 (Int)
         /// </summary>
-        MaxHp2 = 2000022,
+        Salary0 = 200001,
         /// <summary>
-        /// 最大血量_3 (Float)
+        /// 薪资速率_0 (Long)
         /// </summary>
-        MaxHp3 = 2000023,
+        SalartRate0 = 200002,
         /// <summary>
-        /// 最大血量_4 (Int)
+        /// 饥饿值_0 (Int)
         /// </summary>
-        MaxHp4 = 2000024,
+        Hunger0 = 200003,
         /// <summary>
-        /// 最大血量_5 (Float)
+        /// 饥饿速率_0 (Long)
         /// </summary>
-        MaxHp5 = 2000025,
+        HungerRate0 = 200004,
         /// <summary>
-        /// 最大血量_6 (Int)
+        /// 饱腹值_0 (Int)
         /// </summary>
-        MaxHp6 = 2000026,
+        Satiety0 = 200005,
         /// <summary>
-        /// 速度_0 (Float)
+        /// 健康值_0 (Int)
         /// </summary>
-        Speed0 = 200003,
+        Health0 = 200006,
         /// <summary>
-        /// 速度_1 (Float)
+        /// 产出值_0 (Int)
         /// </summary>
-        Speed1 = 2000031,
+        OutPut0 = 200007,
         /// <summary>
-        /// 速度_2 (Float)
+        /// 产出速率_0 (Long)
         /// </summary>
-        Speed2 = 2000032,
+        OutPutRate0 = 200008,
         /// <summary>
-        /// 速度_3 (Float)
+        /// 幸福值_0 (Int)
         /// </summary>
-        Speed3 = 2000033,
+        Happiness0 = 200009,
         /// <summary>
-        /// 速度_4 (Float)
+        /// 招募值_0 (Int)
         /// </summary>
-        Speed4 = 2000034,
+        Recruit0 = 200010,
         /// <summary>
-        /// 速度_5 (Float)
+        /// 价格_0 (Int)
         /// </summary>
-        Speed5 = 2000035,
-        /// <summary>
-        /// 速度_6 (Float)
-        /// </summary>
-        Speed6 = 2000036,
-        /// <summary>
-        /// AOI_0 (Float)
-        /// </summary>
-        AOI0 = 200004,
-        /// <summary>
-        /// AOI_1 (Float)
-        /// </summary>
-        AOI1 = 2000041,
-        /// <summary>
-        /// AOI_2 (Float)
-        /// </summary>
-        AOI2 = 2000042,
-        /// <summary>
-        /// AOI_3 (Float)
-        /// </summary>
-        AOI3 = 2000043,
-        /// <summary>
-        /// AOI_4 (Float)
-        /// </summary>
-        AOI4 = 2000044,
-        /// <summary>
-        /// AOI_5 (Float)
-        /// </summary>
-        AOI5 = 2000045,
-        /// <summary>
-        /// AOI_6 (Float)
-        /// </summary>
-        AOI6 = 2000046,
+        Price0 = 200011,
     }
 
 } 

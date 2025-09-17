@@ -6,6 +6,7 @@ namespace ET.Client
     {
         Invalid = 0,
         LoginUI,
+        MainUI,
         // <last line>
     }
 }

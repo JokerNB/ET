@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="y6b7eitg">
+  <resources>
+    <image id="jpf40" name="BG_MainUI.png" path="/Atlas/" exported="true"/>
+    <component id="jpf41" name="MainUI.xml" path="/Component/" exported="true"/>
+    <component id="jpf42" name="Button_PlayGame.xml" path="/Component/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>
