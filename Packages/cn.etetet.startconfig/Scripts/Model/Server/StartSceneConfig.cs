@@ -15,6 +15,7 @@ namespace ET
         private readonly MultiMap<int, StartSceneConfig> sceneByType = new();
 
         public StartSceneConfig loginCenterConfig { get; private set; }
+        public StartSceneConfig archiveCenterConfig { get; private set; }
         
         public List<StartSceneConfig> GetByProcess(int process)
         {
@@ -64,6 +65,11 @@ namespace ET
                 if (this.loginCenterConfig == null && startSceneConfig.Type == SceneType.LoginCenter)
                 {
                     this.loginCenterConfig = startSceneConfig;
+                }
+                
+                if (this.archiveCenterConfig == null && startSceneConfig.Type == SceneType.ArchiveCenter)
+                {
+                    this.archiveCenterConfig = startSceneConfig;
                 }
             }
         }

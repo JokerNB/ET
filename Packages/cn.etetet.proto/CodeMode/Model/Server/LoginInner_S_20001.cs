@@ -477,6 +477,295 @@ namespace ET
         }
     }
 
+    [MemoryPackable]
+    [Message(LoginInner.ArchiveInfoProto)]
+    public partial class ArchiveInfoProto : MessageObject
+    {
+        public static ArchiveInfoProto Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<ArchiveInfoProto>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public long AccountHash { get; set; }
+
+        [MemoryPackOrder(1)]
+        public List<long> Recruits { get; set; } = new();
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.AccountHash = default;
+            this.Recruits.Clear();
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_GetArchiveListRequest)]
+    [ResponseType(nameof(Other2Archive_GetArchiveListResponse))]
+    public partial class Other2Archive_GetArchiveListRequest : MessageObject, IRequest
+    {
+        public static Other2Archive_GetArchiveListRequest Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_GetArchiveListRequest>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public string AccountName { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.AccountName = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_GetArchiveListResponse)]
+    public partial class Other2Archive_GetArchiveListResponse : MessageObject, IResponse
+    {
+        public static Other2Archive_GetArchiveListResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_GetArchiveListResponse>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        [MemoryPackOrder(3)]
+        public List<ArchiveInfoProto> ArchiveInfos { get; set; } = new();
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+            this.ArchiveInfos.Clear();
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_AddNewArchiveRequest)]
+    [ResponseType(nameof(Other2Archive_AddNewArchiveResponse))]
+    public partial class Other2Archive_AddNewArchiveRequest : MessageObject, IRequest
+    {
+        public static Other2Archive_AddNewArchiveRequest Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_AddNewArchiveRequest>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public string AccountName { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.AccountName = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_AddNewArchiveResponse)]
+    public partial class Other2Archive_AddNewArchiveResponse : MessageObject, IResponse
+    {
+        public static Other2Archive_AddNewArchiveResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_AddNewArchiveResponse>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_UpdateArchiveRequest)]
+    [ResponseType(nameof(Other2Archive_UpdateArchiveResponse))]
+    public partial class Other2Archive_UpdateArchiveRequest : MessageObject, IRequest
+    {
+        public static Other2Archive_UpdateArchiveRequest Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_UpdateArchiveRequest>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(3)]
+        public ArchiveInfoProto ArchiveInfo { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.ArchiveInfo = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_UpdateArchiveResponse)]
+    public partial class Other2Archive_UpdateArchiveResponse : MessageObject, IResponse
+    {
+        public static Other2Archive_UpdateArchiveResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_UpdateArchiveResponse>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_RemoveArchiveRequest)]
+    [ResponseType(nameof(Other2Archive_RemoveArchiveResponse))]
+    public partial class Other2Archive_RemoveArchiveRequest : MessageObject, IRequest
+    {
+        public static Other2Archive_RemoveArchiveRequest Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_RemoveArchiveRequest>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public string AccountName { get; set; }
+
+        [MemoryPackOrder(2)]
+        public int ArchiveNum { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.AccountName = default;
+            this.ArchiveNum = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_RemoveArchiveResponse)]
+    public partial class Other2Archive_RemoveArchiveResponse : MessageObject, IResponse
+    {
+        public static Other2Archive_RemoveArchiveResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_RemoveArchiveResponse>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
     public static class LoginInner
     {
         public const ushort R2G_GetLoginKey = 20002;
@@ -494,5 +783,14 @@ namespace ET
         public const ushort L2G_RemoveLoginRecord = 20014;
         public const ushort G2M_SecondLogin = 20015;
         public const ushort M2G_SecondLogin = 20016;
+        public const ushort ArchiveInfoProto = 20017;
+        public const ushort Other2Archive_GetArchiveListRequest = 20018;
+        public const ushort Other2Archive_GetArchiveListResponse = 20019;
+        public const ushort Other2Archive_AddNewArchiveRequest = 20020;
+        public const ushort Other2Archive_AddNewArchiveResponse = 20021;
+        public const ushort Other2Archive_UpdateArchiveRequest = 20022;
+        public const ushort Other2Archive_UpdateArchiveResponse = 20023;
+        public const ushort Other2Archive_RemoveArchiveRequest = 20024;
+        public const ushort Other2Archive_RemoveArchiveResponse = 20025;
     }
 }

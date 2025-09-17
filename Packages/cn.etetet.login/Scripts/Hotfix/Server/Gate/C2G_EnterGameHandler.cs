@@ -42,7 +42,7 @@ namespace ET.Server
                     try
                     {
                         var m2GSecondLogin = await session.Root().GetComponent<MessageLocationSenderComponent>().Get(LocationType.Unit)
-                                .Call(player.UnitId, G2M_SecondLogin.Create()) as M2G_SecondLogin;
+                                .Call(request.PlayerId, G2M_SecondLogin.Create()) as M2G_SecondLogin;
                         if (m2GSecondLogin.Error == ErrorCode.ERR_Success)
                         {
                             //TODO:二次登录逻辑，补全下发切换场景消息
@@ -62,6 +62,7 @@ namespace ET.Server
                         session?.Disconnect().NoContext();
                         throw;
                     }
+
                     return;
                 }
 
@@ -77,15 +78,12 @@ namespace ET.Server
                     // //这里可以从DB加载Unit
                     // Unit unit = UnitFactory.Create(scene, player.Id, UnitType.Player);
                     // long unitId = unit.Id;
-                    (bool isNewPlayer, Unit unit) = await UnitLoadHelper.LoadUnit(player);
-                    long unitId = unit.Id;
+                    (bool isNewPlayer, Unit unit) = await UnitLoadHelper.LoadPlayerUnit(player, request.PlayerId);
 
                     StartSceneConfig startSceneConfig = StartSceneConfigCategory.Instance.GetBySceneName(session.Zone(), "Map1");
-                    
+
                     //等到一帧的最后再传送，先让G2C_EnterMap返回，否则传送消息可能比G2C_EnterMap还早
-                    TransferHelper.TransferAtFrameFinish(unit,startSceneConfig.ActorId,startSceneConfig.Name).NoContext();
-                    player.UnitId = unitId;
-                    response.MyUnitId = unitId;
+                    TransferHelper.TransferAtFrameFinish(unit, startSceneConfig.ActorId, startSceneConfig.Name).NoContext();
                     player.playerState = PlayerState.Game;
                 }
                 catch (Exception e)

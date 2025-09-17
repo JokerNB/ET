@@ -13,7 +13,8 @@
 
             unit.AddComponent<ObjectWait>();
 
-            EventSystem.Instance.Publish(currentScene, new AfterUnitCreate() { Unit = unit });
+            if (unit.UnitType != UnitType.Player)
+                EventSystem.Instance.Publish(currentScene, new AfterUnitCreate() { Unit = unit });
             return unit;
         }
     }

@@ -13,13 +13,13 @@ namespace ET.Server
             unitComponent.AddChild(unit);
             unitComponent.Add(unit);
 
-            unit.AddComponent<UnitDBSaveComponent>();
+            // unit.AddComponent<UnitDBSaveComponent>();
             for (int i = 0; i < request.Entitys.Count; ++i)
             {
                 string k = request.Types[i];
                 Type t = CodeTypes.Instance.GetType(k);
                 byte[] v = request.Entitys[i];
-                unit.GetComponent<UnitDBSaveComponent>().AddToBytes(t, v);
+                // unit.GetComponent<UnitDBSaveComponent>().AddToBytes(t, v);
                 Entity entity = MongoHelper.Deserialize<Entity>(v);
                 unit.AddComponent(entity);
             }

@@ -12,5 +12,6 @@
         public string Password;
         public long CreateTime;
         public int AccountType;
+        public long PlayerId;
     }
 }

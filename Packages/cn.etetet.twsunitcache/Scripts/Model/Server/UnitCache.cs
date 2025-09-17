@@ -7,6 +7,6 @@ namespace ET.Server
     {
         public string key;
 
-        public Dictionary<long,byte[]> CacheComponentsDic = new Dictionary<long, byte[]>();
+        public Dictionary<long, byte[]> CacheComponentsDic = new Dictionary<long, byte[]>();
     }
 }

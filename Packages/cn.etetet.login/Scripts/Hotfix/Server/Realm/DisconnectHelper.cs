@@ -45,7 +45,7 @@ namespace ET.Server
                 case PlayerState.Game:
                     //通知游戏逻辑服下线Unit角色逻辑，并将数据存入数据库
                     var m2gRequestExitGame = await player.Root().GetComponent<MessageLocationSenderComponent>().Get(LocationType.Unit)
-                            .Call(player.UnitId, G2M_RequestExitGame.Create());
+                            .Call(player.PlayerId, G2M_RequestExitGame.Create());
 
                     //通知移除账号角色登录信息
                     G2L_RemoveLoginRecord g2LRemoveLoginRecord = G2L_RemoveLoginRecord.Create();

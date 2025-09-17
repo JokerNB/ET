@@ -3,7 +3,7 @@
     [ComponentOf(typeof(Scene))]
     public class PlayerComponent : Entity, IAwake
     {
-        public long MyId { get; set; }
+        public long PlayerId { get; set; }
         public string Token { get; set; }
 
         public long Key { get; set; }

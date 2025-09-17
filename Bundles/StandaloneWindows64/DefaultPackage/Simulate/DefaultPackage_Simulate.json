@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/9/17 19:13:34",
+    "PackageNote": "2025/9/18 4:54:42",
     "AssetList": [
         {
             "Address": "Map1",
@@ -989,7 +989,7 @@
             "UnityCRC": 0,
             "FileHash": "ce7e47b0a172656892651cbca85508e2",
             "FileCRC": "00000000",
-            "FileSize": 1073604,
+            "FileSize": 1163052,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1009,7 +1009,7 @@
             "UnityCRC": 0,
             "FileHash": "40a591389fcf28d6d3445f295201756e",
             "FileCRC": "00000000",
-            "FileSize": 1684397,
+            "FileSize": 1684401,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1979,7 +1979,7 @@
             "UnityCRC": 0,
             "FileHash": "45d28134004acf2881a1289685447b89",
             "FileCRC": "00000000",
-            "FileSize": 2361,
+            "FileSize": 2377,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

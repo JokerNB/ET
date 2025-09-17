@@ -29,6 +29,7 @@ namespace ET.Client
             await self.Root().GetComponent<TimerComponent>().WaitAsync(500);
             list.numItems = num + 12;
             await self.Root().GetComponent<TimerComponent>().WaitAsync(500);
+            await self.Root().GetComponent<FUIComponent>().ShowPanelAsync<MainUI>();
             self.Root().GetComponent<FUIComponent>().ClosePanel<LoginUI>();
         }
     }

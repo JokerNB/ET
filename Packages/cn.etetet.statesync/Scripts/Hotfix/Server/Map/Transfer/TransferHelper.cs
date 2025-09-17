@@ -19,7 +19,7 @@ namespace ET.Server
             // location加锁
             long unitId = unit.Id;
             
-            unit.GetComponent<UnitDBSaveComponent>().SaveChangeNoWait();
+            // unit.GetComponent<UnitDBSaveComponent>().SaveChangeNoWait();
 
             M2M_UnitTransferRequest request = M2M_UnitTransferRequest.Create();
             request.OldActorId = unit.GetActorId();
@@ -35,11 +35,11 @@ namespace ET.Server
                 }
             }
 
-            foreach (var kv in unit.GetComponent<UnitDBSaveComponent>().Bytes)
-            {
-                request.Entitys.Add(kv.Value);
-                request.Types.Add(kv.Key.FullName);
-            }
+            // foreach (var kv in unit.GetComponent<UnitDBSaveComponent>().Bytes)
+            // {
+            //     request.Entitys.Add(kv.Value);
+            //     request.Types.Add(kv.Key.FullName);
+            // }
 
             unit.Dispose();
 

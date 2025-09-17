@@ -22,6 +22,23 @@ message NetClient2Main_Login // IResponse
 	int64 PlayerId = 5;
 }
 
+// ResponseType NetClient2Main_LoginGame
+message Main2NetClient_LoginGame // IRequest
+{
+	int32 RpcId = 1;
+	string Account = 2;
+	int64 RealmKey = 3;
+	string GateAddress = 4;
+	int64 PlayerId = 5;
+}
+
+message NetClient2Main_LoginGame // IResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+}
+
 // ResponseType G2C_Ping
 message C2G_Ping // ISessionRequest
 {
@@ -34,23 +51,6 @@ message G2C_Ping // ISessionResponse
 	int32 Error = 2;
 	string Message = 3;
 	int64 Time = 4;
-}
-
-
-// ResponseType G2C_LoginGate
-message C2G_LoginGate // ISessionRequest
-{
-	int32 RpcId = 1;
-	int64 Key = 2;  // 帐号
-	int64 GateId = 3;
-}
-
-message G2C_LoginGate // ISessionResponse
-{
-	int32 RpcId = 1;
-	int32 Error = 2;
-	string Message = 3;
-	int64 PlayerId = 4;
 }
 
 // ResponseType R2C_LoginAccount
@@ -67,6 +67,7 @@ message R2C_LoginAccount // ISessionResponse
 	int32 Error = 2;
 	string Message = 3;
 	string Token = 4;
+	int64 PlayerId = 5;
 }
 
 message ServerInfoProto
@@ -111,29 +112,13 @@ message R2C_GetRealmKey // ISessionResponse
 	int64 GateId = 6;
 }
 
-// ResponseType NetClient2Main_LoginGame
-message Main2NetClient_LoginGame // IRequest
-{
-	int32 RpcId = 1;
-	string Account = 2;
-	int64 RealmKey = 3;
-	string GateAddress = 5;
-}
-
-message NetClient2Main_LoginGame // IResponse
-{
-	int32 RpcId = 1;
-	int32 Error = 2;
-	string Message = 3;
-	int64 PlayerId = 4;
-}
-
 // ResponseType G2C_LoginGameGate
 message C2G_LoginGameGate // ISessionRequest
 {
 	int32 RpcId = 1;
 	int64 Key = 2;
 	string AccountName = 3;
+	int64 PlayerId = 4;
 }
 
 message G2C_LoginGameGate // ISessionResponse
@@ -141,13 +126,13 @@ message G2C_LoginGameGate // ISessionResponse
 	int32 RpcId = 1;
 	int32 Error = 2;
 	string Message = 3;
-	int64 PlayerId = 4;
 }
 
 // ResponseType G2C_EnterGame
 message C2G_EnterGame // ISessionRequest
 {
 	int32 RpcId = 1;
+	int64 PlayerId = 2;
 }
 
 message G2C_EnterGame // ISessionResponse
@@ -155,5 +140,68 @@ message G2C_EnterGame // ISessionResponse
 	int32 RpcId = 1;
 	int32 Error = 2;
 	string Message = 3;
-	int64 MyUnitId = 4;
+}
+
+
+// ResponseType C2R_GetArchiveListResponse
+message C2R_GetArchiveListRequest // ISessionRequest
+{
+	int32 RpcId = 1;
+	string Token = 2;
+	string AccountName = 3;
+}
+
+message C2R_GetArchiveListResponse // ISessionResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+	repeated ArchiveInfoProto ArchiveInfoList = 4;
+}
+
+// ResponseType C2R_AddNewArchiveResponse
+message C2R_AddNewArchiveRequest // ISessionRequest
+{
+	int32 RpcId = 1;
+	string Token = 2;
+	string AccountName = 3;
+}
+
+message C2R_AddNewArchiveResponse // ISessionResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+	repeated ArchiveInfoProto ArchiveInfoList = 4;
+}
+
+// ResponseType C2R_RemoveArchiveResponse
+message C2R_RemoveArchiveRequest // ISessionRequest
+{
+	int32 RpcId = 1;
+	string Token = 2;
+	string AccountName = 3;
+	int32 ArchiveNum = 4;
+}
+
+message C2R_RemoveArchiveResponse // ISessionResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+}
+
+// ResponseType C2M_UpdateArchiveResponse
+message C2M_UpdateArchiveRequest // ISessionRequest
+{
+	int32 RpcId = 1;
+	string Token = 2;
+	ArchiveInfoProto ArchiveInfoProto = 3;
+}
+
+message C2M_UpdateArchiveResponse // ISessionResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
 }

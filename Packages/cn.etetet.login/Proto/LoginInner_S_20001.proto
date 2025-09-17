@@ -106,3 +106,68 @@ message M2G_SecondLogin // ILocationResponse
 	int32 Error = 2;
 	string Message = 3;
 }
+
+
+message ArchiveInfoProto
+{
+	int64 AccountHash = 1;
+	repeated int64 Recruits = 2;
+}
+
+//ResponseType Other2Archive_GetArchiveListResponse
+message Other2Archive_GetArchiveListRequest // IRequest
+{
+	int32 RpcId = 1;
+	string AccountName = 2;
+}
+
+message Other2Archive_GetArchiveListResponse // IResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+	repeated ArchiveInfoProto ArchiveInfos = 4;
+}
+
+//ResponseType Other2Archive_AddNewArchiveResponse
+message Other2Archive_AddNewArchiveRequest // IRequest
+{
+	int32 RpcId = 1;
+	string AccountName = 2;
+}
+
+message Other2Archive_AddNewArchiveResponse // IResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+}
+
+//ResponseType Other2Archive_UpdateArchiveResponse
+message Other2Archive_UpdateArchiveRequest // IRequest
+{
+	int32 RpcId = 1;
+	ArchiveInfoProto ArchiveInfo = 4;
+}
+
+message Other2Archive_UpdateArchiveResponse // IResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+}
+
+//ResponseType Other2Archive_RemoveArchiveResponse
+message Other2Archive_RemoveArchiveRequest // IRequest
+{
+	int32 RpcId = 1;
+	string AccountName = 2;
+	int32 ArchiveNum = 3;
+}
+
+message Other2Archive_RemoveArchiveResponse // IResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+}

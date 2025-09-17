@@ -58,9 +58,9 @@
                     Player player = playerComponent.GetByAccount(request.AccountName);
                     if (player == null)
                     {
-                        long unitId = IdGenerater.Instance.GenerateId();
-                        player = playerComponent.AddChildWithId<Player, string>(unitId, account);
-                        player.UnitId = unitId;
+                        long playerId = request.PlayerId;
+                        player = playerComponent.AddChildWithId<Player, string>(playerId, account);
+                        player.PlayerId = playerId;
                         
                         playerComponent.Add(player);
                         PlayerSessionComponent playerSessionComponent = player.AddComponent<PlayerSessionComponent>();
@@ -81,8 +81,6 @@
                         session.AddComponent<SessionPlayerComponent>().Player = player;
                         player.GetComponent<PlayerSessionComponent>().Session = session;
                     }
-
-                    response.PlayerId = player.Id;
                 }
             }
         }

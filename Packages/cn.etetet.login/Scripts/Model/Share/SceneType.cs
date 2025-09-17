@@ -7,5 +7,6 @@
 		public const int Router = PackageType.Login * 1000 + 3;
 		public const int RouterManager = PackageType.Login * 1000 + 4;
 		public const int LoginCenter = PackageType.Login * 1000 + 5; //登录中心服
+		public const int ArchiveCenter = PackageType.Login * 1000 + 6; //存档中心服
 	}
 }

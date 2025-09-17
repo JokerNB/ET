@@ -45,10 +45,23 @@ namespace ET.Client
                 Log.Error("获取RealmKey失败");
                 return;
             }
+            
+            C2R_GetArchiveListRequest c2RGetArchiveListRequest = C2R_GetArchiveListRequest.Create();
+            c2RGetArchiveListRequest.AccountName = account;
+            c2RGetArchiveListRequest.Token = token;
+            C2R_GetArchiveListResponse c2RGetArchiveListResponse = await clientSenderComponent.Call(c2RGetArchiveListRequest) as C2R_GetArchiveListResponse;
+            if (c2RGetArchiveListResponse.Error != ErrorCode.ERR_Success)
+            {
+                Log.Error("获取存档列表失败");
+                return;
+            }
+            root.GetComponent<ArchiveInfoManagerComponent_Client>().InitArchiveList(c2RGetArchiveListResponse.ArchiveInfoList);
+
             var playerComponent = root.GetComponent<PlayerComponent>();
             playerComponent.Token = token;
             playerComponent.Key = r2CGetRealmKey.Key;
-            playerComponent.Address = address;
+            playerComponent.Address = r2CGetRealmKey.Address;
+            playerComponent.PlayerId = netClient2MainLogin.PlayerId;
             
             await EventSystem.Instance.PublishAsync(root, new LoginFinish());
         }

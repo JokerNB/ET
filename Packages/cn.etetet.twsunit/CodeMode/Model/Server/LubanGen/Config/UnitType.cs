@@ -12,117 +12,121 @@ namespace ET
     public enum UnitType
     {
         /// <summary>
+        /// 玩家
+        /// </summary>
+        Player = 0,
+        /// <summary>
         /// 无业游民
         /// </summary>
-        None = 0,
+        HomeLess = 1,
         /// <summary>
         /// 农民
         /// </summary>
-        Famer = 1,
+        Famer = 2,
         /// <summary>
         /// 樵夫
         /// </summary>
-        LumberJack = 2,
+        LumberJack = 3,
         /// <summary>
         /// 渔夫
         /// </summary>
-        FisherMan = 3,
+        FisherMan = 4,
         /// <summary>
         /// 矿工
         /// </summary>
-        Miner = 4,
+        Miner = 5,
         /// <summary>
         /// 面包师
         /// </summary>
-        Baker = 5,
+        Baker = 6,
         /// <summary>
         /// 厨师
         /// </summary>
-        Cook = 6,
+        Cook = 7,
         /// <summary>
         /// 铁匠
         /// </summary>
-        BlackSmith = 7,
+        BlackSmith = 8,
         /// <summary>
         /// 木匠
         /// </summary>
-        Carpenter = 8,
+        Carpenter = 9,
         /// <summary>
         /// 裁缝
         /// </summary>
-        Tailor = 9,
+        Tailor = 10,
         /// <summary>
         /// 陶工
         /// </summary>
-        Potter = 10,
+        Potter = 11,
         /// <summary>
         /// 酿酒师
         /// </summary>
-        Brewer = 11,
+        Brewer = 12,
         /// <summary>
         /// 珠宝匠
         /// </summary>
-        Jeweler = 12,
+        Jeweler = 13,
         /// <summary>
         /// 商人
         /// </summary>
-        Merchant = 13,
+        Merchant = 14,
         /// <summary>
         /// 医生
         /// </summary>
-        Physician = 14,
+        Physician = 15,
         /// <summary>
         /// 教师
         /// </summary>
-        Teacher = 15,
+        Teacher = 16,
         /// <summary>
         /// 牧师
         /// </summary>
-        Priest = 16,
+        Priest = 17,
         /// <summary>
         /// 士兵
         /// </summary>
-        Soldier = 17,
+        Soldier = 18,
         /// <summary>
         /// 车夫
         /// </summary>
-        CartDriver = 18,
+        CartDriver = 19,
         /// <summary>
         /// 吟游诗人
         /// </summary>
-        Bard = 19,
+        Bard = 20,
         /// <summary>
         /// 演员
         /// </summary>
-        Actor = 20,
+        Actor = 21,
         /// <summary>
         /// 管理者
         /// </summary>
-        Clerk = 21,
+        Clerk = 22,
         /// <summary>
         /// 税务官
         /// </summary>
-        TxCollector = 22,
+        TxCollector = 23,
         /// <summary>
         /// 学者
         /// </summary>
-        Scholar = 23,
+        Scholar = 24,
         /// <summary>
         /// 贵族
         /// </summary>
-        Noble = 24,
+        Noble = 25,
         /// <summary>
         /// 工程师
         /// </summary>
-        Engineer = 25,
+        Engineer = 26,
         /// <summary>
         /// 冒险者
         /// </summary>
-        Adventurer = 26,
+        Adventurer = 27,
         /// <summary>
         /// 小偷
         /// </summary>
-        Chief = 27,
+        Chief = 28,
     }
 
 } 

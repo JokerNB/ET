@@ -56,6 +56,14 @@
     "Port": 20102
   },
   {
+    "Id": 203,
+    "Process": 1,
+    "Zone": 1000,
+    "SceneType": "ArchiveCenter",
+    "Name": "ArchiveCenter",
+    "Port": 0
+  },
+  {
     "Id": 301,
     "Process": 1,
     "Zone": 1,

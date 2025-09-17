@@ -9,7 +9,7 @@ namespace ET
     /// 如果需要快照数据时 可拷贝目标的NumericData 就可以打破只能挂载一个数据的局限性
     /// </summary>
     [ComponentOf]
-    public class NumericDataComponent : Entity, IAwake, IDestroy, ITransfer, IDeserialize
+    public class NumericDataComponent : Entity, IAwake, IDestroy, IDeserialize, IUnitCache
     {
         //外部禁止访问使用此值 你应该只使用 NumericDataComponentSystem 中的扩展方法
         [BsonElement]

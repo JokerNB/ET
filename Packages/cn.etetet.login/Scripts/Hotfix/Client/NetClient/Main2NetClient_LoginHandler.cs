@@ -43,6 +43,7 @@ namespace ET.Client
             
             response.Token = r2CLoginAccount.Token;
             response.Error = r2CLoginAccount.Error;
+            response.PlayerId = r2CLoginAccount.PlayerId;
         }
     }
 }

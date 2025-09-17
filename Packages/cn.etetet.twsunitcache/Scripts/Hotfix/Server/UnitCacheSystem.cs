@@ -56,17 +56,14 @@
             if (entity == null)
                 return;
             //TODO:传入的Entity与已缓存的反序列化的Entity是否有区别（entity数据未改变的情况下）
-            if (self.CacheComponentsDic.TryGetValue(entity.Id, out byte[] oldEntityBson))
+            if (self.CacheComponentsDic.ContainsKey(entity.Id))
             {
-                Entity oldEntity = MongoHelper.Deserialize<Entity>(oldEntityBson);
-                if (entity != oldEntity)
-                    oldEntity.Dispose();
-                Log.Error(
-                    $"UnitCache AddOrUpdate , oldEntityName : {oldEntity.GetType().FullName} , entityName : {entity.GetType().FullName} , 是否为同一个Entity : {oldEntity == entity}");
-                self.CacheComponentsDic.Remove(entity.Id);
+                self.CacheComponentsDic[entity.Id] = entity.ToBson();
             }
-
-            self.CacheComponentsDic.Add(entity.Id, entity.ToBson());
+            else
+            {
+                self.CacheComponentsDic.Add(entity.Id, entity.ToBson());
+            }
         }
     }
 }

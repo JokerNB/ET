@@ -15,6 +15,7 @@ namespace ET.Server
                     await dbComponent.CreateIndex(Builders<Unit>.IndexKeys.Ascending(v => v.ConfigId));
                     // 插入初始数据……
                     await dbComponent.CreateCollection<KnapsackComponent>();
+                    await dbComponent.CreateCollection<NumericDataComponent>();
                     break;
                 case 2: // 机器人区
                     break;
@@ -22,6 +23,7 @@ namespace ET.Server
                     break;
                 case 1000: //登录服
                     await dbComponent.CreateCollection<Account>();
+                    await dbComponent.CreateCollection<ArchiveInfo>();
                     break;
             }
             await ETTask.CompletedTask;
