@@ -36,23 +36,6 @@ message G2C_Ping // ISessionResponse
 	int64 Time = 4;
 }
 
-// ResponseType R2C_Login
-message C2R_Login // ISessionRequest
-{
-	int32 RpcId = 1;
-	string  Account = 2;  // 帐号
-	string  Password = 3;  // 密码
-}
-
-message R2C_Login // ISessionResponse
-{
-	int32 RpcId = 1;
-	int32 Error = 2;
-	string Message = 3;
-	string Address = 4;
-	int64 Key = 5;
-	int64 GateId = 6;
-}
 
 // ResponseType G2C_LoginGate
 message C2G_LoginGate // ISessionRequest
@@ -109,70 +92,6 @@ message R2C_GetServerInfos // ISessionResponse
 	repeated ServerInfoProto ServerInfoList = 4;
 }
 
-message RoleInfoProto
-{
-	int64 Id = 1;
-	string Name = 2;
-	int32 State = 3;
-	string Account = 4;
-	int64 LastLoginTime = 5;
-	int64 CreateTime = 6;
-	int32 ServerId = 7;
-}
-
-// ResponseType R2C_GetRoles
-message C2R_GetRoles // ISessionRequest
-{
-	int32 RpcId = 1;
-	string Token = 2;
-	string Account = 3;
-	int32 ServerId = 4;
-}
-
-message R2C_GetRoles // ISessionResponse
-{
-	int32 RpcId = 1;
-	int32 Error = 2;
-	string Message = 3;
-	repeated RoleInfoProto RoleInfos = 4;
-}
-
-// ResponseType R2C_CreateRole
-message C2R_CreateRole // ISessionRequest
-{
-	int32 RpcId = 1;
-	string Token = 2;
-	string Account = 3;
-	int32 ServerId = 4;
-	string RoleName = 5;
-}
-
-message R2C_CreateRole // ISessionResponse
-{
-	int32 RpcId = 1;
-	int32 Error = 2;
-	string Message = 3;
-	RoleInfoProto RoleInfo = 4;
-}
-
-// ResponseType R2C_DeleteRole
-message C2R_DeleteRole // ISessionRequest
-{
-	int32 RpcId = 1;
-	string Token = 2;
-	string Account = 3;
-	int32 ServerId = 4;
-	int32 RoleInfoId = 5;
-}
-
-message R2C_DeleteRole // ISessionResponse
-{
-	int32 RpcId = 1;
-	int32 Error = 2;
-	string Message = 3;
-	int64 DeletedRoleInfoID = 4;
-}
-
 // ResponseType R2C_GetRealmKey
 message C2R_GetRealmKey // ISessionRequest
 {
@@ -198,7 +117,6 @@ message Main2NetClient_LoginGame // IRequest
 	int32 RpcId = 1;
 	string Account = 2;
 	int64 RealmKey = 3;
-	int64 RoleId = 4;
 	string GateAddress = 5;
 }
 
@@ -216,7 +134,6 @@ message C2G_LoginGameGate // ISessionRequest
 	int32 RpcId = 1;
 	int64 Key = 2;
 	string AccountName = 3;
-	int64 RoleId = 4;
 }
 
 message G2C_LoginGameGate // ISessionResponse

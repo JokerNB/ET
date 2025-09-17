@@ -1,10 +1,10 @@
-namespace ET.Server
+namespace ET
 {
     [EntitySystemOf(typeof(Unit))]
     public static partial class UnitSystem
     {
         [EntitySystem]
-        private static void GetComponentSys(this ET.Server.Unit self, System.Type args2)
+        private static void GetComponentSys(this ET.Unit self, System.Type args2)
         {
 
         }

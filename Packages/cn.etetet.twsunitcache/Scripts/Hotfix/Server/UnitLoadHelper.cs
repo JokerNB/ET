@@ -9,7 +9,6 @@ namespace ET.Server
             GateMapComponent gateMapComponent = player.AddComponent<GateMapComponent>();
             gateMapComponent.Scene = await GateMapFactory.Create(gateMapComponent, player.Id, IdGenerater.Instance.GenerateInstanceId(), "GateMap");
             Unit unit = await UnitCacheHelper.GetUnitCache(player.Root(), gateMapComponent.Scene, player.UnitId);
-
             bool isNewUnit = unit == null;
             if (isNewUnit)
             {
@@ -19,6 +18,7 @@ namespace ET.Server
 
                 UnitCacheHelper.AddOrUpdateUnitAllCache(unit);
             }
+
             //非缓存服需要存储数据的组件
             if (unit.GetComponent<UnitDBSaveComponent>() == null)
                 unit.AddComponent<UnitDBSaveComponent>();

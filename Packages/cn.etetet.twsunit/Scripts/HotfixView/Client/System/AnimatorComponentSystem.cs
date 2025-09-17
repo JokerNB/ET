@@ -17,7 +17,7 @@ namespace ET.Client
 		[EntitySystem]
 		private static void Awake(this AnimatorComponent self)
 		{
-			Animator animator = self.GetParent<Unit_Client>().GetComponent<GameObjectComponent>().GameObject.GetComponent<Animator>();
+			Animator animator = self.GetParent<Unit>().GetComponent<GameObjectComponent>().GameObject.GetComponent<Animator>();
 
 			if (animator == null)
 			{

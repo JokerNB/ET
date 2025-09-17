@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/9/12 22:41:18",
+    "PackageNote": "2025/9/17 14:57:38",
     "AssetList": [
         {
             "Address": "Map1",
@@ -123,11 +123,43 @@
             "DependBundleIDs": []
         },
         {
+            "Address": "Main_atlas0",
+            "AssetPath": "Packages/cn.etetet.twsui/Res/Main/Main_atlas0.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Main_fui",
+            "AssetPath": "Packages/cn.etetet.twsui/Res/Main/Main_fui.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "MainUI_atlas0",
+            "AssetPath": "Packages/cn.etetet.twsui/Res/MainUI/MainUI_atlas0.png",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "MainUI_fui",
+            "AssetPath": "Packages/cn.etetet.twsui/Res/MainUI/MainUI_fui.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6,
+            "DependBundleIDs": []
+        },
+        {
             "Address": "Role_027",
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_027/Role_027.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 5,
+            "BundleID": 7,
             "DependBundleIDs": []
         },
         {
@@ -135,7 +167,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_028/Role_028.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 8,
             "DependBundleIDs": []
         },
         {
@@ -143,7 +175,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_029/Role_029.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 7,
+            "BundleID": 9,
             "DependBundleIDs": []
         },
         {
@@ -151,7 +183,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_030/Role_030.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 8,
+            "BundleID": 10,
             "DependBundleIDs": []
         },
         {
@@ -159,7 +191,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_031/Role_031.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 9,
+            "BundleID": 11,
             "DependBundleIDs": []
         },
         {
@@ -167,7 +199,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_032/Role_032.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 12,
             "DependBundleIDs": []
         },
         {
@@ -175,7 +207,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_033/Role_033.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 11,
+            "BundleID": 13,
             "DependBundleIDs": []
         },
         {
@@ -183,7 +215,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_034/Role_034.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 14,
             "DependBundleIDs": []
         },
         {
@@ -191,7 +223,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_035/Role_035.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependBundleIDs": []
         },
         {
@@ -199,7 +231,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_036/Role_036.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 14,
+            "BundleID": 16,
             "DependBundleIDs": []
         },
         {
@@ -207,7 +239,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_037/Role_037.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 15,
+            "BundleID": 17,
             "DependBundleIDs": []
         },
         {
@@ -215,7 +247,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_038/Role_038.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 16,
+            "BundleID": 18,
             "DependBundleIDs": []
         },
         {
@@ -223,7 +255,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_039/Role_039.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 17,
+            "BundleID": 19,
             "DependBundleIDs": []
         },
         {
@@ -231,7 +263,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_040/Role_040.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 18,
+            "BundleID": 20,
             "DependBundleIDs": []
         },
         {
@@ -239,7 +271,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_041/Role_041.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 19,
+            "BundleID": 21,
             "DependBundleIDs": []
         },
         {
@@ -247,7 +279,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_042/Role_042.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 20,
+            "BundleID": 22,
             "DependBundleIDs": []
         },
         {
@@ -255,7 +287,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_043/Role_043.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 21,
+            "BundleID": 23,
             "DependBundleIDs": []
         },
         {
@@ -263,7 +295,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_044/Role_044.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 22,
+            "BundleID": 24,
             "DependBundleIDs": []
         },
         {
@@ -271,7 +303,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_045/Role_045.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 23,
+            "BundleID": 25,
             "DependBundleIDs": []
         },
         {
@@ -279,7 +311,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_046/Role_046.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 24,
+            "BundleID": 26,
             "DependBundleIDs": []
         },
         {
@@ -287,7 +319,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_047/Role_047.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 25,
+            "BundleID": 27,
             "DependBundleIDs": []
         },
         {
@@ -295,7 +327,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_048/Role_048.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 26,
+            "BundleID": 28,
             "DependBundleIDs": []
         },
         {
@@ -303,7 +335,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_049/Role_049.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 27,
+            "BundleID": 29,
             "DependBundleIDs": []
         },
         {
@@ -311,7 +343,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_050/Role_050.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 28,
+            "BundleID": 30,
             "DependBundleIDs": []
         },
         {
@@ -319,7 +351,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_051/Role_051.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 29,
+            "BundleID": 31,
             "DependBundleIDs": []
         },
         {
@@ -327,7 +359,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_052/Role_052.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 30,
+            "BundleID": 32,
             "DependBundleIDs": []
         },
         {
@@ -335,7 +367,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_053/Role_053.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 31,
+            "BundleID": 33,
             "DependBundleIDs": []
         },
         {
@@ -343,7 +375,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_054/Role_054.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 32,
+            "BundleID": 34,
             "DependBundleIDs": []
         },
         {
@@ -351,7 +383,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_055/Role_055.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 33,
+            "BundleID": 35,
             "DependBundleIDs": []
         },
         {
@@ -359,7 +391,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_056/Role_056.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 34,
+            "BundleID": 36,
             "DependBundleIDs": []
         },
         {
@@ -367,7 +399,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_057/Role_057.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 35,
+            "BundleID": 37,
             "DependBundleIDs": []
         },
         {
@@ -375,7 +407,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_058/Role_058.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 36,
+            "BundleID": 38,
             "DependBundleIDs": []
         },
         {
@@ -383,7 +415,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_059/Role_059.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 37,
+            "BundleID": 39,
             "DependBundleIDs": []
         },
         {
@@ -391,7 +423,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_060/Role_060.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 38,
+            "BundleID": 40,
             "DependBundleIDs": []
         },
         {
@@ -399,7 +431,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_061/Role_061.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 39,
+            "BundleID": 41,
             "DependBundleIDs": []
         },
         {
@@ -407,7 +439,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_062/Role_062.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 40,
+            "BundleID": 42,
             "DependBundleIDs": []
         },
         {
@@ -415,7 +447,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_063/Role_063.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 41,
+            "BundleID": 43,
             "DependBundleIDs": []
         },
         {
@@ -423,7 +455,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_064/Role_064.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 42,
+            "BundleID": 44,
             "DependBundleIDs": []
         },
         {
@@ -431,7 +463,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_065/Role_065.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 43,
+            "BundleID": 45,
             "DependBundleIDs": []
         },
         {
@@ -439,7 +471,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_066/Role_066.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 44,
+            "BundleID": 46,
             "DependBundleIDs": []
         },
         {
@@ -447,7 +479,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_067/Role_067.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 45,
+            "BundleID": 47,
             "DependBundleIDs": []
         },
         {
@@ -455,7 +487,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_068/Role_068.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 46,
+            "BundleID": 48,
             "DependBundleIDs": []
         },
         {
@@ -463,7 +495,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_069/Role_069.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 47,
+            "BundleID": 49,
             "DependBundleIDs": []
         },
         {
@@ -471,7 +503,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_070/Role_070.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 48,
+            "BundleID": 50,
             "DependBundleIDs": []
         },
         {
@@ -479,7 +511,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_071/Role_071.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 49,
+            "BundleID": 51,
             "DependBundleIDs": []
         },
         {
@@ -487,7 +519,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_072/Role_072.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 50,
+            "BundleID": 52,
             "DependBundleIDs": []
         },
         {
@@ -495,7 +527,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_073/Role_073.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 51,
+            "BundleID": 53,
             "DependBundleIDs": []
         },
         {
@@ -503,7 +535,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_074/Role_074.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 52,
+            "BundleID": 54,
             "DependBundleIDs": []
         },
         {
@@ -511,7 +543,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_075/Role_075.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 53,
+            "BundleID": 55,
             "DependBundleIDs": []
         },
         {
@@ -519,7 +551,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_076/Role_076.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 54,
+            "BundleID": 56,
             "DependBundleIDs": []
         },
         {
@@ -527,7 +559,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_077/Role_077.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 55,
+            "BundleID": 57,
             "DependBundleIDs": []
         },
         {
@@ -535,7 +567,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_078/Role_078.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 56,
+            "BundleID": 58,
             "DependBundleIDs": []
         },
         {
@@ -543,7 +575,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_079/Role_079.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 57,
+            "BundleID": 59,
             "DependBundleIDs": []
         },
         {
@@ -551,7 +583,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_080/Role_080.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 58,
+            "BundleID": 60,
             "DependBundleIDs": []
         },
         {
@@ -559,7 +591,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_081/Role_081.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 59,
+            "BundleID": 61,
             "DependBundleIDs": []
         },
         {
@@ -567,7 +599,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_082/Role_082.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 60,
+            "BundleID": 62,
             "DependBundleIDs": []
         },
         {
@@ -575,7 +607,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_083/Role_083.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 61,
+            "BundleID": 63,
             "DependBundleIDs": []
         },
         {
@@ -583,7 +615,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_084/Role_084.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 62,
+            "BundleID": 64,
             "DependBundleIDs": []
         },
         {
@@ -591,7 +623,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_085/Role_085.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 63,
+            "BundleID": 65,
             "DependBundleIDs": []
         },
         {
@@ -599,7 +631,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_086/Role_086.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 64,
+            "BundleID": 66,
             "DependBundleIDs": []
         },
         {
@@ -607,7 +639,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_087/Role_087.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 65,
+            "BundleID": 67,
             "DependBundleIDs": []
         },
         {
@@ -615,7 +647,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_088/Role_088.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 66,
+            "BundleID": 68,
             "DependBundleIDs": []
         },
         {
@@ -623,7 +655,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_089/Role_089.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 67,
+            "BundleID": 69,
             "DependBundleIDs": []
         },
         {
@@ -631,7 +663,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_090/Role_090.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 68,
+            "BundleID": 70,
             "DependBundleIDs": []
         },
         {
@@ -639,7 +671,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_091/Role_091.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 69,
+            "BundleID": 71,
             "DependBundleIDs": []
         },
         {
@@ -647,7 +679,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_092/Role_092.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 70,
+            "BundleID": 72,
             "DependBundleIDs": []
         },
         {
@@ -655,7 +687,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_093/Role_093.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 71,
+            "BundleID": 73,
             "DependBundleIDs": []
         },
         {
@@ -663,7 +695,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_094/Role_094.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 72,
+            "BundleID": 74,
             "DependBundleIDs": []
         },
         {
@@ -671,7 +703,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_095/Role_095.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 73,
+            "BundleID": 75,
             "DependBundleIDs": []
         },
         {
@@ -679,7 +711,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_096/Role_096.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 74,
+            "BundleID": 76,
             "DependBundleIDs": []
         },
         {
@@ -687,7 +719,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_097/Role_097.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 75,
+            "BundleID": 77,
             "DependBundleIDs": []
         },
         {
@@ -695,7 +727,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_098/Role_098.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 76,
+            "BundleID": 78,
             "DependBundleIDs": []
         },
         {
@@ -703,7 +735,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_099/Role_099.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 77,
+            "BundleID": 79,
             "DependBundleIDs": []
         },
         {
@@ -711,7 +743,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_100/Role_100.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 78,
+            "BundleID": 80,
             "DependBundleIDs": []
         },
         {
@@ -719,7 +751,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_101/Role_101.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 79,
+            "BundleID": 81,
             "DependBundleIDs": []
         },
         {
@@ -727,7 +759,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_102/Role_102.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 80,
+            "BundleID": 82,
             "DependBundleIDs": []
         },
         {
@@ -735,7 +767,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_103/Role_103.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 81,
+            "BundleID": 83,
             "DependBundleIDs": []
         },
         {
@@ -743,7 +775,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_104/Role_104.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 82,
+            "BundleID": 84,
             "DependBundleIDs": []
         },
         {
@@ -751,7 +783,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_105/Role_105.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 83,
+            "BundleID": 85,
             "DependBundleIDs": []
         },
         {
@@ -759,7 +791,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_106/Role_106.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 84,
+            "BundleID": 86,
             "DependBundleIDs": []
         },
         {
@@ -767,7 +799,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_107/Role_107.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 85,
+            "BundleID": 87,
             "DependBundleIDs": []
         },
         {
@@ -775,7 +807,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_108/Role_108.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 86,
+            "BundleID": 88,
             "DependBundleIDs": []
         },
         {
@@ -783,7 +815,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_109/Role_109.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 87,
+            "BundleID": 89,
             "DependBundleIDs": []
         },
         {
@@ -791,7 +823,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_110/Role_110.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 88,
+            "BundleID": 90,
             "DependBundleIDs": []
         },
         {
@@ -799,7 +831,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_111/Role_111.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 89,
+            "BundleID": 91,
             "DependBundleIDs": []
         },
         {
@@ -807,7 +839,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_112/Role_112.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 90,
+            "BundleID": 92,
             "DependBundleIDs": []
         },
         {
@@ -815,7 +847,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_113/Role_113.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 91,
+            "BundleID": 93,
             "DependBundleIDs": []
         },
         {
@@ -823,7 +855,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_114/Role_114.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 92,
+            "BundleID": 94,
             "DependBundleIDs": []
         },
         {
@@ -831,7 +863,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_115/Role_115.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 93,
+            "BundleID": 95,
             "DependBundleIDs": []
         },
         {
@@ -839,7 +871,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_116/Role_116.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 94,
+            "BundleID": 96,
             "DependBundleIDs": []
         },
         {
@@ -847,7 +879,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_117/Role_117.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 95,
+            "BundleID": 97,
             "DependBundleIDs": []
         },
         {
@@ -855,7 +887,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_118/Role_118.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 96,
+            "BundleID": 98,
             "DependBundleIDs": []
         },
         {
@@ -863,7 +895,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_119/Role_119.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 97,
+            "BundleID": 99,
             "DependBundleIDs": []
         },
         {
@@ -871,7 +903,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_120/Role_120.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 98,
+            "BundleID": 100,
             "DependBundleIDs": []
         },
         {
@@ -879,7 +911,7 @@
             "AssetPath": "Packages/cn.etetet.twsunit/Assets/GameRes/Bundles/Role_121/Role_121.prefab",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 99,
+            "BundleID": 101,
             "DependBundleIDs": []
         },
         {
@@ -887,7 +919,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/AIConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 100,
+            "BundleID": 102,
             "DependBundleIDs": []
         },
         {
@@ -895,7 +927,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/ItemConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 100,
+            "BundleID": 102,
             "DependBundleIDs": []
         },
         {
@@ -903,7 +935,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericLocalizationConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 100,
+            "BundleID": 102,
             "DependBundleIDs": []
         },
         {
@@ -911,7 +943,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueAffectConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 100,
+            "BundleID": 102,
             "DependBundleIDs": []
         },
         {
@@ -919,7 +951,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueCheckConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 100,
+            "BundleID": 102,
             "DependBundleIDs": []
         },
         {
@@ -927,7 +959,15 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/NumericValueLimitConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 100,
+            "BundleID": 102,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "TileItemConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/TileItemConfigCategory.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 102,
             "DependBundleIDs": []
         },
         {
@@ -935,7 +975,7 @@
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/UnitConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 100,
+            "BundleID": 102,
             "DependBundleIDs": []
         }
     ],
@@ -945,7 +985,7 @@
             "UnityCRC": 0,
             "FileHash": "a44c2e41b4bd62cf70e61cb988734306",
             "FileCRC": "00000000",
-            "FileSize": 25423,
+            "FileSize": 21045,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -965,7 +1005,7 @@
             "UnityCRC": 0,
             "FileHash": "ce7e47b0a172656892651cbca85508e2",
             "FileCRC": "00000000",
-            "FileSize": 1193956,
+            "FileSize": 1070628,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -986,6 +1026,26 @@
             "FileHash": "40a591389fcf28d6d3445f295201756e",
             "FileCRC": "00000000",
             "FileSize": 1684400,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsui_res_main.bundle",
+            "UnityCRC": 0,
+            "FileHash": "c6f5933cadfa56fb1d38aa96c029d650",
+            "FileCRC": "00000000",
+            "FileSize": 41190,
+            "Encrypted": false,
+            "Tags": [],
+            "DependBundleIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_packages_cn_etetet_twsui_res_mainui.bundle",
+            "UnityCRC": 0,
+            "FileHash": "539c8bd68aaa53b9d5d8a47c13287f3a",
+            "FileCRC": "00000000",
+            "FileSize": 41192,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1945,7 +2005,7 @@
             "UnityCRC": 0,
             "FileHash": "45d28134004acf2881a1289685447b89",
             "FileCRC": "00000000",
-            "FileSize": 918,
+            "FileSize": 2361,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

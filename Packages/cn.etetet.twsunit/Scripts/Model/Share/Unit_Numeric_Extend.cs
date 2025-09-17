@@ -1,6 +1,6 @@
-﻿namespace ET.Client
+﻿namespace ET
 {
-    public partial class Unit_Client
+    public partial class Unit
     {
         //TODO 以后这里做成分析器
         //给高频使用的组件Component上添加一个特性

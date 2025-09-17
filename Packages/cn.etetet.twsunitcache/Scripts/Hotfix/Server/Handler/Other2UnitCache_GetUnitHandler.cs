@@ -15,7 +15,7 @@ namespace ET.Server
             {
                 if (request.ComponentNameList.Count == 0)
                 {
-                    string unitName = typeof(Unit).FullName ?? "ET.Server.Unit";
+                    string unitName = typeof(Unit).FullName ?? "ET.Unit";
                     dic.Add(unitName, null);
                     foreach (var s in unitCacheComponent.UnitCacheKeyList)
                     {

@@ -6,7 +6,7 @@
 		protected override async ETTask Run(Scene root, M2C_CreateUnits message)
 		{
 			Scene currentScene = root.CurrentScene();
-			UnitComponent_Client unitComponent = currentScene.GetComponent<UnitComponent_Client>();
+			UnitComponent unitComponent = currentScene.GetComponent<UnitComponent>();
 			
 			foreach (UnitInfo unitInfo in message.Units)
 			{
@@ -14,7 +14,7 @@
 				{
 					continue;
 				}
-				Unit_Client unit = UnitFactory.Create(currentScene, unitInfo);
+				Unit unit = UnitFactory.Create(currentScene, unitInfo);
 			}
 			await ETTask.CompletedTask;
 		}

@@ -30,6 +30,6 @@
 
     public struct AfterUnitCreate
     {
-        public Unit_Client Unit;
+        public Unit Unit;
     }
 }

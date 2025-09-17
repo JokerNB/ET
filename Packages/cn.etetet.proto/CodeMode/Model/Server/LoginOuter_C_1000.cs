@@ -156,91 +156,6 @@ namespace ET
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.C2R_Login)]
-    [ResponseType(nameof(R2C_Login))]
-    public partial class C2R_Login : MessageObject, ISessionRequest
-    {
-        public static C2R_Login Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<C2R_Login>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        /// <summary>
-        /// 帐号
-        /// </summary>
-        [MemoryPackOrder(1)]
-        public string Account { get; set; }
-
-        /// <summary>
-        /// 密码
-        /// </summary>
-        [MemoryPackOrder(2)]
-        public string Password { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Account = default;
-            this.Password = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.R2C_Login)]
-    public partial class R2C_Login : MessageObject, ISessionResponse
-    {
-        public static R2C_Login Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<R2C_Login>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public int Error { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string Message { get; set; }
-
-        [MemoryPackOrder(3)]
-        public string Address { get; set; }
-
-        [MemoryPackOrder(4)]
-        public long Key { get; set; }
-
-        [MemoryPackOrder(5)]
-        public long GateId { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Error = default;
-            this.Message = default;
-            this.Address = default;
-            this.Key = default;
-            this.GateId = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
     [Message(LoginOuter.C2G_LoginGate)]
     [ResponseType(nameof(G2C_LoginGate))]
     public partial class C2G_LoginGate : MessageObject, ISessionRequest
@@ -490,288 +405,6 @@ namespace ET
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.RoleInfoProto)]
-    public partial class RoleInfoProto : MessageObject
-    {
-        public static RoleInfoProto Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<RoleInfoProto>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public long Id { get; set; }
-
-        [MemoryPackOrder(1)]
-        public string Name { get; set; }
-
-        [MemoryPackOrder(2)]
-        public int State { get; set; }
-
-        [MemoryPackOrder(3)]
-        public string Account { get; set; }
-
-        [MemoryPackOrder(4)]
-        public long LastLoginTime { get; set; }
-
-        [MemoryPackOrder(5)]
-        public long CreateTime { get; set; }
-
-        [MemoryPackOrder(6)]
-        public int ServerId { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.Id = default;
-            this.Name = default;
-            this.State = default;
-            this.Account = default;
-            this.LastLoginTime = default;
-            this.CreateTime = default;
-            this.ServerId = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.C2R_GetRoles)]
-    [ResponseType(nameof(R2C_GetRoles))]
-    public partial class C2R_GetRoles : MessageObject, ISessionRequest
-    {
-        public static C2R_GetRoles Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<C2R_GetRoles>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public string Token { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string Account { get; set; }
-
-        [MemoryPackOrder(3)]
-        public int ServerId { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Token = default;
-            this.Account = default;
-            this.ServerId = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.R2C_GetRoles)]
-    public partial class R2C_GetRoles : MessageObject, ISessionResponse
-    {
-        public static R2C_GetRoles Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<R2C_GetRoles>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public int Error { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string Message { get; set; }
-
-        [MemoryPackOrder(3)]
-        public List<RoleInfoProto> RoleInfos { get; set; } = new();
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Error = default;
-            this.Message = default;
-            this.RoleInfos.Clear();
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.C2R_CreateRole)]
-    [ResponseType(nameof(R2C_CreateRole))]
-    public partial class C2R_CreateRole : MessageObject, ISessionRequest
-    {
-        public static C2R_CreateRole Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<C2R_CreateRole>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public string Token { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string Account { get; set; }
-
-        [MemoryPackOrder(3)]
-        public int ServerId { get; set; }
-
-        [MemoryPackOrder(4)]
-        public string RoleName { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Token = default;
-            this.Account = default;
-            this.ServerId = default;
-            this.RoleName = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.R2C_CreateRole)]
-    public partial class R2C_CreateRole : MessageObject, ISessionResponse
-    {
-        public static R2C_CreateRole Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<R2C_CreateRole>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public int Error { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string Message { get; set; }
-
-        [MemoryPackOrder(3)]
-        public RoleInfoProto RoleInfo { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Error = default;
-            this.Message = default;
-            this.RoleInfo = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.C2R_DeleteRole)]
-    [ResponseType(nameof(R2C_DeleteRole))]
-    public partial class C2R_DeleteRole : MessageObject, ISessionRequest
-    {
-        public static C2R_DeleteRole Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<C2R_DeleteRole>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public string Token { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string Account { get; set; }
-
-        [MemoryPackOrder(3)]
-        public int ServerId { get; set; }
-
-        [MemoryPackOrder(4)]
-        public int RoleInfoId { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Token = default;
-            this.Account = default;
-            this.ServerId = default;
-            this.RoleInfoId = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.R2C_DeleteRole)]
-    public partial class R2C_DeleteRole : MessageObject, ISessionResponse
-    {
-        public static R2C_DeleteRole Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<R2C_DeleteRole>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public int Error { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string Message { get; set; }
-
-        [MemoryPackOrder(3)]
-        public long DeletedRoleInfoID { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Error = default;
-            this.Message = default;
-            this.DeletedRoleInfoID = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
     [Message(LoginOuter.C2R_GetRealmKey)]
     [ResponseType(nameof(R2C_GetRealmKey))]
     public partial class C2R_GetRealmKey : MessageObject, ISessionRequest
@@ -873,9 +506,6 @@ namespace ET
         [MemoryPackOrder(2)]
         public long RealmKey { get; set; }
 
-        [MemoryPackOrder(3)]
-        public long RoleId { get; set; }
-
         [MemoryPackOrder(4)]
         public string GateAddress { get; set; }
 
@@ -889,7 +519,6 @@ namespace ET
             this.RpcId = default;
             this.Account = default;
             this.RealmKey = default;
-            this.RoleId = default;
             this.GateAddress = default;
 
             ObjectPool.Recycle(this);
@@ -952,9 +581,6 @@ namespace ET
         [MemoryPackOrder(2)]
         public string AccountName { get; set; }
 
-        [MemoryPackOrder(3)]
-        public long RoleId { get; set; }
-
         public override void Dispose()
         {
             if (!this.IsFromPool)
@@ -965,7 +591,6 @@ namespace ET
             this.RpcId = default;
             this.Key = default;
             this.AccountName = default;
-            this.RoleId = default;
 
             ObjectPool.Recycle(this);
         }
@@ -1077,29 +702,20 @@ namespace ET
         public const ushort NetClient2Main_Login = 1002;
         public const ushort C2G_Ping = 1003;
         public const ushort G2C_Ping = 1004;
-        public const ushort C2R_Login = 1005;
-        public const ushort R2C_Login = 1006;
-        public const ushort C2G_LoginGate = 1007;
-        public const ushort G2C_LoginGate = 1008;
-        public const ushort C2R_LoginAccount = 1009;
-        public const ushort R2C_LoginAccount = 1010;
-        public const ushort ServerInfoProto = 1011;
-        public const ushort C2R_GetServerInfos = 1012;
-        public const ushort R2C_GetServerInfos = 1013;
-        public const ushort RoleInfoProto = 1014;
-        public const ushort C2R_GetRoles = 1015;
-        public const ushort R2C_GetRoles = 1016;
-        public const ushort C2R_CreateRole = 1017;
-        public const ushort R2C_CreateRole = 1018;
-        public const ushort C2R_DeleteRole = 1019;
-        public const ushort R2C_DeleteRole = 1020;
-        public const ushort C2R_GetRealmKey = 1021;
-        public const ushort R2C_GetRealmKey = 1022;
-        public const ushort Main2NetClient_LoginGame = 1023;
-        public const ushort NetClient2Main_LoginGame = 1024;
-        public const ushort C2G_LoginGameGate = 1025;
-        public const ushort G2C_LoginGameGate = 1026;
-        public const ushort C2G_EnterGame = 1027;
-        public const ushort G2C_EnterGame = 1028;
+        public const ushort C2G_LoginGate = 1005;
+        public const ushort G2C_LoginGate = 1006;
+        public const ushort C2R_LoginAccount = 1007;
+        public const ushort R2C_LoginAccount = 1008;
+        public const ushort ServerInfoProto = 1009;
+        public const ushort C2R_GetServerInfos = 1010;
+        public const ushort R2C_GetServerInfos = 1011;
+        public const ushort C2R_GetRealmKey = 1012;
+        public const ushort R2C_GetRealmKey = 1013;
+        public const ushort Main2NetClient_LoginGame = 1014;
+        public const ushort NetClient2Main_LoginGame = 1015;
+        public const ushort C2G_LoginGameGate = 1016;
+        public const ushort G2C_LoginGameGate = 1017;
+        public const ushort C2G_EnterGame = 1018;
+        public const ushort G2C_EnterGame = 1019;
     }
 }

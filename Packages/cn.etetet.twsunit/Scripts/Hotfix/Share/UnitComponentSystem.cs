@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace ET.Server
+namespace ET
 {
-    [FriendOfAttribute(typeof(ET.Server.UnitComponent))]
+    [FriendOfAttribute(typeof(ET.UnitComponent))]
     public static partial class UnitComponentSystem
     {
         public static void Add(this UnitComponent self, Unit unit)

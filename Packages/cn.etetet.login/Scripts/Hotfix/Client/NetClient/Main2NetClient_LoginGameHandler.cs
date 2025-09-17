@@ -14,7 +14,6 @@
             C2G_LoginGameGate c2GLoginGameGate =C2G_LoginGameGate.Create();
             c2GLoginGameGate.Key = request.RealmKey;
             c2GLoginGameGate.AccountName = request.Account;
-            c2GLoginGameGate.RoleId = request.RoleId;
             G2C_LoginGameGate g2CLoginGameGate = await gateSession.Call(c2GLoginGameGate) as G2C_LoginGameGate;
 
             if (g2CLoginGameGate.Error != ErrorCode.ERR_Success)

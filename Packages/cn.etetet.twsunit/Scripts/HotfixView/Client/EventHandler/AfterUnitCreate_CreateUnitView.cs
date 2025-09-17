@@ -7,11 +7,7 @@ namespace ET.Client
     {
         protected override async ETTask Run(Scene scene, AfterUnitCreate args)
         {
-            Unit_Client unit = args.Unit;
-            // Unit View层
-            string assetsPath = $"Packages/cn.etetet.twsunit/Assets/GameRes/";
-            // GameObject bundleGameObject = await scene.GetComponent<ResourcesLoaderComponent>()
-            //         .LoadAssetAsync<GameObject>($"{assetsPath}Bundles/{unit.Config.ResName}/{unit.Config.ResName}.prefab");
+            Unit unit = args.Unit;
             GameObject bundleGameObject =
                     await scene.GetComponent<ResourcesLoaderComponent>().LoadAssetAsync<GameObject>($"{unit.Config.ResName}");
 

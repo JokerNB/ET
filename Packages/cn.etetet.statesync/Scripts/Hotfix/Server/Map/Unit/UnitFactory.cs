@@ -11,7 +11,7 @@ namespace ET.Server
             {
                 case UnitType.Clerk:
                 {
-                    UnitConfig unitConfig = UnitConfigCategory.Instance.Get(1001);
+                    UnitConfig unitConfig = UnitConfigCategory.Instance.Get(1);
                     Unit unit = unitComponent.AddChildWithId<Unit, int>(id, unitConfig.Id);
 
                     NumericDataComponent numericComponent = unit.AddComponent<NumericDataComponent>();

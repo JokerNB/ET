@@ -22,7 +22,6 @@ namespace ET.Server
                     break;
                 case 1000: //登录服
                     await dbComponent.CreateCollection<Account>();
-                    await dbComponent.CreateCollection<RoleInfo>();
                     break;
             }
             await ETTask.CompletedTask;

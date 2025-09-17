@@ -1,12 +1,11 @@
-﻿
-namespace ET.Client
+﻿namespace ET.Client
 {
     public static partial class UnitFactory
     {
-        public static Unit_Client Create(Scene currentScene, UnitInfo unitInfo)
+        public static Unit Create(Scene currentScene, UnitInfo unitInfo)
         {
-            UnitComponent_Client unitComponent = currentScene.GetComponent<UnitComponent_Client>();
-            Unit_Client unit = unitComponent.AddChildWithId<Unit_Client, int>(unitInfo.UnitId, unitInfo.ConfigId);
+            UnitComponent unitComponent = currentScene.GetComponent<UnitComponent>();
+            Unit unit = unitComponent.AddChildWithId<Unit, int>(unitInfo.UnitId, unitInfo.ConfigId);
             unitComponent.Add(unit);
 
             NumericDataComponent numericDataComponent = unit.AddComponent<NumericDataComponent>();

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace ET.Server
+namespace ET
 {
     [ChildOf(typeof(UnitComponent))]
     [DebuggerDisplay("ViewName,nq")]
