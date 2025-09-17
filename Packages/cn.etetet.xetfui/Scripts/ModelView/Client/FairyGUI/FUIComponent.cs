@@ -15,7 +15,7 @@ namespace ET.Client
         public Dictionary<PanelId, List<long>> AllPanelsDict = new();
         
         /// 当前打开的各个类型的界面
-        public MultiMapSet<UIPanelType, PanelId> VisiblePanelTypeDict = new();
+        public MultiMapSet<UIPanelType, PanelInfo> VisiblePanelTypeDict = new();
         
         /// 隐藏所有界面时临时的存储
         public List<EntityRef<FUIEntity>> VisiblePanelCache = new();

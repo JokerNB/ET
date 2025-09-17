@@ -7,10 +7,4 @@ namespace ET.Client
         PopUp,     // 弹出窗口
         Other,     //其他窗口
     }
-
-    [ChildOf(typeof(FUIEntity))]
-    public class PanelCoreData: Entity, IAwake
-    {
-        public UIPanelType panelType { get; set; } = UIPanelType.Normal;
-    }
 }

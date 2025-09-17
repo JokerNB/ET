@@ -27,24 +27,7 @@ namespace ET.Client
             }
         }
         
-        public PanelId PanelId
-        {
-            get
-            {
-                if (this.panelId == PanelId.Invalid)
-                {
-                    Log.Error("panel id is " + PanelId.Invalid);
-                }
-                return this.panelId;
-            }
-            set { this.panelId = value; }
-        }
-      
-        private PanelId panelId = PanelId.Invalid;
-
         public GComponent GComponent { get; set; }
-
-        public PanelCoreData PanelCoreData { get; set; }
 
         public SystemLanguage Language { get; set; }
 
@@ -52,6 +35,6 @@ namespace ET.Client
 
         public EntityRef<Entity> Component { get; set; }
         
-        public UIPanelType panelType { get; set; }
+        public PanelInfo panelInfo { get; set; }
     }
 }

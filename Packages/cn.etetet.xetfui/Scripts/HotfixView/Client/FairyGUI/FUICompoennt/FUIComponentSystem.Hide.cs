@@ -14,9 +14,9 @@ namespace ET.Client
             return self.VisiblePanelTypeDict[uiPanelType].Count > 0;
         }
         
-        public static bool IsPanelVisible(this FUIComponent self, PanelId panelId)
+        public static bool IsPanelVisible(this FUIComponent self, PanelInfo panelInfo)
         {
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             return self.IsPanelVisible(fuiEntity);
         }
 
@@ -32,58 +32,58 @@ namespace ET.Client
         
         public static async ETTask HideAndShowPanelStackAsync<T1, T2>(this FUIComponent self) where T1: Entity where T2: Entity, IAwake, IShow, new()
         {
-            PanelId hidePanelId = self.GetPanelIdByGeneric<T1>();
-            PanelId showPanelId = self.GetPanelIdByGeneric<T2>();
-            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelId);
+            PanelInfo hidePanelInfo = self.GetPanelIdByGeneric<T1>();
+            PanelInfo showPanelInfo = self.GetPanelIdByGeneric<T2>();
+            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelInfo);
 
-            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelId);
+            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelInfo);
             FUIEntitySystemSingleton.Instance.Show(fuiEntity.Component);
         }
         
         public static async ETTask HideAndShowPanelStackAsync<T1, T2, P1>(this FUIComponent self, P1 p1) where T1: Entity where T2: Entity, IAwake, IShow<P1>, new()
         {
-            PanelId hidePanelId = self.GetPanelIdByGeneric<T1>();
-            PanelId showPanelId = self.GetPanelIdByGeneric<T2>();
-            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelId);
+            PanelInfo hidePanelInfo = self.GetPanelIdByGeneric<T1>();
+            PanelInfo showPanelInfo = self.GetPanelIdByGeneric<T2>();
+            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelInfo);
 
-            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelId);
+            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelInfo);
             FUIEntitySystemSingleton.Instance.Show(fuiEntity.Component, p1);
         }
         
         public static async ETTask HideAndShowPanelStackAsync<T1, T2, P1, P2>(this FUIComponent self, P1 p1, P2 p2) where T1: Entity where T2: Entity, IAwake, IShow<P1, P2>, new()
         {
-            PanelId hidePanelId = self.GetPanelIdByGeneric<T1>();
-            PanelId showPanelId = self.GetPanelIdByGeneric<T2>();
-            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelId);
+            PanelInfo hidePanelInfo = self.GetPanelIdByGeneric<T1>();
+            PanelInfo showPanelInfo = self.GetPanelIdByGeneric<T2>();
+            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelInfo);
 
-            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelId);
+            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelInfo);
             FUIEntitySystemSingleton.Instance.Show(fuiEntity.Component, p1, p2);
         }
         
         public static async ETTask HideAndShowPanelStackAsync<T1, T2, P1, P2, P3>(this FUIComponent self, P1 p1, P2 p2, P3 p3) where T1: Entity where T2: Entity, IAwake, IShow<P1, P2, P3>, new()
         {
-            PanelId hidePanelId = self.GetPanelIdByGeneric<T1>();
-            PanelId showPanelId = self.GetPanelIdByGeneric<T2>();
-            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelId);
+            PanelInfo hidePanelInfo = self.GetPanelIdByGeneric<T1>();
+            PanelInfo showPanelInfo = self.GetPanelIdByGeneric<T2>();
+            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelInfo);
 
-            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelId);
+            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelInfo);
             FUIEntitySystemSingleton.Instance.Show(fuiEntity.Component, p1, p2, p3);
         }
         
         public static async ETTask HideAndShowPanelStackAsync<T1, T2, P1, P2, P3, P4>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4) where T1: Entity where T2: Entity, IAwake, IShow<P1, P2, P3, P4>, new()
         {
-            PanelId hidePanelId = self.GetPanelIdByGeneric<T1>();
-            PanelId showPanelId = self.GetPanelIdByGeneric<T2>();
-            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelId);
+            PanelInfo hidePanelInfo = self.GetPanelIdByGeneric<T1>();
+            PanelInfo showPanelInfo = self.GetPanelIdByGeneric<T2>();
+            FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelInfo);
 
-            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelId);
+            FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelInfo);
             FUIEntitySystemSingleton.Instance.Show(fuiEntity.Component, p1, p2, p3, p4);
         }
         
         public static async ETTask HideAndShowPanelStackAsync<T1, T2, P1, P2, P3, P4, P5>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4, P5 p5) where T1: Entity where T2: Entity, IAwake, IShow<P1, P2, P3, P4, P5>, new()
         {
-            PanelId hidePanelId = self.GetPanelIdByGeneric<T1>();
-            PanelId showPanelId = self.GetPanelIdByGeneric<T2>();
+            PanelInfo hidePanelId = self.GetPanelIdByGeneric<T1>();
+            PanelInfo showPanelId = self.GetPanelIdByGeneric<T2>();
             FUIEntity hideFUIEntity = self.GetFirstFUIEntityByPanelId(hidePanelId);
 
             FUIEntity fuiEntity = await self.InnerHideAndShowPanelStackAsync<T2>(hideFUIEntity, showPanelId);
@@ -96,24 +96,24 @@ namespace ET.Client
         /// <param name="self"></param>
         /// <param name="hideFUIEntity">要隐藏的界面</param>
         /// <param name="showPanelId">要显示的界面的 PanelId</param>
-        private static async ETTask<FUIEntity> InnerHideAndShowPanelStackAsync<T>(this FUIComponent self, FUIEntity hideFUIEntity, PanelId showPanelId) where T: Entity, IAwake, new()
+        private static async ETTask<FUIEntity> InnerHideAndShowPanelStackAsync<T>(this FUIComponent self, FUIEntity hideFUIEntity, PanelInfo panelInfo) where T: Entity, IAwake, new()
         {
             // 隐藏 hidePanelId
             if (!self.SetPanelHide(hideFUIEntity))
             {
-                Log.Warning($"关闭 panelId: {hideFUIEntity.PanelId} 失败！");
+                Log.Warning($"关闭 panelId: {hideFUIEntity.panelInfo.PanelId} 失败！");
             }
             
             // 显示 showPanelId
-            FUIEntity showFUIEntity = await self.InnerShowPanelAsync<T>(showPanelId);
+            FUIEntity showFUIEntity = await self.InnerShowPanelAsync<T>(panelInfo);
             if (showFUIEntity == null)
             {
-                Log.Error($"界面 {showPanelId} 创建失败！");
+                Log.Error($"界面 {panelInfo.PanelId} 创建失败！");
                 return null;
             }
             
             // 将 hidePanelId 界面压入栈中
-            if (hideFUIEntity.PanelId != PanelId.Invalid)
+            if (hideFUIEntity.panelInfo.PanelId != PanelId.Invalid)
             {
                 self.HidePanelsStack.Push(hideFUIEntity);
                 showFUIEntity.IsUsingStack = true;
@@ -147,12 +147,12 @@ namespace ET.Client
 
         public static void HidePanel<T>(this FUIComponent self) where T: Entity
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
 
             if (fuiEntity == null)
             {
-                Log.Warning($"界面不存在 {panelId}");
+                Log.Warning($"界面不存在 {panelInfo.PanelId}");
                 return;
             }
 
@@ -166,12 +166,12 @@ namespace ET.Client
         
         public static void HidePanel<T, P1>(this FUIComponent self, P1 p1) where T: Entity, IHide
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             
             if (fuiEntity == null)
             {
-                Log.Warning($"界面不存在 {panelId}");
+                Log.Warning($"界面不存在 {panelInfo.PanelId}");
                 return;
             }
             
@@ -192,12 +192,12 @@ namespace ET.Client
         
         public static void HidePanel<T, P1, P2>(this FUIComponent self, P1 p1, P2 p2) where T: Entity, IHide
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             
             if (fuiEntity == null)
             {
-                Log.Warning($"界面不存在 {panelId}");
+                Log.Warning($"界面不存在 {panelInfo.PanelId}");
                 return;
             }
             
@@ -218,12 +218,12 @@ namespace ET.Client
         
         public static void HidePanel<T, P1, P2, P3>(this FUIComponent self, P1 p1, P2 p2, P3 p3) where T: Entity, IHide
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             
             if (fuiEntity == null)
             {
-                Log.Warning($"界面不存在 {panelId}");
+                Log.Warning($"界面不存在 {panelInfo.PanelId}");
                 return;
             }
             
@@ -244,12 +244,12 @@ namespace ET.Client
         
         public static void HidePanel<T, P1, P2, P3, P4>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4) where T: Entity, IHide
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             
             if (fuiEntity == null)
             {
-                Log.Warning($"界面不存在 {panelId}");
+                Log.Warning($"界面不存在 {panelInfo.PanelId}");
                 return;
             }
             
@@ -270,12 +270,12 @@ namespace ET.Client
         
         public static void HidePanel<T, P1, P2, P3, P4, P5>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4, P5 p5) where T: Entity, IHide
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             
             if (fuiEntity == null)
             {
-                Log.Warning($"界面不存在 {panelId}");
+                Log.Warning($"界面不存在 {panelInfo.PanelId}");
                 return;
             }
             
@@ -320,7 +320,7 @@ namespace ET.Client
         {
             if (!self.SetPanelHide(fuiEntity))
             {
-                Log.Warning($"检测关闭 panelId: {fuiEntity.PanelId} 失败！");
+                Log.Warning($"检测关闭 panelId: {fuiEntity.panelInfo.PanelId} 失败！");
                 return null;
             }
 
@@ -345,9 +345,9 @@ namespace ET.Client
             
             fuiEntity.GComponent.visible = true;
 
-            self.VisiblePanelTypeDict.Add(fuiEntity.PanelCoreData.panelType, fuiEntity.PanelId);
+            self.VisiblePanelTypeDict.Add(fuiEntity.panelInfo.UIPanelType, fuiEntity.panelInfo);
             
-            Log.Info("<color=magenta>### current Navigation panel </color>{0}".Fmt(fuiEntity.PanelId));
+            Log.Info("<color=magenta>### current Navigation panel </color>{0}".Fmt(fuiEntity.panelInfo.PanelId));
         }
         
         private static bool SetPanelHide(this FUIComponent self, FUIEntity fuiEntity)
@@ -359,7 +359,7 @@ namespace ET.Client
             
             fuiEntity.Visible = false;
 
-            self.VisiblePanelTypeDict.Remove(fuiEntity.PanelCoreData.panelType, fuiEntity.PanelId);
+            self.VisiblePanelTypeDict.Remove(fuiEntity.panelInfo.UIPanelType, fuiEntity.panelInfo);
             
             return true;
         }
@@ -380,7 +380,7 @@ namespace ET.Client
                     continue;
                 }
                 
-                if (fuiEntity.PanelCoreData.panelType == UIPanelType.Fixed && !includeFixed)
+                if (fuiEntity.panelInfo.UIPanelType == UIPanelType.Fixed && !includeFixed)
                 {
                     continue;
                 }

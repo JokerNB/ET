@@ -22,7 +22,7 @@ namespace FUIEditor
         richtext,
         list
     }
-    
+
     public enum ComponentType
     {
         None,
@@ -35,15 +35,23 @@ namespace FUIEditor
         Slider,
         Tree
     }
-    
+
+    public enum ToUIPanelType
+    {
+        Normal,    // 普通主界面
+        Fixed,     // 固定窗口
+        PopUp,     // 弹出窗口
+        Other,     //其他窗口
+    }
+
     public static class FUICodeSpawner
     {
         // 名字空间
         public static string NameSpace = "ET.Client";
-        
+
         // 类名前缀
         public static string ClassNamePrefix = "FUI_";
-        
+
         // 代码生成路径
         public static string FUIAutoGenDir;
         public static string ModelViewCodeDir;
@@ -51,20 +59,21 @@ namespace FUIEditor
 
         // 不生成使用默认名称的成员
         public static readonly bool IgnoreDefaultVariableName = true;
-        
+
         public static readonly Dictionary<string, PackageInfo> PackageInfos = new Dictionary<string, PackageInfo>();
 
         public static readonly Dictionary<string, ComponentInfo> ComponentInfos = new Dictionary<string, ComponentInfo>();
-        
+
         // PackageName: PackageId
         public static readonly Dictionary<string, string> PackageNameToId = new Dictionary<string, string>();
-        
+
         // PackageName: List<ComponentInfo>
         public static readonly MultiMap<string, ComponentInfo> PackageComponentInfos = new MultiMap<string, ComponentInfo>();
-        
+
         public static readonly List<ComponentInfo> MainPanelComponentInfos = new List<ComponentInfo>();
-        
-        public static readonly MultiDictionary<string, string, ComponentInfo> ExportedComponentInfos = new MultiDictionary<string, string, ComponentInfo>();
+
+        public static readonly MultiDictionary<string, string, ComponentInfo> ExportedComponentInfos =
+                new MultiDictionary<string, string, ComponentInfo>();
 
         private static readonly HashSet<string> ExtralExportURLs = new HashSet<string>();
 
@@ -74,7 +83,7 @@ namespace FUIEditor
             ModelViewCodeDir = modelViewCodeDir;
             HotfixViewCodeDir = hotfixViewCodeDir;
         }
-        
+
         public static string GetTabs(int count)
         {
             if (count == 0)
@@ -84,14 +93,14 @@ namespace FUIEditor
                 res += "    ";
             return res;
         }
-        
+
         public static void FUICodeSpawn(string fguiProjectDir, string[] packageNames)
         {
             ParseAndSpawnCode(fguiProjectDir, packageNames);
 
             AssetDatabase.Refresh();
         }
-        
+
         public static void FUICodeSpawn(string fguiProjectDir, string packageName, string[] packageNames)
         {
             ParseAndSpawnCode(fguiProjectDir, packageName, packageNames);
@@ -105,7 +114,7 @@ namespace FUIEditor
             AfterParseAllPackages();
             SpawnCode();
         }
-        
+
         private static void ParseAndSpawnCode(string fguiProjectDir, string packageName, string[] packageNames)
         {
             ParseAllPackages(fguiProjectDir, packageNames);
@@ -157,7 +166,7 @@ namespace FUIEditor
                 Log.Warning($"{packageXmlPath} 不存在！");
                 return null;
             }
-            
+
             XML xml = new XML(File.ReadAllText($"{packageDir}/package.xml"));
             packageInfo.Id = xml.GetAttribute("id");
 
@@ -165,7 +174,7 @@ namespace FUIEditor
             {
                 throw new Exception("package.xml 格式不对！");
             }
-            
+
             PackageNameToId.Add(packageInfo.Name, packageInfo.Id);
 
             foreach (XML element in xml.elements[0].elements)
@@ -174,24 +183,24 @@ namespace FUIEditor
                 {
                     continue;
                 }
-                
+
                 PackageComponentInfo packageComponentInfo = new PackageComponentInfo();
                 packageComponentInfo.Id = element.GetAttribute("id");
                 packageComponentInfo.Name = element.GetAttribute("name");
                 packageComponentInfo.Path = "{0}{1}{2}".Fmt(packageDir, element.GetAttribute("path"), packageComponentInfo.Name);
                 packageComponentInfo.Exported = element.GetAttribute("exported") == "true";
-                
+
                 packageInfo.PackageComponentInfos.Add(packageComponentInfo.Name, packageComponentInfo);
 
                 ComponentInfo componentInfo = ParseComponent(packageInfo, packageComponentInfo);
                 string key = "{0}/{1}".Fmt(componentInfo.PackageId, componentInfo.Id);
                 ComponentInfos.Add(key, componentInfo);
-                
+
                 PackageComponentInfos.Add(packageInfo.Id, componentInfo);
 
-                if (componentInfo.PanelType == PanelType.Main)
+                if (componentInfo.uiPanelType >= 0)
                 {
-                    MainPanelComponentInfos.Add(componentInfo);    
+                    MainPanelComponentInfos.Add(componentInfo);
                 }
             }
 
@@ -225,9 +234,9 @@ namespace FUIEditor
             }
             else if (xml.attributes.TryGetValue("remark", out string remark))
             {
-                if (Enum.TryParse(remark, out PanelType panelType))
+                if (int.TryParse(remark, out int uiPanelType))
                 {
-                    componentInfo.PanelType = panelType;
+                    componentInfo.uiPanelType = uiPanelType;
                 }
             }
 
@@ -246,12 +255,10 @@ namespace FUIEditor
                     componentInfo.TransitionList.Add(element);
                 }
                 else if (element.name == "relation")
-                { 
-                    
+                {
                 }
                 else if (element.name == "customProperty")
-                { 
-                    
+                {
                 }
                 else
                 {
@@ -264,7 +271,7 @@ namespace FUIEditor
 
             return componentInfo;
         }
-        
+
         // 检查哪些组件可以导出。需要在 ParseAllPackages 后执行，因为需要有全部 package 的信息。
         private static void AfterParseAllPackages()
         {
@@ -272,17 +279,18 @@ namespace FUIEditor
             {
                 componentInfo.CheckCanExport(ExtralExportURLs, IgnoreDefaultVariableName);
             }
-            
+
             foreach (ComponentInfo componentInfo in ComponentInfos.Values)
             {
                 componentInfo.SetVariableInfoTypeName();
-                
+
                 if (componentInfo.NeedExportClass)
                 {
                     ExportedComponentInfos.Add(componentInfo.PackageId, componentInfo.Id, componentInfo);
                 }
             }
         }
+
         private static void SpawnCode(string packageId)
         {
             var componentInfoList = PackageComponentInfos[packageId];
@@ -298,10 +306,10 @@ namespace FUIEditor
 
             foreach (ComponentInfo componentInfo in componentInfoList)
             {
-                if (componentInfo.PanelType == PanelType.Main)
+                if (componentInfo.uiPanelType >= 0)
                 {
                     PackageInfo packageInfo = PackageInfos[componentInfo.PackageId];
-                
+
                     SpawnSubPanelCode(componentInfo);
 
                     FUIPanelSpawner.SpawnPanel(packageInfo.Name, componentInfo);
@@ -309,14 +317,14 @@ namespace FUIEditor
                 }
             }
         }
-        
+
         private static void SpawnCode()
         {
-            if (Directory.Exists(FUIAutoGenDir)) 
+            if (Directory.Exists(FUIAutoGenDir))
             {
                 Directory.Delete(FUIAutoGenDir, true);
             }
-            
+
             foreach (ComponentInfo componentInfo in ComponentInfos.Values)
             {
                 FUIComponentSpawner.SpawnComponent(componentInfo);
@@ -329,10 +337,10 @@ namespace FUIEditor
             foreach (var kv in ComponentInfos)
             {
                 ComponentInfo componentInfo = kv.Value;
-                if (componentInfo.PanelType == PanelType.Main)
+                if (componentInfo.uiPanelType >= 0)
                 {
                     PackageInfo packageInfo = PackageInfos[componentInfo.PackageId];
-                    
+
                     SpawnSubPanelCode(componentInfo);
                     FUIPanelSpawner.SpawnPanel(packageInfo.Name, componentInfo);
                     FUIPanelSystemSpawner.SpawnPanelSystem(packageInfo.Name, componentInfo);
@@ -348,25 +356,14 @@ namespace FUIEditor
                 {
                     return;
                 }
-                
+
                 string subPackageName = PackageInfos[variableInfo.PackageId].Name;
 
                 FUIPanelSpawner.SpawnSubPanel(subPackageName, variableInfo.ComponentInfo);
                 FUIPanelSystemSpawner.SpawnPanelSystem(subPackageName, variableInfo.ComponentInfo, variableInfo);
-                
+
                 SpawnSubPanelCode(variableInfo.ComponentInfo);
             });
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-

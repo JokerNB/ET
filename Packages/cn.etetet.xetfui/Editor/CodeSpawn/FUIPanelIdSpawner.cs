@@ -11,7 +11,7 @@ namespace FUIEditor
         public static void SpawnPanelId()
         {
             Func<int, string> GetTabs = FUICodeSpawner.GetTabs;
-            
+
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("/** This is an automatically generated class by FUICodeSpawner. Please do not modify it. **/");
             sb.AppendLine();
@@ -27,14 +27,14 @@ namespace FUIEditor
             {
                 sb.AppendLine($"{GetTabs(2)}{componentInfo.NameWithoutExtension},");
             }
-            
+
             sb.AppendLine($"{GetTabs(2)}// <last line>");
-            
-            sb.AppendLine($"{GetTabs(1)}}}"); 
+
+            sb.AppendLine($"{GetTabs(1)}}}");
             sb.AppendLine("}");
-            
+
             string filePath = "{0}/PanelId.cs".Fmt(FUICodeSpawner.FUIAutoGenDir);
-            
+
             // 创建目录
             string directoryPath = Path.GetDirectoryName(filePath);
             if (!Directory.Exists(directoryPath))
@@ -44,7 +44,7 @@ namespace FUIEditor
                     Directory.CreateDirectory(directoryPath);
                 }
             }
-            
+
             using FileStream fs = new FileStream(filePath, FileMode.Create);
             using StreamWriter sw = new StreamWriter(fs);
             sw.Write(sb.ToString());
@@ -58,14 +58,14 @@ namespace FUIEditor
                 SpawnPanelId();
                 return;
             }
-            
+
             Func<int, string> GetTabs = FUICodeSpawner.GetTabs;
-            
+
             string content = File.ReadAllText(filePath);
 
             foreach (ComponentInfo componentInfo in componentInfos)
             {
-                if (componentInfo.PanelType != PanelType.Main)
+                if (componentInfo.uiPanelType < 0)
                 {
                     continue;
                 }
@@ -75,19 +75,18 @@ namespace FUIEditor
                 {
                     continue;
                 }
-                    
+
                 int index = content.IndexOf($"{GetTabs(2)}// <last line>", StringComparison.Ordinal);
                 if (index == -1)
                 {
                     SpawnPanelId();
                     return;
                 }
-                    
+
                 content = content.Insert(index, newline);
             }
-            
-            File.WriteAllText(filePath, content);
 
+            File.WriteAllText(filePath, content);
         }
     }
 }

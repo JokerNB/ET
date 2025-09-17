@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" remark="Main">
+<component size="1920,1080" remark="3">
   <displayList>
     <image id="n0_jpf4" name="n0" src="jpf40" fileName="Atlas/BG_MainUI.png" xy="0,-118" size="1971,1350" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>

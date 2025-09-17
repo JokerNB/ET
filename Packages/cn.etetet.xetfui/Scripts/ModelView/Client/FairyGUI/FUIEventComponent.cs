@@ -6,6 +6,8 @@ namespace ET.Client
     public struct PanelInfo
     {
         public PanelId PanelId;
+
+        public UIPanelType UIPanelType;
     
         public string PackageName;
     

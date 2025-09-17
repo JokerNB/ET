@@ -3,7 +3,7 @@ using ET.Client.Login;
 namespace ET.Client
 {
     [ComponentOf(typeof(FUIEntity))]
-    [FUIPanel(PanelId.LoginUI, "Login", "LoginUI")]
+    [FUIPanel(PanelId.LoginUI, UIPanelType.Other, "Login", "LoginUI")]
     public class LoginUI : Entity, IAwake
     {
         private FUI_LoginUI _fuiLoginUI;

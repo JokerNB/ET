@@ -45,19 +45,10 @@ namespace ET.Client
                 Log.Error("获取RealmKey失败");
                 return;
             }
-            
-            //请求角色进入Map地图
-            NetClient2Main_LoginGame netClient2MainLoginGame =
-                    await clientSenderComponent.LoginGameAsync(account, r2CGetRealmKey.Key, r2CGetRealmKey.Address);
-            if (netClient2MainLoginGame.Error != ErrorCode.ERR_Success)
-            {
-                Log.Error($"进入游戏失败: {netClient2MainLoginGame.Error}");
-                return;
-            }
-            
-            Log.Debug("进入游戏成功！");
-            root.GetComponent<PlayerComponent>().MyId = netClient2MainLoginGame.PlayerId;
-            root.GetComponent<PlayerComponent>().Token = token;
+            var playerComponent = root.GetComponent<PlayerComponent>();
+            playerComponent.Token = token;
+            playerComponent.Key = r2CGetRealmKey.Key;
+            playerComponent.Address = address;
             
             await EventSystem.Instance.PublishAsync(root, new LoginFinish());
         }

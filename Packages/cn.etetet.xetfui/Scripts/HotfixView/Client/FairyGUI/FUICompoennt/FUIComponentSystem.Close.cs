@@ -30,85 +30,85 @@ namespace ET.Client
         
         public static void ClosePanel<T>(this FUIComponent self) where T: Entity
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            self.ClosePanel(panelId);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            self.ClosePanel(panelInfo);
         }
         
         public static void ClosePanel<T, P1>(this FUIComponent self, P1 p1) where T: Entity
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            self.ClosePanel(panelId, p1);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            self.ClosePanel(panelInfo, p1);
         }
         
         public static void ClosePanel<T, P1, P2>(this FUIComponent self, P1 p1, P2 p2) where T: Entity
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            self.ClosePanel(panelId, p1, p2);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            self.ClosePanel(panelInfo, p1, p2);
         }
         
         public static void ClosePanel<T, P1, P2, P3>(this FUIComponent self, P1 p1, P2 p2, P3 p3) where T: Entity
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            self.ClosePanel(panelId, p1, p2, p3);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            self.ClosePanel(panelInfo, p1, p2, p3);
         }
         
         public static void ClosePanel<T, P1, P2, P3, P4>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4) where T: Entity
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            self.ClosePanel(panelId, p1, p2, p3, p4);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            self.ClosePanel(panelInfo, p1, p2, p3, p4);
         }
         
         public static void ClosePanel<T, P1, P2, P3, P4, P5>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4, P5 p5) where T: Entity
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            self.ClosePanel(panelId, p1, p2, p3, p4, p5);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            self.ClosePanel(panelInfo, p1, p2, p3, p4, p5);
         }
         
         public static void ClosePanel(this FUIComponent self, long entityId)
         {
             FUIEntity fuiEntity = self.GetFUIEntity(entityId);
-            self.ClosePanel(fuiEntity.PanelId);
+            self.ClosePanel(fuiEntity.panelInfo);
         }
         
-        public static void ClosePanel(this FUIComponent self, PanelId panelId)
+        public static void ClosePanel(this FUIComponent self, PanelInfo panelInfo)
         {
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             // self.HidePanel(fuiEntity.PanelId);
             self.UnLoadPanel(fuiEntity);
         }
         
-        public static void ClosePanel<P1>(this FUIComponent self, PanelId panelId, P1 p1)
+        public static void ClosePanel<P1>(this FUIComponent self, PanelInfo panelInfo, P1 p1)
         {
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             // self.HidePanel(fuiEntity.PanelId, p1);
             self.UnLoadPanel(fuiEntity);
         }
         
-        public static void ClosePanel<P1, P2>(this FUIComponent self, PanelId panelId, P1 p1, P2 p2)
+        public static void ClosePanel<P1, P2>(this FUIComponent self, PanelInfo panelInfo, P1 p1, P2 p2)
         {
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             // self.HidePanel(fuiEntity.PanelId, p1, p2);
             self.UnLoadPanel(fuiEntity);
         }
         
-        public static void ClosePanel<P1, P2, P3>(this FUIComponent self, PanelId panelId, P1 p1, P2 p2, P3 p3)
+        public static void ClosePanel<P1, P2, P3>(this FUIComponent self, PanelInfo panelInfo, P1 p1, P2 p2, P3 p3)
         {
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             // self.HidePanel(fuiEntity.PanelId, p1, p2, p3);
             self.UnLoadPanel(fuiEntity);
         }
         
-        public static void ClosePanel<P1, P2, P3, P4>(this FUIComponent self, PanelId panelId, P1 p1, P2 p2, P3 p3, P4 p4)
+        public static void ClosePanel<P1, P2, P3, P4>(this FUIComponent self, PanelInfo panelInfo, P1 p1, P2 p2, P3 p3, P4 p4)
         {
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             // self.HidePanel(fuiEntity.PanelId, p1, p2, p3, p4);
             self.UnLoadPanel(fuiEntity);
 
         }
         
-        public static void ClosePanel<P1, P2, P3, P4, P5>(this FUIComponent self, PanelId panelId, P1 p1, P2 p2, P3 p3, P4 p4, P5 p5)
+        public static void ClosePanel<P1, P2, P3, P4, P5>(this FUIComponent self, PanelInfo panelInfo, P1 p1, P2 p2, P3 p3, P4 p4, P5 p5)
         {
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             // self.HidePanel(fuiEntity.PanelId, p1, p2, p3, p4, p5);
             self.UnLoadPanel(fuiEntity);
         }
@@ -131,7 +131,7 @@ namespace ET.Client
 
             if (isDispose)
             {
-                if (self.AllPanelsDict.TryGetValue(fuiEntity.PanelId, out var list))
+                if (self.AllPanelsDict.TryGetValue(fuiEntity.panelInfo.PanelId, out var list))
                 {
                     list.Remove(fuiEntity.Id);
                 }

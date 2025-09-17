@@ -54,13 +54,6 @@ namespace FUIEditor
         }
     }
     
-    public enum PanelType
-    {
-        None,
-        Main,
-        Common
-    }
-    
     public class ComponentInfo
     {
         public string NameSpace { get; private set; } = "";
@@ -70,8 +63,14 @@ namespace FUIEditor
         public string Id { get; set; }
 
         public string Name { get; set; }
-        
-        public PanelType PanelType { get; set; }
+
+        /// <summary>
+        /// -3 不生成
+        /// -2 仅自动生成
+        /// -1 自动生成 + 自定义model+system脚本，不是可显示的界面
+        /// 0及以上 所有都包含
+        /// </summary>
+        public int uiPanelType { get; set; } = -3;
         
         public string ComponentTypeName { get; private set; }
 
@@ -136,7 +135,7 @@ namespace FUIEditor
 
             GatherVariable();
 
-            if (this.PanelType != PanelType.None)
+            if (this.uiPanelType >= -2)
             {
                 needExportClass = true;
             }
@@ -186,7 +185,7 @@ namespace FUIEditor
 
                 if (FUICodeSpawner.ComponentInfos.TryGetValue(key, out ComponentInfo componentInfo))
                 {
-                    if (componentInfo.PanelType == PanelType.Common)
+                    if (componentInfo.uiPanelType is -1)
                     {
                         variableInfo.ComponentInfo = componentInfo;
                     }

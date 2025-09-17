@@ -33,8 +33,8 @@ namespace ET.Client
         /// <returns></returns>
         public static T GetPanelLogic<T>(this FUIComponent self, bool needVisible = false) where T : Entity
         {
-            PanelId panelId = self.GetPanelIdByGeneric<T>();
-            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
+            PanelInfo panelInfo = self.GetPanelIdByGeneric<T>();
+            FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelInfo);
             
             return self.GetPanelLogic<T>(fuiEntity, needVisible);
         }
@@ -49,7 +49,7 @@ namespace ET.Client
 
             if (!fuiEntity.IsPreLoad)
             {
-                Log.Warning($"{fuiEntity.PanelId} is not loaded!");
+                Log.Warning($"{fuiEntity.panelInfo.PanelId} is not loaded!");
                 return null;
             }
 
@@ -62,19 +62,19 @@ namespace ET.Client
             return fuiEntity.GetComponent<T>();
         }
         
-        private static PanelId GetPanelIdByGeneric<T>(this FUIComponent self) where T : Entity
+        private static PanelInfo GetPanelIdByGeneric<T>(this FUIComponent self) where T : Entity
         {
             if (FUIEventComponent.Instance.TryGetPanelInfo<T>(out PanelInfo panelInfo))
             {
-                return panelInfo.PanelId;
+                return panelInfo;
             }
 
-            return PanelId.Invalid;
+            return default;
         }
         
-        private static FUIEntity GetFirstFUIEntityByPanelId(this FUIComponent self, PanelId panelId)
+        private static FUIEntity GetFirstFUIEntityByPanelId(this FUIComponent self, PanelInfo panelInfo)
         {
-            if (!self.AllPanelsDict.TryGetValue(panelId, out var list))
+            if (!self.AllPanelsDict.TryGetValue(panelInfo.PanelId, out var list))
             {
                 return null;
             }

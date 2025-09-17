@@ -46,7 +46,7 @@ namespace FUIEditor
                     return;
                 }
 
-                if (variableInfo.ComponentInfo?.PanelType != PanelType.Common)
+                if (variableInfo.ComponentInfo?.uiPanelType is not ( -1 or  -2))
                 {
                     return;
                 }
@@ -69,6 +69,9 @@ namespace FUIEditor
             
             string nameSpace = componentInfo.NameSpace;
             string panelName = componentInfo.NameWithoutExtension;
+
+            ToUIPanelType toUIPanelType = (ToUIPanelType)componentInfo.uiPanelType;
+            string uiPanelType = toUIPanelType.ToString();
             
             string fileDir = "{0}/{1}".Fmt(FUICodeSpawner.ModelViewCodeDir, packageName);
             if (!Directory.Exists(fileDir))
@@ -91,7 +94,7 @@ namespace FUIEditor
             sb.AppendLine($"namespace {FUICodeSpawner.NameSpace}");
             sb.AppendLine("{");
             sb.AppendLine($"{GetTabs(1)}[ComponentOf(typeof(FUIEntity))]");
-            sb.AppendLine($"{GetTabs(1)}[FUIPanel(PanelId.{panelName}, \"{packageName}\", \"{panelName}\")]");
+            sb.AppendLine($"{GetTabs(1)}[FUIPanel(PanelId.{panelName}, UIPanelType.{uiPanelType}, \"{packageName}\", \"{panelName}\")]");
             sb.AppendLine($"{GetTabs(1)}public class {panelName}: Entity, IAwake");
             sb.AppendLine($"{GetTabs(1)}{{");
             
@@ -103,7 +106,7 @@ namespace FUIEditor
                     return;
                 }
 
-                if (variableInfo.ComponentInfo?.PanelType != PanelType.Common)
+                if (variableInfo.ComponentInfo?.uiPanelType is not (-1 or -2))
                 {
                     return;
                 }

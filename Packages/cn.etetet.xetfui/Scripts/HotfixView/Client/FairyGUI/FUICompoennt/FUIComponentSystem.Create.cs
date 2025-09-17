@@ -11,15 +11,15 @@ namespace ET.Client
         /// <summary>
         /// 创建一个新界面。适用于会创建多个副本的情况。
         /// </summary>
-        public static async ETTask<FUIEntity> CreatePanelAsync<T>(this FUIComponent self, PanelId panelId, long id = 0) where T: Entity, IAwake, new()
+        public static async ETTask<FUIEntity> CreatePanelAsync<T>(this FUIComponent self, PanelInfo panelInfo, long id = 0) where T: Entity, IAwake, new()
         {
-            FUIEntity fuiEntity = await self.CreateFUIEntityAsync<T>(panelId, id);
+            FUIEntity fuiEntity = await self.CreateFUIEntityAsync<T>(panelInfo, id);
             self.SetPanelVisible(fuiEntity);
 
             return fuiEntity;
         }
         
-        private static async ETTask<FUIEntity> CreateFUIEntityAsync<T>(this FUIComponent self, PanelId panelId, long id = 0) where T: Entity, IAwake, new()
+        private static async ETTask<FUIEntity> CreateFUIEntityAsync<T>(this FUIComponent self, PanelInfo panelInfo, long id = 0) where T: Entity, IAwake, new()
         {
             CoroutineLock coroutineLock = null;
             try
@@ -35,7 +35,7 @@ namespace ET.Client
                 {
                     fuiEntity = self.AddChild<FUIEntity>(true);
                 }
-                fuiEntity.PanelId = panelId;
+                fuiEntity.panelInfo = panelInfo;
                 
                 bool isSuccess = await self.LoadFUIEntitysAsync<T>(fuiEntity);
                 if (isSuccess)
@@ -74,16 +74,16 @@ namespace ET.Client
             }
             
             // 设置根节点
-            fuiEntity.SetRoot(self.GetTargetRoot(fuiEntity.PanelCoreData.panelType));
+            fuiEntity.SetRoot(self.GetTargetRoot(panelInfo.UIPanelType));
 
             Entity component = fuiEntity.AddComponent<T>();
             fuiEntity.Component = component;
 
             // 记录fuiEntity
-            if (!self.AllPanelsDict.TryGetValue(fuiEntity.PanelId, out var list))
+            if (!self.AllPanelsDict.TryGetValue(fuiEntity.panelInfo.PanelId, out var list))
             {
                 list = new List<long>();
-                self.AllPanelsDict[fuiEntity.PanelId] = list;
+                self.AllPanelsDict[fuiEntity.panelInfo.PanelId] = list;
             }
             list.Add(fuiEntity.Id);
             

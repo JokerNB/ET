@@ -18,12 +18,12 @@ namespace ET.Client
             list.numItems = num;
             await self.Root().GetComponent<TimerComponent>().WaitAsync(1000);
             list.numItems = num + 2;
-            
+
             GlobalComponent globalComponent = self.Root().GetComponent<GlobalComponent>();
-            await LoginHelper.Login(self.Root(), globalComponent.GlobalConfig.Address, "Et123456", "123");
+            var playerComponent = self.Root().GetComponent<PlayerComponent>();
+            await LoginHelper.Login(self.Root(), globalComponent.GlobalConfig.Address, playerComponent.Account, playerComponent.Password);
             await self.Root().GetComponent<TimerComponent>().WaitAsync(500);
             list.numItems = num + 4;
-            
             await self.Root().GetComponent<TimerComponent>().WaitAsync(500);
             list.numItems = num + 6;
             await self.Root().GetComponent<TimerComponent>().WaitAsync(500);

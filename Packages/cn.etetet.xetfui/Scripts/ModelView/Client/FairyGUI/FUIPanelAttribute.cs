@@ -15,10 +15,16 @@ namespace ET.Client
             get;
         }
 
-        public FUIPanelAttribute(PanelId panelId, string packageName, string componentName)
+        public FUIPanelAttribute(PanelId panelId, UIPanelType uiPanelType, string packageName, string componentName)
         {
             this.PanelId = panelId;
-            this.PanelInfo = new PanelInfo() { PanelId = panelId, PackageName = packageName, ComponentName = componentName };
+            this.PanelInfo = new PanelInfo
+            {
+                PanelId = panelId,
+                UIPanelType = uiPanelType,
+                PackageName = packageName,
+                ComponentName = componentName,
+            };
         }
     }
 }

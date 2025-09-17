@@ -60,7 +60,7 @@ namespace FUIEditor
                     return;
                 }
 
-                if (variableInfo.ComponentInfo?.PanelType != PanelType.Common)
+                if (variableInfo.ComponentInfo?.uiPanelType is not (-1 or -2))
                 {
                     return;
                 }
