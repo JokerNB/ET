@@ -72,9 +72,6 @@ namespace ET
         [MemoryPackOrder(3)]
         public string Token { get; set; }
 
-        [MemoryPackOrder(4)]
-        public long PlayerId { get; set; }
-
         public override void Dispose()
         {
             if (!this.IsFromPool)
@@ -86,7 +83,6 @@ namespace ET
             this.Error = default;
             this.Message = default;
             this.Token = default;
-            this.PlayerId = default;
 
             ObjectPool.Recycle(this);
         }
@@ -114,9 +110,6 @@ namespace ET
         [MemoryPackOrder(3)]
         public string GateAddress { get; set; }
 
-        [MemoryPackOrder(4)]
-        public long PlayerId { get; set; }
-
         public override void Dispose()
         {
             if (!this.IsFromPool)
@@ -128,7 +121,6 @@ namespace ET
             this.Account = default;
             this.RealmKey = default;
             this.GateAddress = default;
-            this.PlayerId = default;
 
             ObjectPool.Recycle(this);
         }
@@ -285,9 +277,6 @@ namespace ET
         [MemoryPackOrder(3)]
         public string Token { get; set; }
 
-        [MemoryPackOrder(4)]
-        public long PlayerId { get; set; }
-
         public override void Dispose()
         {
             if (!this.IsFromPool)
@@ -299,7 +288,6 @@ namespace ET
             this.Error = default;
             this.Message = default;
             this.Token = default;
-            this.PlayerId = default;
 
             ObjectPool.Recycle(this);
         }
@@ -511,9 +499,6 @@ namespace ET
         [MemoryPackOrder(2)]
         public string AccountName { get; set; }
 
-        [MemoryPackOrder(3)]
-        public long PlayerId { get; set; }
-
         public override void Dispose()
         {
             if (!this.IsFromPool)
@@ -524,7 +509,6 @@ namespace ET
             this.RpcId = default;
             this.Key = default;
             this.AccountName = default;
-            this.PlayerId = default;
 
             ObjectPool.Recycle(this);
         }
@@ -577,7 +561,7 @@ namespace ET
         public int RpcId { get; set; }
 
         [MemoryPackOrder(1)]
-        public long PlayerId { get; set; }
+        public string Account { get; set; }
 
         public override void Dispose()
         {
@@ -587,7 +571,7 @@ namespace ET
             }
 
             this.RpcId = default;
-            this.PlayerId = default;
+            this.Account = default;
 
             ObjectPool.Recycle(this);
         }
@@ -906,6 +890,77 @@ namespace ET
         }
     }
 
+    [MemoryPackable]
+    [Message(LoginOuter.C2G_SelectOrAddArchiveRequest)]
+    [ResponseType(nameof(C2G_SelectOrAddArchiveResponse))]
+    public partial class C2G_SelectOrAddArchiveRequest : MessageObject, ISessionRequest
+    {
+        public static C2G_SelectOrAddArchiveRequest Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<C2G_SelectOrAddArchiveRequest>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public string AccountName { get; set; }
+
+        [MemoryPackOrder(2)]
+        public int ArchiveNum { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.AccountName = default;
+            this.ArchiveNum = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginOuter.C2G_SelectOrAddArchiveResponse)]
+    public partial class C2G_SelectOrAddArchiveResponse : MessageObject, ISessionResponse
+    {
+        public static C2G_SelectOrAddArchiveResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<C2G_SelectOrAddArchiveResponse>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        [MemoryPackOrder(2)]
+        public int ArchiveNum { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+            this.ArchiveNum = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
     public static class LoginOuter
     {
         public const ushort Main2NetClient_Login = 1001;
@@ -933,5 +988,7 @@ namespace ET
         public const ushort C2R_RemoveArchiveResponse = 1023;
         public const ushort C2M_UpdateArchiveRequest = 1024;
         public const ushort C2M_UpdateArchiveResponse = 1025;
+        public const ushort C2G_SelectOrAddArchiveRequest = 1026;
+        public const ushort C2G_SelectOrAddArchiveResponse = 1027;
     }
 }

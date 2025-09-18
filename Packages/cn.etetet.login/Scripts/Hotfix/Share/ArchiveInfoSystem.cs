@@ -14,6 +14,7 @@ namespace ET
         {
             ArchiveInfoProto archiveInfoProto = ArchiveInfoProto.Create();
             archiveInfoProto.AccountHash = self.AccountLongHash;
+            archiveInfoProto.ArchiveNum = self.ArchiveNumber;
             archiveInfoProto.Recruits = new List<long>(self.RecruitUnitIds);
             return archiveInfoProto;
         }
@@ -22,6 +23,8 @@ namespace ET
         {
             self.RecruitUnitIds.Clear();
             self.RecruitUnitIds.AddRange(archiveInfoProto.Recruits);
+            self.ArchiveNumber = archiveInfoProto.ArchiveNum;
+            self.AccountLongHash = archiveInfoProto.AccountHash;
         }
     }
 }

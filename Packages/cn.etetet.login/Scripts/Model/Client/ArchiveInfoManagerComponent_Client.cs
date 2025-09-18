@@ -7,6 +7,6 @@ namespace ET.Client
     {
         public List<EntityRef<ArchiveInfo>> ArchiveInfos = new List<EntityRef<ArchiveInfo>>();
 
-        public EntityRef<ArchiveInfo> CurArchiveInfo = null;
+        public EntityRef<ArchiveInfo> CurArchiveInfo = default;
     }
 }

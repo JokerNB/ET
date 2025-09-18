@@ -42,7 +42,7 @@ namespace ET.Server
                     try
                     {
                         var m2GSecondLogin = await session.Root().GetComponent<MessageLocationSenderComponent>().Get(LocationType.Unit)
-                                .Call(request.PlayerId, G2M_SecondLogin.Create()) as M2G_SecondLogin;
+                                .Call(request.Account.GetLongHashCode(), G2M_SecondLogin.Create()) as M2G_SecondLogin;
                         if (m2GSecondLogin.Error == ErrorCode.ERR_Success)
                         {
                             //TODO:二次登录逻辑，补全下发切换场景消息
@@ -78,7 +78,8 @@ namespace ET.Server
                     // //这里可以从DB加载Unit
                     // Unit unit = UnitFactory.Create(scene, player.Id, UnitType.Player);
                     // long unitId = unit.Id;
-                    (bool isNewPlayer, Unit unit) = await UnitLoadHelper.LoadPlayerUnit(player, request.PlayerId);
+
+                    (bool isNewPlayer, Unit unit) = await UnitLoadHelper.LoadPlayerUnit(player, request.Account.GetLongHashCode());
 
                     StartSceneConfig startSceneConfig = StartSceneConfigCategory.Instance.GetBySceneName(session.Zone(), "Map1");
 

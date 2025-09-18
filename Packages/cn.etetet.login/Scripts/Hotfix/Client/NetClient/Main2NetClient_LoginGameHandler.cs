@@ -14,7 +14,6 @@
             C2G_LoginGameGate c2GLoginGameGate =C2G_LoginGameGate.Create();
             c2GLoginGameGate.Key = request.RealmKey;
             c2GLoginGameGate.AccountName = request.Account;
-            c2GLoginGameGate.PlayerId = request.PlayerId;
             G2C_LoginGameGate g2CLoginGameGate = await gateSession.Call(c2GLoginGameGate) as G2C_LoginGameGate;
 
             if (g2CLoginGameGate.Error != ErrorCode.ERR_Success)
@@ -25,17 +24,17 @@
             }
             Log.Debug("登录gate成功！");
 
-            var c2GEnterGame = C2G_EnterGame.Create();
-            c2GEnterGame.PlayerId = request.PlayerId;
-            G2C_EnterGame g2CEnterGame = await gateSession.Call(c2GEnterGame) as G2C_EnterGame;
-            if (g2CEnterGame.Error != ErrorCode.ERR_Success)
-            {
-                response.Error = g2CEnterGame.Error;
-                Log.Error($"登录Map失败：{g2CEnterGame.Error}");
-                return;
-            }
-            
-            Log.Debug("登录Map成功！");
+            // var c2GEnterGame = C2G_EnterGame.Create();
+            // c2GEnterGame.Account = account;
+            // G2C_EnterGame g2CEnterGame = await gateSession.Call(c2GEnterGame) as G2C_EnterGame;
+            // if (g2CEnterGame.Error != ErrorCode.ERR_Success)
+            // {
+            //     response.Error = g2CEnterGame.Error;
+            //     Log.Error($"登录Map失败：{g2CEnterGame.Error}");
+            //     return;
+            // }
+            //
+            // Log.Debug("登录Map成功！");
         }
     }
 }

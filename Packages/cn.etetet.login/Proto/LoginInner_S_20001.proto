@@ -111,7 +111,8 @@ message M2G_SecondLogin // ILocationResponse
 message ArchiveInfoProto
 {
 	int64 AccountHash = 1;
-	repeated int64 Recruits = 2;
+	int32 ArchiveNum = 2;
+	repeated int64 Recruits = 3;
 }
 
 //ResponseType Other2Archive_GetArchiveListResponse
@@ -141,6 +142,7 @@ message Other2Archive_AddNewArchiveResponse // IResponse
 	int32 RpcId = 1;
 	int32 Error = 2;
 	string Message = 3;
+	int32 ArchiveNum = 4;
 }
 
 //ResponseType Other2Archive_UpdateArchiveResponse
@@ -170,4 +172,25 @@ message Other2Archive_RemoveArchiveResponse // IResponse
 	int32 RpcId = 1;
 	int32 Error = 2;
 	string Message = 3;
+}
+
+//ResponseType Other2Archive_SelectCurArchiveResponse
+message Other2Archive_SelectCurArchiveRequest // IRequest
+{
+	int32 RpcId = 1;
+	string AccountName = 2;
+	int32 ArchiveNum = 3;
+}
+
+message Other2Archive_SelectCurArchiveResponse // IResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+}
+
+message Other2Archive_RemoveCurArchive // IMessage
+{
+	int32 RpcId = 1;
+	string AccountName = 2;
 }

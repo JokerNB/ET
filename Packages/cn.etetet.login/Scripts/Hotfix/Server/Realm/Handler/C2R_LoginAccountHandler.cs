@@ -72,7 +72,6 @@ namespace ET.Server
                         account.Password = request.Password;
                         account.AccountType = (int)AccountType.General;
                         account.CreateTime = TimeInfo.Instance.ServerNow();
-                        account.PlayerId = IdGenerater.Instance.GenerateId();
                         await dbComponent.Save(account);
                     }
                     
@@ -105,7 +104,6 @@ namespace ET.Server
                     session.Root().GetComponent<TokenComponent>().Add(request.AccountName, Token);
                     
                     response.Token = Token;
-                    response.PlayerId = account.PlayerId;
                     account?.Dispose();
                 }
             }

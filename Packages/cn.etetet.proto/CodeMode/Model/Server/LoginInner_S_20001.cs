@@ -490,6 +490,9 @@ namespace ET
         public long AccountHash { get; set; }
 
         [MemoryPackOrder(1)]
+        public int ArchiveNum { get; set; }
+
+        [MemoryPackOrder(2)]
         public List<long> Recruits { get; set; } = new();
 
         public override void Dispose()
@@ -500,6 +503,7 @@ namespace ET
             }
 
             this.AccountHash = default;
+            this.ArchiveNum = default;
             this.Recruits.Clear();
 
             ObjectPool.Recycle(this);
@@ -621,6 +625,9 @@ namespace ET
         [MemoryPackOrder(2)]
         public string Message { get; set; }
 
+        [MemoryPackOrder(3)]
+        public int ArchiveNum { get; set; }
+
         public override void Dispose()
         {
             if (!this.IsFromPool)
@@ -631,6 +638,7 @@ namespace ET
             this.RpcId = default;
             this.Error = default;
             this.Message = default;
+            this.ArchiveNum = default;
 
             ObjectPool.Recycle(this);
         }
@@ -766,6 +774,102 @@ namespace ET
         }
     }
 
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_SelectCurArchiveRequest)]
+    [ResponseType(nameof(Other2Archive_SelectCurArchiveResponse))]
+    public partial class Other2Archive_SelectCurArchiveRequest : MessageObject, IRequest
+    {
+        public static Other2Archive_SelectCurArchiveRequest Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_SelectCurArchiveRequest>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public string AccountName { get; set; }
+
+        [MemoryPackOrder(2)]
+        public int ArchiveNum { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.AccountName = default;
+            this.ArchiveNum = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_SelectCurArchiveResponse)]
+    public partial class Other2Archive_SelectCurArchiveResponse : MessageObject, IResponse
+    {
+        public static Other2Archive_SelectCurArchiveResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_SelectCurArchiveResponse>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginInner.Other2Archive_RemoveCurArchive)]
+    public partial class Other2Archive_RemoveCurArchive : MessageObject, IMessage
+    {
+        public static Other2Archive_RemoveCurArchive Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<Other2Archive_RemoveCurArchive>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public string AccountName { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.AccountName = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
     public static class LoginInner
     {
         public const ushort R2G_GetLoginKey = 20002;
@@ -792,5 +896,8 @@ namespace ET
         public const ushort Other2Archive_UpdateArchiveResponse = 20023;
         public const ushort Other2Archive_RemoveArchiveRequest = 20024;
         public const ushort Other2Archive_RemoveArchiveResponse = 20025;
+        public const ushort Other2Archive_SelectCurArchiveRequest = 20026;
+        public const ushort Other2Archive_SelectCurArchiveResponse = 20027;
+        public const ushort Other2Archive_RemoveCurArchive = 20028;
     }
 }

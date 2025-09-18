@@ -7,5 +7,6 @@ namespace ET.Server
     {
         public Dictionary<long, List<EntityRef<ArchiveInfo>>> ArchiveInfos = new Dictionary<long, List<EntityRef<ArchiveInfo>>>();
         public Dictionary<long, int> ArchiveLastNumber = new Dictionary<long, int>();
+        public Dictionary<long, EntityRef<ArchiveInfo>> CurArchiveInfo = new Dictionary<long, EntityRef<ArchiveInfo>>();
     }
 }

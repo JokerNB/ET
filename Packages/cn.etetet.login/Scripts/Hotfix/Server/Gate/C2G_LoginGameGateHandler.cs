@@ -58,7 +58,7 @@
                     Player player = playerComponent.GetByAccount(request.AccountName);
                     if (player == null)
                     {
-                        long playerId = request.PlayerId;
+                        long playerId = request.AccountName.GetLongHashCode();
                         player = playerComponent.AddChildWithId<Player, string>(playerId, account);
                         player.PlayerId = playerId;
                         

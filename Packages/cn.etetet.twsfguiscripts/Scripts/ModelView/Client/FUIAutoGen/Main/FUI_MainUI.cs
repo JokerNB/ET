@@ -8,7 +8,16 @@ namespace ET.Client.Main
     [EnableClass]
     public partial class FUI_MainUI: GComponent
     {
+        public enum ListStatePage
+        {
+            hide,
+            show,
+        }
+
+        public Controller ListState;
+        public GList ArchiveList;
         public ET.Client.Main.FUI_Button_PlayGame Button_PlayGame;
+        public ET.Client.Main.FUI_Button_PlayGame Button_ArchiveList;
         public ET.Client.Main.FUI_Button_PlayGame Button_ExitGame;
         public const string URL = "ui://y6b7eitgjpf41";
 
@@ -20,8 +29,11 @@ namespace ET.Client.Main
         public override void ConstructFromXML(XML xml)
         {
             base.ConstructFromXML(xml);
-            Button_PlayGame = (ET.Client.Main.FUI_Button_PlayGame)GetChildAt(1);
-            Button_ExitGame = (ET.Client.Main.FUI_Button_PlayGame)GetChildAt(2);
+            ListState = GetControllerAt(0);
+            ArchiveList = (GList)GetChildAt(1);
+            Button_PlayGame = (ET.Client.Main.FUI_Button_PlayGame)GetChildAt(2);
+            Button_ArchiveList = (ET.Client.Main.FUI_Button_PlayGame)GetChildAt(3);
+            Button_ExitGame = (ET.Client.Main.FUI_Button_PlayGame)GetChildAt(4);
         }
     }
 }

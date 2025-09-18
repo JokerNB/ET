@@ -13,6 +13,7 @@ namespace ET.Client
             root.AddComponent<ResourcesLoaderComponent>();
             root.AddComponent<PlayerComponent>();
             root.AddComponent<CurrentScenesComponent>();
+            root.AddComponent<ArchiveInfoManagerComponent_Client>();
 
             root.AddComponent<FUIAssetComponent, bool>(true);
             var fuiComponent = root.AddComponent<FUIComponent>();

@@ -31,8 +31,6 @@ namespace ET.Client
             }
 
             ServerInfoProto serverInfoProto = r2CGetServerInfos.ServerInfoList[0];
-            
-            //TODO:请求存档信息
 
             //请求获取RealmKey
             C2R_GetRealmKey c2RGetRealmKey = C2R_GetRealmKey.Create();
@@ -45,24 +43,36 @@ namespace ET.Client
                 Log.Error("获取RealmKey失败");
                 return;
             }
-            
+
             C2R_GetArchiveListRequest c2RGetArchiveListRequest = C2R_GetArchiveListRequest.Create();
             c2RGetArchiveListRequest.AccountName = account;
             c2RGetArchiveListRequest.Token = token;
-            C2R_GetArchiveListResponse c2RGetArchiveListResponse = await clientSenderComponent.Call(c2RGetArchiveListRequest) as C2R_GetArchiveListResponse;
+            C2R_GetArchiveListResponse c2RGetArchiveListResponse =
+                    await clientSenderComponent.Call(c2RGetArchiveListRequest) as C2R_GetArchiveListResponse;
             if (c2RGetArchiveListResponse.Error != ErrorCode.ERR_Success)
             {
                 Log.Error("获取存档列表失败");
                 return;
             }
+
             root.GetComponent<ArchiveInfoManagerComponent_Client>().InitArchiveList(c2RGetArchiveListResponse.ArchiveInfoList);
 
+            //请求角色进入Map地图
+            NetClient2Main_LoginGame netClient2MainLoginGame =
+                    await clientSenderComponent.LoginGameAsync(account, r2CGetRealmKey.Key, r2CGetRealmKey.Address);
+            if (netClient2MainLoginGame.Error != ErrorCode.ERR_Success)
+            {
+                Log.Error($"进入Gate失败: {netClient2MainLoginGame.Error}");
+                return;
+            }
+            
+            Log.Debug("进入Gate成功！");
+            
             var playerComponent = root.GetComponent<PlayerComponent>();
             playerComponent.Token = token;
             playerComponent.Key = r2CGetRealmKey.Key;
             playerComponent.Address = r2CGetRealmKey.Address;
-            playerComponent.PlayerId = netClient2MainLogin.PlayerId;
-            
+
             await EventSystem.Instance.PublishAsync(root, new LoginFinish());
         }
     }

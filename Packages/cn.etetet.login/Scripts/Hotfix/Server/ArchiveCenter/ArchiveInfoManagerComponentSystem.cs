@@ -16,6 +16,7 @@ namespace ET.Server
         {
             self.ArchiveInfos.Clear();
             self.ArchiveLastNumber.Clear();
+            self.CurArchiveInfo.Clear();
         }
 
         public static void Add(this ET.Server.ArchiveInfoManagerComponent self, string accountName, ET.ArchiveInfo archiveInfo)
@@ -74,8 +75,8 @@ namespace ET.Server
                 {
                     foreach (ArchiveInfo info in archiveInfos)
                     {
-                        self.Add(accountName, info);
                         self.AddChild(info);
+                        self.Add(accountName, info);
                     }
                 }
             }
@@ -90,7 +91,7 @@ namespace ET.Server
 
                 var archiveInfo = self.AddChild<ArchiveInfo>();
                 archiveInfo.AccountLongHash = accountName.GetLongHashCode();
-                archiveInfo.ArchiveNumber = self.ArchiveLastNumber[archiveInfo.AccountLongHash] + 1;
+                archiveInfo.ArchiveNumber = self.ArchiveLastNumber.TryGetValue(archiveInfo.AccountLongHash, out int value) ? value + 1 : 1;
                 self.Add(accountName, archiveInfo);
                 await dbComponent.Save(archiveInfo);
             }
@@ -148,6 +149,29 @@ namespace ET.Server
 
                 await ETTask.CompletedTask;
             }
+        }
+
+        public static int SelectCurArchive(this ET.Server.ArchiveInfoManagerComponent self, string accountName, int archiveNumber)
+        {
+            if (self.ArchiveInfos.TryGetValue(accountName.GetLongHashCode(), out var archiveInfoList))
+            {
+                foreach (ArchiveInfo archiveInfo in archiveInfoList)
+                {
+                    if (archiveInfo.ArchiveNumber == archiveNumber)
+                    {
+                        self.CurArchiveInfo[archiveInfo.AccountLongHash] = archiveInfo;
+                        return ErrorCode.ERR_Success;
+                    }
+                }
+            }
+
+            return ErrorCode.ERR_SelectArchiveError;
+        }
+
+        public static void RemoveCurArchive(this ET.Server.ArchiveInfoManagerComponent self, string accountName)
+        {
+            if (self.CurArchiveInfo.ContainsKey(accountName.GetLongHashCode()))
+                self.CurArchiveInfo.Remove(accountName.GetLongHashCode());
         }
     }
 }

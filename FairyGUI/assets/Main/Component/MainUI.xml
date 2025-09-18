@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" remark="3">
+  <controller name="ListState" pages="0,hide,1,show" selected="0"/>
   <displayList>
     <image id="n0_jpf4" name="n0" src="jpf40" fileName="Atlas/BG_MainUI.png" xy="0,-118" size="1971,1350" aspect="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </image>
-    <component id="n1_jpf4" name="Button_PlayGame" src="jpf42" fileName="Component/Button_PlayGame.xml" xy="525,358" size="400,80">
+    <list id="n3_tfsz" name="ArchiveList" xy="1030,247" size="420,585" overflow="scroll" lineGap="13" defaultItem="ui://y6b7eitgjpf42" align="center" vAlign="middle" autoClearItems="true">
+      <gearDisplay controller="ListState" pages="1"/>
+      <relation target="n5_tfsz" sidePair="left-right"/>
+      <item title="1"/>
+      <item title="2"/>
+      <item title="3"/>
+      <item title="4"/>
+      <item title="5"/>
+      <item title="6"/>
+      <item title="7"/>
+      <item title="8"/>
+      <item title="9"/>
+    </list>
+    <component id="n1_jpf4" name="Button_PlayGame" src="jpf42" fileName="Component/Button_PlayGame.xml" xy="525,360" size="400,80" group="n5_tfsz">
       <relation target="" sidePair="left-left%,top-top%"/>
-      <Button title="开始游戏"/>
+      <Button title="开始新游戏"/>
     </component>
-    <component id="n2_jpf4" name="Button_ExitGame" src="jpf42" fileName="Component/Button_PlayGame.xml" xy="525,507" size="400,80">
+    <component id="n4_tfsz" name="Button_ArchiveList" src="jpf42" fileName="Component/Button_PlayGame.xml" xy="525,500" size="400,80" group="n5_tfsz">
+      <relation target="" sidePair="left-left%,top-top%"/>
+      <Button title="存档"/>
+    </component>
+    <component id="n2_jpf4" name="Button_ExitGame" src="jpf42" fileName="Component/Button_PlayGame.xml" xy="525,640" size="400,80" group="n5_tfsz">
       <relation target="" sidePair="left-left%,top-top%"/>
       <Button title="退出游戏"/>
     </component>
+    <group id="n5_tfsz" name="n5" xy="525,360" size="400,360" advanced="true" layout="vt" lineGap="60">
+      <relation target="" sidePair="center-center%,middle-middle"/>
+    </group>
   </displayList>
 </component>

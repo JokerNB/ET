@@ -3,13 +3,14 @@
 namespace ET.Client
 {
     [EntitySystemOf(typeof(ArchiveInfoManagerComponent_Client))]
+    [FriendOfAttribute(typeof(ET.ArchiveInfo))]
     public static partial class ArchiveInfoManagerComponent_ClientSystem
     {
         [EntitySystem]
         private static void Awake(this ET.Client.ArchiveInfoManagerComponent_Client self)
         {
         }
-        
+
         [EntitySystem]
         private static void Destroy(this ET.Client.ArchiveInfoManagerComponent_Client self)
         {
@@ -21,23 +22,23 @@ namespace ET.Client
         {
             self.ArchiveInfos.Add(archiveInfo);
         }
-        
+
         public static void Remove(this ArchiveInfoManagerComponent_Client self, ET.ArchiveInfo archiveInfo)
         {
             self.ArchiveInfos.Remove(archiveInfo);
         }
-        
+
         public static async ETTask<int> AddNew(this ArchiveInfoManagerComponent_Client self)
         {
             var archiveInfo = self.AddChild<ArchiveInfo>();
             self.Add(archiveInfo);
-            
+
             C2R_AddNewArchiveRequest msg = C2R_AddNewArchiveRequest.Create();
             msg.AccountName = self.Root().GetComponent<PlayerComponent>().Account;
             var response = await self.Root().GetComponent<ClientSenderComponent>().Call(msg) as C2R_AddNewArchiveResponse;
             return response.Error;
         }
-        
+
         public static async ETTask<int> Update(this ArchiveInfoManagerComponent_Client self, ArchiveInfo archiveInfo)
         {
             C2M_UpdateArchiveRequest msg = C2M_UpdateArchiveRequest.Create();
@@ -52,6 +53,7 @@ namespace ET.Client
             {
                 var archiveInfo = self.AddChild<ArchiveInfo>();
                 archiveInfo.FromMessage(archiveInfoProto);
+                self.Add(archiveInfo);
             }
         }
 
@@ -62,10 +64,22 @@ namespace ET.Client
                 self.CurArchiveInfo = self.ArchiveInfos[idx];
             }
         }
-        
+
         public static void RemoveCurArchive(this ArchiveInfoManagerComponent_Client self)
         {
-            self.CurArchiveInfo = null;
+            self.CurArchiveInfo = default;
+        }
+
+        public static void SetCurArchiveInfoByArchiveNum(this ArchiveInfoManagerComponent_Client self, int archiveNum)
+        {
+            foreach (ArchiveInfo archiveInfo in self.ArchiveInfos)
+            {
+                if (archiveInfo.ArchiveNumber == archiveNum)
+                {
+                    self.CurArchiveInfo = archiveInfo;
+                    return;
+                }
+            }
         }
     }
 }

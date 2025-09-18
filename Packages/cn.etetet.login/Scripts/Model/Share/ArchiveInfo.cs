@@ -7,9 +7,7 @@ namespace ET
     public class ArchiveInfo : Entity, IAwake
     {
         //存档编号
-        [BsonIgnore]
         public int ArchiveNumber;
-
         //玩家ID，每个账号唯一的ID
         public long AccountLongHash;
         //招募的人员
