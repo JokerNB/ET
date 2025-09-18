@@ -100,6 +100,7 @@ namespace ET.Client
                 Log.Error($"选择存档出错：{err}");
                 return;
             }
+
             var clientSenderComponent = self.Root().GetComponent<ClientSenderComponent>();
             var playerComponent = self.Root().GetComponent<PlayerComponent>();
             string account = playerComponent.Account;
@@ -114,6 +115,7 @@ namespace ET.Client
             }
 
             Log.Debug("登录Map成功！");
+            await self.Root().GetComponent<FUIComponent>().ShowPanelAsync<LoadingUI, bool>(false);
             self.Root().GetComponent<FUIComponent>().ClosePanel<MainUI>();
         }
     }

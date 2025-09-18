@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,10" extention="ProgressBar" initName="ProgressBar" remark="-2">
+  <displayList>
+    <image id="n0_tfsz" name="n0" src="tfszj" fileName="Atlas/Progress_0.png" xy="0,0" size="50,10">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_tfsz" name="bar" src="tfszk" fileName="Atlas/Progress_1.png" xy="1,1" size="48,8">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <ProgressBar/>
+</component>

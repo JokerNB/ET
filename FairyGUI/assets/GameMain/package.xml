@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="xqkzagd9">
+  <resources>
+    <image id="tfsz0" name="20250918193447_1.jpg" path="/Atlas/"/>
+    <component id="tfsz1" name="GameMainUI.xml" path="/Component/" exported="true"/>
+    <image id="tfsz2" name="BG_Item_0.png" path="/Atlas/" exported="true"/>
+    <component id="tfsz3" name="Button_Flag.xml" path="/Component/" exported="true"/>
+    <image id="tfsz4" name="Flag_7.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfsz5" name="Flag_8.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfsz6" name="Flag_9.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfsz7" name="Flag_10.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfsz8" name="Flag_11.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfsz9" name="Flag_0.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfsza" name="Flag_1.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfszb" name="Flag_2.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfszc" name="Flag_3.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfszd" name="Flag_4.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfsze" name="Flag_5.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfszf" name="Flag_6.png" path="/Atlas/Flag/" exported="true"/>
+    <image id="tfszg" name="BG_Item_-1.png" path="/Atlas/" exported="true"/>
+    <component id="tfszh" name="Button_Func.xml" path="/Component/" exported="true"/>
+    <image id="tfszi" name="BG_Item_1.png" path="/Atlas/" exported="true"/>
+    <image id="tfszj" name="Progress_0.png" path="/Atlas/" exported="true" scale="9grid" scale9grid="5,4,10,1"/>
+    <image id="tfszk" name="Progress_1.png" path="/Atlas/" exported="true" scale="9grid" scale9grid="5,4,10,2"/>
+    <component id="tfszl" name="ProgressBar.xml" path="/Component/" exported="true"/>
+    <image id="tfszm" name="BG_Item_2.png" path="/Atlas/" exported="true"/>
+    <component id="tfszn" name="Item_Property.xml" path="/Component/" exported="true"/>
+    <image id="tfszo" name="Icon_Coin.png" path="/Atlas/" exported="true"/>
+    <image id="tfszp" name="BG_Bottom.png" path="/Atlas/" exported="true" scale="9grid" scale9grid="25,25,50,50"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

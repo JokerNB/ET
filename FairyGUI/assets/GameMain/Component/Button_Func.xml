@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="86,108" extention="Button" initName="Button_Func" remark="-2">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="Type" exported="true" pages="0,Normal,1,TextProgress,2,Progress" selected="0"/>
+  <displayList>
+    <image id="n7_tfsz" name="n7" src="tfszi" fileName="Atlas/BG_Item_1.png" xy="6,2" size="79,79"/>
+    <image id="n0_tfsz" name="n0" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0" size="86,86">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <image id="n1_tfsz" name="n1" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0" size="86,86">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <image id="n2_tfsz" name="n2" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0" size="86,86">
+      <gearDisplay controller="button" pages="2"/>
+    </image>
+    <image id="n3_tfsz" name="n3" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0" size="86,86">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+    <loader id="n5_tfsz" name="icon" xy="8,3" size="75,75" url="ui://xqkzagd9tfsz9" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+      <gearXY controller="Type" pages="2" values="16,3" default="8,3"/>
+      <gearSize controller="Type" pages="2" values="58,58,1,1" default="75,75,1,1"/>
+    </loader>
+    <text id="n8_tfsz" name="title" xy="8,84" size="78,24" font="Microsoft JhengHei" fontSize="15" align="center" vAlign="middle" autoSize="shrink" text="建造">
+      <relation target="" sidePair="bottom-bottom"/>
+    </text>
+    <text id="n9_tfsz" name="Text_Progress" xy="8,55" size="75,23" fontSize="15" align="center" autoSize="shrink" text="0 / 16">
+      <gearDisplay controller="Type" pages="1"/>
+    </text>
+    <component id="n10_tfsz" name="Progress" src="tfszl" fileName="Component/ProgressBar.xml" xy="10,60" size="69,13">
+      <gearDisplay controller="Type" pages="2"/>
+      <ProgressBar value="100" max="100"/>
+    </component>
+  </displayList>
+  <Button/>
+</component>

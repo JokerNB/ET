@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="268,40" initName="Item_Property" remark="-2">
+  <displayList>
+    <image id="n0_tfsz" name="n0" src="tfszm" fileName="Atlas/BG_Item_2.png" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_tfsz" name="n1" src="tfszo" fileName="Atlas/Icon_Coin.png" xy="-4,-1">
+      <relation target="" sidePair="width-width,height-height,left-left,top-top"/>
+    </image>
+    <text id="n2_tfsz" name="Text" xy="39,4" size="222,32" font="Microsoft JhengHei" fontSize="22" color="#ffff00" align="right" vAlign="middle" autoSize="height" text="123456">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>

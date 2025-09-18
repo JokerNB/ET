@@ -70,6 +70,12 @@ namespace ET.Client
             self.Camera = Camera.main;
 
             self.GenerateTilesAroundCamera();
+            
+            EventSystem.Instance.Publish(self.Root().CurrentScene(), new SetLoadingValue
+            {
+                Value = 5,
+                isComplete = true,
+            });
         }
 
         public static void GenerateTilesAroundCamera(this ET.Client.MapManagerComponent self)

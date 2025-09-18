@@ -5,7 +5,8 @@ namespace ET.Client
     public enum PanelId
     {
         Invalid = 0,
-        LoginUI,
+        GameMainUI,
+        LoadingUI,
         MainUI,
         // <last line>
     }
