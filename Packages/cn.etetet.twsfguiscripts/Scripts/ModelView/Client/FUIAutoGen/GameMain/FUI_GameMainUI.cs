@@ -15,6 +15,7 @@ namespace ET.Client.GameMain
         }
 
         public Controller BuildingUIState;
+        public ET.Client.GameMain.FUI_Button_Flag Button_Flag;
         public GList FuncList;
         public ET.Client.GameMain.FUI_Item_Property Item_Property;
         public ET.Client.GameMain.FUI_BuildingUI BuildingUI;
@@ -29,6 +30,7 @@ namespace ET.Client.GameMain
         {
             base.ConstructFromXML(xml);
             BuildingUIState = GetControllerAt(0);
+            Button_Flag = (ET.Client.GameMain.FUI_Button_Flag)GetChildAt(1);
             FuncList = (GList)GetChildAt(2);
             Item_Property = (ET.Client.GameMain.FUI_Item_Property)GetChildAt(3);
             BuildingUI = (ET.Client.GameMain.FUI_BuildingUI)GetChildAt(5);

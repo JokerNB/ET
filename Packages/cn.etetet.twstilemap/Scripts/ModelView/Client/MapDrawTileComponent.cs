@@ -14,7 +14,7 @@ namespace ET.Client
         public Tilemap tileMap_Water { get; set; }
         public Tilemap tileMap_Preview { get; set; }
         
-        public Dictionary<TileType, List<TileBase>> tileBaseMap_Map { get; set; } = new Dictionary<TileType, List<TileBase>>();
+        public Dictionary<int, TileBase> ConfigId_tileBaseDic { get; set; } = new Dictionary<int, TileBase>();
         
         public Tile tile_Green { get; set; }
         public Tile tile_Red { get; set; }
@@ -25,17 +25,18 @@ namespace ET.Client
         
         public Camera Camera;
         
-        
-        public Tilemap previewTilemap;
-        
+        //curdata
         public bool isBuilding = false;
         public Tilemap targetTilemap;
-        public Vector3Int BuildUpPos = default;
+        public Vector3Int BuildStartPos = default;
         public int2 cellSize = default;
-        public TileItemConfig Config = null;
-        public TileBase TileBase = null;
+        public TileItemConfig curConfig = null;
+        public TileBase curTileBase = null;
         public bool isCanDraw = false;
         public List<Vector3Int> previewTilesPos = new List<Vector3Int>();
-        public DrawType curDrawType;
+        public List<Vector3Int> targetTilesPos = new List<Vector3Int>();
+        public DrawType curDrawType = DrawType.None;
+        public Vector3Int dragStartPos = default;
+        public bool isDrag = false;
     }
 }

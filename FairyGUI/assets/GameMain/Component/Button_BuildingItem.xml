@@ -10,7 +10,7 @@
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
     <text id="n6_sb3t" name="Text_Desc" xy="128,59" size="391,42" font="Microsoft JhengHei" fontSize="12" color="#ccff66" autoSize="shrink" text="桥，可竖向同行"/>
-    <text id="n7_sb3t" name="Text_Price" xy="551,5" size="92,28" fontSize="12" color="#ffff33" align="center" vAlign="middle" vars="true" autoSize="none" text="价格：${价格=100}"/>
+    <text id="n7_sb3t" name="Text_Price" xy="551,5" size="92,28" fontSize="12" color="#ffff33" align="center" vAlign="middle" vars="true" autoSize="none" singleLine="true" text="价格：${price=100}"/>
   </displayList>
   <Button/>
 </component>

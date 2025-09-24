@@ -12,13 +12,17 @@ namespace ET
     public enum DrawType
     {
         /// <summary>
+        /// 无
+        /// </summary>
+        None = 0,
+        /// <summary>
         /// 单个
         /// </summary>
-        Single = 0,
+        Single = 1,
         /// <summary>
         /// 拖拽
         /// </summary>
-        Drag = 1,
+        Drag = 2,
     }
 
 } 

@@ -2,10 +2,8 @@
 <component size="1920,1080" opaque="false" remark="0">
   <controller name="BuildingUIState" exported="true" pages="0,不显示,1,显示" selected="0"/>
   <displayList>
-    <image id="n8_tfsz" name="n8" src="tfszp" fileName="Atlas/BG_Bottom.png" xy="0,956" size="1920,124" group="n10_sb3t">
-      <relation target="" sidePair="height-height,bottom-bottom"/>
-    </image>
-    <component id="n4_tfsz" name="n4" src="tfsz3" fileName="Component/Button_Flag.xml" xy="5,970" group="n10_sb3t"/>
+    <loader id="n11_t0ne" name="n11" xy="0,956" size="1920,124" group="n10_sb3t" url="ui://xqkzagd9tfszp" fill="scaleFree" useResize="true"/>
+    <component id="n4_tfsz" name="Button_Flag" src="tfsz3" fileName="Component/Button_Flag.xml" xy="5,970" group="n10_sb3t"/>
     <list id="n6_tfsz" name="FuncList" xy="348,969" size="811,108" group="n10_sb3t" layout="row" scroll="horizontal" colGap="4" defaultItem="ui://xqkzagd9tfszh" autoItemSize="false" autoClearItems="true" scrollItemToViewOnClick="false" foldInvisibleItems="true">
       <item title="建造" icon="ui://xqkzagd9tfsz6"/>
       <item title="房间" icon="ui://xqkzagd9tfsza"/>

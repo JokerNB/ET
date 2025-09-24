@@ -16,7 +16,7 @@
     "TileData": {
       "ResName": "CustomRuleTile_Normal_Bridge_V",
       "TileType": 2,
-      "DrawType": 0
+      "DrawType": 1
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Bridge_0",
@@ -39,7 +39,7 @@
     "TileData": {
       "ResName": "CustomRuleTile_Normal_Bridge_H",
       "TileType": 2,
-      "DrawType": 0
+      "DrawType": 1
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Bridge_1",
@@ -62,7 +62,7 @@
     "TileData": {
       "ResName": "Floor_Farm_1",
       "TileType": 0,
-      "DrawType": 1
+      "DrawType": 2
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Farm_0",
@@ -85,7 +85,7 @@
     "TileData": {
       "ResName": "CustomRuleTile_Ring_Fence",
       "TileType": 2,
-      "DrawType": 1
+      "DrawType": 2
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Fence",
@@ -108,7 +108,7 @@
     "TileData": {
       "ResName": "FDR_Grasslands_716",
       "TileType": 3,
-      "DrawType": 0
+      "DrawType": 1
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Fire_0",
@@ -131,7 +131,7 @@
     "TileData": {
       "ResName": "FDR_Grasslands_734",
       "TileType": 3,
-      "DrawType": 0
+      "DrawType": 1
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Fire_1",
@@ -154,7 +154,7 @@
     "TileData": {
       "ResName": "FDR_Grasslands_363",
       "TileType": 3,
-      "DrawType": 1
+      "DrawType": 2
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Signage_0",
@@ -177,7 +177,7 @@
     "TileData": {
       "ResName": "FDR_Grasslands_389",
       "TileType": 3,
-      "DrawType": 1
+      "DrawType": 2
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Signage_Left",
@@ -200,7 +200,7 @@
     "TileData": {
       "ResName": "FDR_Grasslands_388",
       "TileType": 3,
-      "DrawType": 1
+      "DrawType": 2
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Signage_Right",
@@ -223,7 +223,7 @@
     "TileData": {
       "ResName": "CustomRuleTile_Normal_BigTable",
       "TileType": 2,
-      "DrawType": 0
+      "DrawType": 1
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Table_0",
@@ -246,7 +246,7 @@
     "TileData": {
       "ResName": "FDR_Grasslands_366",
       "TileType": 3,
-      "DrawType": 1
+      "DrawType": 2
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Table_1",
@@ -269,7 +269,7 @@
     "TileData": {
       "ResName": "CustomRuleTile_Normal_LitTable",
       "TileType": 2,
-      "DrawType": 0
+      "DrawType": 1
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Table_2",
@@ -292,7 +292,7 @@
     "TileData": {
       "ResName": "CustomRuleTile_Normal_Tree",
       "TileType": 2,
-      "DrawType": 0
+      "DrawType": 1
     },
     "PreviewPrefabData": [],
     "UIName": "Build_Tree",

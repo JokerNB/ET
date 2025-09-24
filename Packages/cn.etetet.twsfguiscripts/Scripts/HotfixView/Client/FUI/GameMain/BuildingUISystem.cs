@@ -39,7 +39,8 @@ namespace ET.Client
                 fuiButtonBuildingItem.icon = $"ui://GameMain/{config.UIName}";
                 fuiButtonBuildingItem.title = config.Title;
                 fuiButtonBuildingItem.Text_Desc.text = config.Desc;
-                fuiButtonBuildingItem.Text_Price.SetVar("价格", config.NumericTypeValue[ENumericType.Price0].ToString());
+                var price = config.NumericTypeValue[ENumericType.Price0];
+                fuiButtonBuildingItem.Text_Price.SetVar("price", price.ToString()).FlushVars();
             }
         }
 
@@ -50,7 +51,7 @@ namespace ET.Client
             if (self.ItemIndex.ContainsKey(index))
             {
                 TileItemConfig config = TileItemConfigCategory.Instance.Get(self.ItemIndex[index]);
-                // self.Root().GetComponent<MapManagerComponent_Client>().BuildStart(config).NoContext();
+                self.Root().CurrentScene().GetComponent<MapDrawTileComponent>().BuildStart(config.Id);
                 self.Root().GetComponent<FUIComponent>().GetPanelLogic<GameMainUI>(true).SetBuildingUIState(0);
             }
         }

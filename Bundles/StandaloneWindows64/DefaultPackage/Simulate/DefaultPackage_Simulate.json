@@ -8,7 +8,7 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/9/24 17:41:46",
+    "PackageNote": "2025/9/24 22:27:56",
     "AssetList": [
         {
             "Address": "Map1",
@@ -181,6 +181,22 @@
         {
             "Address": "Floor_Farm_1",
             "AssetPath": "Packages/cn.etetet.twstilemap/Assets/Sprites/Tiles/Floor_Farm_1.asset",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Floor_Preview_Green",
+            "AssetPath": "Packages/cn.etetet.twstilemap/Assets/Sprites/Tiles/Floor_Preview_Green.asset",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5,
+            "DependBundleIDs": []
+        },
+        {
+            "Address": "Floor_Preview_Red",
+            "AssetPath": "Packages/cn.etetet.twstilemap/Assets/Sprites/Tiles/Floor_Preview_Red.asset",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 5,
@@ -1093,7 +1109,7 @@
             "UnityCRC": 0,
             "FileHash": "ce7e47b0a172656892651cbca85508e2",
             "FileCRC": "00000000",
-            "FileSize": 1220244,
+            "FileSize": 1225244,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1123,7 +1139,7 @@
             "UnityCRC": 0,
             "FileHash": "c73252ad922df1daed0f60fb74f01be1",
             "FileCRC": "00000000",
-            "FileSize": 42618,
+            "FileSize": 44223,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -1133,7 +1149,7 @@
             "UnityCRC": 0,
             "FileHash": "d37263cf608ce7ba66180b06bda7623b",
             "FileCRC": "00000000",
-            "FileSize": 181404,
+            "FileSize": 181436,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
