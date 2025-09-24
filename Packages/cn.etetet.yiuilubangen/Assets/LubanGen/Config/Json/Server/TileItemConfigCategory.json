@@ -1,19 +1,301 @@
 [
   {
     "Id": 1,
-    "LandType": 4,
-    "Desc": "农田，可种植农作物",
+    "Title": "竖桥",
+    "Desc": "桥，可竖向同行",
     "NumericTypeValue": [
       [
         200011,
-        0
+        10
+      ]
+    ],
+    "CellData": [
+      3,
+      3
+    ],
+    "TileData": {
+      "ResName": "CustomRuleTile_Normal_Bridge_V",
+      "TileType": 2,
+      "DrawType": 0
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Bridge_0",
+    "GroupID": 1
+  },
+  {
+    "Id": 2,
+    "Title": "横桥",
+    "Desc": "桥，可横向同行",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      3,
+      3
+    ],
+    "TileData": {
+      "ResName": "CustomRuleTile_Normal_Bridge_H",
+      "TileType": 2,
+      "DrawType": 0
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Bridge_1",
+    "GroupID": 1
+  },
+  {
+    "Id": 3,
+    "Title": "农田",
+    "Desc": "农田，无农作物",
+    "NumericTypeValue": [
+      [
+        200011,
+        5
       ]
     ],
     "CellData": [
       1,
       1
     ],
-    "PrefabName": "",
-    "UIName": ""
+    "TileData": {
+      "ResName": "Floor_Farm_1",
+      "TileType": 0,
+      "DrawType": 1
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Farm_0",
+    "GroupID": 2
+  },
+  {
+    "Id": 4,
+    "Title": "栅栏",
+    "Desc": "栅栏",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      1,
+      1
+    ],
+    "TileData": {
+      "ResName": "CustomRuleTile_Ring_Fence",
+      "TileType": 2,
+      "DrawType": 1
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Fence",
+    "GroupID": 3
+  },
+  {
+    "Id": 5,
+    "Title": "小火",
+    "Desc": "小火",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      1,
+      2
+    ],
+    "TileData": {
+      "ResName": "FDR_Grasslands_716",
+      "TileType": 3,
+      "DrawType": 0
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Fire_0",
+    "GroupID": 3
+  },
+  {
+    "Id": 6,
+    "Title": "大火",
+    "Desc": "大火",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      1,
+      2
+    ],
+    "TileData": {
+      "ResName": "FDR_Grasslands_734",
+      "TileType": 3,
+      "DrawType": 0
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Fire_1",
+    "GroupID": 3
+  },
+  {
+    "Id": 7,
+    "Title": "路标",
+    "Desc": "路标",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      1,
+      1
+    ],
+    "TileData": {
+      "ResName": "FDR_Grasslands_363",
+      "TileType": 3,
+      "DrawType": 1
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Signage_0",
+    "GroupID": 3
+  },
+  {
+    "Id": 8,
+    "Title": "路标",
+    "Desc": "路标，向左",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      1,
+      1
+    ],
+    "TileData": {
+      "ResName": "FDR_Grasslands_389",
+      "TileType": 3,
+      "DrawType": 1
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Signage_Left",
+    "GroupID": 3
+  },
+  {
+    "Id": 9,
+    "Title": "路标",
+    "Desc": "路标，向右",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      1,
+      1
+    ],
+    "TileData": {
+      "ResName": "FDR_Grasslands_388",
+      "TileType": 3,
+      "DrawType": 1
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Signage_Right",
+    "GroupID": 3
+  },
+  {
+    "Id": 10,
+    "Title": "桌子",
+    "Desc": "大桌子",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      2,
+      2
+    ],
+    "TileData": {
+      "ResName": "CustomRuleTile_Normal_BigTable",
+      "TileType": 2,
+      "DrawType": 0
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Table_0",
+    "GroupID": 3
+  },
+  {
+    "Id": 11,
+    "Title": "桌子",
+    "Desc": "小桌子",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      1,
+      1
+    ],
+    "TileData": {
+      "ResName": "FDR_Grasslands_366",
+      "TileType": 3,
+      "DrawType": 1
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Table_1",
+    "GroupID": 3
+  },
+  {
+    "Id": 12,
+    "Title": "桌子",
+    "Desc": "长桌子",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      1,
+      2
+    ],
+    "TileData": {
+      "ResName": "CustomRuleTile_Normal_LitTable",
+      "TileType": 2,
+      "DrawType": 0
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Table_2",
+    "GroupID": 3
+  },
+  {
+    "Id": 13,
+    "Title": "树",
+    "Desc": "树",
+    "NumericTypeValue": [
+      [
+        200011,
+        10
+      ]
+    ],
+    "CellData": [
+      2,
+      3
+    ],
+    "TileData": {
+      "ResName": "CustomRuleTile_Normal_Tree",
+      "TileType": 2,
+      "DrawType": 0
+    },
+    "PreviewPrefabData": [],
+    "UIName": "Build_Tree",
+    "GroupID": 3
   }
 ]

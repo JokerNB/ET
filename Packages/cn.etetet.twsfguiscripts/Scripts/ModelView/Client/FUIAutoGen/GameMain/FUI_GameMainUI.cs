@@ -8,8 +8,16 @@ namespace ET.Client.GameMain
     [EnableClass]
     public partial class FUI_GameMainUI: GComponent
     {
-        public ET.Client.GameMain.FUI_Button_Func Button_Func;
+        public enum BuildingUIStatePage
+        {
+            不显示,
+            显示,
+        }
+
+        public Controller BuildingUIState;
+        public GList FuncList;
         public ET.Client.GameMain.FUI_Item_Property Item_Property;
+        public ET.Client.GameMain.FUI_BuildingUI BuildingUI;
         public const string URL = "ui://xqkzagd9tfsz1";
 
         public static FUI_GameMainUI CreateInstance()
@@ -20,8 +28,10 @@ namespace ET.Client.GameMain
         public override void ConstructFromXML(XML xml)
         {
             base.ConstructFromXML(xml);
-            Button_Func = (ET.Client.GameMain.FUI_Button_Func)GetChildAt(2);
-            Item_Property = (ET.Client.GameMain.FUI_Item_Property)GetChildAt(4);
+            BuildingUIState = GetControllerAt(0);
+            FuncList = (GList)GetChildAt(2);
+            Item_Property = (ET.Client.GameMain.FUI_Item_Property)GetChildAt(3);
+            BuildingUI = (ET.Client.GameMain.FUI_BuildingUI)GetChildAt(5);
         }
     }
 }

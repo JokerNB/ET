@@ -10,7 +10,8 @@
         "ET.TWS.TileMap",
         "ET.YooAssets",
         "Unity.Mathematics",
-        "XET.FUI"
+        "XET.FUI",
+        "Unity.2D.Tilemap.Extras"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

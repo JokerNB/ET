@@ -2,26 +2,26 @@
 <component size="106,106" extention="Button" initName="Button_Flag" remark="-2">
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
-    <image id="n7_tfsz" name="n7" src="tfszg" fileName="Atlas/BG_Item_-1.png" xy="8,3">
+    <image id="n7_tfsz" name="n7" src="tfszg" fileName="Atlas/BG_Item_-1.png" xy="3,0" size="103,105">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n0_tfsz" name="n0" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0">
+    <image id="n0_tfsz" name="n0" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0" size="106,106">
       <gearDisplay controller="button" pages="0"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n1_tfsz" name="n1" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0">
+    <image id="n1_tfsz" name="n1" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0" size="106,106">
       <gearDisplay controller="button" pages="1"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n2_tfsz" name="n2" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0">
+    <image id="n2_tfsz" name="n2" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0" size="106,106">
       <gearDisplay controller="button" pages="2"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n3_tfsz" name="n3" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0">
+    <image id="n3_tfsz" name="n3" src="tfsz2" fileName="Atlas/BG_Item_0.png" xy="0,0" size="106,106">
       <gearDisplay controller="button" pages="3"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <loader id="n5_tfsz" name="GLoader_Flag" xy="8,3" size="95,95" url="ui://xqkzagd9tfsz9" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
+    <loader id="n5_tfsz" name="GLoader_Flag" xy="5,2" size="99,100" url="ui://xqkzagd9tfsz9" align="center" vAlign="middle" fill="scale" shrinkOnly="true">
       <relation target="" sidePair="width-width,height-height"/>
     </loader>
   </displayList>

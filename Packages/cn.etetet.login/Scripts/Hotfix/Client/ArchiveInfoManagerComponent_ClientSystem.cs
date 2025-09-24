@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.Mathematics;
 
 namespace ET.Client
 {
@@ -80,6 +81,27 @@ namespace ET.Client
                     return;
                 }
             }
+
+            if (self.GetCurArchiveInfo() == default)
+            {
+                var archiveInfo = self.AddChild<ArchiveInfo>();
+                archiveInfo.ArchiveNumber = archiveNum;
+                archiveInfo.AccountLongHash = self.Root().GetComponent<PlayerComponent>().AccountLongHashCode;
+                self.CurArchiveInfo = archiveInfo;
+            }
+        }
+
+        public static ArchiveInfo GetCurArchiveInfo(this ArchiveInfoManagerComponent_Client self)
+        {
+            if (self.CurArchiveInfo == default)
+                return null;
+            return self.CurArchiveInfo;
+        }
+
+        public static MapTileInfo AddNewMapTileByCurArchive(this ArchiveInfoManagerComponent_Client self, int configId, List<int2> tilePos)
+        {
+            ArchiveInfo curArchiveInfo = self.CurArchiveInfo;
+            return curArchiveInfo.AddNewMapTileInfo(configId, tilePos);
         }
     }
 }

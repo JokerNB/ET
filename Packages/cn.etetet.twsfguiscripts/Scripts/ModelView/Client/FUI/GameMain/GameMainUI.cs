@@ -1,4 +1,5 @@
 using ET.Client.GameMain;
+using FairyGUI;
 
 namespace ET.Client
 {

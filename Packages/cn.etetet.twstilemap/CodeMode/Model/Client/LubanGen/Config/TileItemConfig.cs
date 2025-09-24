@@ -18,12 +18,14 @@ namespace ET
         public TileItemConfig(ByteBuf _buf) 
         {
             Id = _buf.ReadInt();
-            LandType = (LandType)_buf.ReadInt();
+            Title = _buf.ReadString();
             Desc = _buf.ReadString();
             {int n0 = _buf.ReadSize(); NumericTypeValue = new System.Collections.Generic.Dictionary<ENumericType, long>(n0 * 3 / 2);for(var i0 = 0 ; i0 < n0 ; i0++) { ENumericType _k0;  _k0 = (ENumericType)_buf.ReadInt(); long _v0;  _v0 = _buf.ReadLong();     NumericTypeValue.Add(_k0, _v0);}}
             {int n0 = _buf.ReadSize(); CellData = new System.Collections.Generic.List<int>(n0);for(var i0 = 0 ; i0 < n0 ; i0++) { int _e0;  _e0 = _buf.ReadInt(); CellData.Add(_e0);}}
-            PrefabName = _buf.ReadString();
+            TileData = global::ET.TileData.DeserializeTileData(_buf);
+            {int n0 = _buf.ReadSize(); PreviewPrefabData = new System.Collections.Generic.Dictionary<string, TileType>(n0 * 3 / 2);for(var i0 = 0 ; i0 < n0 ; i0++) { string _k0;  _k0 = _buf.ReadString(); TileType _v0;  _v0 = (TileType)_buf.ReadInt();     PreviewPrefabData.Add(_k0, _v0);}}
             UIName = _buf.ReadString();
+            GroupID = _buf.ReadInt();
 
             EndInit();
         }
@@ -38,9 +40,9 @@ namespace ET
         /// </summary>
         public readonly int Id;
         /// <summary>
-        /// 类型
+        /// 标题
         /// </summary>
-        public readonly LandType LandType;
+        public readonly string Title;
         /// <summary>
         /// 描述
         /// </summary>
@@ -50,23 +52,32 @@ namespace ET
         /// </summary>
         public readonly System.Collections.Generic.Dictionary<ENumericType, long> NumericTypeValue;
         /// <summary>
-        /// 地格数据
+        /// 地格数据(宽、高)
         /// </summary>
         public readonly System.Collections.Generic.List<int> CellData;
         /// <summary>
-        /// 资源名称
+        /// 地格数据
         /// </summary>
-        public readonly string PrefabName;
+        public readonly TileData TileData;
+        /// <summary>
+        /// 预览资源名称
+        /// </summary>
+        public readonly System.Collections.Generic.Dictionary<string, TileType> PreviewPrefabData;
         /// <summary>
         /// UI资源名称
         /// </summary>
         public readonly string UIName;
+        /// <summary>
+        /// 组ID
+        /// </summary>
+        public readonly int GroupID;
     
         public const int __ID__ = -1071248989;
         public override int GetTypeId() => __ID__;
 
         public  void ResolveRef()
         {
+            TileData?.ResolveRef();
             EndRef();
         }
 
@@ -74,12 +85,14 @@ namespace ET
         {
             return "{ "
             + "Id:" + Id + ","
-            + "LandType:" + LandType + ","
+            + "Title:" + Title + ","
             + "Desc:" + Desc + ","
             + "NumericTypeValue:" + Luban.StringUtil.CollectionToString(NumericTypeValue) + ","
             + "CellData:" + Luban.StringUtil.CollectionToString(CellData) + ","
-            + "PrefabName:" + PrefabName + ","
+            + "TileData:" + TileData + ","
+            + "PreviewPrefabData:" + Luban.StringUtil.CollectionToString(PreviewPrefabData) + ","
             + "UIName:" + UIName + ","
+            + "GroupID:" + GroupID + ","
             + "}";
         }
 

@@ -478,6 +478,35 @@ namespace ET
     }
 
     [MemoryPackable]
+    [Message(LoginInner.MapTileInfoProto)]
+    public partial class MapTileInfoProto : MessageObject
+    {
+        public static MapTileInfoProto Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<MapTileInfoProto>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int configId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public List<Unity.Mathematics.int2> tilePos { get; set; } = new();
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.configId = default;
+            this.tilePos.Clear();
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
     [Message(LoginInner.ArchiveInfoProto)]
     public partial class ArchiveInfoProto : MessageObject
     {
@@ -495,6 +524,9 @@ namespace ET
         [MemoryPackOrder(2)]
         public List<long> Recruits { get; set; } = new();
 
+        [MemoryPackOrder(3)]
+        public List<MapTileInfoProto> MapTileInfos { get; set; } = new();
+
         public override void Dispose()
         {
             if (!this.IsFromPool)
@@ -505,6 +537,7 @@ namespace ET
             this.AccountHash = default;
             this.ArchiveNum = default;
             this.Recruits.Clear();
+            this.MapTileInfos.Clear();
 
             ObjectPool.Recycle(this);
         }
@@ -657,7 +690,7 @@ namespace ET
         [MemoryPackOrder(0)]
         public int RpcId { get; set; }
 
-        [MemoryPackOrder(3)]
+        [MemoryPackOrder(1)]
         public ArchiveInfoProto ArchiveInfo { get; set; }
 
         public override void Dispose()
@@ -887,17 +920,18 @@ namespace ET
         public const ushort L2G_RemoveLoginRecord = 20014;
         public const ushort G2M_SecondLogin = 20015;
         public const ushort M2G_SecondLogin = 20016;
-        public const ushort ArchiveInfoProto = 20017;
-        public const ushort Other2Archive_GetArchiveListRequest = 20018;
-        public const ushort Other2Archive_GetArchiveListResponse = 20019;
-        public const ushort Other2Archive_AddNewArchiveRequest = 20020;
-        public const ushort Other2Archive_AddNewArchiveResponse = 20021;
-        public const ushort Other2Archive_UpdateArchiveRequest = 20022;
-        public const ushort Other2Archive_UpdateArchiveResponse = 20023;
-        public const ushort Other2Archive_RemoveArchiveRequest = 20024;
-        public const ushort Other2Archive_RemoveArchiveResponse = 20025;
-        public const ushort Other2Archive_SelectCurArchiveRequest = 20026;
-        public const ushort Other2Archive_SelectCurArchiveResponse = 20027;
-        public const ushort Other2Archive_RemoveCurArchive = 20028;
+        public const ushort MapTileInfoProto = 20017;
+        public const ushort ArchiveInfoProto = 20018;
+        public const ushort Other2Archive_GetArchiveListRequest = 20019;
+        public const ushort Other2Archive_GetArchiveListResponse = 20020;
+        public const ushort Other2Archive_AddNewArchiveRequest = 20021;
+        public const ushort Other2Archive_AddNewArchiveResponse = 20022;
+        public const ushort Other2Archive_UpdateArchiveRequest = 20023;
+        public const ushort Other2Archive_UpdateArchiveResponse = 20024;
+        public const ushort Other2Archive_RemoveArchiveRequest = 20025;
+        public const ushort Other2Archive_RemoveArchiveResponse = 20026;
+        public const ushort Other2Archive_SelectCurArchiveRequest = 20027;
+        public const ushort Other2Archive_SelectCurArchiveResponse = 20028;
+        public const ushort Other2Archive_RemoveCurArchive = 20029;
     }
 }

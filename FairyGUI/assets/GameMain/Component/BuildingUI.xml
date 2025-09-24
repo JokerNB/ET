@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="650,956" initName="BuildingUI" remark="-1">
+  <displayList>
+    <image id="n3_sb3t" name="n3" src="sb3t16" fileName="Atlas/BG_BuildingUI.png" xy="0,0" size="650,956"/>
+    <list id="n0_tfsz" name="BuildingItemList" xy="0,71" size="650,884" overflow="scroll" margin="5,0,0,0" autoClearItems="true">
+      <item url="ui://xqkzagd9sb3t1a" title="地面"/>
+      <item url="ui://xqkzagd9sb3t17"/>
+    </list>
+    <text id="n4_sb3t" name="Text_Title" xy="11,8" size="270,53" font="Microsoft JhengHei" fontSize="35" color="#ffffff" vAlign="middle" letterSpacing="15" autoSize="shrink" strokeColor="#ff0000" text="建造"/>
+  </displayList>
+</component>

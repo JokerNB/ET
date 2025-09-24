@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" remark="0">
+<component size="1920,1080" opaque="false" remark="0">
+  <controller name="BuildingUIState" exported="true" pages="0,不显示,1,显示" selected="0"/>
   <displayList>
-    <image id="n8_tfsz" name="n8" src="tfszp" fileName="Atlas/BG_Bottom.png" xy="0,956" size="1920,124">
+    <image id="n8_tfsz" name="n8" src="tfszp" fileName="Atlas/BG_Bottom.png" xy="0,956" size="1920,124" group="n10_sb3t">
       <relation target="" sidePair="height-height,bottom-bottom"/>
     </image>
-    <component id="n4_tfsz" name="n4" src="tfsz3" fileName="Component/Button_Flag.xml" xy="5,970"/>
-    <component id="n5_tfsz" name="Button_Func" src="tfszh" fileName="Component/Button_Func.xml" xy="348,970"/>
-    <list id="n6_tfsz" name="n6" xy="348,969" size="811,108" layout="row" scroll="horizontal" colGap="4" defaultItem="ui://xqkzagd9tfszh" autoItemSize="false" scrollItemToViewOnClick="false" foldInvisibleItems="true">
+    <component id="n4_tfsz" name="n4" src="tfsz3" fileName="Component/Button_Flag.xml" xy="5,970" group="n10_sb3t"/>
+    <list id="n6_tfsz" name="FuncList" xy="348,969" size="811,108" group="n10_sb3t" layout="row" scroll="horizontal" colGap="4" defaultItem="ui://xqkzagd9tfszh" autoItemSize="false" autoClearItems="true" scrollItemToViewOnClick="false" foldInvisibleItems="true">
       <item title="建造" icon="ui://xqkzagd9tfsz6"/>
       <item title="房间" icon="ui://xqkzagd9tfsza"/>
       <item title="道具" icon="ui://xqkzagd9tfszb"/>
@@ -17,6 +17,13 @@
       <item title="研究" icon="ui://xqkzagd9tfsz4" controllers="Type,2"/>
       <item title="神启" icon="ui://xqkzagd9tfsz5" controllers="Type,2"/>
     </list>
-    <component id="n7_tfsz" name="Item_Property" src="tfszn" fileName="Component/Item_Property.xml" xy="133,970" scale="0.748,0.748"/>
+    <component id="n7_tfsz" name="Item_Property" src="tfszn" fileName="Component/Item_Property.xml" xy="133,970" group="n10_sb3t" scale="0.748,0.748"/>
+    <group id="n10_sb3t" name="n10" xy="0,956" size="1920,124" advanced="true">
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+    <component id="n9_sb3t" name="BuildingUI" src="tfszr" fileName="Component/BuildingUI.xml" xy="0,0">
+      <gearDisplay controller="BuildingUIState" pages="1"/>
+      <relation target="" sidePair="left-left,top-top"/>
+    </component>
   </displayList>
 </component>

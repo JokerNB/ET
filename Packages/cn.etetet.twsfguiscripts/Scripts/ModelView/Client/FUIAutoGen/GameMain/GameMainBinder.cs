@@ -13,6 +13,8 @@ namespace ET.Client
             UIObjectFactory.SetPackageItemExtension(ET.Client.GameMain.FUI_Button_Flag.URL, typeof(ET.Client.GameMain.FUI_Button_Flag));
             UIObjectFactory.SetPackageItemExtension(ET.Client.GameMain.FUI_Button_Func.URL, typeof(ET.Client.GameMain.FUI_Button_Func));
             UIObjectFactory.SetPackageItemExtension(ET.Client.GameMain.FUI_Item_Property.URL, typeof(ET.Client.GameMain.FUI_Item_Property));
+            UIObjectFactory.SetPackageItemExtension(ET.Client.GameMain.FUI_BuildingUI.URL, typeof(ET.Client.GameMain.FUI_BuildingUI));
+            UIObjectFactory.SetPackageItemExtension(ET.Client.GameMain.FUI_Button_BuildingItem.URL, typeof(ET.Client.GameMain.FUI_Button_BuildingItem));
         }
     }
 }

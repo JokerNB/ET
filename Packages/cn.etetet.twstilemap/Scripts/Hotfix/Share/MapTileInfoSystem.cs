@@ -1,0 +1,38 @@
+﻿using System.Collections.Generic;
+using Unity.Mathematics;
+
+namespace ET
+{
+    [EntitySystemOf(typeof(MapTileInfo))]
+    public static partial class MapTileInfoSystem
+    {
+        [EntitySystem]
+        private static void Awake(this ET.MapTileInfo self)
+        {
+        }
+
+        public static MapTileInfoProto ToMessage(this MapTileInfo self)
+        {
+            MapTileInfoProto mapTileInfoProto = MapTileInfoProto.Create();
+            mapTileInfoProto.configId = self.configId;
+            mapTileInfoProto.tilePos = new List<int2>(self.tilePos);
+            return mapTileInfoProto;
+        }
+
+        public static void FromMessage(this ET.MapTileInfo self, MapTileInfoProto mapTileInfoProto)
+        {
+            self.configId = mapTileInfoProto.configId;
+            self.tilePos = new List<int2>(mapTileInfoProto.tilePos);
+        }
+
+        public static void UpdateTilePos(this ET.MapTileInfo self, List<int2> tilePos)
+        {
+            foreach (int2 pos in tilePos)
+            {
+                if(self.tilePos.Contains(pos))
+                    continue;
+                self.tilePos.Add(pos);
+            }
+        }
+    }
+}

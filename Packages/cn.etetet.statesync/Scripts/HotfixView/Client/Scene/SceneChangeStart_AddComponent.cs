@@ -19,7 +19,8 @@ namespace ET.Client
                 // 切换到map场景
 
                 currentScene.AddComponent<OperaComponent>();
-                currentScene.AddComponent<MapManagerComponent>();
+                var mapDrawTileComponent = currentScene.AddComponent<MapDrawTileComponent>();
+                await mapDrawTileComponent.DrawByInit();
             }
             catch (Exception e)
             {

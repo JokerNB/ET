@@ -37,7 +37,7 @@ namespace ET
             msgOpcode.Clear();
             opcodeList.Clear();
 
-            PackagesLock packagesLock = PackageHelper.LoadEtPackagesLock("./");
+            PackagesLock packagesLock = PackageHelper.LoadEtPackagesLock();
             PackageInfo protoPackage = packagesLock.dependencies["cn.etetet.proto"];
             clientMessagePath = Path.Combine(protoPackage.dir, "CodeMode/Model/Client");
             serverMessagePath = Path.Combine(protoPackage.dir, "CodeMode/Model/Server");
@@ -88,6 +88,7 @@ namespace ET
             sb.Append("{\n");
 
             bool isMsgStart = false;
+            bool isEnumStart = false;
             string msgName = "";
             string responseType = "";
             StringBuilder sbDispose = new();
@@ -166,6 +167,11 @@ namespace ET
                 {
                     if (newline.StartsWith('{'))
                     {
+                        if (isEnumStart)
+                        {
+                            sb.Append("\t\t{\n");
+                            continue;
+                        }
                         sbDispose.Clear();
                         sb.Append("\t{\n");
                         sb.Append($"\t\tpublic static {msgName} Create(bool isFromPool = false)\n\t\t{{\n\t\t\treturn ObjectPool.Fetch<{msgName}>(isFromPool);\n\t\t}}\n\n");
@@ -174,6 +180,12 @@ namespace ET
 
                     if (newline.StartsWith('}'))
                     {
+                        if (isEnumStart)
+                        {
+                            sb.Append("\t\t}\n");
+                            isEnumStart = false;
+                            continue;
+                        }
                         isMsgStart = false;
                         responseType = "";
 
@@ -216,6 +228,15 @@ namespace ET
                     else if (memberStr.StartsWith("repeated"))
                     {
                         Repeated(sb, memberStr, sbDispose);
+                    }
+                    else if (memberStr.StartsWith("enum"))
+                    {
+                        isEnumStart = true;
+                        ToEnum(sb, memberStr, sbDispose);
+                    }
+                    else if (isEnumStart)
+                    {
+                        ToEnumMember(sb, memberStr, sbDispose);
                     }
                     else
                     {
@@ -323,6 +344,7 @@ namespace ET
                 "int64" => "long",
                 "uint64" => "ulong",
                 "uint16" => "ushort",
+                "enum" => "enum",
                 _ => type
             };
         }
@@ -345,6 +367,7 @@ namespace ET
                 switch (typeCs)
                 {
                     case "bytes":
+                    case "enum":
                     {
                         break;
                     }
@@ -352,6 +375,46 @@ namespace ET
                         sbDispose.Append($"this.{name} = default;\n\t\t\t");
                         break;
                 }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{newline}\n {e}");
+            }
+        }
+        
+        private static void ToEnum(StringBuilder sb, string newline, StringBuilder sbDispose)
+        {
+            try
+            {
+                string[] ss = newline.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
+                string type = ss[0];
+                string name = ss[1];
+                string typeCs = ConvertType(type);
+
+                sb.Append($"\t\tpublic {typeCs} {name}\n");
+
+                switch (typeCs)
+                {
+                    case "enum":
+                    {
+                        break;
+                    }
+                    default:
+                        sbDispose.Append($"this.{name} = default;\n\t\t\t");
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{newline}\n {e}");
+            }
+        }
+        
+        private static void ToEnumMember(StringBuilder sb, string newline, StringBuilder sbDispose)
+        {
+            try
+            {
+                sb.Append($"\t\t\t{newline}\n");
             }
             catch (Exception e)
             {

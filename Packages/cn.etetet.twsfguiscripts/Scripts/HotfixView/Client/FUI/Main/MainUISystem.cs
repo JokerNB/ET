@@ -89,6 +89,7 @@ namespace ET.Client
 
             self.curArchiveNum = response.ArchiveNum;
             self.Root().GetComponent<ArchiveInfoManagerComponent_Client>().SetCurArchiveInfoByArchiveNum(self.curArchiveNum);
+            self.Root().GetComponent<MapManagerComponent_Client>().InitMapData();
             return ErrorCode.ERR_Success;
         }
 

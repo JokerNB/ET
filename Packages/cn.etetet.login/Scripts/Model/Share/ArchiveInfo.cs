@@ -12,6 +12,7 @@ namespace ET
         public long AccountLongHash;
         //招募的人员
         public List<long> RecruitUnitIds = new List<long>();
+        public List<EntityRef<MapTileInfo>> MapTileInfos = new List<EntityRef<MapTileInfo>>();
     }
 }
 

@@ -27,6 +27,25 @@
     <component id="tfszn" name="Item_Property.xml" path="/Component/" exported="true"/>
     <image id="tfszo" name="Icon_Coin.png" path="/Atlas/" exported="true"/>
     <image id="tfszp" name="BG_Bottom.png" path="/Atlas/" exported="true" scale="9grid" scale9grid="25,25,50,50"/>
+    <component id="tfszr" name="BuildingUI.xml" path="/Component/" exported="true"/>
+    <image id="sb3ts" name="Build_Bridge_0.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3tt" name="Build_Bridge_1.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3tu" name="Build_Farm_1.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3tv" name="Build_Farm_0.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3tw" name="Build_Fence.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3tx" name="Build_Fire_0.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3ty" name="Build_Fire_1.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3tz" name="Build_Signage_0.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3t10" name="Build_Signage_Left.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3t11" name="Build_Signage_Right.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3t12" name="Build_Table_0.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3t13" name="Build_Table_1.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3t14" name="Build_Table_2.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3t15" name="Build_Tree.png" path="/Atlas/TileMapUI/" exported="true"/>
+    <image id="sb3t16" name="BG_BuildingUI.png" path="/Atlas/" exported="true" scale="9grid" scale9grid="162,90,324,15"/>
+    <component id="sb3t17" name="Button_BuildingItem.xml" path="/Component/" exported="true"/>
+    <image id="sb3t18" name="BG_BuildingUI_Item.png" path="/Atlas/" exported="true" scale="9grid" scale9grid="16,3,32,6"/>
+    <component id="sb3t1a" name="Label_BuildingGroup.xml" path="/Component/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

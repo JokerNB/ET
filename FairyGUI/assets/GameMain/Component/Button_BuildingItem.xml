@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="650,120" extention="Button" initName="Button_BuildingItem">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n5_sb3t" name="n5" src="sb3t18" fileName="Atlas/BG_BuildingUI_Item.png" xy="0,0" size="650,120"/>
+    <text id="n3_sb3t" name="title" xy="128,10" size="157,33" font="Microsoft JhengHei" fontSize="20" color="#ffffff" vAlign="middle" letterSpacing="3" autoSize="shrink" singleLine="true" text="地板">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <loader id="n4_sb3t" name="icon" xy="16,9" size="100,100" url="ui://xqkzagd9sb3tv" align="center" vAlign="middle" fill="scale" clearOnPublish="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n6_sb3t" name="Text_Desc" xy="128,59" size="391,42" font="Microsoft JhengHei" fontSize="12" color="#ccff66" autoSize="shrink" text="桥，可竖向同行"/>
+    <text id="n7_sb3t" name="Text_Price" xy="551,5" size="92,28" fontSize="12" color="#ffff33" align="center" vAlign="middle" vars="true" autoSize="none" text="价格：${价格=100}"/>
+  </displayList>
+  <Button/>
+</component>
