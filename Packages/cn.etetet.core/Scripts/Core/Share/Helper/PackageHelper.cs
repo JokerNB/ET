@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace ET
@@ -32,9 +33,12 @@ namespace ET
     
     public static class PackageHelper
     {
-        public static PackagesLock LoadEtPackagesLock(string unityDir)
+        public static PackagesLock LoadEtPackagesLock()
         {
-            string s = File.ReadAllText(Path.Combine(unityDir, "Packages/packages-lock.json"));
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string unityDir = Path.GetFullPath(Path.Combine(baseDirectory, "../../../"));
+            string path = Path.Combine(unityDir, "packages-lock.json");
+            string s = File.ReadAllText(path);
 
             PackagesLock packagesLock = MongoHelper.FromJson<PackagesLock>(s);
             packagesLock.unityDir = unityDir;
@@ -54,7 +58,7 @@ namespace ET
                 
                 if (packageInfo.source == "embedded")
                 {
-                    packageInfo.dir = Path.Combine(unityDir, "Packages", packageInfo.version.Replace("file:", ""));
+                    packageInfo.dir = Path.Combine(unityDir, packageInfo.version.Replace("file:", ""));
                 }
                 else if (packageInfo.source == "git")
                 {
