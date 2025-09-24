@@ -99,6 +99,30 @@ namespace ET.Client
             await handler.Task;
             self.handlers.Add(location, handler);
         }
+        
+        public static async ETTask<Dictionary<string, T>> LoadSubAssetAsync<T>(this ResourcesLoaderComponent self, string location) where T : UnityEngine.Object
+        {
+            using CoroutineLock coroutineLock = await self.Root().GetComponent<CoroutineLockComponent>().Wait(CoroutineLockType.ResourcesLoader, location.GetHashCode());
+
+            HandleBase handler;
+            if (!self.handlers.TryGetValue(location, out handler))
+            {
+                handler = self.package.LoadSubAssetsAsync<T>(location);
+
+                await handler.Task;
+
+                self.handlers.Add(location, handler);
+            }
+            
+            Dictionary<string, T> dictionary = new Dictionary<string, T>();
+            foreach (UnityEngine.Object assetObj in ((SubAssetsHandle)handler).SubAssetObjects)
+            {
+                T t = assetObj as T;
+                dictionary.Add(t.name, t);
+            }
+
+            return dictionary;
+        }
     }
 }
 
