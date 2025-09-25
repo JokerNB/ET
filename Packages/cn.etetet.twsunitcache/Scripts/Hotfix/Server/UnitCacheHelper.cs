@@ -37,6 +37,7 @@ namespace ET.Server
 
                 byte[] entityByte = queryUnit.EntityList[i];
                 Type type = CodeTypes.Instance.GetType(queryUnit.ComponentNameLIst[i]);
+                unit.AddComponent(type);
                 EventSystem.Instance.Invoke(SceneType.UnitCache, new AddToBytes()
                 {
                     unit = unit,

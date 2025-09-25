@@ -46,7 +46,6 @@
             {
                 self.CacheComponentsDic.Remove(unitId);
                 Entity entity = MongoHelper.Deserialize<Entity>(entityBson);
-                ;
                 entity.Dispose();
             }
         }
