@@ -188,14 +188,14 @@ message C2R_RemoveArchiveResponse // ISessionResponse
 }
 
 // ResponseType C2M_UpdateArchiveResponse
-message C2M_UpdateArchiveRequest // ISessionRequest
+message C2M_UpdateArchiveRequest // ILocationRequest
 {
 	int32 RpcId = 1;
 	string Token = 2;
 	ArchiveInfoProto ArchiveInfoProto = 3;
 }
 
-message C2M_UpdateArchiveResponse // ISessionResponse
+message C2M_UpdateArchiveResponse // ILocationResponse
 {
 	int32 RpcId = 1;
 	int32 Error = 2;

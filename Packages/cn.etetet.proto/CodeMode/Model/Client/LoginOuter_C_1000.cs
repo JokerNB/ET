@@ -826,7 +826,7 @@ namespace ET
     [MemoryPackable]
     [Message(LoginOuter.C2M_UpdateArchiveRequest)]
     [ResponseType(nameof(C2M_UpdateArchiveResponse))]
-    public partial class C2M_UpdateArchiveRequest : MessageObject, ISessionRequest
+    public partial class C2M_UpdateArchiveRequest : MessageObject, ILocationRequest
     {
         public static C2M_UpdateArchiveRequest Create(bool isFromPool = false)
         {
@@ -859,7 +859,7 @@ namespace ET
 
     [MemoryPackable]
     [Message(LoginOuter.C2M_UpdateArchiveResponse)]
-    public partial class C2M_UpdateArchiveResponse : MessageObject, ISessionResponse
+    public partial class C2M_UpdateArchiveResponse : MessageObject, ILocationResponse
     {
         public static C2M_UpdateArchiveResponse Create(bool isFromPool = false)
         {

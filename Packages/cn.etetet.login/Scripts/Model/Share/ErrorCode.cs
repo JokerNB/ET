@@ -22,5 +22,6 @@
         public const int ERR_ReEnterGameError = ERR_WithException + PackageType.Login * 1000 + 18;
         public const int ERR_EnterGameError = ERR_WithException + PackageType.Login * 1000 + 19;
         public const int ERR_SelectArchiveError = ERR_WithException + PackageType.Login * 1000 + 20;
+        public const int ERR_UpdateArchiveError = ERR_WithException + PackageType.Login * 1000 + 21;
     }
 }

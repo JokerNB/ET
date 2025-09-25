@@ -25,24 +25,24 @@ namespace ET.Client
 
             if(curArchiveInfo == null)
                 return;
-            foreach (MapTileInfo mapTileInfo in curArchiveInfo.MapTileInfos)
-            {
-                self.ConfigID_MapTileInfoDic.Add(mapTileInfo.configId, mapTileInfo);
-            }
+            self.ConfigID_MapTileInfoDic = new Dictionary<int, EntityRef<MapTileInfo>>(curArchiveInfo.MapTileInfosDic);
         }
 
         public static void BuildFinished(this ET.Client.MapManagerComponent_Client self, int configId, List<int2> tilePos)
         {
+            MapTileInfo mapTileInfo = null;
             if (self.ConfigID_MapTileInfoDic.ContainsKey(configId))
             {
-                MapTileInfo mapTileInfo = self.ConfigID_MapTileInfoDic[configId];
+                mapTileInfo = self.ConfigID_MapTileInfoDic[configId];
                 mapTileInfo.UpdateTilePos(tilePos);
+
             }
             else
             {
-                MapTileInfo mapTileInfo = self.Root().GetComponent<ArchiveInfoManagerComponent_Client>().AddNewMapTileByCurArchive(configId, tilePos);
+                mapTileInfo = self.Root().GetComponent<ArchiveInfoManagerComponent_Client>().AddNewMapTileByCurArchive(configId, tilePos);
                 self.ConfigID_MapTileInfoDic.Add(mapTileInfo.configId, mapTileInfo);
             }
+            self.Root().GetComponent<ArchiveInfoManagerComponent_Client>().UpdateCurArchiveMapTileInfo(mapTileInfo);
         }
     }
 }

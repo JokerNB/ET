@@ -57,6 +57,11 @@ namespace ET.Client
                 UnityEditor.EditorApplication.isPaused = true;
 #endif
             }
+            
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                self.Root().GetComponent<ArchiveInfoManagerComponent_Client>().ManualSaveCurArchiveInfo();
+            }
         }
 
         private static async ETTask Test1(this OperaComponent self)

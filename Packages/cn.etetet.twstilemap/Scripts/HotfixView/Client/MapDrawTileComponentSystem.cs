@@ -15,7 +15,6 @@ namespace ET.Client
         [EntitySystem]
         private static void Awake(this ET.Client.MapDrawTileComponent self)
         {
-            // self.previewTilemap = self.GetParent<MapManagerComponent>().tileMap_Preview;
             self.InitMap().NoContext();
         }
 
@@ -92,6 +91,7 @@ namespace ET.Client
         {
             var referenceCollector = GameObject.Find("World").GetComponent<ReferenceCollector>();
 
+            self.tileMap_Base = referenceCollector.Get<Tilemap>("Tilemap_Base");
             self.tileMap_Floor = referenceCollector.Get<Tilemap>("Tilemap_Floor");
             self.tileMap_Build = referenceCollector.Get<Tilemap>("Tilemap_Build");
             self.tileMap_Road = referenceCollector.Get<Tilemap>("Tilemap_Road");
@@ -124,7 +124,17 @@ namespace ET.Client
                 foreach (int2 pos in mapTileInfo.tilePos)
                 {
                     var ve3Pos = new Vector3Int(pos.x, pos.y, 0);
-                    tilemap.SetTile(ve3Pos, tileBase);
+                    switch (mapTileInfo.Config.TileData.DrawType)
+                    {
+                        case DrawType.Single:
+                            self.DrawInTargetTileMapSingleByInit(ve3Pos, mapTileInfo.tileSize, tileBase, tilemap);
+                            break;
+                        case DrawType.Drag:
+                            tilemap.SetTile(ve3Pos, tileBase);
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
                 }
 
                 tilemaps.Add(tilemap);
@@ -141,6 +151,19 @@ namespace ET.Client
                 isComplete = true,
             });
         }
+        
+        public static void DrawInTargetTileMapSingleByInit(this ET.Client.MapDrawTileComponent self, Vector3Int buildStartPos, int2 cellSize, TileBase tileBase, Tilemap targetTilemap)
+        {
+            for (int x = 0; x < cellSize.x; x++)
+            {
+                for (int y = 0; y < cellSize.y; y++)
+                {
+                    Vector3Int pos = new Vector3Int(buildStartPos.x + x, buildStartPos.y + y, 0);
+                    targetTilemap.SetTile(pos, tileBase);
+                }
+            }
+            targetTilemap.RefreshAllTiles();
+        }
 
         public static void GenerateTilesAroundCamera(this ET.Client.MapDrawTileComponent self)
         {
@@ -149,8 +172,8 @@ namespace ET.Client
             Vector3 topRight = self.Camera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, self.Camera.orthographicSize));
 
             // 计算需要覆盖的网格范围
-            Vector3Int minCell = self.tileMap_Floor.WorldToCell(bottomLeft);
-            Vector3Int maxCell = self.tileMap_Floor.WorldToCell(topRight);
+            Vector3Int minCell = self.tileMap_Base.WorldToCell(bottomLeft);
+            Vector3Int maxCell = self.tileMap_Base.WorldToCell(topRight);
 
             // 计算需要填充的单元格数量（+1 确保完全覆盖）
             int numCellsX = maxCell.x - minCell.x + 1;
@@ -163,12 +186,12 @@ namespace ET.Client
                 {
                     Vector3Int cellPosition = new Vector3Int(minCell.x + x, minCell.y + y, 0);
                     Tile tile = self.defaultGroundTile_Grasslands;
-                    self.tileMap_Floor.SetTile(cellPosition, tile);
+                    self.tileMap_Base.SetTile(cellPosition, tile);
                 }
             }
 
             // 可选：优化性能，一次性更新所有 Tile
-            self.tileMap_Floor.RefreshAllTiles();
+            self.tileMap_Base.RefreshAllTiles();
         }
 
         public static async ETTask<TileBase> LoadTile(this ET.Client.MapDrawTileComponent self, string name, TileType tileType)
@@ -215,7 +238,7 @@ namespace ET.Client
         {
             var mouseWorldPosition = self.Camera.ScreenToWorldPoint(Input.mousePosition);
             mouseWorldPosition.z = 0;
-            var cellPos = self.tileMap_Floor.WorldToCell(mouseWorldPosition);
+            var cellPos = self.tileMap_Base.WorldToCell(mouseWorldPosition);
             return new Vector3Int(cellPos.x, cellPos.y);
         }
 
@@ -260,6 +283,7 @@ namespace ET.Client
             }
 
             self.tileMap_Preview.RefreshAllTiles();
+            self.previewTilesPos.Clear();
         }
 
         public static void DrawInTargetTileMapBySingle(this ET.Client.MapDrawTileComponent self)
@@ -273,7 +297,7 @@ namespace ET.Client
                     self.targetTilemap.SetTile(pos, self.curTileBase);
                 }
             }
-
+            self.targetTilesPos.Add(buildStartPos);
             self.targetTilemap.RefreshAllTiles();
         }
 
@@ -342,7 +366,10 @@ namespace ET.Client
             var tileData = config.TileData;
             self.curDrawType = tileData.DrawType;
             if (self.curDrawType == DrawType.None)
+            {
+                self.ClearTempData();
                 return;
+            }
             if (self.ConfigId_tileBaseDic.TryGetValue(configId, out TileBase value))
             {
                 self.curTileBase = value;
@@ -351,16 +378,27 @@ namespace ET.Client
             {
                 TileBase tileBase = await self.LoadTile(tileData.ResName, tileData.TileType);
                 if (tileBase == null)
+                {
+                    self.ClearTempData();
                     return;
+                }
                 self.ConfigId_tileBaseDic.Add(configId, tileBase);
                 self.curTileBase = tileBase;
             }
 
             var targetTilemap = self.GetTargetTilemapByGroupId(config.GroupID);
             if (targetTilemap == null)
+            {
+                self.ClearTempData();
                 return;
+            }
             self.targetTilemap = targetTilemap;
             self.cellSize = new int2(self.curConfig.CellData[0], self.curConfig.CellData[1]);
+            if (self.curDrawType == DrawType.Drag && (self.cellSize.x != 1 || self.cellSize.y != 1))
+            {
+                self.ClearTempData();
+                return;
+            }
 
             self.isBuilding = true;
         }
@@ -393,7 +431,6 @@ namespace ET.Client
             self.curConfig = null;
             self.curTileBase = null;
             self.isCanDraw = false;
-            self.previewTilesPos.Clear();
             self.targetTilesPos.Clear();
             self.curDrawType = DrawType.None;
             self.dragStartPos = default;

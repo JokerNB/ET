@@ -20,7 +20,7 @@ namespace ET
         /// </summary>
         Single = 1,
         /// <summary>
-        /// 拖拽
+        /// 拖拽(当前规则：x，y不能大于1)
         /// </summary>
         Drag = 2,
     }

@@ -8,6 +8,7 @@ namespace ET.Client
     [ComponentOf(typeof(Scene))]
     public class MapDrawTileComponent : Entity, IAwake, IUpdate, IDestroy
     {
+        public Tilemap tileMap_Base { get; set; }
         public Tilemap tileMap_Floor { get; set; }
         public Tilemap tileMap_Build { get; set; }
         public Tilemap tileMap_Road { get; set; }

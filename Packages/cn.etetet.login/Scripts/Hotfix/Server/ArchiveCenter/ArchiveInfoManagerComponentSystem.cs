@@ -90,8 +90,11 @@ namespace ET.Server
                 DBComponent dbComponent = self.Root().GetComponent<DBManagerComponent>().GetZoneDB(self.Zone());
 
                 var archiveInfo = self.AddChild<ArchiveInfo>();
-                archiveInfo.AccountLongHash = accountName.GetLongHashCode();
-                archiveInfo.ArchiveNumber = self.ArchiveLastNumber.TryGetValue(archiveInfo.AccountLongHash, out int value) ? value + 1 : 1;
+                int archiveNumber = self.ArchiveLastNumber.TryGetValue(archiveInfo.AccountLongHash, out int value) ? value + 1 : 1;
+                archiveInfo.Initialize(accountName,archiveNumber);
+                // archiveInfo.AccountLongHash = accountName.GetLongHashCode();
+                // archiveInfo.ArchiveNumber = self.ArchiveLastNumber.TryGetValue(archiveInfo.AccountLongHash, out int value) ? value + 1 : 1;
+                
                 self.Add(accountName, archiveInfo);
                 await dbComponent.Save(archiveInfo);
             }
@@ -101,21 +104,27 @@ namespace ET.Server
         {
             if (self.ArchiveInfos.TryGetValue(archiveInfoProto.AccountHash, out var archiveInfoList))
             {
-                foreach (ArchiveInfo archiveInfo in archiveInfoList)
+                for (int i = 0; i < archiveInfoList.Count; i++)
                 {
+                    ArchiveInfo archiveInfo = archiveInfoList[i];
                     if (archiveInfo.AccountLongHash == archiveInfoProto.AccountHash)
                     {
                         archiveInfo.FromMessage(archiveInfoProto);
-                        CoroutineLockComponent coroutineLockComponent = self.Root().GetComponent<CoroutineLockComponent>();
-                        using (await coroutineLockComponent.Wait(CoroutineLockType.OperaArchiveInfos, archiveInfoProto.AccountHash))
-                        {
-                            DBComponent dbComponent = self.Root().GetComponent<DBManagerComponent>().GetZoneDB(self.Zone());
-                            await dbComponent.Save(archiveInfo);
-                        }
-
+                        await self.SaveArchive(archiveInfo);
+                        Log.Error("存档成功 ！！！");
                         break;
                     }
                 }
+            }
+        }
+
+        public static async ETTask SaveArchive(this ET.Server.ArchiveInfoManagerComponent self, ArchiveInfo archiveInfo)
+        {
+            CoroutineLockComponent coroutineLockComponent = self.Root().GetComponent<CoroutineLockComponent>();
+            using (await coroutineLockComponent.Wait(CoroutineLockType.OperaArchiveInfos, archiveInfo.AccountLongHash))
+            {
+                DBComponent dbComponent = self.Root().GetComponent<DBManagerComponent>().GetZoneDB(self.Zone());
+                await dbComponent.Save(archiveInfo);
             }
         }
 
