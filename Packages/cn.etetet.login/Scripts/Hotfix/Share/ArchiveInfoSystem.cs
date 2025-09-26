@@ -30,7 +30,7 @@ namespace ET
             self.ArchiveNumber = archiveNumber;
         }
 
-        public static ArchiveInfoProto ToMessage(this ArchiveInfo self)
+        /*public static ArchiveInfoProto ToMessage(this ArchiveInfo self)
         {
             ArchiveInfoProto archiveInfoProto = ArchiveInfoProto.Create();
             archiveInfoProto.AccountHash = self.AccountLongHash;
@@ -44,9 +44,25 @@ namespace ET
 
             archiveInfoProto.MapTileInfos = list;
             return archiveInfoProto;
+        }*/
+        
+        public static ArchiveInfoProto ToMessage(this ArchiveInfo self)
+        {
+            ArchiveInfoProto archiveInfoProto = ArchiveInfoProto.Create();
+            archiveInfoProto.AccountHash = self.AccountLongHash;
+            archiveInfoProto.ArchiveNum = self.ArchiveNumber;
+            archiveInfoProto.Recruits = new List<long>(self.RecruitUnitIds);
+            var list = new List<byte[]>();
+            foreach (MapTileInfo mapTileInfo in self.MapTileInfosDic.Values)
+            {
+                list.Add(mapTileInfo.ToMessage());
+            }
+
+            archiveInfoProto.MapTileInfos = list;
+            return archiveInfoProto;
         }
 
-        public static void FromMessage(this ET.ArchiveInfo self, ArchiveInfoProto archiveInfoProto)
+        /*public static void FromMessage(this ET.ArchiveInfo self, ArchiveInfoProto archiveInfoProto)
         {
             self.RecruitUnitIds.Clear();
             self.RecruitUnitIds.AddRange(archiveInfoProto.Recruits);
@@ -63,6 +79,29 @@ namespace ET
                 {
                     var mapTileInfo = self.AddChild<MapTileInfo>();
                     mapTileInfo.FromMessage(mapTileInfoProto);
+                    self.MapTileInfosDic.Add(mapTileInfo.configId, mapTileInfo);
+                }
+            }
+        }*/
+        
+        public static void FromMessage(this ET.ArchiveInfo self, ArchiveInfoProto archiveInfoProto)
+        {
+            self.RecruitUnitIds.Clear();
+            self.RecruitUnitIds.AddRange(archiveInfoProto.Recruits);
+            self.ArchiveNumber = archiveInfoProto.ArchiveNum;
+            self.AccountLongHash = archiveInfoProto.AccountHash;
+            foreach (byte[] mapTileInfoProto in archiveInfoProto.MapTileInfos)
+            {
+                var mapTileInfo = MongoHelper.Deserialize<MapTileInfo>(mapTileInfoProto);
+                if (self.MapTileInfosDic.ContainsKey(mapTileInfo.configId))
+                {
+                    MapTileInfo mapTileInfoEntity = self.MapTileInfosDic[mapTileInfo.configId];
+                    mapTileInfoEntity.tilePos = new List<int2>(mapTileInfo.tilePos);
+                    mapTileInfoEntity.tilePos_DB = new List<int[]>(mapTileInfo.tilePos_DB);
+                }
+                else
+                {
+                    self.AddChild(mapTileInfo);
                     self.MapTileInfosDic.Add(mapTileInfo.configId, mapTileInfo);
                 }
             }

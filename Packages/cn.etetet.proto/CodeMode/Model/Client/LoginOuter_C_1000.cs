@@ -611,22 +611,56 @@ namespace ET
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.C2R_GetArchiveListRequest)]
-    [ResponseType(nameof(C2R_GetArchiveListResponse))]
-    public partial class C2R_GetArchiveListRequest : MessageObject, ISessionRequest
+    [Message(LoginOuter.ArchiveInfoProto)]
+    public partial class ArchiveInfoProto : MessageObject
     {
-        public static C2R_GetArchiveListRequest Create(bool isFromPool = false)
+        public static ArchiveInfoProto Create(bool isFromPool = false)
         {
-            return ObjectPool.Fetch<C2R_GetArchiveListRequest>(isFromPool);
+            return ObjectPool.Fetch<ArchiveInfoProto>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public long AccountHash { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int ArchiveNum { get; set; }
+
+        [MemoryPackOrder(2)]
+        public List<long> Recruits { get; set; } = new();
+
+        [MemoryPackOrder(3)]
+        public List<byte[]> MapTileInfos { get; set; } = new();
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.AccountHash = default;
+            this.ArchiveNum = default;
+            this.Recruits.Clear();
+            this.MapTileInfos.Clear();
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginOuter.C2Archive_GetArchiveListRequest)]
+    [ResponseType(nameof(C2Archive_GetArchiveListResponse))]
+    public partial class C2Archive_GetArchiveListRequest : MessageObject, IActorArchiveRequest
+    {
+        public static C2Archive_GetArchiveListRequest Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<C2Archive_GetArchiveListRequest>(isFromPool);
         }
 
         [MemoryPackOrder(0)]
         public int RpcId { get; set; }
 
         [MemoryPackOrder(1)]
-        public string Token { get; set; }
-
-        [MemoryPackOrder(2)]
         public string AccountName { get; set; }
 
         public override void Dispose()
@@ -637,7 +671,6 @@ namespace ET
             }
 
             this.RpcId = default;
-            this.Token = default;
             this.AccountName = default;
 
             ObjectPool.Recycle(this);
@@ -645,12 +678,12 @@ namespace ET
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.C2R_GetArchiveListResponse)]
-    public partial class C2R_GetArchiveListResponse : MessageObject, ISessionResponse
+    [Message(LoginOuter.C2Archive_GetArchiveListResponse)]
+    public partial class C2Archive_GetArchiveListResponse : MessageObject, IActorArchiveResponse
     {
-        public static C2R_GetArchiveListResponse Create(bool isFromPool = false)
+        public static C2Archive_GetArchiveListResponse Create(bool isFromPool = false)
         {
-            return ObjectPool.Fetch<C2R_GetArchiveListResponse>(isFromPool);
+            return ObjectPool.Fetch<C2Archive_GetArchiveListResponse>(isFromPool);
         }
 
         [MemoryPackOrder(0)]
@@ -663,7 +696,7 @@ namespace ET
         public string Message { get; set; }
 
         [MemoryPackOrder(3)]
-        public List<ArchiveInfoProto> ArchiveInfoList { get; set; } = new();
+        public List<ArchiveInfoProto> ArchiveInfos { get; set; } = new();
 
         public override void Dispose()
         {
@@ -675,29 +708,26 @@ namespace ET
             this.RpcId = default;
             this.Error = default;
             this.Message = default;
-            this.ArchiveInfoList.Clear();
+            this.ArchiveInfos.Clear();
 
             ObjectPool.Recycle(this);
         }
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.C2R_AddNewArchiveRequest)]
-    [ResponseType(nameof(C2R_AddNewArchiveResponse))]
-    public partial class C2R_AddNewArchiveRequest : MessageObject, ISessionRequest
+    [Message(LoginOuter.C2Archive_AddNewArchiveRequest)]
+    [ResponseType(nameof(C2Archive_AddNewArchiveResponse))]
+    public partial class C2Archive_AddNewArchiveRequest : MessageObject, IActorArchiveRequest
     {
-        public static C2R_AddNewArchiveRequest Create(bool isFromPool = false)
+        public static C2Archive_AddNewArchiveRequest Create(bool isFromPool = false)
         {
-            return ObjectPool.Fetch<C2R_AddNewArchiveRequest>(isFromPool);
+            return ObjectPool.Fetch<C2Archive_AddNewArchiveRequest>(isFromPool);
         }
 
         [MemoryPackOrder(0)]
         public int RpcId { get; set; }
 
         [MemoryPackOrder(1)]
-        public string Token { get; set; }
-
-        [MemoryPackOrder(2)]
         public string AccountName { get; set; }
 
         public override void Dispose()
@@ -708,7 +738,6 @@ namespace ET
             }
 
             this.RpcId = default;
-            this.Token = default;
             this.AccountName = default;
 
             ObjectPool.Recycle(this);
@@ -716,12 +745,12 @@ namespace ET
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.C2R_AddNewArchiveResponse)]
-    public partial class C2R_AddNewArchiveResponse : MessageObject, ISessionResponse
+    [Message(LoginOuter.C2Archive_AddNewArchiveResponse)]
+    public partial class C2Archive_AddNewArchiveResponse : MessageObject, IActorArchiveResponse
     {
-        public static C2R_AddNewArchiveResponse Create(bool isFromPool = false)
+        public static C2Archive_AddNewArchiveResponse Create(bool isFromPool = false)
         {
-            return ObjectPool.Fetch<C2R_AddNewArchiveResponse>(isFromPool);
+            return ObjectPool.Fetch<C2Archive_AddNewArchiveResponse>(isFromPool);
         }
 
         [MemoryPackOrder(0)]
@@ -732,44 +761,6 @@ namespace ET
 
         [MemoryPackOrder(2)]
         public string Message { get; set; }
-
-        [MemoryPackOrder(3)]
-        public List<ArchiveInfoProto> ArchiveInfoList { get; set; } = new();
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Error = default;
-            this.Message = default;
-            this.ArchiveInfoList.Clear();
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.C2R_RemoveArchiveRequest)]
-    [ResponseType(nameof(C2R_RemoveArchiveResponse))]
-    public partial class C2R_RemoveArchiveRequest : MessageObject, ISessionRequest
-    {
-        public static C2R_RemoveArchiveRequest Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<C2R_RemoveArchiveRequest>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public string Token { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string AccountName { get; set; }
 
         [MemoryPackOrder(3)]
         public int ArchiveNum { get; set; }
@@ -782,8 +773,8 @@ namespace ET
             }
 
             this.RpcId = default;
-            this.Token = default;
-            this.AccountName = default;
+            this.Error = default;
+            this.Message = default;
             this.ArchiveNum = default;
 
             ObjectPool.Recycle(this);
@@ -791,12 +782,42 @@ namespace ET
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.C2R_RemoveArchiveResponse)]
-    public partial class C2R_RemoveArchiveResponse : MessageObject, ISessionResponse
+    [Message(LoginOuter.C2Archive_UpdateArchiveRequest)]
+    [ResponseType(nameof(C2Archive_UpdateArchiveResponse))]
+    public partial class C2Archive_UpdateArchiveRequest : MessageObject, IActorArchiveRequest
     {
-        public static C2R_RemoveArchiveResponse Create(bool isFromPool = false)
+        public static C2Archive_UpdateArchiveRequest Create(bool isFromPool = false)
         {
-            return ObjectPool.Fetch<C2R_RemoveArchiveResponse>(isFromPool);
+            return ObjectPool.Fetch<C2Archive_UpdateArchiveRequest>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public ArchiveInfoProto ArchiveInfo { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.ArchiveInfo = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginOuter.C2Archive_UpdateArchiveResponse)]
+    public partial class C2Archive_UpdateArchiveResponse : MessageObject, IActorArchiveResponse
+    {
+        public static C2Archive_UpdateArchiveResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<C2Archive_UpdateArchiveResponse>(isFromPool);
         }
 
         [MemoryPackOrder(0)]
@@ -824,80 +845,13 @@ namespace ET
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.C2M_UpdateArchiveRequest)]
-    [ResponseType(nameof(C2M_UpdateArchiveResponse))]
-    public partial class C2M_UpdateArchiveRequest : MessageObject, ILocationRequest
+    [Message(LoginOuter.C2Archive_RemoveArchiveRequest)]
+    [ResponseType(nameof(C2Archive_RemoveArchiveResponse))]
+    public partial class C2Archive_RemoveArchiveRequest : MessageObject, IActorArchiveRequest
     {
-        public static C2M_UpdateArchiveRequest Create(bool isFromPool = false)
+        public static C2Archive_RemoveArchiveRequest Create(bool isFromPool = false)
         {
-            return ObjectPool.Fetch<C2M_UpdateArchiveRequest>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public string Token { get; set; }
-
-        [MemoryPackOrder(2)]
-        public ArchiveInfoProto ArchiveInfoProto { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Token = default;
-            this.ArchiveInfoProto = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.C2M_UpdateArchiveResponse)]
-    public partial class C2M_UpdateArchiveResponse : MessageObject, ILocationResponse
-    {
-        public static C2M_UpdateArchiveResponse Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<C2M_UpdateArchiveResponse>(isFromPool);
-        }
-
-        [MemoryPackOrder(0)]
-        public int RpcId { get; set; }
-
-        [MemoryPackOrder(1)]
-        public int Error { get; set; }
-
-        [MemoryPackOrder(2)]
-        public string Message { get; set; }
-
-        public override void Dispose()
-        {
-            if (!this.IsFromPool)
-            {
-                return;
-            }
-
-            this.RpcId = default;
-            this.Error = default;
-            this.Message = default;
-
-            ObjectPool.Recycle(this);
-        }
-    }
-
-    [MemoryPackable]
-    [Message(LoginOuter.C2G_SelectOrAddArchiveRequest)]
-    [ResponseType(nameof(C2G_SelectOrAddArchiveResponse))]
-    public partial class C2G_SelectOrAddArchiveRequest : MessageObject, ISessionRequest
-    {
-        public static C2G_SelectOrAddArchiveRequest Create(bool isFromPool = false)
-        {
-            return ObjectPool.Fetch<C2G_SelectOrAddArchiveRequest>(isFromPool);
+            return ObjectPool.Fetch<C2Archive_RemoveArchiveRequest>(isFromPool);
         }
 
         [MemoryPackOrder(0)]
@@ -925,12 +879,12 @@ namespace ET
     }
 
     [MemoryPackable]
-    [Message(LoginOuter.C2G_SelectOrAddArchiveResponse)]
-    public partial class C2G_SelectOrAddArchiveResponse : MessageObject, ISessionResponse
+    [Message(LoginOuter.C2Archive_RemoveArchiveResponse)]
+    public partial class C2Archive_RemoveArchiveResponse : MessageObject, IActorArchiveResponse
     {
-        public static C2G_SelectOrAddArchiveResponse Create(bool isFromPool = false)
+        public static C2Archive_RemoveArchiveResponse Create(bool isFromPool = false)
         {
-            return ObjectPool.Fetch<C2G_SelectOrAddArchiveResponse>(isFromPool);
+            return ObjectPool.Fetch<C2Archive_RemoveArchiveResponse>(isFromPool);
         }
 
         [MemoryPackOrder(0)]
@@ -941,6 +895,37 @@ namespace ET
 
         [MemoryPackOrder(2)]
         public string Message { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.Error = default;
+            this.Message = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginOuter.C2Archive_SelectCurArchiveRequest)]
+    [ResponseType(nameof(C2Archive_SelectCurArchiveResponse))]
+    public partial class C2Archive_SelectCurArchiveRequest : MessageObject, IActorArchiveRequest
+    {
+        public static C2Archive_SelectCurArchiveRequest Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<C2Archive_SelectCurArchiveRequest>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public string AccountName { get; set; }
 
         [MemoryPackOrder(2)]
         public int ArchiveNum { get; set; }
@@ -953,9 +938,70 @@ namespace ET
             }
 
             this.RpcId = default;
+            this.AccountName = default;
+            this.ArchiveNum = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginOuter.C2Archive_SelectCurArchiveResponse)]
+    public partial class C2Archive_SelectCurArchiveResponse : MessageObject, IActorArchiveResponse
+    {
+        public static C2Archive_SelectCurArchiveResponse Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<C2Archive_SelectCurArchiveResponse>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public int Error { get; set; }
+
+        [MemoryPackOrder(2)]
+        public string Message { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
             this.Error = default;
             this.Message = default;
-            this.ArchiveNum = default;
+
+            ObjectPool.Recycle(this);
+        }
+    }
+
+    [MemoryPackable]
+    [Message(LoginOuter.C2Archive_RemoveCurArchive)]
+    public partial class C2Archive_RemoveCurArchive : MessageObject, IActorArchiveMessage
+    {
+        public static C2Archive_RemoveCurArchive Create(bool isFromPool = false)
+        {
+            return ObjectPool.Fetch<C2Archive_RemoveCurArchive>(isFromPool);
+        }
+
+        [MemoryPackOrder(0)]
+        public int RpcId { get; set; }
+
+        [MemoryPackOrder(1)]
+        public string AccountName { get; set; }
+
+        public override void Dispose()
+        {
+            if (!this.IsFromPool)
+            {
+                return;
+            }
+
+            this.RpcId = default;
+            this.AccountName = default;
 
             ObjectPool.Recycle(this);
         }
@@ -980,15 +1026,17 @@ namespace ET
         public const ushort G2C_LoginGameGate = 1015;
         public const ushort C2G_EnterGame = 1016;
         public const ushort G2C_EnterGame = 1017;
-        public const ushort C2R_GetArchiveListRequest = 1018;
-        public const ushort C2R_GetArchiveListResponse = 1019;
-        public const ushort C2R_AddNewArchiveRequest = 1020;
-        public const ushort C2R_AddNewArchiveResponse = 1021;
-        public const ushort C2R_RemoveArchiveRequest = 1022;
-        public const ushort C2R_RemoveArchiveResponse = 1023;
-        public const ushort C2M_UpdateArchiveRequest = 1024;
-        public const ushort C2M_UpdateArchiveResponse = 1025;
-        public const ushort C2G_SelectOrAddArchiveRequest = 1026;
-        public const ushort C2G_SelectOrAddArchiveResponse = 1027;
+        public const ushort ArchiveInfoProto = 1018;
+        public const ushort C2Archive_GetArchiveListRequest = 1019;
+        public const ushort C2Archive_GetArchiveListResponse = 1020;
+        public const ushort C2Archive_AddNewArchiveRequest = 1021;
+        public const ushort C2Archive_AddNewArchiveResponse = 1022;
+        public const ushort C2Archive_UpdateArchiveRequest = 1023;
+        public const ushort C2Archive_UpdateArchiveResponse = 1024;
+        public const ushort C2Archive_RemoveArchiveRequest = 1025;
+        public const ushort C2Archive_RemoveArchiveResponse = 1026;
+        public const ushort C2Archive_SelectCurArchiveRequest = 1027;
+        public const ushort C2Archive_SelectCurArchiveResponse = 1028;
+        public const ushort C2Archive_RemoveCurArchive = 1029;
     }
 }

@@ -147,7 +147,7 @@ namespace ET
 
                     sb.Append($"\tpublic partial class {msgName} : MessageObject");
 
-                    if (parentClass is "IActorMessage" or "IActorRequest" or "IActorResponse")
+                    if (parentClass is "IActorMessage" or "IActorRequest" or "IActorResponse" /*or "IActorArchiveMessage" or "IActorArchiveRequest" or "IActorArchiveResponse"*/)
                     {
                         sb.Append($", {parentClass}\n");
                     }

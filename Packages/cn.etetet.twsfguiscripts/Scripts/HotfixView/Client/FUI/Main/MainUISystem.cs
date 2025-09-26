@@ -51,12 +51,12 @@ namespace ET.Client
             ArchiveInfo archiveInfo = archiveInfoManagerComponentClient.ArchiveInfos[index];
             self.curArchiveNum = archiveInfo.ArchiveNumber;
             //登录游戏
-            self.LoginGame().NoContext();
+            self.LoginGame(true).NoContext();
         }
 
         public static void OnPlayGameClick(this MainUI self)
         {
-            self.LoginGame().NoContext();
+            self.LoginGame(false).NoContext();
         }
 
         public static void OnArchiveListClick(this MainUI self)
@@ -73,29 +73,41 @@ namespace ET.Client
 #endif
         }
 
-        public static async ETTask<int> OperaArchive(this ET.Client.MainUI self)
+        public static async ETTask<int> OperaArchive(this ET.Client.MainUI self, bool isSelectArchive)
         {
             var playerComponent = self.Root().GetComponent<PlayerComponent>();
 
-            C2G_SelectOrAddArchiveRequest req = C2G_SelectOrAddArchiveRequest.Create();
-            req.AccountName = playerComponent.Account;
-            req.ArchiveNum = self.curArchiveNum;
-
-            var response = await self.Root().GetComponent<ClientSenderComponent>().Call(req) as C2G_SelectOrAddArchiveResponse;
-            if (response.Error != ErrorCode.ERR_Success)
+            if (!isSelectArchive)
             {
-                return response.Error;
+                C2Archive_AddNewArchiveRequest req = C2Archive_AddNewArchiveRequest.Create();
+                req.AccountName = playerComponent.Account;
+                var response = await self.Root().GetComponent<ClientSenderComponent>().Call(req) as C2Archive_AddNewArchiveResponse;
+                if (response.Error != ErrorCode.ERR_Success)
+                {
+                    return response.Error;
+                }
+                self.curArchiveNum = response.ArchiveNum;
             }
-
-            self.curArchiveNum = response.ArchiveNum;
+            else
+            {
+                C2Archive_SelectCurArchiveRequest req = C2Archive_SelectCurArchiveRequest.Create();
+                req.AccountName = playerComponent.Account;
+                req.ArchiveNum = self.curArchiveNum;
+                var response = await self.Root().GetComponent<ClientSenderComponent>().Call(req) as C2Archive_SelectCurArchiveResponse;
+                if (response.Error != ErrorCode.ERR_Success)
+                {
+                    return response.Error;
+                }
+            }
+            
             self.Root().GetComponent<ArchiveInfoManagerComponent_Client>().SetCurArchiveInfoByArchiveNum(self.curArchiveNum);
             self.Root().GetComponent<MapManagerComponent_Client>().InitMapData();
             return ErrorCode.ERR_Success;
         }
 
-        public static async ETTask LoginGame(this MainUI self)
+        public static async ETTask LoginGame(this MainUI self, bool isSelectArchive)
         {
-            int err = await self.OperaArchive();
+            int err = await self.OperaArchive(isSelectArchive);
             if (err != ErrorCode.ERR_Success)
             {
                 Log.Error($"选择存档出错：{err}");

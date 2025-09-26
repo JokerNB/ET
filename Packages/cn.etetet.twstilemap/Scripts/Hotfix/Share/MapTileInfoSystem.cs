@@ -22,15 +22,20 @@ namespace ET
             }
         }
 
-        public static MapTileInfoProto ToMessage(this MapTileInfo self)
+        /*public static MapTileInfoProto ToMessage(this MapTileInfo self)
         {
             MapTileInfoProto mapTileInfoProto = MapTileInfoProto.Create();
             mapTileInfoProto.configId = self.configId;
             mapTileInfoProto.tilePos = new List<int2>(self.tilePos);
             return mapTileInfoProto;
+        }*/
+        
+        public static byte[] ToMessage(this MapTileInfo self)
+        {
+            return self.ToBson();
         }
 
-        public static void FromMessage(this ET.MapTileInfo self, MapTileInfoProto mapTileInfoProto)
+        /*public static void FromMessage(this ET.MapTileInfo self, MapTileInfoProto mapTileInfoProto)
         {
             self.configId = mapTileInfoProto.configId;
             self.tilePos = new List<int2>(mapTileInfoProto.tilePos);
@@ -40,7 +45,7 @@ namespace ET
                 int[] tilePos = new int[] { pos.x, pos.y };
                 self.tilePos_DB.Add(tilePos);
             }
-        }
+        }*/
 
         public static void UpdateTilePos(this ET.MapTileInfo self, List<int2> tilePos)
         {

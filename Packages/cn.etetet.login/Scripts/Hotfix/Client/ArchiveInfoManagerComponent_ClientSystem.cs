@@ -51,9 +51,9 @@ namespace ET.Client
             var archiveInfo = self.AddChild<ArchiveInfo>();
             self.Add(archiveInfo);
 
-            C2R_AddNewArchiveRequest msg = C2R_AddNewArchiveRequest.Create();
+            C2Archive_AddNewArchiveRequest msg = C2Archive_AddNewArchiveRequest.Create();
             msg.AccountName = self.Root().GetComponent<PlayerComponent>().Account;
-            var response = await self.Root().GetComponent<ClientSenderComponent>().Call(msg) as C2R_AddNewArchiveResponse;
+            var response = await self.Root().GetComponent<ClientSenderComponent>().Call(msg) as C2Archive_AddNewArchiveResponse;
             if (response.Error == ErrorCode.ERR_Success)
             {
                 self.hasUpdate = true;
@@ -61,11 +61,11 @@ namespace ET.Client
             return response.Error;
         }
 
-        public static async ETTask<int> Update(this ArchiveInfoManagerComponent_Client self, ArchiveInfo archiveInfo)
+        public static async ETTask<int> SendUpdateMsg(this ArchiveInfoManagerComponent_Client self, ArchiveInfo archiveInfo)
         {
-            C2M_UpdateArchiveRequest msg = C2M_UpdateArchiveRequest.Create();
-            msg.ArchiveInfoProto = archiveInfo.ToMessage();
-            var response = await self.Root().GetComponent<ClientSenderComponent>().Call(msg) as C2M_UpdateArchiveResponse;
+            C2Archive_UpdateArchiveRequest msg = C2Archive_UpdateArchiveRequest.Create();
+            msg.ArchiveInfo = archiveInfo.ToMessage();
+            var response = await self.Root().GetComponent<ClientSenderComponent>().Call(msg) as C2Archive_UpdateArchiveResponse;
             return response.Error;
         }
         
@@ -77,7 +77,7 @@ namespace ET.Client
                 return;
             self.hasUpdate = false;
             ArchiveInfo archiveInfo = self.CurArchiveInfo;
-            int err = await self.Update(archiveInfo);
+            int err = await self.SendUpdateMsg(archiveInfo);
             if (err != ErrorCode.ERR_Success)
             {
                 Log.Error($"Auto UpdateCurArchiveInfo Error : {err}");
@@ -165,7 +165,7 @@ namespace ET.Client
             if (self.CurArchiveInfo == default)
                 return;
             Log.Error("手动存档111");
-            self.Update(self.CurArchiveInfo).NoContext();
+            self.SendUpdateMsg(self.CurArchiveInfo).NoContext();
         }
     }
 }

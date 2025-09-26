@@ -138,82 +138,90 @@ message G2C_EnterGame // ISessionResponse
 	string Message = 3;
 }
 
-
-// ResponseType C2R_GetArchiveListResponse
-message C2R_GetArchiveListRequest // ISessionRequest
+message ArchiveInfoProto
 {
-	int32 RpcId = 1;
-	string Token = 2;
-	string AccountName = 3;
+	int64 AccountHash = 1;
+	int32 ArchiveNum = 2;
+	repeated int64 Recruits = 3;
+	repeated byte[] MapTileInfos = 4;
 }
 
-message C2R_GetArchiveListResponse // ISessionResponse
+//ResponseType C2Archive_GetArchiveListResponse
+message C2Archive_GetArchiveListRequest // IActorArchiveRequest
+{
+	int32 RpcId = 1;
+	string AccountName = 2;
+}
+
+message C2Archive_GetArchiveListResponse // IActorArchiveResponse
 {
 	int32 RpcId = 1;
 	int32 Error = 2;
 	string Message = 3;
-	repeated ArchiveInfoProto ArchiveInfoList = 4;
+	repeated ArchiveInfoProto ArchiveInfos = 4;
 }
 
-// ResponseType C2R_AddNewArchiveResponse
-message C2R_AddNewArchiveRequest // ISessionRequest
+//ResponseType C2Archive_AddNewArchiveResponse
+message C2Archive_AddNewArchiveRequest // IActorArchiveRequest
 {
 	int32 RpcId = 1;
-	string Token = 2;
-	string AccountName = 3;
+	string AccountName = 2;
 }
 
-message C2R_AddNewArchiveResponse // ISessionResponse
+message C2Archive_AddNewArchiveResponse // IActorArchiveResponse
 {
 	int32 RpcId = 1;
 	int32 Error = 2;
 	string Message = 3;
-	repeated ArchiveInfoProto ArchiveInfoList = 4;
-}
-
-// ResponseType C2R_RemoveArchiveResponse
-message C2R_RemoveArchiveRequest // ISessionRequest
-{
-	int32 RpcId = 1;
-	string Token = 2;
-	string AccountName = 3;
 	int32 ArchiveNum = 4;
 }
 
-message C2R_RemoveArchiveResponse // ISessionResponse
+//ResponseType C2Archive_UpdateArchiveResponse
+message C2Archive_UpdateArchiveRequest // IActorArchiveRequest
+{
+	int32 RpcId = 1;
+	ArchiveInfoProto ArchiveInfo = 2;
+}
+
+message C2Archive_UpdateArchiveResponse // IActorArchiveResponse
 {
 	int32 RpcId = 1;
 	int32 Error = 2;
 	string Message = 3;
 }
 
-// ResponseType C2M_UpdateArchiveResponse
-message C2M_UpdateArchiveRequest // ILocationRequest
-{
-	int32 RpcId = 1;
-	string Token = 2;
-	ArchiveInfoProto ArchiveInfoProto = 3;
-}
-
-message C2M_UpdateArchiveResponse // ILocationResponse
-{
-	int32 RpcId = 1;
-	int32 Error = 2;
-	string Message = 3;
-}
-
-// ResponseType C2G_SelectOrAddArchiveResponse
-message C2G_SelectOrAddArchiveRequest // ISessionRequest
+//ResponseType C2Archive_RemoveArchiveResponse
+message C2Archive_RemoveArchiveRequest // IActorArchiveRequest
 {
 	int32 RpcId = 1;
 	string AccountName = 2;
 	int32 ArchiveNum = 3;
 }
 
-message C2G_SelectOrAddArchiveResponse // ISessionResponse
+message C2Archive_RemoveArchiveResponse // IActorArchiveResponse
 {
 	int32 RpcId = 1;
 	int32 Error = 2;
 	string Message = 3;
+}
+
+//ResponseType C2Archive_SelectCurArchiveResponse
+message C2Archive_SelectCurArchiveRequest // IActorArchiveRequest
+{
+	int32 RpcId = 1;
+	string AccountName = 2;
 	int32 ArchiveNum = 3;
+}
+
+message C2Archive_SelectCurArchiveResponse // IActorArchiveResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+}
+
+message C2Archive_RemoveCurArchive // IActorArchiveMessage
+{
+	int32 RpcId = 1;
+	string AccountName = 2;
 }

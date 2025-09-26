@@ -44,18 +44,18 @@ namespace ET.Client
                 return;
             }
 
-            C2R_GetArchiveListRequest c2RGetArchiveListRequest = C2R_GetArchiveListRequest.Create();
+            C2Archive_GetArchiveListRequest c2RGetArchiveListRequest = C2Archive_GetArchiveListRequest.Create();
             c2RGetArchiveListRequest.AccountName = account;
-            c2RGetArchiveListRequest.Token = token;
-            C2R_GetArchiveListResponse c2RGetArchiveListResponse =
-                    await clientSenderComponent.Call(c2RGetArchiveListRequest) as C2R_GetArchiveListResponse;
+            C2Archive_GetArchiveListResponse c2RGetArchiveListResponse =
+                    await clientSenderComponent.Call(c2RGetArchiveListRequest) as C2Archive_GetArchiveListResponse;
             if (c2RGetArchiveListResponse.Error != ErrorCode.ERR_Success)
             {
                 Log.Error("获取存档列表失败");
                 return;
             }
 
-            root.GetComponent<ArchiveInfoManagerComponent_Client>().InitArchiveList(c2RGetArchiveListResponse.ArchiveInfoList);
+            root.GetComponent<ArchiveInfoManagerComponent_Client>().InitArchiveList(c2RGetArchiveListResponse.ArchiveInfos);
+            
 
             //请求角色进入Map地图
             NetClient2Main_LoginGame netClient2MainLoginGame =
