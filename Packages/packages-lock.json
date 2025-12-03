@@ -66,6 +66,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.lwfui": {
+      "version": "file:cn.etetet.lwfui",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.mathematics": {
       "version": "file:cn.etetet.mathematics",
       "depth": 0,
@@ -191,6 +197,24 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
+    },
+    "cn.etetet.xetfui": {
+      "version": "file:cn.etetet.xetfui",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "cn.etetet.core": "0.0.16",
+        "cn.etetet.xetyooassets": "0.0.5"
+      }
+    },
+    "cn.etetet.xetyooassets": {
+      "version": "file:cn.etetet.xetyooassets",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "cn.etetet.core": "0.0.16",
+        "cn.etetet.yooassets": "2.1.3"
+      }
     },
     "cn.etetet.yiuiluban": {
       "version": "file:cn.etetet.yiuiluban",
