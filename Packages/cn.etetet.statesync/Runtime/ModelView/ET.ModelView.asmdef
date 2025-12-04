@@ -10,7 +10,8 @@
         "ET.SourceGeneratorAttribute",
         "ET.UI",
         "ET.YooAssets",
-        "Unity.Mathematics"
+        "Unity.Mathematics",
+        "XET.FUI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
@@ -23,8 +24,5 @@
         "IS_COMPILING || UNITY_EDITOR"
     ],
     "versionDefines": [],
-    "noEngineReferences": false,
-    "optionalUnityReferences": [],
-    "additionalReferences": [],
-    "compilerOptions": ""
+    "noEngineReferences": false
 }

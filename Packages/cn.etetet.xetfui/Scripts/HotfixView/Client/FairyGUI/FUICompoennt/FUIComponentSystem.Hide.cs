@@ -164,7 +164,7 @@ namespace ET.Client
             }        
         }
         
-        public static void HidePanel<T, P1>(this FUIComponent self, P1 p1) where T: Entity, IHide
+        public static void HidePanel<T, P1>(this FUIComponent self, P1 p1) where T: Entity/*, IHide*/
         {
             PanelId panelId = self.GetPanelIdByGeneric<T>();
             FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
@@ -190,7 +190,7 @@ namespace ET.Client
             }
         }
         
-        public static void HidePanel<T, P1, P2>(this FUIComponent self, P1 p1, P2 p2) where T: Entity, IHide
+        public static void HidePanel<T, P1, P2>(this FUIComponent self, P1 p1, P2 p2) where T: Entity/*, IHide*/
         {
             PanelId panelId = self.GetPanelIdByGeneric<T>();
             FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
@@ -216,7 +216,7 @@ namespace ET.Client
             }
         }
         
-        public static void HidePanel<T, P1, P2, P3>(this FUIComponent self, P1 p1, P2 p2, P3 p3) where T: Entity, IHide
+        public static void HidePanel<T, P1, P2, P3>(this FUIComponent self, P1 p1, P2 p2, P3 p3) where T: Entity/*, IHide*/
         {
             PanelId panelId = self.GetPanelIdByGeneric<T>();
             FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
@@ -242,7 +242,7 @@ namespace ET.Client
             }
         }
         
-        public static void HidePanel<T, P1, P2, P3, P4>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4) where T: Entity, IHide
+        public static void HidePanel<T, P1, P2, P3, P4>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4) where T: Entity/*, IHide*/
         {
             PanelId panelId = self.GetPanelIdByGeneric<T>();
             FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
@@ -268,7 +268,7 @@ namespace ET.Client
             }
         }
         
-        public static void HidePanel<T, P1, P2, P3, P4, P5>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4, P5 p5) where T: Entity, IHide
+        public static void HidePanel<T, P1, P2, P3, P4, P5>(this FUIComponent self, P1 p1, P2 p2, P3 p3, P4 p4, P5 p5) where T: Entity/*, IHide*/
         {
             PanelId panelId = self.GetPanelIdByGeneric<T>();
             FUIEntity fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);

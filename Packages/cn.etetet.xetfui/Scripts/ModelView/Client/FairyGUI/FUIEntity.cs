@@ -39,6 +39,8 @@ namespace ET.Client
             }
             set { this.panelId = value; }
         }
+
+        public UIPanelType panelType;
       
         private PanelId panelId = PanelId.Invalid;
 

@@ -74,7 +74,7 @@ namespace ET.Client
             }
             
             // 设置根节点
-            fuiEntity.SetRoot(self.GetTargetRoot(self.Root(), fuiEntity.PanelCoreData.panelType));
+            fuiEntity.SetRoot(self.GetTargetRoot(fuiEntity.PanelCoreData.panelType));
 
             Entity component = fuiEntity.AddComponent<T>();
             fuiEntity.Component = component;
@@ -97,7 +97,7 @@ namespace ET.Client
             return (await self.Scene().GetComponent<FUIAssetComponent>().CreateObjectAsync(packageName, componentName)).asCom;
         }
         
-        public static GComponent GetTargetRoot(this FUIComponent self, Scene root, UIPanelType type)
+        public static GComponent GetTargetRoot(this FUIComponent self,UIPanelType type)
         {
             if (type == UIPanelType.Normal)
             {

@@ -1,6 +1,6 @@
 {
     "FileVersion": "2.3.1",
-    "EnableAddressable": false,
+    "EnableAddressable": true,
     "LocationToLower": false,
     "IncludeAssetGUID": false,
     "OutputNameStyle": 0,
@@ -8,10 +8,10 @@
     "BuildPipeline": "EditorSimulateBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
-    "PackageNote": "2025/12/3 15:29:34",
+    "PackageNote": "2025/12/4 9:08:15",
     "AssetList": [
         {
-            "Address": "",
+            "Address": "Unit",
             "AssetPath": "Packages/cn.etetet.demores/Bundles/Unit/Unit.prefab",
             "AssetGUID": "",
             "AssetTags": [],
@@ -19,7 +19,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "Map1",
             "AssetPath": "Packages/cn.etetet.demores/Scenes/Map1.unity",
             "AssetGUID": "",
             "AssetTags": [],
@@ -27,7 +27,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "Map2",
             "AssetPath": "Packages/cn.etetet.demores/Scenes/Map2.unity",
             "AssetGUID": "",
             "AssetTags": [],
@@ -35,7 +35,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "ET.Hotfix.dll",
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Hotfix.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
@@ -43,7 +43,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "ET.Hotfix.pdb",
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Hotfix.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
@@ -51,7 +51,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "ET.HotfixView.dll",
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.HotfixView.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
@@ -59,7 +59,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "ET.HotfixView.pdb",
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.HotfixView.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
@@ -67,7 +67,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "ET.Model.dll",
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Model.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
@@ -75,7 +75,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "ET.Model.pdb",
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.Model.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
@@ -83,7 +83,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "ET.ModelView.dll",
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.ModelView.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
@@ -91,7 +91,7 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
+            "Address": "ET.ModelView.pdb",
             "AssetPath": "Packages/cn.etetet.loader/Bundles/Code/ET.ModelView.pdb.bytes",
             "AssetGUID": "",
             "AssetTags": [],
@@ -99,43 +99,27 @@
             "DependBundleIDs": []
         },
         {
-            "Address": "",
-            "AssetPath": "Packages/cn.etetet.statesync/Bundles/UI/UIHelp.prefab",
+            "Address": "Loading_fui",
+            "AssetPath": "Packages/cn.etetet.lwfui/Bundles/FUI/Loading/Loading_fui.bytes",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 4,
             "DependBundleIDs": []
         },
         {
-            "Address": "",
-            "AssetPath": "Packages/cn.etetet.statesync/Bundles/UI/UILobby.prefab",
+            "Address": "AIConfigCategory",
+            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/AIConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 5,
             "DependBundleIDs": []
         },
         {
-            "Address": "",
-            "AssetPath": "Packages/cn.etetet.statesync/Bundles/UI/UILogin.prefab",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 6,
-            "DependBundleIDs": []
-        },
-        {
-            "Address": "",
-            "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/AIConfigCategory.bytes",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 7,
-            "DependBundleIDs": []
-        },
-        {
-            "Address": "",
+            "Address": "UnitConfigCategory",
             "AssetPath": "Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client/UnitConfigCategory.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 7,
+            "BundleID": 5,
             "DependBundleIDs": []
         }
     ],
@@ -145,7 +129,7 @@
             "UnityCRC": 0,
             "FileHash": "c205b4fc3306768916b879910875bae5",
             "FileCRC": "00000000",
-            "FileSize": 1430,
+            "FileSize": 1480,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -155,7 +139,7 @@
             "UnityCRC": 0,
             "FileHash": "d41cfbd8797fffc73bf39d827a1bce5a",
             "FileCRC": "00000000",
-            "FileSize": 216922,
+            "FileSize": 225044,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -165,7 +149,7 @@
             "UnityCRC": 0,
             "FileHash": "6052b40dbafd81994395689c7c9fd610",
             "FileCRC": "00000000",
-            "FileSize": 70649,
+            "FileSize": 73309,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
@@ -175,37 +159,17 @@
             "UnityCRC": 0,
             "FileHash": "afce70f6c52f321a3bcba6f0d2e2e26f",
             "FileCRC": "00000000",
-            "FileSize": 725244,
+            "FileSize": 805120,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []
         },
         {
-            "BundleName": "defaultpackage_packages_cn_etetet_statesync_bundles_ui_uihelp.bundle",
+            "BundleName": "defaultpackage_packages_cn_etetet_lwfui_bundles_fui_loading_loading_fui.bundle",
             "UnityCRC": 0,
-            "FileHash": "aea76a3fe5e93f79a0d10e4301978bfb",
+            "FileHash": "2c817bfcbfc1762dea8b6e75611de277",
             "FileCRC": "00000000",
-            "FileSize": 4966,
-            "Encrypted": false,
-            "Tags": [],
-            "DependBundleIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_packages_cn_etetet_statesync_bundles_ui_uilobby.bundle",
-            "UnityCRC": 0,
-            "FileHash": "fc2e466b8677e8151e5bb20bce17f764",
-            "FileCRC": "00000000",
-            "FileSize": 11002,
-            "Encrypted": false,
-            "Tags": [],
-            "DependBundleIDs": []
-        },
-        {
-            "BundleName": "defaultpackage_packages_cn_etetet_statesync_bundles_ui_uilogin.bundle",
-            "UnityCRC": 0,
-            "FileHash": "e2fface53c07837e4342f67ebd7108c3",
-            "FileCRC": "00000000",
-            "FileSize": 28796,
+            "FileSize": 314,
             "Encrypted": false,
             "Tags": [],
             "DependBundleIDs": []

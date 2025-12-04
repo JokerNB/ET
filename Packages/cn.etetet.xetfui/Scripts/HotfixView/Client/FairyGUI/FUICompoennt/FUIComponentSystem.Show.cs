@@ -65,11 +65,6 @@ namespace ET.Client
         /// </summary>
         private static async ETTask<FUIEntity> InnerShowPanelAsync<T>(this FUIComponent self, PanelId panelId) where T: Entity, IAwake, new()
         {
-            return await self.InnerShowPanelAsync(typeof(T), panelId);
-        }
-        
-        private static async ETTask<FUIEntity> InnerShowPanelAsync(this FUIComponent self, Type type, PanelId panelId)
-        {
             using (await self.Root().GetComponent<CoroutineLockComponent>().Wait(CoroutineLockType.ShowingPanels, (int)panelId, 3000))
             {
                 var fuiEntity = self.GetFirstFUIEntityByPanelId(panelId);
@@ -81,7 +76,7 @@ namespace ET.Client
                     return fuiEntity;
                 }
 
-                fuiEntity = await self.CreatePanelAsync(type, panelId);
+                fuiEntity = await self.CreatePanelAsync<T>(panelId);
                 return fuiEntity;
             }
         }

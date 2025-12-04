@@ -29,7 +29,8 @@ namespace ET.Client
         public static void SetPanelType(this FUIEntity self, UIPanelType panelType)
         {
             self.panelType = panelType;
-            self.SetRoot(FUIRootHelper.GetTargetRoot(self.Root(), panelType));
+            // var gComponent = FUIRootHelper.GetTargetRoot(self.Root(), panelType);
+            // self.SetRoot(gComponent);
         }
 
         public static UIPanelType GetPanelType(this FUIEntity self)
