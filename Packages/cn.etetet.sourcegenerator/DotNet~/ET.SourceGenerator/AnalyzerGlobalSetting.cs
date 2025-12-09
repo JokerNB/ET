@@ -14,7 +14,7 @@ namespace ET
         /// </summary>
         public static HashSet<string> EnableClassIgnoreDirNames = new HashSet<string>()
         {
-
+"Model/Client/Generate"
         };
     }
 }

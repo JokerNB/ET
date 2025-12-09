@@ -5,7 +5,8 @@
         "ET.Core",
         "ET.YooAssets",
         "ET.SourceGeneratorAttribute",
-        "ET.HybridCLR"
+        "ET.HybridCLR",
+        "Fantasy.Unity"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

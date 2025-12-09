@@ -1,0 +1,11 @@
+﻿{
+    "Id": 0,
+    "Name": "ftserver",
+    "ScriptsReferences": 
+    {
+        "Hotfix": ["FT.Server"],
+        "HotfixView": ["FT.Server"],
+        "Model": ["FT.Server"],
+        "ModelView": ["FT.Server"]
+    }
+}

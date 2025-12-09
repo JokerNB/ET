@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace ET.Client
 {
@@ -8,5 +9,6 @@ namespace ET.Client
 		public GameObject account;
 		public GameObject password;
 		public GameObject loginBtn;
+		public Text Text_LoginMsg;
 	}
 }

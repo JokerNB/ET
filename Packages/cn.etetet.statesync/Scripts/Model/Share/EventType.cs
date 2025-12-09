@@ -32,4 +32,9 @@
     {
         public Unit Unit;
     }
+
+    public struct ConnectState
+    {
+        public string state;
+    }
 }

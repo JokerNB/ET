@@ -15,6 +15,8 @@ namespace ET.Client
             root.AddComponent<ResourcesLoaderComponent>();
             root.AddComponent<PlayerComponent>();
             root.AddComponent<CurrentScenesComponent>();
+            root.AddComponent<FTServerModelComponent>();
+            root.AddComponent<TestContentFTServer>();
             
             await EventSystem.Instance.PublishAsync(root, new AppStartInitFinish());
         }

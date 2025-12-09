@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using Fantasy.Helper;
 using HybridCLR;
 using UnityEngine;
 
@@ -57,6 +58,8 @@ namespace ET
                 }
                 this.modelAssembly = Assembly.Load(modelAssBytes, modelPdbBytes);
                 this.modelViewAssembly = Assembly.Load(modelViewAssBytes, modelViewPdbBytes);
+                this.modelAssembly.EnsureLoaded();
+                this.modelViewAssembly.EnsureLoaded();
             }
             else
             {
@@ -66,9 +69,13 @@ namespace ET
                 byte[] modelViewPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.ModelView.pdb.bytes"));
                 this.modelAssembly = Assembly.Load(modelAssBytes, modelPdbBytes);
                 this.modelViewAssembly = Assembly.Load(modelViewAssBytes, modelViewPdbBytes);
+                this.modelAssembly.EnsureLoaded();
+                this.modelViewAssembly.EnsureLoaded();
             }
             
             (Assembly hotfixAssembly, Assembly hotfixViewAssembly) = this.LoadHotfix();
+            hotfixAssembly.EnsureLoaded();
+            hotfixViewAssembly.EnsureLoaded();
 
             World.Instance.AddSingleton<CodeTypes, Assembly[]>(new[]
             {
@@ -118,6 +125,8 @@ namespace ET
         public void Reload()
         {
             (Assembly hotfixAssembly, Assembly hotfixViewAssembly) = this.LoadHotfix();
+            hotfixAssembly.EnsureLoaded();
+            hotfixViewAssembly.EnsureLoaded();
 
             CodeTypes codeTypes = World.Instance.AddSingleton<CodeTypes, Assembly[]>(new[]
             {

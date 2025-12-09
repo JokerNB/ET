@@ -1,0 +1,16 @@
+﻿{
+  "name": "cn.etetet.ftserver",
+  "displayName": "FT.Server",
+  "version": "0.0.0",
+  "unity": "2022.3",
+  "description": "",
+  "author": {
+    "name": "FT.Server"
+  },
+  "repository": {},
+  "relatedPackages": {},
+  "dependencies": {},
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@ET-Packages"
+  }
+}

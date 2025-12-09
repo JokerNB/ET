@@ -47,6 +47,8 @@
             <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
         
+        <Compile Remove="..\..\..\cn.etetet.lwftserver\**" />
+        
     </ItemGroup> 
     <ItemGroup>
         <ProjectReference Include="$(SolutionDir)Packages\cn.etetet.sourcegenerator\DotNet~\ET.SourceGenerator\ET.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />

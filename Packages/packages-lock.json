@@ -42,6 +42,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.ftserver": {
+      "version": "file:cn.etetet.ftserver",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.http": {
       "version": "file:cn.etetet.http",
       "depth": 0,
@@ -225,6 +231,14 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
+    },
+    "com.fantasy.unity": {
+      "version": "file:com.fantasy.unity",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      }
     },
     "com.halodi.halodi-unity-package-registry-manager": {
       "version": "file:com.halodi.halodi-unity-package-registry-manager",
