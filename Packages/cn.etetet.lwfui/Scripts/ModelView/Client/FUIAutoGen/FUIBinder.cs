@@ -10,7 +10,10 @@ namespace ET.Client
         {
             UIObjectFactory.Clear();
             
-            LoadingBinder.BindAll();
+            UICoinShopBinder.BindAll();
+            UICommonBinder.BindAll();
+            UIMainBinder.BindAll();
+            UISettingsBinder.BindAll();
             // <last line>
         }
     }

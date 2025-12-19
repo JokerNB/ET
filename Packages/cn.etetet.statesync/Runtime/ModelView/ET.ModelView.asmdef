@@ -2,6 +2,7 @@
     "name": "ET.ModelView",
     "rootNamespace": "ET",
     "references": [
+        "XET.FUI",
         "ET.Core",
         "ET.Init",
         "ET.Loader",
@@ -10,8 +11,7 @@
         "ET.SourceGeneratorAttribute",
         "ET.UI",
         "ET.YooAssets",
-        "Unity.Mathematics",
-        "XET.FUI"
+        "Unity.Mathematics"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

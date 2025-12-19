@@ -28,6 +28,8 @@ namespace ET.Client
             GRoot.inst.AddChild(self.OtherGRoot);
             
             FUIBinder.BindAll();
+            GRoot.inst.fairyBatching = true;
+            GRoot.inst.MakeFullScreen();
         }
         
         [EntitySystem]

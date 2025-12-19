@@ -5,7 +5,9 @@ namespace ET.Client
     public enum PanelId
     {
         Invalid = 0,
-        UILoading,
+        UICoinShopPanel,
+        UIMainPanel,
+        UISettingsPanel,
         // <last line>
     }
 }
