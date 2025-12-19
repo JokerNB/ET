@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="312,184" extention="Button" initName="Button_Item_CoinShop" remark="Common">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_qj47" name="n0" src="qj47c" fileName="Atlas/Container.png" xy="-48,-8" size="408,280">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <image id="n1_qj47" name="n1" src="qj47c" fileName="Atlas/Container.png" xy="-48,-8" size="408,280">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <image id="n2_qj47" name="n2" src="qj47c" fileName="Atlas/Container.png" xy="-48,-8" size="408,280">
+      <gearDisplay controller="button" pages="2"/>
+    </image>
+    <image id="n3_qj47" name="n3" src="qj47c" fileName="Atlas/Container.png" xy="-48,-8" size="408,280">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+    <text id="n5_qj47" name="tittle" xy="12,61" size="288,84" font="ui://046ui8npqj476" fontSize="64" color="#1e2939" align="center" vAlign="middle" autoSize="none" text="$0.99"/>
+  </displayList>
+  <Button/>
+</component>

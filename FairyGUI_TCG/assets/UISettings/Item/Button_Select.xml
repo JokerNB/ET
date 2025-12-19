@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="264,152" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="Switch" exported="true" pages="0,Off,1,On" selected="0"/>
+  <displayList>
+    <image id="n0_qj47" name="n0" src="qj471" fileName="Atlas/Container (2).png" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_qj47" name="n1" src="qj471" fileName="Atlas/Container (2).png" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_qj47" name="n2" src="qj471" fileName="Atlas/Container (2).png" xy="0,0">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_qj47" name="n3" src="qj471" fileName="Atlas/Container (2).png" xy="0,0">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_qj47" name="n4" src="qj47f" fileName="Atlas/Container (1).png" xy="0,0">
+      <gearDisplay controller="Switch" pages="1"/>
+    </image>
+    <image id="n5_qj47" name="n5" src="qj472" fileName="Atlas/Container.png" xy="40,20">
+      <gearXY controller="Switch" pages="0" values="40,20" default="140,20"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="0rrl8mre">
+  <resources>
+    <image id="qj471" name="Container (2).png" path="/Atlas/" exported="true"/>
+    <image id="qj472" name="Container.png" path="/Atlas/" exported="true"/>
+    <image id="qj473" name="Icon (1).png" path="/Atlas/" exported="true"/>
+    <image id="qj474" name="Icon (2).png" path="/Atlas/" exported="true"/>
+    <image id="qj475" name="Icon (3).png" path="/Atlas/" exported="true"/>
+    <image id="qj477" name="Icon (5).png" path="/Atlas/" exported="true"/>
+    <image id="qj478" name="Icon (6).png" path="/Atlas/" exported="true"/>
+    <image id="qj479" name="Icon (7).png" path="/Atlas/" exported="true"/>
+    <image id="qj47a" name="Icon.png" path="/Atlas/" exported="true"/>
+    <image id="qj47b" name="SettingButton.png" path="/Atlas/" exported="true"/>
+    <image id="qj47c" name="SettingsPage.png" path="/Atlas/" exported="true"/>
+    <image id="qj47d" name="SettingToggle.png" path="/Atlas/" exported="true"/>
+    <image id="qj47e" name="Button.png" path="/Atlas/" exported="true"/>
+    <image id="qj47f" name="Container (1).png" path="/Atlas/" exported="true"/>
+    <component id="qj47g" name="UISettingsPanel.xml" path="/" exported="true"/>
+    <component id="qj47h" name="Item_Settings.xml" path="/Item/" exported="true"/>
+    <component id="qj47j" name="Button_Select.xml" path="/Item/" exported="true"/>
+    <component id="qj47k" name="Item_General.xml" path="/Item/" exported="true"/>
+    <image id="qj47m" name="Icon (4).png" path="/Atlas/" exported="true"/>
+    <component id="qj47p" name="Button_LogOut.xml" path="/Item/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1574,371" remark="Common">
+  <displayList>
+    <image id="n0_qj47" name="n0" src="qj47t" fileName="Atlas/BottomNav.png" xy="-152,-52"/>
+    <component id="n3_qj47" name="Button_Bottom_Shop" src="qj4716" fileName="Items/Button_Bottom.xml" xy="-16,47" controller="BottomType,0"/>
+    <component id="n4_qj47" name="Button_Bottom_Game" src="qj4716" fileName="Items/Button_Bottom.xml" xy="499,47" controller="BottomType,1"/>
+    <component id="n5_qj47" name="Button_Bottom_Auction" src="qj4716" fileName="Items/Button_Bottom.xml" xy="1014,47" controller="BottomType,2"/>
+  </displayList>
+</component>

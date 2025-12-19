@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="716,713" initName="Item_Content" remark="Common">
+  <controller name="ColorType" exported="true" pages="0,,1,,2,,3,,4,,5," selected="0"/>
+  <controller name="IsNew" exported="true" pages="0,False,1,True" selected="0"/>
+  <displayList>
+    <image id="n13_qj47" name="n13" src="qj47g" fileName="Atlas/GameCard (5).png" xy="-48,0">
+      <gearDisplay controller="ColorType" pages="0"/>
+    </image>
+    <image id="n12_qj47" name="n12" src="qj47h" fileName="Atlas/GameCard (4).png" xy="-80,0">
+      <gearDisplay controller="ColorType" pages="1"/>
+    </image>
+    <image id="n11_qj47" name="n11" src="qj47i" fileName="Atlas/GameCard (3).png" xy="-48,0">
+      <gearDisplay controller="ColorType" pages="2"/>
+    </image>
+    <image id="n10_qj47" name="n10" src="qj47j" fileName="Atlas/GameCard (2).png" xy="-80,-4">
+      <gearDisplay controller="ColorType" pages="3"/>
+    </image>
+    <image id="n9_qj47" name="n9" src="qj47k" fileName="Atlas/GameCard (1).png" xy="-45,-4">
+      <gearDisplay controller="ColorType" pages="4"/>
+    </image>
+    <image id="n0_qj47" name="n0" src="qj47f" fileName="Atlas/GameCard.png" xy="-80,-2">
+      <gearDisplay controller="ColorType" pages="5"/>
+    </image>
+    <image id="n6_qj47" name="n6" src="qj47m" fileName="Atlas/Container (3).png" xy="35,281" size="644,440" color="#ff0000">
+      <relation target="n7_qj47" sidePair="topext-top,bottomext-bottom"/>
+    </image>
+    <text id="n7_qj47" name="Text_Content" xy="131,346" pivot="0,1" size="450,218" font="ui://046ui8npqj476" fontSize="81" color="#ffffff" align="center" leading="13" letterSpacing="2" autoSize="height" text="BRAINROT&#xA;STACK">
+      <gearText controller="ColorType" pages="0,1,2,3,4" values="BRAINROT&#xA;STACK|CRASH IT|SLOT&#xA;CARS|ARCHERY|JUNGLE&#xA;RUN" default="BEACH&#xA;BALL"/>
+    </text>
+    <image id="n1_qj47" name="n1" src="qj47n" fileName="Atlas/Container (2).png" xy="19,59" group="n14_qj47"/>
+    <text id="n3_qj47" name="Text_New" xy="142,107" size="194,89" group="n14_qj47" font="ui://046ui8npqj476" fontSize="65" color="#1e2939" letterSpacing="2" autoSize="none" text="NEW!"/>
+    <group id="n14_qj47" name="n14" xy="19,59" size="421,264" advanced="true">
+      <gearDisplay controller="IsNew" pages="1"/>
+    </group>
+  </displayList>
+</component>

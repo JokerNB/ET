@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1575,3411" remark="Main">
+  <displayList>
+    <image id="n19_qj47" name="n19" src="qj47a" fileName="Atlas/AppContent.png" pkg="0oxdmt1z" xy="0,0" size="1575,3411">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_qj47" name="n3" src="qj47c" fileName="Atlas/SettingsPage.png" xy="-80,0"/>
+    <component id="n1_qj47" name="Button_Close" src="qj47h" fileName="Items/Button_Close.xml" pkg="0oxdmt1z" xy="16,56"/>
+    <text id="n2_qj47" name="Text_Tittle" xy="577,105" size="480,85" font="ui://046ui8npqj476" fontSize="65" color="#ffffff" align="center" vAlign="middle" letterSpacing="1" autoSize="none" text="SETTINGS"/>
+    <text id="n4_qj47" name="Text_AUDIO" xy="37,366" size="264,85" font="ui://046ui8npqj476" fontSize="65" color="#1e2939" align="center" vAlign="middle" letterSpacing="1" autoSize="none" text="AUDIO"/>
+    <component id="n6_qj47" name="Item_Settings_0" src="qj47h" fileName="Item/Item_Settings.xml" xy="48,506"/>
+    <component id="n7_qj47" name="Item_Settings_1" src="qj47h" fileName="Item/Item_Settings.xml" xy="48,817" controller="SelectionType,1"/>
+    <text id="n8_qj47" name="Text_NOTIFICATIONS" xy="62,1166" size="518,85" font="ui://046ui8npqj476" fontSize="65" color="#1e2939" align="center" vAlign="middle" letterSpacing="1" text="NOTIFICATIONS"/>
+    <component id="n9_qj47" name="Item_Settings_2" src="qj47h" fileName="Item/Item_Settings.xml" xy="48,1305" controller="SelectionType,2"/>
+    <component id="n10_qj47" name="Item_Settings_3" src="qj47h" fileName="Item/Item_Settings.xml" xy="48,1615" controller="SelectionType,3"/>
+    <text id="n11_qj47" name="Text_GENERAL" xy="62,1965" size="321,85" font="ui://046ui8npqj476" fontSize="65" color="#1e2939" align="center" vAlign="middle" letterSpacing="1" text="GENERAL"/>
+    <component id="n12_qj47" name="Item_General_0" src="qj47k" fileName="Item/Item_General.xml" xy="48,2103"/>
+    <component id="n13_qj47" name="Item_General_1" src="qj47k" fileName="Item/Item_General.xml" xy="48,2382" controller="SelectionType,3"/>
+    <component id="n14_qj47" name="Item_General_2" src="qj47k" fileName="Item/Item_General.xml" xy="48,2661" controller="SelectionType,4"/>
+    <component id="n18_qj47" name="Button_LogOut" src="qj47p" fileName="Item/Button_LogOut.xml" xy="48,2972"/>
+  </displayList>
+</component>

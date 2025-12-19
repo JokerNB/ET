@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="0mie2hot">
+  <resources>
+    <image id="qj470" name="Container (1).png" path="/Atlas/" exported="true"/>
+    <image id="qj471" name="Container (2).png" path="/Atlas/" exported="true"/>
+    <image id="qj472" name="Container (3).png" path="/Atlas/" exported="true"/>
+    <image id="qj473" name="Container (4).png" path="/Atlas/" exported="true"/>
+    <image id="qj474" name="Container (5).png" path="/Atlas/" exported="true" scale="9grid" scale9grid="136,0,192,154"/>
+    <image id="qj475" name="Container (6).png" path="/Atlas/" exported="true"/>
+    <image id="qj476" name="Container (7).png" path="/Atlas/" exported="true"/>
+    <image id="qj477" name="Container (8).png" path="/Atlas/" exported="true"/>
+    <image id="qj478" name="Container (9).png" path="/Atlas/" exported="true"/>
+    <image id="qj479" name="Container (10).png" path="/Atlas/" exported="true"/>
+    <image id="qj47a" name="Container (11).png" path="/Atlas/" exported="true"/>
+    <image id="qj47b" name="Container (12).png" path="/Atlas/" exported="true"/>
+    <image id="qj47c" name="Container.png" path="/Atlas/" exported="true"/>
+    <image id="qj47d" name="Icon (4).png" path="/Atlas/" exported="true"/>
+    <image id="qj47f" name="CoinRefillPage.png" path="/Atlas/" exported="true"/>
+    <component id="qj47g" name="UICoinShopPanel.xml" path="/" exported="true"/>
+    <component id="qj47j" name="Item_CoinShop.xml" path="/Items/" exported="true"/>
+    <component id="qj47k" name="Button_Item_CoinShop.xml" path="/Items/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

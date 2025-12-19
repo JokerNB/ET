@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1479,372" remark="Common">
+  <controller name="ColorType" exported="true" pages="0,,1,,2,,3,,4," selected="0"/>
+  <controller name="TopType" exported="true" pages="1,,2,,3," selected="0"/>
+  <displayList>
+    <image id="n1_qj47" name="n1" src="qj470" fileName="Atlas/Container (1).png" xy="-48,0">
+      <gearDisplay controller="ColorType" pages="0"/>
+    </image>
+    <image id="n9_qj47" name="n9" src="qj472" fileName="Atlas/Container (3).png" xy="-48,0">
+      <gearDisplay controller="ColorType" pages="1"/>
+    </image>
+    <image id="n10_qj47" name="n10" src="qj476" fileName="Atlas/Container (7).png" xy="-48,0">
+      <gearDisplay controller="ColorType" pages="2"/>
+    </image>
+    <image id="n11_qj47" name="n11" src="qj478" fileName="Atlas/Container (9).png" xy="-48,0">
+      <gearDisplay controller="ColorType" pages="3"/>
+    </image>
+    <image id="n8_qj47" name="n8" src="qj47a" fileName="Atlas/Container (11).png" xy="-48,0">
+      <gearDisplay controller="ColorType" pages="4"/>
+    </image>
+    <image id="n2_qj47" name="n2" src="qj47d" fileName="Atlas/Icon (4).png" xy="341,98" size="80,80"/>
+    <loader id="n3_qj47" name="Icon" xy="30,70" size="312,312" url="ui://0mie2hotqj473" autoSize="true"/>
+    <text id="n4_qj47" name="Text_Value" xy="451,80" size="222,127" font="ui://046ui8npqj476" fontSize="81" color="#ffffff" autoSize="none" text="100"/>
+    <text id="n6_qj47" name="Text_Tittle" xy="339,215" size="167,66" font="ui://046ui8npqj476" fontSize="50" color="#ffffff" autoSize="none" text="COINS"/>
+    <component id="n7_qj47" name="Button_Item_CoinShop" src="qj47k" fileName="Items/Button_Item_CoinShop.xml" xy="1089,93"/>
+    <image id="n13_qj47" name="n13" src="qj474" fileName="Atlas/Container (5).png" xy="503,-56" size="473,232" group="n17_qj47">
+      <relation target="n14_qj47" sidePair="width-width"/>
+    </image>
+    <text id="n14_qj47" name="Text_Top" xy="617,-15" size="243,66" group="n17_qj47" font="ui://046ui8npqj476" fontSize="50" align="center" vAlign="middle" text="POPULAR">
+      <gearText controller="TopType" pages="2,3" values="+20% BOUNS|BEST VALUE" default="POPULAR"/>
+    </text>
+    <group id="n17_qj47" name="n17" xy="503,-56" size="473,232" advanced="true">
+      <gearDisplay controller="TopType" pages="1,2,3"/>
+      <gearDisplay2 controller="ColorType" pages="2,3,4" condition="0"/>
+      <relation target="" sidePair="center-center"/>
+    </group>
+  </displayList>
+</component>

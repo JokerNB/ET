@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1478,265">
+  <controller name="SelectionType" exported="true" pages="0,,1,,2,,3," selected="3"/>
+  <displayList>
+    <image id="n2_qj47" name="n2" src="qj47d" fileName="Atlas/SettingToggle.png" xy="-20,-4"/>
+    <loader id="n3_qj47" name="n3" xy="75,92" size="80,80" url="ui://0rrl8mreqj475" autoSize="true">
+      <gearIcon controller="SelectionType" pages="1,2,3" values="ui://0rrl8mreqj473|ui://0rrl8mreqj474|ui://0rrl8mreqj475" default="ui://0rrl8mreqj47a"/>
+    </loader>
+    <text id="n4_qj47" name="n4" xy="197,91" size="317,76" font="ui://046ui8npqj476" fontSize="58" color="#1e2939" align="center" vAlign="middle" text="VIBRATION">
+      <gearText controller="SelectionType" pages="1,2,3" values="MUSIC|NOTIFICATIONS|VIBRATION" default="SOUND"/>
+    </text>
+    <component id="n5_qj47" name="n5" src="qj47j" fileName="Item/Button_Select.xml" xy="1159,72"/>
+  </displayList>
+</component>

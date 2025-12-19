@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1478,253" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_qj47" name="n0" src="qj47e" fileName="Atlas/Button.png" xy="-48,0" size="1575,413">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <image id="n1_qj47" name="n1" src="qj47e" fileName="Atlas/Button.png" xy="-48,0" size="1575,413">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <image id="n2_qj47" name="n2" src="qj47e" fileName="Atlas/Button.png" xy="-48,0" size="1575,413">
+      <gearDisplay controller="button" pages="2"/>
+    </image>
+    <image id="n3_qj47" name="n3" src="qj47e" fileName="Atlas/Button.png" xy="-48,0" size="1575,413">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+    <image id="n6_qj47" name="n6" src="qj479" fileName="Atlas/Icon (7).png" xy="535,86"/>
+    <text id="n7_qj47" name="n7" xy="655,83" size="301,86" font="ui://046ui8npqj476" fontSize="66" color="#ffffff" text="LOG OUT"/>
+  </displayList>
+  <Button/>
+</component>

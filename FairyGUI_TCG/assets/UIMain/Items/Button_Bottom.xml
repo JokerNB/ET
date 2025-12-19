@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="579,381" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
+  <controller name="BottomType" exported="true" pages="0,Shop,1,Game,2,Auction" selected="0"/>
+  <displayList>
+    <image id="n0_qj47" name="n0" src="qj47r" fileName="Atlas/Button (2).png" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_qj47" name="n1" src="qj47q" fileName="Atlas/Button (3).png" xy="-12,-7">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_qj47" name="n2" src="qj47r" fileName="Atlas/Button (2).png" xy="0,0">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_qj47" name="n3" src="qj47q" fileName="Atlas/Button (3).png" xy="-12,-7">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_qj47" name="title" xy="63,152" size="453,91" font="ui://046ui8npqj476" fontSize="50" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="SHOP">
+      <gearColor controller="button" pages="1,3" values="#1e2939,#000000|#1e2939,#000000" default="#ffffff,#000000"/>
+      <gearText controller="BottomType" pages="0,1" values="SHOP|GAME" default="AUCTION"/>
+    </text>
+    <loader id="n5_qj47" name="icon" xy="249,70" size="84,84" url="ui://kjwej5knqj47c" align="center" vAlign="middle" fill="scale">
+      <gearColor controller="button" pages="0,2" values="#ffffff|#ffffff" default="#1e2939"/>
+      <gearIcon controller="BottomType" pages="0,1" values="ui://kjwej5knqj47c|ui://kjwej5knqj4719" default="ui://kjwej5knqj47e"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>

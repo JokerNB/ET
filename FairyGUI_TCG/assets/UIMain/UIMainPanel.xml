@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1575,3411" remark="Main">
+  <displayList>
+    <loader id="n0_qj47" name="n0" xy="0,0" size="1574,3411" aspect="true" url="ui://0oxdmt1zqj47a" fill="scale">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n3_qj47" name="Button_Settings" src="qj47x" fileName="Items/Button_Settings.xml" xy="32,40" aspect="true"/>
+    <image id="n4_qj47" name="n4" src="qj47l" fileName="Atlas/Container.png" xy="386,24"/>
+    <image id="n6_qj47" name="n6" src="qj47v" fileName="Atlas/Vector.png" xy="498,93"/>
+    <text id="n7_qj47" name="Text_Energy" xy="570,80" size="117,88" font="ui://046ui8npqj476" fontSize="66" color="#ffffff" autoSize="shrink" text="100"/>
+    <image id="n9_qj47" name="n9" src="qj47s" fileName="Atlas/Button (1).png" xy="690,25"/>
+    <image id="n10_qj47" name="n10" src="qj47b" fileName="Atlas/Icon.png" xy="797,91"/>
+    <text id="n11_qj47" name="Text_Coin" xy="877,79" size="117,88" font="ui://046ui8npqj476" fontSize="66" color="#ffffff" autoSize="shrink" text="123"/>
+    <component id="n12_qj47" name="Button_Add" src="qj4710" fileName="Items/Button_Add.xml" xy="1001,84"/>
+    <component id="n13_qj47" name="Button_LanguageSwitcher" src="qj4711" fileName="Items/Button_LanguageSwitcher.xml" xy="1327,32"/>
+    <component id="n15_qj47" name="Item_Content_0" src="qj4712" fileName="Items/Item_Content.xml" xy="48,295" controller="ColorType,0,IsNew,1"/>
+    <component id="n16_qj47" name="Item_Content_1" src="qj4712" fileName="Items/Item_Content.xml" xy="812,295" controller="ColorType,1,IsNew,0"/>
+    <component id="n17_qj47" name="Item_Content_2" src="qj4712" fileName="Items/Item_Content.xml" xy="47,1059" controller="ColorType,2,IsNew,0"/>
+    <component id="n18_qj47" name="Item_Content_3" src="qj4712" fileName="Items/Item_Content.xml" xy="811,1064" controller="ColorType,3,IsNew,0"/>
+    <component id="n19_qj47" name="Item_Content_4" src="qj4712" fileName="Items/Item_Content.xml" xy="46,1826" controller="ColorType,4,IsNew,1"/>
+    <component id="n20_qj47" name="Item_Content_5" src="qj4712" fileName="Items/Item_Content.xml" xy="811,1825" controller="ColorType,5,IsNew,1"/>
+    <component id="n22_qj47" name="Bottom" src="qj4714" fileName="Items/Bottom.xml" xy="0,3040"/>
+  </displayList>
+</component>

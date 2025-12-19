@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="kjwej5kn">
+  <resources>
+    <component id="kp3z0" name="UIMainPanel.xml" path="/" exported="true"/>
+    <image id="qj47b" name="Icon.png" path="/Atlas/" exported="true"/>
+    <image id="qj47c" name="Icon (3).png" path="/Atlas/" exported="true"/>
+    <image id="qj47d" name="Icon (2).png" path="/Atlas/" exported="true"/>
+    <image id="qj47e" name="Icon (1).png" path="/Atlas/" exported="true"/>
+    <image id="qj47f" name="GameCard.png" path="/Atlas/" exported="true"/>
+    <image id="qj47g" name="GameCard (5).png" path="/Atlas/" exported="true"/>
+    <image id="qj47h" name="GameCard (4).png" path="/Atlas/" exported="true"/>
+    <image id="qj47i" name="GameCard (3).png" path="/Atlas/" exported="true"/>
+    <image id="qj47j" name="GameCard (2).png" path="/Atlas/" exported="true"/>
+    <image id="qj47k" name="GameCard (1).png" path="/Atlas/" exported="true"/>
+    <image id="qj47l" name="Container.png" path="/Atlas/" exported="true"/>
+    <image id="qj47m" name="Container (3).png" path="/Atlas/" exported="true" scale="9grid" scale9grid="161,82,322,79"/>
+    <image id="qj47n" name="Container (2).png" path="/Atlas/" exported="true"/>
+    <image id="qj47o" name="Container (1).png" path="/Atlas/" exported="true"/>
+    <image id="qj47p" name="Button.png" path="/Atlas/" exported="true"/>
+    <image id="qj47q" name="Button (3).png" path="/Atlas/" exported="true"/>
+    <image id="qj47r" name="Button (2).png" path="/Atlas/" exported="true"/>
+    <image id="qj47s" name="Button (1).png" path="/Atlas/" exported="true"/>
+    <image id="qj47t" name="BottomNav.png" path="/Atlas/" exported="true"/>
+    <image id="qj47u" name="LanguageSwitcher.png" path="/Atlas/" exported="true"/>
+    <image id="qj47v" name="Vector.png" path="/Atlas/" exported="true"/>
+    <component id="qj47x" name="Button_Settings.xml" path="/Items/" exported="true"/>
+    <component id="qj4710" name="Button_Add.xml" path="/Items/" exported="true"/>
+    <component id="qj4711" name="Button_LanguageSwitcher.xml" path="/Items/" exported="true"/>
+    <component id="qj4712" name="Item_Content.xml" path="/Items/" exported="true"/>
+    <component id="qj4714" name="Bottom.xml" path="/Items/" exported="true"/>
+    <component id="qj4716" name="Button_Bottom.xml" path="/Items/" exported="true"/>
+    <image id="qj4719" name="Gamepad-2--Streamline-Lucide (1).png" path="/Atlas/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

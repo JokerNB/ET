@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="0oxdmt1z">
+  <resources>
+    <image id="qj47a" name="AppContent.png" path="/Atlas/" exported="true"/>
+    <image id="qj47e" name="Button (4).png" path="/Atlas/" exported="true"/>
+    <component id="qj47h" name="Button_Close.xml" path="/Items/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1575,3411" remark="Main">
+  <displayList>
+    <image id="n12_qj47" name="n12" src="qj47a" fileName="Atlas/AppContent.png" pkg="0oxdmt1z" xy="0,0" size="1575,3411">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n13_qj47" name="n13" src="qj47f" fileName="Atlas/CoinRefillPage.png" xy="-80,0" group="n14_qj47">
+      <relation target="n14_qj47" sidePair="width-width,top-top"/>
+    </image>
+    <component id="n1_qj47" name="Button_Close" src="qj47h" fileName="Items/Button_Close.xml" pkg="0oxdmt1z" xy="17,56" group="n14_qj47">
+      <relation target="n14_qj47" sidePair="left-left,top-top"/>
+    </component>
+    <image id="n2_qj47" name="n2" src="qj47d" fileName="Atlas/Icon (4).png" xy="483,100" group="n15_qj47"/>
+    <text id="n3_qj47" name="Text_Tittle" xy="605,104" size="595,86" group="n15_qj47" font="ui://046ui8npqj476" fontSize="65" color="#ffffff" align="center" vAlign="middle" letterSpacing="1" autoSize="none" text="GET MORE COINS"/>
+    <group id="n15_qj47" name="n15" xy="483,100" size="717,96" group="n14_qj47" advanced="true">
+      <relation target="n14_qj47" sidePair="center-center"/>
+    </group>
+    <group id="n14_qj47" name="n14" xy="-80,0" size="1735,475" advanced="true">
+      <relation target="" sidePair="width-width,top-top"/>
+    </group>
+    <text id="n4_qj47" name="Text_Head" xy="366,356" size="843,86" font="ui://046ui8npqj476" fontSize="58" color="#364153" align="center" vAlign="middle" autoSize="none" text="SELECT A COIN PACKAGE:">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <component id="n5_qj47" name="Item_CoinShop_0" src="qj47j" fileName="Items/Item_CoinShop.xml" xy="48,507" controller="ColorType,0,TopType,1">
+      <relation target="" sidePair="center-center"/>
+    </component>
+    <component id="n6_qj47" name="Item_CoinShop_1" src="qj47j" fileName="Items/Item_CoinShop.xml" xy="49,942" controller="ColorType,1,TopType,1">
+      <relation target="" sidePair="center-center"/>
+    </component>
+    <component id="n7_qj47" name="Item_CoinShop_2" src="qj47j" fileName="Items/Item_CoinShop.xml" xy="48,1377" controller="ColorType,2,TopType,1">
+      <relation target="" sidePair="center-center"/>
+    </component>
+    <component id="n8_qj47" name="Item_CoinShop_3" src="qj47j" fileName="Items/Item_CoinShop.xml" xy="48,1812" controller="ColorType,3,TopType,2">
+      <relation target="" sidePair="center-center"/>
+    </component>
+    <component id="n9_qj47" name="Item_CoinShop_4" src="qj47j" fileName="Items/Item_CoinShop.xml" xy="48,2247" controller="ColorType,4,TopType,3">
+      <relation target="" sidePair="center-center"/>
+    </component>
+    <image id="n10_qj47" name="n10" src="qj47b" fileName="Atlas/Container (12).png" xy="28,2679" group="n16_qj47"/>
+    <text id="n11_qj47" name="n11" xy="224,2758" size="1126,138" group="n16_qj47" font="ui://046ui8npqj476" fontSize="49" color="#193cb8" align="center" autoSize="none" text="SECURE PAYMENT POWERED BY YOUR APP STORE.PURCHASES ARE NON_REFUNDABLE."/>
+    <group id="n16_qj47" name="n16" xy="28,2679" size="1519,320" advanced="true">
+      <relation target="" sidePair="center-center"/>
+    </group>
+  </displayList>
+</component>
