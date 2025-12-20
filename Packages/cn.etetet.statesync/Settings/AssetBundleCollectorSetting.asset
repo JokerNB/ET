@@ -94,8 +94,8 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.demores/Bundles/Unit
-        CollectorGUID: 2f805b95f651fcc47a8ad0cc32706c38
+      - CollectPath: Packages/cn.etetet.demores/Unit
+        CollectorGUID: 42349235ffdfc8e40a29486d6aff55f0
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
