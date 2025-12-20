@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 1553421779}
   - component: {fileID: 1553421778}
   - component: {fileID: 1553421777}
+  - component: {fileID: 1553421780}
   m_Layer: 0
   m_Name: Stage Camera
   m_TagString: Untagged
@@ -343,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 1553421775}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.368782, y: -5, z: 0}
+  m_LocalPosition: {x: 2.8125, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -457,6 +458,26 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1553421780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553421775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a9a2466c5b64193a654ebc9b3353eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleMode: 1
+  screenMatchMode: 1
+  designResolutionX: 1575
+  designResolutionY: 3411
+  fallbackScreenDPI: 96
+  defaultSpriteDPI: 96
+  constantScaleFactor: 1
+  ignoreOrientation: 0
 --- !u!850595691 &1972482029
 LightingSettings:
   m_ObjectHideFlags: 0
